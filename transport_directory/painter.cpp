@@ -1,7 +1,7 @@
 #include "painter.h"
 
 Painter::Painter(const Json::Dict& render_settings_json, const Borders& borders)
-								 : render_settings_(MakeSettings(render_settings_json)), borders_(borders) {
+	: render_settings_(MakeSettings(render_settings_json)), borders_(borders) {
 
 	double x_rate = borders.max_lon - borders.min_lon == 0 ?
 		0 : (render_settings_.width - 2 * render_settings_.padding) / (borders.max_lon - borders.min_lon);
@@ -66,7 +66,7 @@ void Painter::PaintText(Sphere::Point coords, const std::string& text) {
 std::string Painter::Paint() const {
 	std::stringstream out;
 	svg.Render(out);
-	return move(out.str());
+	return std::move(out.str());
 }
 
 Painter::RenderSettings Painter::MakeSettings(const Json::Dict& json) {

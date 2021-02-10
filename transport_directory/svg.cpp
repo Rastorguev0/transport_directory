@@ -38,9 +38,9 @@ namespace Svg {
 
 	void Circle::Render(std::ostream& out) const {
 		out << "<circle ";
-		out << "cx=\"" << center_.x << "\" ";
-		out << "cy=\"" << center_.y << "\" ";
-		out << "r=\"" << radius_ << "\" ";
+		out << "cx=\\\"" << center_.x << "\\\" ";
+		out << "cy=\\\"" << center_.y << "\\\" ";
+		out << "r=\\\"" << radius_ << "\\\" ";
 		PathProps::RenderAttrs(out);
 		out << "/>";
 	}
@@ -52,7 +52,7 @@ namespace Svg {
 
 	void Polyline::Render(std::ostream& out) const {
 		out << "<polyline ";
-		out << "points=\"";
+		out << "points=\\\"";
 		bool first = true;
 		for (const Point point : points_) {
 			if (first) {
@@ -63,7 +63,7 @@ namespace Svg {
 			}
 			out << point.x << "," << point.y;
 		}
-		out << "\" ";
+		out << "\\\" ";
 		PathProps::RenderAttrs(out);
 		out << "/>";
 	}
@@ -95,13 +95,13 @@ namespace Svg {
 
 	void Text::Render(std::ostream& out) const {
 		out << "<text ";
-		out << "x=\"" << point_.x << "\" ";
-		out << "y=\"" << point_.y << "\" ";
-		out << "dx=\"" << offset_.x << "\" ";
-		out << "dy=\"" << offset_.y << "\" ";
-		out << "font-size=\"" << font_size_ << "\" ";
+		out << "x=\\\"" << point_.x << "\\\" ";
+		out << "y=\\\"" << point_.y << "\\\" ";
+		out << "dx=\\\"" << offset_.x << "\\\" ";
+		out << "dy=\\\"" << offset_.y << "\\\" ";
+		out << "font-size=\\\"" << font_size_ << "\\\" ";
 		if (font_family_) {
-			out << "font-family=\"" << *font_family_ << "\" ";
+			out << "font-family=\\\"" << *font_family_ << "\\\" ";
 		}
 		PathProps::RenderAttrs(out);
 		out << ">";
@@ -110,8 +110,8 @@ namespace Svg {
 	}
 
 	void Document::Render(std::ostream& out) const {
-		out << "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>";
-		out << "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\">";
+		out << "<?xml version=\\\"1.0\\\" encoding=\\\"UTF-8\\\" ?>";
+		out << "<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" version=\\\"1.1\\\">";
 		for (const auto& object_ptr : objects_) {
 			object_ptr->Render(out);
 		}

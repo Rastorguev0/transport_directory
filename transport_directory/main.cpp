@@ -4,7 +4,6 @@
 #include "sphere.h"
 #include "transport_catalog.h"
 #include "utils.h"
-#include "test_all.h"
 
 #include <iostream>
 

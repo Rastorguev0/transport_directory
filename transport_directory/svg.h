@@ -70,18 +70,18 @@ namespace Svg {
 			return AsOwner();
 		}
 		void RenderAttrs(std::ostream& out) const {
-			out << "fill=\"";
+			out << "fill=\\\"";
 			RenderColor(out, fill_color_);
-			out << "\" ";
-			out << "stroke=\"";
+			out << "\\\" ";
+			out << "stroke=\\\"";
 			RenderColor(out, stroke_color_);
-			out << "\" ";
-			out << "stroke-width=\"" << stroke_width_ << "\" ";
+			out << "\\\" ";
+			out << "stroke-width=\\\"" << stroke_width_ << "\\\" ";
 			if (stroke_line_cap_) {
-				out << "stroke-linecap=\"" << *stroke_line_cap_ << "\" ";
+				out << "stroke-linecap=\\\"" << *stroke_line_cap_ << "\\\" ";
 			}
 			if (stroke_line_join_) {
-				out << "stroke-linejoin=\"" << *stroke_line_join_ << "\" ";
+				out << "stroke-linejoin=\\\"" << *stroke_line_join_ << "\\\" ";
 			}
 		}
 
