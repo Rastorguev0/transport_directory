@@ -85,7 +85,7 @@ Borders TransportCatalog::ComputeMapBorders(const Descriptions::StopsDict& stops
     stops_dict.begin()->second->position.longitude,
   };
   for (const auto& [_, stop] : stops_dict) {
-    if (stop->position.latitude < result.max_lat) {
+    if (stop->position.latitude < result.min_lat) {
       result.min_lat = stop->position.latitude;
     }
     if (stop->position.longitude < result.min_lon) {

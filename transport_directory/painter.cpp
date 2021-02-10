@@ -66,10 +66,6 @@ void Painter::PaintText(Sphere::Point coords, const std::string& text) {
 std::string Painter::Paint() const {
 	std::stringstream out;
 	svg.Render(out);
-
-	std::ofstream svg_file("svg.svg");
-	svg.Render(svg_file);
-
 	return move(out.str());
 }
 
@@ -88,14 +84,14 @@ Painter::RenderSettings Painter::MakeSettings(const Json::Dict& json) {
 	};
 }
 
-Svg::Point ParsePoint(const Json::Node& node) {
+Svg::Point Painter::ParsePoint(const Json::Node& node) {
 	return Svg::Point{
 	node.AsArray().at(0).AsDouble(),
 	node.AsArray().at(1).AsDouble()
 	};
 }
 
-Svg::Color ParseColor(const Json::Node& node) {
+Svg::Color Painter::ParseColor(const Json::Node& node) {
 	const auto& variant_color = node.GetBase();
 	Svg::Color color;
 	if (std::holds_alternative<std::string>(variant_color)) {
@@ -113,7 +109,7 @@ Svg::Color ParseColor(const Json::Node& node) {
 	return color;
 }
 
-std::vector<Svg::Color> ParsePalette(const Json::Node& node) {
+std::vector<Svg::Color> Painter::ParsePalette(const Json::Node& node) {
 	const auto& colors = node.AsArray();
 	std::vector<Svg::Color> palette;
 	palette.reserve(colors.size());

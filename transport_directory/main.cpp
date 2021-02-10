@@ -11,8 +11,7 @@
 using namespace std;
 
 int main() {
-  ifstream json("example2.json");
-  const auto input_doc = Json::Load(json);
+  const auto input_doc = Json::Load(cin);
   const auto& input_map = input_doc.GetRoot().AsMap();
 
   const TransportCatalog db(

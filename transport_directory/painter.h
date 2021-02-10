@@ -15,11 +15,6 @@ struct Borders {
 };
 
 
-Svg::Point ParsePoint(const Json::Node& node);
-Svg::Color ParseColor(const Json::Node& node);
-std::vector<Svg::Color> ParsePalette(const Json::Node& node);
-
-
 class Painter {
 public:
 	Painter(const Json::Dict& render_settings_json, const Borders& borders);
@@ -43,7 +38,10 @@ private:
 		std::vector<Svg::Color> color_palette;
 	};
 
-	static RenderSettings MakeSettings(const Json::Dict& json);
+	RenderSettings MakeSettings(const Json::Dict& json);
+	Svg::Point ParsePoint(const Json::Node& node);
+	Svg::Color ParseColor(const Json::Node& node);
+	std::vector<Svg::Color> ParsePalette(const Json::Node& node);
 
 	Svg::Document svg;
 	const RenderSettings render_settings_;
