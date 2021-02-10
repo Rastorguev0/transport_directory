@@ -143,10 +143,14 @@
     <ClInclude Include="descriptions.h" />
     <ClInclude Include="graph.h" />
     <ClInclude Include="json.h" />
+    <ClInclude Include="painter.h" />
+    <ClInclude Include="profile.h" />
     <ClInclude Include="requests.h" />
     <ClInclude Include="router.h" />
     <ClInclude Include="sphere.h" />
     <ClInclude Include="svg.h" />
+    <ClInclude Include="test_all.h" />
+    <ClInclude Include="test_runner.h" />
     <ClInclude Include="transport_catalog.h" />
     <ClInclude Include="transport_router.h" />
     <ClInclude Include="utils.h" />
@@ -155,6 +159,7 @@
     <ClCompile Include="descriptions.cpp" />
     <ClCompile Include="json.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="painter.cpp" />
     <ClCompile Include="requests.cpp" />
     <ClCompile Include="sphere.cpp" />
     <ClCompile Include="svg.cpp" />

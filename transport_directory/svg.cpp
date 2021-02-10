@@ -2,56 +2,29 @@
 
 namespace Svg {
 
-	template <typename Owner>
-	Owner& PathProps<Owner>::AsOwner() {
-		return static_cast<Owner&>(*this);
+	void RenderColor(std::ostream& out, std::monostate) {
+		out << "none";
 	}
 
-	template <typename Owner>
-	Owner& PathProps<Owner>::SetFillColor(const Color& color) {
-		fill_color_ = color;
-		return AsOwner();
+	void RenderColor(std::ostream& out, const std::string& value) {
+		out << value;
 	}
 
-	template <typename Owner>
-	Owner& PathProps<Owner>::SetStrokeColor(const Color& color) {
-		stroke_color_ = color;
-		return AsOwner();
+	void RenderColor(std::ostream& out, Rgb rgb) {
+		out << "rgb(" << static_cast<int>(rgb.red)
+			<< "," << static_cast<int>(rgb.green)
+			<< "," << static_cast<int>(rgb.blue) << ")";
 	}
 
-	template <typename Owner>
-	Owner& PathProps<Owner>::SetStrokeWidth(double value) {
-		stroke_width_ = value;
-		return AsOwner();
+	void RenderColor(std::ostream& out, Rgba rgba) {
+		out << "rgba(" << static_cast<int>(rgba.color.red)
+			<< "," << static_cast<int>(rgba.color.green)
+			<< "," << static_cast<int>(rgba.color.blue) << "," << rgba.alpha << ")";
 	}
 
-	template <typename Owner>
-	Owner& PathProps<Owner>::SetStrokeLineCap(const string& value) {
-		stroke_line_cap_ = value;
-		return AsOwner();
-	}
-
-	template <typename Owner>
-	Owner& PathProps<Owner>::SetStrokeLineJoin(const string& value) {
-		stroke_line_join_ = value;
-		return AsOwner();
-	}
-
-	template <typename Owner>
-	void PathProps<Owner>::RenderAttrs(ostream& out) const {
-		out << "fill=\"";
-		RenderColor(out, fill_color_);
-		out << "\" ";
-		out << "stroke=\"";
-		RenderColor(out, stroke_color_);
-		out << "\" ";
-		out << "stroke-width=\"" << stroke_width_ << "\" ";
-		if (stroke_line_cap_) {
-			out << "stroke-linecap=\"" << *stroke_line_cap_ << "\" ";
-		}
-		if (stroke_line_join_) {
-			out << "stroke-linejoin=\"" << *stroke_line_join_ << "\" ";
-		}
+	void RenderColor(std::ostream& out, const Color& color) {
+		visit([&out](const auto& value) { RenderColor(out, value); },
+			color);
 	}
 
 	Circle& Circle::SetCenter(Point point) {
@@ -63,7 +36,7 @@ namespace Svg {
 		return *this;
 	}
 
-	void Circle::Render(ostream& out) const {
+	void Circle::Render(std::ostream& out) const {
 		out << "<circle ";
 		out << "cx=\"" << center_.x << "\" ";
 		out << "cy=\"" << center_.y << "\" ";
@@ -77,7 +50,7 @@ namespace Svg {
 		return *this;
 	}
 
-	void Polyline::Render(ostream& out) const {
+	void Polyline::Render(std::ostream& out) const {
 		out << "<polyline ";
 		out << "points=\"";
 		bool first = true;
@@ -110,17 +83,17 @@ namespace Svg {
 		return *this;
 	}
 
-	Text& Text::SetFontFamily(const string& value) {
+	Text& Text::SetFontFamily(const std::string& value) {
 		font_family_ = value;
 		return *this;
 	}
 
-	Text& Text::SetData(const string& data) {
+	Text& Text::SetData(const std::string& data) {
 		data_ = data;
 		return *this;
 	}
 
-	void Text::Render(ostream& out) const {
+	void Text::Render(std::ostream& out) const {
 		out << "<text ";
 		out << "x=\"" << point_.x << "\" ";
 		out << "y=\"" << point_.y << "\" ";
@@ -136,12 +109,7 @@ namespace Svg {
 		out << "</text>";
 	}
 
-	template <typename ObjectType>
-	void Document::Add(ObjectType object) {
-		objects_.push_back(make_unique<ObjectType>(move(object)));
-	}
-
-	void Document::Render(ostream& out) const {
+	void Document::Render(std::ostream& out) const {
 		out << "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>";
 		out << "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\">";
 		for (const auto& object_ptr : objects_) {

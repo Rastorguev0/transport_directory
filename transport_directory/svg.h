@@ -7,118 +7,143 @@
 #include <vector>
 #include <memory>
 
-using namespace std;
-
 namespace Svg {
 
-  /*              UTIL STRUCTURES               */
+	struct Point {
+		double x = 0;
+		double y = 0;
+	};
 
-  struct Point {
-    double x = 0;
-    double y = 0;
-  };
+	struct Rgb {
+		uint8_t red;
+		uint8_t green;
+		uint8_t blue;
+	};
 
-  struct Rgb {
-    uint8_t red;
-    uint8_t green;
-    uint8_t blue;
-  };
+	struct Rgba {
+		Rgb color;
+		double alpha;
+	};
 
-  using Color = variant<monostate, string, Rgb>;
-  const Color NoneColor{};
+	using Color = std::variant<std::monostate, std::string, Rgb, Rgba>;
+	const Color NoneColor{};
 
-  void RenderColor(ostream& out, monostate) {
-    out << "none";
-  }
+	void RenderColor(std::ostream& out, std::monostate);
 
-  void RenderColor(ostream& out, const string& value) {
-    out << value;
-  }
+	void RenderColor(std::ostream& out, const std::string& value);
 
-  void RenderColor(ostream& out, Rgb rgb) {
-    out << "rgb(" << static_cast<int>(rgb.red)
-      << "," << static_cast<int>(rgb.green)
-      << "," << static_cast<int>(rgb.blue) << ")";
-  }
+	void RenderColor(std::ostream& out, Rgb rgb);
 
-  void RenderColor(ostream& out, const Color& color) {
-    visit([&out](const auto& value) { RenderColor(out, value); },
-      color);
-  }
+	void RenderColor(std::ostream& out, Rgba rgba);
 
-  /*              BASE CLASSES               */
+	void RenderColor(std::ostream& out, const Color& color);
 
-  class Object {
-  public:
-    virtual void Render(ostream& out) const = 0;
-    virtual ~Object() = default;
-  };
 
-  template <typename Owner>
-  class PathProps {
-  public:
-    Owner& SetFillColor(const Color& color);
-    Owner& SetStrokeColor(const Color& color);
-    Owner& SetStrokeWidth(double value);
-    Owner& SetStrokeLineCap(const string& value);
-    Owner& SetStrokeLineJoin(const string& value);
-    void RenderAttrs(ostream& out) const;
 
-  private:
-    Color fill_color_;
-    Color stroke_color_;
-    double stroke_width_ = 1.0;
-    optional<string> stroke_line_cap_;
-    optional<string> stroke_line_join_;
+	class Object {
+	public:
+		virtual void Render(std::ostream& out) const = 0;
+		virtual ~Object() = default;
+	};
 
-    Owner& AsOwner();
-  };
+	template <typename Owner>
+	class PathProps {
+	public:
+		Owner& SetFillColor(const Color& color) {
+			fill_color_ = color;
+			return AsOwner();
+		}
+		Owner& SetStrokeColor(const Color& color) {
+			stroke_color_ = color;
+			return AsOwner();
+		}
+		Owner& SetStrokeWidth(double value) {
+			stroke_width_ = value;
+			return AsOwner();
+		}
+		Owner& SetStrokeLineCap(const std::string& value) {
+			stroke_line_cap_ = value;
+			return AsOwner();
+		}
+		Owner& SetStrokeLineJoin(const std::string& value) {
+			stroke_line_join_ = value;
+			return AsOwner();
+		}
+		void RenderAttrs(std::ostream& out) const {
+			out << "fill=\"";
+			RenderColor(out, fill_color_);
+			out << "\" ";
+			out << "stroke=\"";
+			RenderColor(out, stroke_color_);
+			out << "\" ";
+			out << "stroke-width=\"" << stroke_width_ << "\" ";
+			if (stroke_line_cap_) {
+				out << "stroke-linecap=\"" << *stroke_line_cap_ << "\" ";
+			}
+			if (stroke_line_join_) {
+				out << "stroke-linejoin=\"" << *stroke_line_join_ << "\" ";
+			}
+		}
 
-  class Circle : public Object, public PathProps<Circle> {
-  public:
-    Circle& SetCenter(Point point);
-    Circle& SetRadius(double radius);
-    void Render(ostream& out) const override;
+	private:
+		Color fill_color_;
+		Color stroke_color_;
+		double stroke_width_ = 1.0;
+		std::optional<std::string> stroke_line_cap_;
+		std::optional<std::string> stroke_line_join_;
 
-  private:
-    Point center_;
-    double radius_ = 1;
-  };
+		Owner& AsOwner() {
+			return static_cast<Owner&>(*this);
+		}
+	};
 
-  class Polyline : public Object, public PathProps<Polyline> {
-  public:
-    Polyline& AddPoint(Point point);
-    void Render(ostream& out) const override;
+	class Circle : public Object, public PathProps<Circle> {
+	public:
+		Circle& SetCenter(Point point);
+		Circle& SetRadius(double radius);
+		void Render(std::ostream& out) const override;
 
-  private:
-    vector<Point> points_;
-  };
+	private:
+		Point center_;
+		double radius_ = 1;
+	};
 
-  class Text : public Object, public PathProps<Text> {
-  public:
-    Text& SetPoint(Point point);
-    Text& SetOffset(Point point);
-    Text& SetFontSize(uint32_t size);
-    Text& SetFontFamily(const string& value);
-    Text& SetData(const string& data);
-    void Render(ostream& out) const override;
+	class Polyline : public Object, public PathProps<Polyline> {
+	public:
+		Polyline& AddPoint(Point point);
+		void Render(std::ostream& out) const override;
 
-  private:
-    Point point_;
-    Point offset_;
-    uint32_t font_size_ = 1;
-    optional<string> font_family_;
-    string data_;
-  };
+	private:
+		std::vector<Point> points_;
+	};
 
-  class Document : public Object {
-  public:
-    template <typename ObjectType>
-    void Add(ObjectType object);
+	class Text : public Object, public PathProps<Text> {
+	public:
+		Text& SetPoint(Point point);
+		Text& SetOffset(Point point);
+		Text& SetFontSize(uint32_t size);
+		Text& SetFontFamily(const std::string& value);
+		Text& SetData(const std::string& data);
+		void Render(std::ostream& out) const override;
 
-    void Render(ostream& out) const override;
+	private:
+		Point point_;
+		Point offset_;
+		uint32_t font_size_ = 1;
+		std::optional<std::string> font_family_;
+		std::string data_;
+	};
 
-  private:
-    vector<unique_ptr<Object>> objects_;
-  };
+	class Document : public Object {
+	public:
+		template <typename ObjectType>
+		void Add(ObjectType object) {
+			objects_.push_back(std::make_unique<ObjectType>(std::move(object)));
+		}
+
+		void Render(std::ostream& out) const override;
+
+	private:
+		std::vector<std::unique_ptr<Object>> objects_;
+	};
 }
