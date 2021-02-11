@@ -45,7 +45,7 @@ double Generator::RandomDouble(double left, double right) {
 Dict Generator::GenerateRouteStat() {
 	Dict dict;
 	auto from = stops_.begin();
-	auto to = prev(stops_.end());
+	auto to = prev(stops.end());
 	dict["type"] = Node("Route"s);
 	dict["id"] = Node(static_cast<int>(rnd() % 1'000'000'000));
 	dict["from"] = from->first;
@@ -103,8 +103,8 @@ vector<Node> Generator::GenerateRoute() {
 		stops.push_back(Node(string(GenerateRandomStopName())));
 	}
 	for (int i = 1; i + 1 < static_cast<int>(stops.size()); i++) {
-		stops_[stops[i].AsString()].insert(stops[i - 1].AsString());
-		stops_[stops[i].AsString()].insert(stops[i + 1].AsString());
+		stops[stops[i].AsString()].insert(stops[i - 1].AsString());
+		stops[stops[i].AsString()].insert(stops[i + 1].AsString());
 	}
 	return stops;
 }
