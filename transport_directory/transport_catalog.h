@@ -47,12 +47,12 @@ public:
 
 private:
   static int ComputeRoadRouteLength(
-      const std::vector<std::string>& stops,
+      const std::vector<std::string>& stops_,
       const Descriptions::StopsDict& stops_dict
   );
 
   static double ComputeGeoRouteDistance(
-      const std::vector<std::string>& stops,
+      const std::vector<std::string>& stops_,
       const Descriptions::StopsDict& stops_dict
   );
 
@@ -60,10 +60,10 @@ private:
 
   void SketchRoutes(
     const Descriptions::BusesDict& buses,
-    const Descriptions::StopsDict& stops
+    const Descriptions::StopsDict& stops_
   ) const;
-  void SketchStops(const Descriptions::StopsDict& stops) const;
-  void SketchTitles(const Descriptions::StopsDict& stops) const;
+  void SketchStops(const Descriptions::StopsDict& stops_) const;
+  void SketchTitles(const Descriptions::StopsDict& stops_) const;
 
   std::unordered_map<std::string, Stop> stops_;
   std::unordered_map<std::string, Bus> buses_;

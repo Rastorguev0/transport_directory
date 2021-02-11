@@ -66,7 +66,7 @@ void Painter::PaintText(Sphere::Point coords, const std::string& text) {
 std::string Painter::Paint() const {
 	std::stringstream out;
 	svg.Render(out);
-	return std::move(out.str());
+	return out.str();
 }
 
 Painter::RenderSettings Painter::MakeSettings(const Json::Dict& json) {

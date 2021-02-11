@@ -10,6 +10,10 @@ using namespace std::chrono;
 struct Timer {
     Timer(const string& m) : msg(m) {}
     Timer() {}
+    void PrintTime() {
+      cerr << msg << ": " <<
+        time << " ms" << endl;
+    }
     long long time = 0;
     string msg = "";
 };

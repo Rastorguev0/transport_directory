@@ -89,6 +89,8 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -146,6 +148,7 @@
     <ClInclude Include="painter.h" />
     <ClInclude Include="profile.h" />
     <ClInclude Include="requests.h" />
+    <ClInclude Include="rnd_big_data.h" />
     <ClInclude Include="router.h" />
     <ClInclude Include="sphere.h" />
     <ClInclude Include="svg.h" />

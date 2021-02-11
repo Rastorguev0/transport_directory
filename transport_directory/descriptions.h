@@ -23,7 +23,7 @@ namespace Descriptions {
 
   struct Bus {
     std::string name;
-    std::vector<std::string> stops;
+    std::vector<std::string> stops_;
 
     static Bus ParseFrom(const Json::Dict& attrs);
   };

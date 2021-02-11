@@ -22,13 +22,13 @@ TransportCatalog::TransportCatalog(vector<Descriptions::InputQuery> data,
 
     buses_dict[bus.name] = &bus;
     buses_[bus.name] = Bus{
-      bus.stops.size(),
-      ComputeUniqueItemsCount(AsRange(bus.stops)),
-      ComputeRoadRouteLength(bus.stops, stops_dict),
-      ComputeGeoRouteDistance(bus.stops, stops_dict)
+      bus.stops_.size(),
+      ComputeUniqueItemsCount(AsRange(bus.stops_)),
+      ComputeRoadRouteLength(bus.stops_, stops_dict),
+      ComputeGeoRouteDistance(bus.stops_, stops_dict)
     };
 
-    for (const string& stop_name : bus.stops) {
+    for (const string& stop_name : bus.stops_) {
       stops_.at(stop_name).bus_names.insert(bus.name);
     }
   }
@@ -54,24 +54,24 @@ optional<TransportRouter::RouteInfo> TransportCatalog::FindRoute(const string& s
 }
 
 int TransportCatalog::ComputeRoadRouteLength(
-    const vector<string>& stops,
+    const vector<string>& stops_,
     const Descriptions::StopsDict& stops_dict
 ) {
   int result = 0;
-  for (size_t i = 1; i < stops.size(); ++i) {
-    result += Descriptions::ComputeStopsDistance(*stops_dict.at(stops[i - 1]), *stops_dict.at(stops[i]));
+  for (size_t i = 1; i < stops_.size(); ++i) {
+    result += Descriptions::ComputeStopsDistance(*stops_dict.at(stops_[i - 1]), *stops_dict.at(stops_[i]));
   }
   return result;
 }
 
 double TransportCatalog::ComputeGeoRouteDistance(
-    const vector<string>& stops,
+    const vector<string>& stops_,
     const Descriptions::StopsDict& stops_dict
 ) {
   double result = 0;
-  for (size_t i = 1; i < stops.size(); ++i) {
+  for (size_t i = 1; i < stops_.size(); ++i) {
     result += Sphere::Distance(
-      stops_dict.at(stops[i - 1])->position, stops_dict.at(stops[i])->position
+      stops_dict.at(stops_[i - 1])->position, stops_dict.at(stops_[i])->position
     );
   }
   return result;
@@ -103,26 +103,26 @@ Borders TransportCatalog::ComputeMapBorders(const Descriptions::StopsDict& stops
 
 void TransportCatalog::SketchRoutes(
   const Descriptions::BusesDict& buses,
-  const Descriptions::StopsDict& stops
+  const Descriptions::StopsDict& stops_
 ) const {
   for (const auto& [_, bus] : buses) {
     vector<Sphere::Point> points;
-    points.reserve(bus->stops.size());
-    for (const string& stop : bus->stops) {
-      points.push_back(stops.at(stop)->position);
+    points.reserve(bus->stops_.size());
+    for (const string& stop : bus->stops_) {
+      points.push_back(stops_.at(stop)->position);
     }
     painter_->PaintPolyline(points);
   }
 }
 
-void TransportCatalog::SketchStops(const Descriptions::StopsDict& stops) const {
-  for (const auto& [_, stop] : stops) {
+void TransportCatalog::SketchStops(const Descriptions::StopsDict& stops_) const {
+  for (const auto& [_, stop] : stops_) {
     painter_->PaintCircle(stop->position);
   }
 }
 
-void TransportCatalog::SketchTitles(const Descriptions::StopsDict& stops) const {
-  for (const auto& [_, stop] : stops) {
+void TransportCatalog::SketchTitles(const Descriptions::StopsDict& stops_) const {
+  for (const auto& [_, stop] : stops_) {
     painter_->PaintText(stop->position, stop->name);
   }
 }

@@ -66,6 +66,9 @@
     <ClInclude Include="test_all.h">
       <Filter>Header Files\maintenence</Filter>
     </ClInclude>
+    <ClInclude Include="rnd_big_data.h">
+      <Filter>Header Files\maintenence</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="descriptions.cpp">

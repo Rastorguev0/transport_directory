@@ -21,19 +21,19 @@ namespace Descriptions {
   }
 
   vector<string> ParseStops(const vector<Json::Node>& stop_nodes, bool is_roundtrip) {
-    vector<string> stops;
-    stops.reserve(stop_nodes.size());
+    vector<string> stops_;
+    stops_.reserve(stop_nodes.size());
     for (const Json::Node& stop_node : stop_nodes) {
-      stops.push_back(stop_node.AsString());
+      stops_.push_back(stop_node.AsString());
     }
-    if (is_roundtrip || stops.size() <= 1) {
-      return stops;
+    if (is_roundtrip || stops_.size() <= 1) {
+      return stops_;
     }
-    stops.reserve(stops.size() * 2 - 1);  // end stop is not repeated
-    for (size_t stop_idx = stops.size() - 1; stop_idx > 0; --stop_idx) {
-      stops.push_back(stops[stop_idx - 1]);
+    stops_.reserve(stops_.size() * 2 - 1);  // end stop is not repeated
+    for (size_t stop_idx = stops_.size() - 1; stop_idx > 0; --stop_idx) {
+      stops_.push_back(stops_[stop_idx - 1]);
     }
-    return stops;
+    return stops_;
   }
 
   int ComputeStopsDistance(const Stop& lhs, const Stop& rhs) {
@@ -47,7 +47,7 @@ namespace Descriptions {
   Bus Bus::ParseFrom(const Json::Dict& attrs) {
     return Bus{
         .name = attrs.at("name").AsString(),
-        .stops = ParseStops(attrs.at("stops").AsArray(), attrs.at("is_roundtrip").AsBool()),
+        .stops_ = ParseStops(attrs.at("stops").AsArray(), attrs.at("is_roundtrip").AsBool()),
     };
   }
 
@@ -63,7 +63,6 @@ namespace Descriptions {
         result.push_back(Stop::ParseFrom(node_dict));
       }
     }
-
     return result;
   }
 
