@@ -34,6 +34,12 @@
         "stop_label_offset": [
             7,
             -3
+        ],
+        "layers": [
+            "bus_lines",
+            "bus_labels",
+            "stop_points",
+            "stop_labels"
         ]
     },
     "base_requests": [

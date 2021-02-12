@@ -3,21 +3,21 @@
 using namespace std;
 
 TransportCatalog::TransportCatalog(vector<Descriptions::InputQuery> data,
-                                   const Json::Dict& routing_settings_json,
-                                   const Json::Dict& render_settings_json) {
+  const Json::Dict& routing_settings_json,
+  const Json::Dict& render_settings_json) {
   auto stops_end = partition(begin(data), end(data), [](const auto& item) {
     return holds_alternative<Descriptions::Stop>(item);
-  });
+    });
 
   Descriptions::StopsDict stops_dict;
-  for (const auto& item : Range{begin(data), stops_end}) {
+  for (const auto& item : Range{ begin(data), stops_end }) {
     const auto& stop = get<Descriptions::Stop>(item);
     stops_dict[stop.name] = &stop;
-    stops_.insert({stop.name, {}});
+    stops_.insert({ stop.name, {} });
   }
 
   Descriptions::BusesDict buses_dict;
-  for (const auto& item : Range{stops_end, end(data)}) {
+  for (const auto& item : Range{ stops_end, end(data) }) {
     const auto& bus = get<Descriptions::Bus>(item);
 
     buses_dict[bus.name] = &bus;
@@ -36,10 +36,8 @@ TransportCatalog::TransportCatalog(vector<Descriptions::InputQuery> data,
   router_ = make_unique<TransportRouter>(stops_dict, buses_dict, routing_settings_json);
 
   painter_ = make_unique<Painter>(render_settings_json, ComputeMapBorders(stops_dict));
-  SketchRoutes(buses_dict, stops_dict);
-  SketchBusNames(buses_dict, stops_dict);
-  SketchStops(stops_dict);
-  SketchStopNames(stops_dict);
+
+  SketchMap(buses_dict, stops_dict);
 }
 
 const TransportCatalog::Stop* TransportCatalog::GetStop(const string& name) const {
@@ -55,8 +53,8 @@ optional<TransportRouter::RouteInfo> TransportCatalog::FindRoute(const string& s
 }
 
 int TransportCatalog::ComputeRoadRouteLength(
-    const vector<string>& stops,
-    const Descriptions::StopsDict& stops_dict
+  const vector<string>& stops,
+  const Descriptions::StopsDict& stops_dict
 ) {
   int result = 0;
   for (size_t i = 1; i < stops.size(); ++i) {
@@ -66,8 +64,8 @@ int TransportCatalog::ComputeRoadRouteLength(
 }
 
 double TransportCatalog::ComputeGeoRouteDistance(
-    const vector<string>& stops,
-    const Descriptions::StopsDict& stops_dict
+  const vector<string>& stops,
+  const Descriptions::StopsDict& stops_dict
 ) {
   double result = 0;
   for (size_t i = 1; i < stops.size(); ++i) {
@@ -102,6 +100,33 @@ Borders TransportCatalog::ComputeMapBorders(const Descriptions::StopsDict& stops
   return result;
 }
 
+void TransportCatalog::SketchMap(
+  const Descriptions::BusesDict& buses,
+  const Descriptions::StopsDict& stops
+) const {
+  for (const auto& [_, bus] : buses) {
+    painter_->PaintBusName(stops.at(bus->stops.at(0))->position, bus->name);
+    if (!bus->is_roundtrip) {
+      size_t index = bus->stops.size() / 2;
+      if (bus->stops.at(0) != bus->stops.at(index)) {
+        painter_->PaintBusName(stops.at(bus->stops.at(index))->position, bus->name, true);
+      }
+    }
+
+    vector<Sphere::Point> points;
+    points.reserve(bus->stops.size());
+    for (const string& stop : bus->stops) {
+      points.push_back(stops.at(stop)->position);
+    }
+    painter_->PaintRoute(move(points));
+  }
+
+  for (const auto& [_, stop] : stops) {
+    painter_->PaintStop(stop->position);
+    painter_->PaintStopName(stop->position, stop->name);
+  }
+}
+
 void TransportCatalog::SketchRoutes(
   const Descriptions::BusesDict& buses,
   const Descriptions::StopsDict& stops
@@ -112,7 +137,7 @@ void TransportCatalog::SketchRoutes(
     for (const string& stop : bus->stops) {
       points.push_back(stops.at(stop)->position);
     }
-    painter_->PaintPolyline(points);
+    painter_->PaintRoute(points);
   }
 }
 
@@ -135,7 +160,7 @@ void TransportCatalog::SketchBusNames(
 
 void TransportCatalog::SketchStops(const Descriptions::StopsDict& stops) const {
   for (const auto& [_, stop] : stops) {
-    painter_->PaintCircle(stop->position);
+    painter_->PaintStop(stop->position);
   }
 }
 

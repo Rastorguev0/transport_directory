@@ -57,7 +57,10 @@ private:
 	);
 
 	static Borders ComputeMapBorders(const Descriptions::StopsDict& stops_dict);
-
+	void SketchMap(
+		const Descriptions::BusesDict& buses,
+		const Descriptions::StopsDict& stops
+	) const;
 	void SketchRoutes(
 		const Descriptions::BusesDict& buses,
 		const Descriptions::StopsDict& stops

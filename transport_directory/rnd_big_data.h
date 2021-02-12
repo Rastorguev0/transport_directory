@@ -11,7 +11,7 @@ class Generator {
 public:
 	Generator(int stop_amount, int bus_amount, int stops_on_route, int query_amount)
 		: stops_amount(stop_amount), buses_amount(bus_amount), stops_on_route(stops_on_route),
-			query_amount(query_amount) {}
+		query_amount(query_amount) {}
 
 	double RandomDouble(double left, double right);
 
@@ -45,7 +45,7 @@ double Generator::RandomDouble(double left, double right) {
 Dict Generator::GenerateRouteStat() {
 	Dict dict;
 	auto from = stops_.begin();
-	auto to = prev(stops.end());
+	auto to = prev(stops_.end());
 	dict["type"] = Node("Route"s);
 	dict["id"] = Node(static_cast<int>(rnd() % 1'000'000'000));
 	dict["from"] = from->first;
@@ -103,8 +103,8 @@ vector<Node> Generator::GenerateRoute() {
 		stops.push_back(Node(string(GenerateRandomStopName())));
 	}
 	for (int i = 1; i + 1 < static_cast<int>(stops.size()); i++) {
-		stops[stops[i].AsString()].insert(stops[i - 1].AsString());
-		stops[stops[i].AsString()].insert(stops[i + 1].AsString());
+		stops_[stops[i].AsString()].insert(stops[i - 1].AsString());
+		stops_[stops[i].AsString()].insert(stops[i + 1].AsString());
 	}
 	return stops;
 }
@@ -168,8 +168,15 @@ Dict Generator::GenerateBigData() {
 		{"stop_label_offset", Node(vector<Node>{Node(7), Node(-3)})},
 		{"underlayer_color", Node(vector<Node>{Node(255), Node(255), Node(255), Node(0.85)})},
 		{"underlayer_width", Node(3)},
-		{"color_palette", Node(vector<Node>{Node("green"s), Node("orange"s), Node("red"s)})}
-		});
+		{"color_palette", Node(vector<Node>{Node("green"s), Node("orange"s), Node("red"s)})},
+		{"layers", Node(vector<Node>{
+						Node("bus_lines"s),
+						Node("bus_labels"s),
+						Node("stop_points"s),
+						Node("stop_labels"s)
+				})
+		}
+			});
 	dict["base_requests"] = GenerateBase();
 	vector<Node> stats = [this] {
 		auto result = GenerateStats();
