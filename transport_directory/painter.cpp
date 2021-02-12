@@ -42,7 +42,25 @@ void Painter::PaintPolyline(const std::vector<Sphere::Point>& points) {
 	svg.Add(std::move(polyline));
 }
 
-void Painter::PaintText(Sphere::Point coords, const std::string& text) {
+void Painter::PaintBusName(Sphere::Point coords, const std::string& text, bool use_prev_color) {
+	static int color_idx = 0;
+	Svg::Text base =
+		Svg::Text{}
+		.SetData(text)
+		.SetPoint(ProjectSpherePoint(coords))
+		.SetOffset(render_settings_.bus_label_offset)
+		.SetFontSize(render_settings_.bus_label_font_size)
+		.SetFontWeight("bold")
+		.SetFontFamily("Verdana");
+	
+	PaintLabel(base);
+	if (use_prev_color && color_idx > 0) color_idx--;
+	svg.Add(Svg::Text(base).SetFillColor(
+		render_settings_.color_palette[color_idx++ % render_settings_.color_palette.size()]
+	));
+}
+
+void Painter::PaintStopName(Sphere::Point coords, const std::string& text) {
 	Svg::Text base =
 		Svg::Text{}
 		.SetData(text)
@@ -50,21 +68,15 @@ void Painter::PaintText(Sphere::Point coords, const std::string& text) {
 		.SetOffset(render_settings_.stop_label_offset)
 		.SetFontSize(render_settings_.stop_label_font_size)
 		.SetFontFamily("Verdana");
-	//add label
-	svg.Add(
-		Svg::Text(base)
-		.SetFillColor(render_settings_.underlayer_color)
-		.SetStrokeColor(render_settings_.underlayer_color)
-		.SetStrokeWidth(render_settings_.underlayer_width)
-		.SetStrokeLineCap("round")
-		.SetStrokeLineJoin("round")
-	);
-	//add title
+
+	PaintLabel(base);
 	svg.Add(Svg::Text(base).SetFillColor("black"));
 }
 
 std::string Painter::Paint() const {
 	std::stringstream out;
+	//std::ofstream svg_out("svg.svg");
+	//svg.Render(svg_out);
 	svg.Render(out);
 	return out.str();
 }
@@ -119,4 +131,15 @@ std::vector<Svg::Color> Painter::ParsePalette(const Json::Node& node) {
 		palette.push_back(ParseColor(color));
 	}
 	return palette;
+}
+
+void Painter::PaintLabel(const Svg::Text& base) {
+	svg.Add(
+		Svg::Text(base)
+		.SetFillColor(render_settings_.underlayer_color)
+		.SetStrokeColor(render_settings_.underlayer_color)
+		.SetStrokeWidth(render_settings_.underlayer_width)
+		.SetStrokeLineCap("round")
+		.SetStrokeLineJoin("round")
+	);
 }

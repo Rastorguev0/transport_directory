@@ -37,8 +37,9 @@ TransportCatalog::TransportCatalog(vector<Descriptions::InputQuery> data,
 
   painter_ = make_unique<Painter>(render_settings_json, ComputeMapBorders(stops_dict));
   SketchRoutes(buses_dict, stops_dict);
+  SketchBusNames(buses_dict, stops_dict);
   SketchStops(stops_dict);
-  SketchTitles(stops_dict);
+  SketchStopNames(stops_dict);
 }
 
 const TransportCatalog::Stop* TransportCatalog::GetStop(const string& name) const {
@@ -115,15 +116,32 @@ void TransportCatalog::SketchRoutes(
   }
 }
 
+void TransportCatalog::SketchBusNames(
+  const Descriptions::BusesDict& buses,
+  const Descriptions::StopsDict& stops
+) const {
+  for (const auto& [_, bus] : buses) {
+    Sphere::Point stop_location = stops.at(bus->stops.at(0))->position;
+    painter_->PaintBusName(stop_location, bus->name);
+    if (!bus->is_roundtrip) {
+      size_t index = bus->stops.size() / 2;
+      if (bus->stops.at(0) != bus->stops.at(index)) {
+        stop_location = stops.at(bus->stops.at(index))->position;
+        painter_->PaintBusName(stop_location, bus->name, true);
+      }
+    }
+  }
+}
+
 void TransportCatalog::SketchStops(const Descriptions::StopsDict& stops) const {
   for (const auto& [_, stop] : stops) {
     painter_->PaintCircle(stop->position);
   }
 }
 
-void TransportCatalog::SketchTitles(const Descriptions::StopsDict& stops) const {
+void TransportCatalog::SketchStopNames(const Descriptions::StopsDict& stops) const {
   for (const auto& [_, stop] : stops) {
-    painter_->PaintText(stop->position, stop->name);
+    painter_->PaintStopName(stop->position, stop->name);
   }
 }
 

@@ -88,6 +88,11 @@ namespace Svg {
 		return *this;
 	}
 
+	Text& Text::SetFontWeight(const std::string& value) {
+		font_weight_ = value;
+		return *this;
+	}
+
 	Text& Text::SetData(const std::string& data) {
 		data_ = data;
 		return *this;
@@ -102,6 +107,9 @@ namespace Svg {
 		out << "font-size=\\\"" << font_size_ << "\\\" ";
 		if (font_family_) {
 			out << "font-family=\\\"" << *font_family_ << "\\\" ";
+		}
+		if (font_weight_) {
+			out << "font-weight=\\\"" << *font_weight_ << "\\\" ";
 		}
 		PathProps::RenderAttrs(out);
 		out << ">";

@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <sstream>
 #include <optional>
+#include <fstream>
 
 struct Borders {
 	double min_lat;
@@ -22,7 +23,8 @@ public:
 	Svg::Point ProjectSpherePoint(Sphere::Point p) const;
 	void PaintCircle(Sphere::Point center);
 	void PaintPolyline(const std::vector<Sphere::Point>& points);
-	void PaintText(Sphere::Point coords, const std::string& text);
+	void PaintStopName(Sphere::Point coords, const std::string& text);
+	void PaintBusName(Sphere::Point coords, const std::string& text, bool preserve_prev_color = false);
 	std::string Paint() const;
 private:
 	struct RenderSettings {
@@ -44,6 +46,7 @@ private:
 	Svg::Point ParsePoint(const Json::Node& node);
 	Svg::Color ParseColor(const Json::Node& node);
 	std::vector<Svg::Color> ParsePalette(const Json::Node& node);
+	void PaintLabel(const Svg::Text& base);
 
 	Svg::Document svg;
 	const RenderSettings render_settings_;
