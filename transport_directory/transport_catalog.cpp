@@ -34,10 +34,7 @@ TransportCatalog::TransportCatalog(vector<Descriptions::InputQuery> data,
   }
 
   router_ = make_unique<TransportRouter>(stops_dict, buses_dict, routing_settings_json);
-
-  painter_ = make_unique<Painter>(render_settings_json, ComputeMapBorders(stops_dict));
-
-  SketchMap(buses_dict, stops_dict);
+  map_ = Painter(render_settings_json, buses_dict, stops_dict).Paint();
 }
 
 const TransportCatalog::Stop* TransportCatalog::GetStop(const string& name) const {
@@ -76,57 +73,6 @@ double TransportCatalog::ComputeGeoRouteDistance(
   return result;
 }
 
-Borders TransportCatalog::ComputeMapBorders(const Descriptions::StopsDict& stops_dict) {
-  Borders result{
-    stops_dict.begin()->second->position.latitude,
-    stops_dict.begin()->second->position.longitude,
-    stops_dict.begin()->second->position.latitude,
-    stops_dict.begin()->second->position.longitude,
-  };
-  for (const auto& [_, stop] : stops_dict) {
-    if (stop->position.latitude < result.min_lat) {
-      result.min_lat = stop->position.latitude;
-    }
-    if (stop->position.longitude < result.min_lon) {
-      result.min_lon = stop->position.longitude;
-    }
-    if (stop->position.latitude > result.max_lat) {
-      result.max_lat = stop->position.latitude;
-    }
-    if (stop->position.longitude > result.max_lon) {
-      result.max_lon = stop->position.longitude;
-    }
-  }
-  return result;
-}
-
-void TransportCatalog::SketchMap(
-  const Descriptions::BusesDict& buses,
-  const Descriptions::StopsDict& stops
-) const {
-  for (const auto& [_, bus] : buses) {
-    painter_->PaintBusName(stops.at(bus->stops.at(0))->position, bus->name);
-    if (!bus->is_roundtrip) {
-      size_t index = bus->stops.size() / 2;
-      if (bus->stops.at(0) != bus->stops.at(index)) {
-        painter_->PaintBusName(stops.at(bus->stops.at(index))->position, bus->name, true);
-      }
-    }
-
-    vector<Sphere::Point> points;
-    points.reserve(bus->stops.size());
-    for (const string& stop : bus->stops) {
-      points.push_back(stops.at(stop)->position);
-    }
-    painter_->PaintRoute(move(points));
-  }
-
-  for (const auto& [_, stop] : stops) {
-    painter_->PaintStop(stop->position);
-    painter_->PaintStopName(stop->position, stop->name);
-  }
-}
-
 std::string TransportCatalog::RenderMap() const {
-  return painter_->Paint();
+  return map_;
 }

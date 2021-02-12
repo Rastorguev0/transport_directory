@@ -56,14 +56,8 @@ private:
 		const Descriptions::StopsDict& stops_dict
 	);
 
-	static Borders ComputeMapBorders(const Descriptions::StopsDict& stops_dict);
-	void SketchMap(
-		const Descriptions::BusesDict& buses,
-		const Descriptions::StopsDict& stops
-	) const;
-
 	std::unordered_map<std::string, Stop> stops_;
 	std::unordered_map<std::string, Bus> buses_;
 	std::unique_ptr<TransportRouter> router_;
-	std::unique_ptr<Painter> painter_;
+	std::string map_;
 };

@@ -1,147 +1,23 @@
 #include "painter.h"
-#include "profile.h"
 
-Painter::Painter(const Json::Dict& render_settings_json, const Borders& borders)
-	: render_settings_(MakeSettings(render_settings_json)), borders_(borders) {
+#include <algorithm>
+#include <sstream>
+#include <optional>
+#include <fstream>
 
-	double x_rate = borders.max_lon - borders.min_lon == 0 ?
-		0 : (render_settings_.width - 2 * render_settings_.padding) / (borders.max_lon - borders.min_lon);
-	double y_rate = borders.max_lat - borders.min_lat == 0 ?
-		0 : (render_settings_.height - 2 * render_settings_.padding) / (borders.max_lat - borders.min_lat);
+using namespace std;
 
-	zoom_rate = std::min(x_rate, y_rate);
-	if (zoom_rate == 0) zoom_rate = std::max(x_rate, y_rate);
-
-	for (const auto& layer : render_settings_.layers) {
-		layers_[layer];
-	}
-};
-
-Svg::Point Painter::ProjectSpherePoint(Sphere::Point p) const {
-	return {
-		(p.longitude - borders_.min_lon) * zoom_rate + render_settings_.padding,
-		(borders_.max_lat - p.latitude) * zoom_rate + render_settings_.padding
-	};
-}
-
-void Painter::PaintStop(Sphere::Point center) {
-	if (layers_.count(tags_.stop_points)) {
-		layers_[tags_.stop_points].push_back(
-			Svg::Circle{}
-			.SetCenter(ProjectSpherePoint(center))
-			.SetFillColor("white")
-			.SetRadius(render_settings_.stop_radius)
-			);
-	}
-}
-
-void Painter::PaintRoute(const std::vector<Sphere::Point>& points) {
-	if (layers_.count(tags_.bus_lines)) {
-		static int color_idx = 0;
-		Svg::Polyline polyline =
-			Svg::Polyline{}
-			.SetStrokeColor(render_settings_.color_palette[color_idx++ % render_settings_.color_palette.size()])
-			.SetStrokeWidth(render_settings_.line_width)
-			.SetStrokeLineCap("round")
-			.SetStrokeLineJoin("round");
-		for (const auto& p : points) {
-			polyline.AddPoint(ProjectSpherePoint(p));
-		}
-		layers_[tags_.bus_lines].push_back(std::move(polyline));
-	}
-}
-
-void Painter::PaintBusName(Sphere::Point coords, const std::string& text, bool use_prev_color) {
-	if (layers_.count(tags_.bus_labels)) {
-		static int color_idx = 0;
-		Svg::Text base =
-			Svg::Text{}
-			.SetData(text)
-			.SetPoint(ProjectSpherePoint(coords))
-			.SetOffset(render_settings_.bus_label_offset)
-			.SetFontSize(render_settings_.bus_label_font_size)
-			.SetFontWeight("bold")
-			.SetFontFamily("Verdana");
-
-		layers_[tags_.bus_labels].push_back(CreateUnderlayer(base));
-		if (use_prev_color && color_idx > 0) color_idx--;
-		layers_[tags_.bus_labels].push_back(Svg::Text(base).SetFillColor(
-			render_settings_.color_palette[color_idx++ % render_settings_.color_palette.size()]
-		));
-	}
-}
-
-void Painter::PaintStopName(Sphere::Point coords, const std::string& text) {
-	if (layers_.count(tags_.stop_labels)) {
-		Svg::Text base =
-			Svg::Text{}
-			.SetData(text)
-			.SetPoint(ProjectSpherePoint(coords))
-			.SetOffset(render_settings_.stop_label_offset)
-			.SetFontSize(render_settings_.stop_label_font_size)
-			.SetFontFamily("Verdana");
-
-		layers_[tags_.stop_labels].push_back(CreateUnderlayer(base));
-		layers_[tags_.stop_labels].push_back(Svg::Text(base).SetFillColor("black"));
-	}
-}
-
-Svg::Text Painter::CreateUnderlayer(const Svg::Text& base) {
-	return
-		Svg::Text(base)
-		.SetFillColor(render_settings_.underlayer_color)
-		.SetStrokeColor(render_settings_.underlayer_color)
-		.SetStrokeWidth(render_settings_.underlayer_width)
-		.SetStrokeLineCap("round")
-		.SetStrokeLineJoin("round");
-}
-
-std::string Painter::Paint() {
-	if (!rendered_map_) {
-		for (const std::string& layer : render_settings_.layers) {
-			for (const auto& obj : layers_.at(layer)) {
-				std::visit([this](auto&& o) {
-					this->svg_.Add(o); }, obj);
-			}
-		}
-		std::stringstream out;
-		svg_.Render(out);
-		rendered_map_ = out.str();
-		//std::ofstream svg_out("svg.svg");
-		//svg_.Render(svg_out);
-	}
-	return rendered_map_.value();
-}
-
-Painter::RenderSettings Painter::MakeSettings(const Json::Dict& json) {
-	return {
-		json.at("width").AsDouble(),
-		json.at("height").AsDouble(),
-		json.at("padding").AsDouble(),
-		json.at("stop_radius").AsDouble(),
-		json.at("line_width").AsDouble(),
-		json.at("stop_label_font_size").AsInt(),
-		ParsePoint(json.at("stop_label_offset")),
-		ParseColor(json.at("underlayer_color")),
-		json.at("underlayer_width").AsDouble(),
-		ParsePalette(json.at("color_palette")),
-		json.at("bus_label_font_size").AsInt(),
-		ParsePoint(json.at("bus_label_offset")),
-		ParseVectorStrings(json.at("layers"))
-	};
-}
-
-Svg::Point Painter::ParsePoint(const Json::Node& node) {
+Svg::Point ParsePoint(const Json::Node& node) {
 	return Svg::Point{
 	node.AsArray().at(0).AsDouble(),
 	node.AsArray().at(1).AsDouble()
 	};
 }
 
-Svg::Color Painter::ParseColor(const Json::Node& node) {
+Svg::Color ParseColor(const Json::Node& node) {
 	const auto& variant_color = node.GetBase();
 	Svg::Color color;
-	if (std::holds_alternative<std::string>(variant_color)) {
+	if (holds_alternative<string>(variant_color)) {
 		color = node.AsString();
 	}
 	else {
@@ -156,9 +32,9 @@ Svg::Color Painter::ParseColor(const Json::Node& node) {
 	return color;
 }
 
-std::vector<Svg::Color> Painter::ParsePalette(const Json::Node& node) {
+vector<Svg::Color> ParsePalette(const Json::Node& node) {
 	const auto& colors = node.AsArray();
-	std::vector<Svg::Color> palette;
+	vector<Svg::Color> palette;
 	palette.reserve(colors.size());
 	for (const auto& color : colors) {
 		palette.push_back(ParseColor(color));
@@ -166,10 +42,175 @@ std::vector<Svg::Color> Painter::ParsePalette(const Json::Node& node) {
 	return palette;
 }
 
-std::vector<std::string> Painter::ParseVectorStrings(const Json::Node& node) {
-	std::vector<std::string> result;
+vector<string> ParseVectorStrings(const Json::Node& node) {
+	vector<string> result;
 	for (const auto& str : node.AsArray()) {
 		result.push_back(str.AsString());
 	}
 	return result;
+}
+
+RenderSettings ParseSettings(const Json::Dict& json) {
+	return {
+		.width = json.at("width").AsDouble(),
+		.height = json.at("height").AsDouble(),
+		.padding = json.at("padding").AsDouble(),
+		.stop_radius = json.at("stop_radius").AsDouble(),
+		.line_width = json.at("line_width").AsDouble(),
+		.stop_label_font_size = json.at("stop_label_font_size").AsInt(),
+		.stop_label_offset = ParsePoint(json.at("stop_label_offset")),
+		.underlayer_color = ParseColor(json.at("underlayer_color")),
+		.underlayer_width = json.at("underlayer_width").AsDouble(),
+		.color_palette = ParsePalette(json.at("color_palette")),
+		.bus_label_font_size = json.at("bus_label_font_size").AsInt(),
+		.bus_label_offset = ParsePoint(json.at("bus_label_offset")),
+		.layers = ParseVectorStrings(json.at("layers"))
+	};
+}
+
+static map<string, Svg::Point> ComputeStopsCoords(
+	const Descriptions::StopsDict& stops_dict,
+	const RenderSettings& render_settings) {
+
+	vector<Sphere::Point> points;
+	points.reserve(stops_dict.size());
+	for (const auto& [_, stop] : stops_dict) {
+		points.push_back(stop->position);
+	}
+
+	const double max_width = render_settings.width;
+	const double max_height = render_settings.height;
+	const double padding = render_settings.padding;
+
+	const Sphere::Projector projector(
+		begin(points), end(points),
+		max_width, max_height, padding
+	);
+
+	map<string, Svg::Point> stops_coords;
+	for (const auto& [stop_name, stop] : stops_dict) {
+		stops_coords[stop_name] = projector(stop->position);
+	}
+
+	return stops_coords;
+}
+
+static unordered_map<string, Svg::Color> ChooseBusColors(
+	const Descriptions::BusesDict& buses_dict,
+	const RenderSettings& render_settings) {
+
+	const auto& palette = render_settings.color_palette;
+	unordered_map<string, Svg::Color> bus_colors;
+	int idx = 0;
+	for (const auto& [bus_name, bus_ptr] : buses_dict) {
+		bus_colors[bus_name] = palette[idx++ % palette.size()];
+	}
+	return bus_colors;
+}
+
+
+Painter::Painter(const Json::Dict& render_settings_json,
+	const Descriptions::BusesDict& buses,
+	const Descriptions::StopsDict& stops) 
+	: settings_(ParseSettings(render_settings_json)),
+	buses_dict_(buses),
+	stops_coords_(ComputeStopsCoords(stops, settings_)),
+	bus_colors_(ChooseBusColors(buses, settings_)) {};
+
+void Painter::PaintBusLines(Svg::Document& svg) const {
+	for (const auto& [bus_name, bus] : buses_dict_) {
+		const auto& stops = bus->stops;
+		if (stops.empty()) {
+			continue;
+		}
+		Svg::Polyline line;
+		line.SetStrokeColor(bus_colors_.at(bus_name))
+			.SetStrokeWidth(settings_.line_width)
+			.SetStrokeLineCap("round").SetStrokeLineJoin("round");
+		for (const auto& stop_name : stops) {
+			line.AddPoint(stops_coords_.at(stop_name));
+		}
+		svg.Add(line);
+	}
+}
+
+void Painter::PaintBusLabels(Svg::Document& svg) const {
+	for (const auto& [bus_name, bus] : buses_dict_) {
+		const auto& stops = bus->stops;
+		if (!stops.empty()) {
+			const auto& color = bus_colors_.at(bus_name);
+			for (const string& endpoint : bus->endpoints) {
+				const auto point = stops_coords_.at(endpoint);
+				const auto base_text =
+					Svg::Text{}
+					.SetPoint(point)
+					.SetOffset(settings_.bus_label_offset)
+					.SetFontSize(settings_.bus_label_font_size)
+					.SetFontFamily("Verdana")
+					.SetFontWeight("bold")
+					.SetData(bus_name);
+				svg.Add(
+					Svg::Text(base_text)
+					.SetFillColor(settings_.underlayer_color)
+					.SetStrokeColor(settings_.underlayer_color)
+					.SetStrokeWidth(settings_.underlayer_width)
+					.SetStrokeLineCap("round").SetStrokeLineJoin("round")
+				);
+				svg.Add(
+					Svg::Text(base_text)
+					.SetFillColor(color)
+				);
+			}
+		}
+	}
+}
+
+void Painter::PaintStopPoints(Svg::Document& svg) const {
+	for (const auto& [stop_name, stop_point] : stops_coords_) {
+		svg.Add(Svg::Circle{}
+			.SetCenter(stop_point)
+			.SetRadius(settings_.stop_radius)
+			.SetFillColor("white"));
+	}
+}
+
+void Painter::PaintStopLabels(Svg::Document& svg) const {
+	for (const auto& [stop_name, stop_point] : stops_coords_) {
+		const auto base_text =
+			Svg::Text{}
+			.SetPoint(stop_point)
+			.SetOffset(settings_.stop_label_offset)
+			.SetFontSize(settings_.stop_label_font_size)
+			.SetFontFamily("Verdana")
+			.SetData(stop_name);
+		svg.Add(
+			Svg::Text(base_text)
+			.SetFillColor(settings_.underlayer_color)
+			.SetStrokeColor(settings_.underlayer_color)
+			.SetStrokeWidth(settings_.underlayer_width)
+			.SetStrokeLineCap("round").SetStrokeLineJoin("round")
+		);
+		svg.Add(
+			Svg::Text(base_text)
+			.SetFillColor("black")
+		);
+	}
+}
+
+
+const unordered_map<string, void (Painter::*)(Svg::Document&) const> Painter::LAYER_ACTIONS = {
+		{"bus_lines",   &Painter::PaintBusLines},
+		{"bus_labels",  &Painter::PaintBusLabels},
+		{"stop_points", &Painter::PaintStopPoints},
+		{"stop_labels", &Painter::PaintStopLabels},
+};
+
+string Painter::Paint() const {
+	Svg::Document svg;
+	for (const auto& layer : settings_.layers) {
+		(this->*LAYER_ACTIONS.at(layer))(svg);
+	}
+	ostringstream out;
+	svg.Render(out);
+	return out.str();
 }

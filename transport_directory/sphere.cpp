@@ -26,4 +26,12 @@ namespace Sphere {
       + cos(lhs.latitude) * cos(rhs.latitude) * cos(abs(lhs.longitude - rhs.longitude))
     ) * EARTH_RADIUS;
   }
+
+
+  Svg::Point Projector::operator()(Point point) const {
+    return {
+        (point.longitude - min_lon_) * zoom_rate_ + padding_,
+        (max_lat_ - point.latitude) * zoom_rate_ + padding_,
+    };
+  }
 }

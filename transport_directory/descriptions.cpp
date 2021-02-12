@@ -45,11 +45,22 @@ namespace Descriptions {
   }
 
   Bus Bus::ParseFrom(const Json::Dict& attrs) {
-    return Bus{
-        .name = attrs.at("name").AsString(),
-        .stops = ParseStops(attrs.at("stops").AsArray(), attrs.at("is_roundtrip").AsBool()),
-        .is_roundtrip = attrs.at("is_roundtrip").AsBool()
-    };
+    const auto& name = attrs.at("name").AsString();
+    const auto& stops = attrs.at("stops").AsArray();
+    if (stops.empty()) {
+      return Bus{ .name = name };
+    }
+    else {
+      Bus bus{
+          .name = name,
+          .stops = ParseStops(stops, attrs.at("is_roundtrip").AsBool()),
+          .endpoints = {stops.front().AsString(), stops.back().AsString()}
+      };
+      if (bus.endpoints.back() == bus.endpoints.front()) {
+        bus.endpoints.pop_back();
+      }
+      return bus;
+    }
   }
 
   vector<InputQuery> ReadDescriptions(const vector<Json::Node>& nodes) {
