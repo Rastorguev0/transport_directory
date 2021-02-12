@@ -1,4 +1,5 @@
 #include "painter.h"
+#include "profile.h"
 
 Painter::Painter(const Json::Dict& render_settings_json, const Borders& borders)
 	: render_settings_(MakeSettings(render_settings_json)), borders_(borders) {
@@ -98,9 +99,9 @@ Svg::Text Painter::CreateUnderlayer(const Svg::Text& base) {
 std::string Painter::Paint() {
 	if (!rendered_map_) {
 		for (const std::string& layer : render_settings_.layers) {
-			for (auto&& obj : layers_.at(layer)) {
+			for (const auto& obj : layers_.at(layer)) {
 				std::visit([this](auto&& o) {
-					this->svg_.Add(std::move(o)); }, obj);
+					this->svg_.Add(o); }, obj);
 			}
 		}
 		std::stringstream out;

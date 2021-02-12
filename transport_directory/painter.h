@@ -35,6 +35,7 @@ public:
 	void PaintStopName(Sphere::Point coords, const std::string& text);
 	void PaintBusName(Sphere::Point coords, const std::string& text, bool preserve_prev_color = false);
 	std::string Paint();
+
 private:
 	using Layers = std::map<std::string, std::vector<std::variant<Svg::Circle, Svg::Polyline, Svg::Text>>>;
 	struct RenderSettings {

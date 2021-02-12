@@ -127,49 +127,6 @@ void TransportCatalog::SketchMap(
   }
 }
 
-void TransportCatalog::SketchRoutes(
-  const Descriptions::BusesDict& buses,
-  const Descriptions::StopsDict& stops
-) const {
-  for (const auto& [_, bus] : buses) {
-    vector<Sphere::Point> points;
-    points.reserve(bus->stops.size());
-    for (const string& stop : bus->stops) {
-      points.push_back(stops.at(stop)->position);
-    }
-    painter_->PaintRoute(points);
-  }
-}
-
-void TransportCatalog::SketchBusNames(
-  const Descriptions::BusesDict& buses,
-  const Descriptions::StopsDict& stops
-) const {
-  for (const auto& [_, bus] : buses) {
-    Sphere::Point stop_location = stops.at(bus->stops.at(0))->position;
-    painter_->PaintBusName(stop_location, bus->name);
-    if (!bus->is_roundtrip) {
-      size_t index = bus->stops.size() / 2;
-      if (bus->stops.at(0) != bus->stops.at(index)) {
-        stop_location = stops.at(bus->stops.at(index))->position;
-        painter_->PaintBusName(stop_location, bus->name, true);
-      }
-    }
-  }
-}
-
-void TransportCatalog::SketchStops(const Descriptions::StopsDict& stops) const {
-  for (const auto& [_, stop] : stops) {
-    painter_->PaintStop(stop->position);
-  }
-}
-
-void TransportCatalog::SketchStopNames(const Descriptions::StopsDict& stops) const {
-  for (const auto& [_, stop] : stops) {
-    painter_->PaintStopName(stop->position, stop->name);
-  }
-}
-
 std::string TransportCatalog::RenderMap() const {
   return painter_->Paint();
 }

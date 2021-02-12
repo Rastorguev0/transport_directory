@@ -15,12 +15,12 @@ void SpeedTest() {
     input_map.at("render_settings").AsMap()
   );
 
+  stringstream trash;
   LOG_DURATION("Processing requests");
   Json::PrintValue(
     Requests::ProcessAll(db, input_map.at("stat_requests").AsArray()),
-    cout
+    trash
   );
-  cout << endl;
 }
 
 void TestAll() {

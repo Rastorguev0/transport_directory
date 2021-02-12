@@ -61,16 +61,6 @@ private:
 		const Descriptions::BusesDict& buses,
 		const Descriptions::StopsDict& stops
 	) const;
-	void SketchRoutes(
-		const Descriptions::BusesDict& buses,
-		const Descriptions::StopsDict& stops
-	) const;
-	void SketchBusNames(
-		const Descriptions::BusesDict& buses,
-		const Descriptions::StopsDict& stops
-	) const;
-	void SketchStops(const Descriptions::StopsDict& stops) const;
-	void SketchStopNames(const Descriptions::StopsDict& stops) const;
 
 	std::unordered_map<std::string, Stop> stops_;
 	std::unordered_map<std::string, Bus> buses_;
