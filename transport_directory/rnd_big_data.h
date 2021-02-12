@@ -162,6 +162,8 @@ Dict Generator::GenerateBigData() {
 		{"padding", Node(50)},
 		{"stop_radius", Node(5)},
 		{"line_width", Node(14)},
+		{"bus_label_font_size", Node(14)},
+		{"bus_label_offset", Node(vector<Node>{Node(-7), Node(3)})},
 		{"stop_label_font_size", Node(20)},
 		{"stop_label_offset", Node(vector<Node>{Node(7), Node(-3)})},
 		{"underlayer_color", Node(vector<Node>{Node(255), Node(255), Node(255), Node(0.85)})},

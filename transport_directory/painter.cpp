@@ -80,7 +80,9 @@ Painter::RenderSettings Painter::MakeSettings(const Json::Dict& json) {
 		ParsePoint(json.at("stop_label_offset")),
 		ParseColor(json.at("underlayer_color")),
 		json.at("underlayer_width").AsDouble(),
-		ParsePalette(json.at("color_palette"))
+		ParsePalette(json.at("color_palette")),
+		json.at("bus_label_font_size").AsInt(),
+		ParsePoint(json.at("bus_label_offset"))
 	};
 }
 
