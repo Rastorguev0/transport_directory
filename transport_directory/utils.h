@@ -13,6 +13,7 @@ public:
   Range(It begin, It end) : begin_(begin), end_(end) {}
   It begin() const { return begin_; }
   It end() const { return end_; }
+  size_t size() const { return std::distance(begin_, end_); }
 
 private:
   It begin_;

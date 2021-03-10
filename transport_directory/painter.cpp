@@ -2,7 +2,9 @@
 
 #include <algorithm>
 #include <sstream>
+#include <string_view>
 #include <optional>
+#include <utility>
 #include <fstream>
 
 using namespace std;
@@ -72,27 +74,17 @@ static map<string, Svg::Point> ComputeStopsCoords(
 	const Descriptions::StopsDict& stops_dict,
 	const RenderSettings& render_settings) {
 
-	vector<Sphere::Point> points;
+	vector<pair<Sphere::Point, string>> points;
 	points.reserve(stops_dict.size());
-	for (const auto& [_, stop] : stops_dict) {
-		points.push_back(stop->position);
+	for (const auto& [name, stop] : stops_dict) {
+		points.push_back(make_pair(stop->position, name));
 	}
 
 	const double max_width = render_settings.width;
 	const double max_height = render_settings.height;
 	const double padding = render_settings.padding;
 
-	const Sphere::Projector projector(
-		begin(points), end(points),
-		max_width, max_height, padding
-	);
-
-	map<string, Svg::Point> stops_coords;
-	for (const auto& [stop_name, stop] : stops_dict) {
-		stops_coords[stop_name] = projector(stop->position);
-	}
-
-	return stops_coords;
+	return Sphere::Aligner(max_width, max_height, padding).Align(points);
 }
 
 static unordered_map<string, Svg::Color> ChooseBusColors(

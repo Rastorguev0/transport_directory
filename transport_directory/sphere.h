@@ -1,8 +1,14 @@
 #pragma once
 #include "svg.h"
+#include "utils.h"
 
 #include <cmath>
+#include <map>
+#include <string>
+#include <vector>
+#include <utility>
 #include <algorithm>
+#include <cassert>
 
 namespace Sphere {
   double ConvertDegreesToRadians(double degrees);
@@ -14,7 +20,23 @@ namespace Sphere {
     static Point FromDegrees(double latitude, double longitude);
   };
 
+  bool ByLatitude(Point lhs, Point rhs);
+  bool ByLongitude(Point lhs, Point rhs);
+
   double Distance(Point lhs, Point rhs);
+
+
+  class Aligner {
+  public:
+    Aligner(double max_width, double max_height, double padding);
+
+    std::map<std::string, Svg::Point> Align(std::vector<std::pair<Sphere::Point,
+                                            std::string>>&) const;
+  private:
+    double width = 0;
+    double height = 0;
+    double padding = 0;
+  };
 
 
   class Projector {
@@ -43,18 +65,12 @@ namespace Sphere {
     }
 
     const auto [left_it, right_it] =
-      std::minmax_element(points_begin, points_end,
-        [](Point lhs, Point rhs) {
-          return lhs.longitude < rhs.longitude;
-        });
+      std::minmax_element(points_begin, points_end, ByLongitude);
     min_lon_ = left_it->longitude;
     const double max_lon = right_it->longitude;
 
     const auto [bottom_it, top_it] =
-      std::minmax_element(points_begin, points_end,
-        [](Point lhs, Point rhs) {
-          return lhs.latitude < rhs.latitude;
-        });
+      std::minmax_element(points_begin, points_end, ByLatitude);
     const double min_lat = bottom_it->latitude;
     max_lat_ = top_it->latitude;
 
