@@ -69,6 +69,9 @@
     <ClInclude Include="rnd_big_data.h">
       <Filter>Header Files\maintenence</Filter>
     </ClInclude>
+    <ClInclude Include="aligner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="descriptions.cpp">
@@ -100,6 +103,9 @@
     </ClCompile>
     <ClCompile Include="svg.cpp">
       <Filter>Source Files\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="aligner.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

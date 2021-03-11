@@ -1,8 +1,10 @@
 #include "painter.h"
+#include "aligner.h"
 
 #include <algorithm>
 #include <sstream>
-#include <string_view>
+#include <map>
+#include <unordered_set>
 #include <optional>
 #include <utility>
 #include <fstream>
@@ -74,17 +76,16 @@ static map<string, Svg::Point> ComputeStopsCoords(
 	const Descriptions::StopsDict& stops_dict,
 	const RenderSettings& render_settings) {
 
-	vector<pair<Sphere::Point, string>> points;
-	points.reserve(stops_dict.size());
-	for (const auto& [name, stop] : stops_dict) {
-		points.push_back(make_pair(stop->position, name));
-	}
-
 	const double max_width = render_settings.width;
 	const double max_height = render_settings.height;
 	const double padding = render_settings.padding;
+	Aligner aligner(stops_dict, max_width, max_height, padding);
 
-	return Sphere::Aligner(max_width, max_height, padding).Align(points);
+	map<string, Svg::Point> result;
+	for (const auto& [name, _] : stops_dict) {
+		result[name] = aligner(name);
+	}
+	return result;
 }
 
 static unordered_map<string, Svg::Color> ChooseBusColors(

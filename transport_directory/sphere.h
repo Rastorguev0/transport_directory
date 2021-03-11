@@ -1,14 +1,8 @@
 #pragma once
 #include "svg.h"
-#include "utils.h"
 
 #include <cmath>
-#include <map>
-#include <string>
-#include <vector>
-#include <utility>
 #include <algorithm>
-#include <cassert>
 
 namespace Sphere {
   double ConvertDegreesToRadians(double degrees);
@@ -24,20 +18,6 @@ namespace Sphere {
   bool ByLongitude(Point lhs, Point rhs);
 
   double Distance(Point lhs, Point rhs);
-
-
-  class Aligner {
-  public:
-    Aligner(double max_width, double max_height, double padding);
-
-    std::map<std::string, Svg::Point> Align(std::vector<std::pair<Sphere::Point,
-                                            std::string>>&) const;
-  private:
-    double width = 0;
-    double height = 0;
-    double padding = 0;
-  };
-
 
   class Projector {
   public:
