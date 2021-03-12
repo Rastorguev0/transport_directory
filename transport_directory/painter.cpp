@@ -74,12 +74,13 @@ RenderSettings ParseSettings(const Json::Dict& json) {
 
 static map<string, Svg::Point> ComputeStopsCoords(
 	const Descriptions::StopsDict& stops_dict,
+	const Descriptions::BusesDict& buses_dict,
 	const RenderSettings& render_settings) {
 
 	const double max_width = render_settings.width;
 	const double max_height = render_settings.height;
 	const double padding = render_settings.padding;
-	Aligner aligner(stops_dict, max_width, max_height, padding);
+	Aligner aligner(stops_dict, buses_dict, max_width, max_height, padding);
 
 	map<string, Svg::Point> result;
 	for (const auto& [name, _] : stops_dict) {
@@ -107,7 +108,7 @@ Painter::Painter(const Json::Dict& render_settings_json,
 	const Descriptions::StopsDict& stops) 
 	: settings_(ParseSettings(render_settings_json)),
 	buses_dict_(buses),
-	stops_coords_(ComputeStopsCoords(stops, settings_)),
+	stops_coords_(ComputeStopsCoords(stops, buses, settings_)),
 	bus_colors_(ChooseBusColors(buses, settings_)) {};
 
 void Painter::PaintBusLines(Svg::Document& svg) const {
@@ -205,5 +206,8 @@ string Painter::Paint() const {
 	}
 	ostringstream out;
 	svg.Render(out);
+	//ofstream o("svg1.svg");
+	//ofstream o("svg2.svg");
+	//svg.Render(o);
 	return out.str();
 }

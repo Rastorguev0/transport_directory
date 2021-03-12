@@ -70,7 +70,7 @@
       <Filter>Header Files\maintenence</Filter>
     </ClInclude>
     <ClInclude Include="aligner.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\graphics</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -105,7 +105,7 @@
       <Filter>Source Files\graphics</Filter>
     </ClCompile>
     <ClCompile Include="aligner.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\graphics</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
