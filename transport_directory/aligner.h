@@ -13,6 +13,7 @@ class Aligner {
 private:
   using StopSet = std::unordered_set<std::string_view>;
   using StopIdx = std::unordered_map<std::string_view, int>;
+  using StopCoords = std::unordered_map<std::string_view, Sphere::Point>;
   using StopAxes = std::vector<std::pair<double, std::string_view>>;
 public:
   Aligner(const Descriptions::StopsDict& stops,
@@ -21,20 +22,21 @@ public:
 
   Svg::Point operator()(const std::string& stop_name) const;
 private:
+  StopSet ControlStops(const Descriptions::BusesDict& buses) const;
+  StopCoords ComputeControlBasedCoords(
+    const Descriptions::StopsDict& stops,
+    const Descriptions::BusesDict& buses) const;
   int DistributeIdx(const StopAxes& coords, StopIdx& stops_to_idx);
-  bool AreNeighbours(const StopSet& stops1, const StopSet& stops2) const;
 private:
-  double width = 0;
-  double height = 0;
-  double padding = 0;
+  const double width = 0;
+  const double height = 0;
+  const double padding = 0;
   double x_step, y_step;
 
   StopIdx stops_to_xidx;
   StopIdx stops_to_yidx;
+
+  const Descriptions::SetMap neighs;
   const Descriptions::StopsDict& stops_dict;
   const Descriptions::BusesDict buses_dict;
 };
-
-//very SLOW
-bool ConfirmStopsAreNeighbours(const Descriptions::BusesDict& buses,
-  const std::string& stop1, const std::string& stop2);

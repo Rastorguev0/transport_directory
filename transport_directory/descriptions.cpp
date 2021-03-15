@@ -47,14 +47,16 @@ namespace Descriptions {
   Bus Bus::ParseFrom(const Json::Dict& attrs) {
     const auto& name = attrs.at("name").AsString();
     const auto& stops = attrs.at("stops").AsArray();
+    const bool is_rnd = attrs.at("is_roundtrip").AsBool();
     if (stops.empty()) {
-      return Bus{ .name = name };
+      return Bus{ .name = name, .is_roundtrip = is_rnd };
     }
     else {
       Bus bus{
           .name = name,
-          .stops = ParseStops(stops, attrs.at("is_roundtrip").AsBool()),
-          .endpoints = {stops.front().AsString(), stops.back().AsString()}
+          .stops = ParseStops(stops, is_rnd),
+          .endpoints = {stops.front().AsString(), stops.back().AsString()},
+          .is_roundtrip = is_rnd
       };
       if (bus.endpoints.back() == bus.endpoints.front()) {
         bus.endpoints.pop_back();
@@ -77,5 +79,22 @@ namespace Descriptions {
     }
     return result;
   }
+  
+  SetMap DefineNeighbors(const StopsDict& stops, const BusesDict& buses) {
+    SetMap neighs;
+    for (const auto& [_, bus] : buses) {
+      const auto& route = bus->stops;
+      if (route.size() < 2) continue;
+      for (auto it = begin(route); it + 1 < end(route); it++) {
+        neighs[*it].insert(*(it + 1));
+        neighs[*(it + 1)].insert(*it);
+      }
+    }
 
+    for (const auto& [name, _] : stops) {
+      neighs[name];
+    }
+    return neighs;
+  }
+  
 }

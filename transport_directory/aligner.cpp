@@ -8,71 +8,112 @@ Aligner::Aligner(const Descriptions::StopsDict& stops,
   const Descriptions::BusesDict& buses,
   double max_width, double max_height, double padding)
   : width(max_width), height(max_height), padding(padding),
-  stops_dict(stops), buses_dict(buses) {
+  stops_dict(stops), buses_dict(buses),
+  neighs(Descriptions::DefineNeighbors(stops, buses)) {
 
+  const StopCoords coords = ComputeControlBasedCoords(stops, buses);
   StopAxes longs, lats;
   longs.reserve(stops_dict.size());
   lats.reserve(stops_dict.size());
-  for (const auto& [name, stop] : stops_dict) {
-    longs.emplace_back(stop->position.longitude, name);
-    lats.emplace_back(stop->position.latitude, name);
+  for (const auto& [name, point] : coords) {
+    longs.emplace_back(point.longitude, name);
+    lats.emplace_back(point.latitude, name);
   }
   std::sort(begin(longs), end(longs));
   std::sort(begin(lats), end(lats));
+
   const int lon_count = DistributeIdx(longs, stops_to_xidx);
   const int lat_count = DistributeIdx(lats, stops_to_yidx);
+  x_step = lon_count > 0 ? (width - 2 * padding) / lon_count : 0;
+  y_step = lat_count > 0 ? (height - 2 * padding) / lat_count : 0;
+}
 
-  x_step = lon_count > 1 ? (width - 2 * padding) / (lon_count - 1) : 0;
-  y_step = lat_count > 1 ? (height - 2 * padding) / (lat_count - 1) : 0;
+Aligner::StopSet Aligner::ControlStops(const Descriptions::BusesDict& buses) const {
+  StopSet controls;
+  unordered_map<string_view, int> stops_count;
+  vector<unordered_set<string_view>> round_stops;
+
+  for (const auto& [_, bus] : buses) {
+    for (const auto& end : bus->endpoints) {
+      controls.insert(end);
+    }
+    if (bus->is_roundtrip) round_stops.emplace_back();
+    for (const auto& stop : bus->stops) {
+      stops_count[stop]++;
+      if (bus->is_roundtrip) round_stops.back().insert(stop);
+    }
+  }
+
+  for (const auto& [name, count] : stops_count) {
+    if (count > 2) controls.insert(name);
+  }
+  unordered_map<string_view, int> transfer_map;
+  for (const auto& route : round_stops) {
+    for (auto stop : route) {
+      transfer_map[stop]++;
+    }
+  }
+  for (const auto& [name, count] : transfer_map) {
+    if (count > 1) controls.insert(name);
+  }
+
+  return controls;
+}
+
+Aligner::StopCoords Aligner::ComputeControlBasedCoords(
+  const Descriptions::StopsDict& stops_dict,
+  const Descriptions::BusesDict& buses_dict) const {
+
+  const StopSet controls = ControlStops(buses_dict);
+  StopCoords result;
+  auto next_control = [&controls](const string& stop) {
+    return controls.count(stop);
+  };
+
+  for (const auto& [_, bus] : buses_dict) {
+    const auto& stops = bus->stops;
+    if (stops.size() < 2) continue;
+    auto ctrl_it1 = stops.begin();
+    for (auto ctrl_it2 = find_if(ctrl_it1 + 1, end(stops), next_control);
+         ctrl_it2 < end(stops);
+         ctrl_it2 = find_if(ctrl_it1 + 1, end(stops), next_control)) {
+
+      double lon_step = (stops_dict.at(*ctrl_it2)->position.longitude
+        - stops_dict.at(*ctrl_it1)->position.longitude) / (ctrl_it2 - ctrl_it1);
+      double lat_step = (stops_dict.at(*ctrl_it2)->position.latitude
+        - stops_dict.at(*ctrl_it1)->position.latitude) / (ctrl_it2 - ctrl_it1);
+
+      for (auto it = ctrl_it1; it != ctrl_it2 + 1; it++) {
+        result[*it] = {
+          .latitude = stops_dict.at(*ctrl_it1)->position.latitude + lat_step * (it - ctrl_it1),
+          .longitude = stops_dict.at(*ctrl_it1)->position.longitude + lon_step * (it - ctrl_it1),
+        };
+      }
+      ctrl_it1 = ctrl_it2;
+    }
+  }
+
+  for (const auto& [name, stop] : stops_dict) {
+    if (!result.count(name)) {
+      result[name] = stop->position;
+    }
+  }
+  return result;
 }
 
 int Aligner::DistributeIdx(const StopAxes& axes, StopIdx& stops_to_idx) {
-  int idx = 0;
-  StopSet cur_stops_line;
-
+  int max_idx = 0;
   for (auto it = axes.begin(); it != axes.end(); it++) {
-    if (AreNeighbours(cur_stops_line, { it->second }) ||
-      AreNeighbours({ it->second }, cur_stops_line)) {
-      cur_stops_line.clear();
-      stops_to_idx[it->second] = ++idx;
-    }
-    else {
-      stops_to_idx[it->second] = idx;
-    }
-    cur_stops_line.insert(it->second);
-  }
-  return idx + 1;
-}
-
-bool Aligner::AreNeighbours(const StopSet& stops1, const StopSet& stops2) const {
-  bool neighbors = false;
-  for (auto stop1 : stops1) {
-    if (neighbors) break;
-    for (auto stop2 : stops2) {
-      if (stops_dict.at(string(stop1))->distances.count(string(stop2))) {
-        neighbors = ConfirmStopsAreNeighbours(buses_dict, string(stop1), string(stop2));
-        if (neighbors) break;
+    int idx = -1;
+    for (const auto& n : neighs.at(string(it->second))) {
+      if (stops_to_idx.count(n)) {
+        idx = max(stops_to_idx.at(n), idx);
       }
     }
+    stops_to_idx[it->second] = ++idx;
+    max_idx = max(idx, max_idx);
   }
-  return neighbors;
-}
-
-bool ConfirmStopsAreNeighbours(const Descriptions::BusesDict& buses,
-  const std::string& stop1, const std::string& stop2) {
-  bool neighbors = false;
-  for (const auto& [name, bus] : buses) {
-    if (neighbors) break;
-    auto stop_it = find(begin(bus->stops), end(bus->stops), stop1);
-    for ( ;
-      stop_it != end(bus->stops);
-      stop_it = find(stop_it + 1, end(bus->stops), stop1)) {
-      if (stop_it > begin(bus->stops)) neighbors |= *(stop_it - 1) == stop2;
-      if (stop_it < end(bus->stops) - 1) neighbors |= *(stop_it + 1) == stop2;
-      if (neighbors) break;
-    }
-  }
-  return neighbors;
+  return max_idx;
 }
 
 Svg::Point Aligner::operator()(const string& stop_name) const {

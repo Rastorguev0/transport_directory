@@ -5,6 +5,7 @@
 
 #include <string>
 #include <unordered_map>
+#include <unordered_set>
 #include <variant>
 #include <vector>
 
@@ -25,6 +26,7 @@ namespace Descriptions {
     std::string name;
     std::vector<std::string> stops;
     std::vector<std::string> endpoints;
+    bool is_roundtrip;
 
     static Bus ParseFrom(const Json::Dict& attrs);
   };
@@ -38,4 +40,8 @@ namespace Descriptions {
 
   using StopsDict = Dict<Stop>;
   using BusesDict = Dict<Bus>;
+
+  using SetMap = std::unordered_map<std::string, std::unordered_set<std::string>>;
+
+  SetMap DefineNeighbors(const StopsDict& stops, const BusesDict& buses);
 }
