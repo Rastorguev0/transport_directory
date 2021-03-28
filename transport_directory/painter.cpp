@@ -207,7 +207,7 @@ string Painter::Paint() const {
 	ostringstream out;
 	svg.Render(out);
 	//ofstream o("svg1.svg");
-	//ofstream o("svg2.svg");
-	//svg.Render(o);
+	ofstream o("svg2.svg");
+	svg.Render(o);
 	return out.str();
 }

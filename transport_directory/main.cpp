@@ -12,7 +12,7 @@ using namespace std;
 
 int main() {
   //ifstream in("example1.json");
-  //ifstream in("example27.json");
+  ifstream in("example2.json");
   const auto input_doc = Json::Load(cin);
   const auto& input_map = input_doc.GetRoot().AsMap();
 
