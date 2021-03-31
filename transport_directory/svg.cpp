@@ -1,4 +1,5 @@
 #include "svg.h"
+#include <iterator>
 
 namespace Svg {
 
@@ -68,6 +69,30 @@ namespace Svg {
 		out << "/>";
 	}
 
+	Rectangle& Rectangle::SetCorner(Point point) {
+		lu_corner = point;
+		return *this;
+	}
+
+	Rectangle& Rectangle::SetWidth(double size) {
+		w = size;
+		return *this;
+	}
+
+	Rectangle& Rectangle::SetHeight(double size) {
+		h = size;
+		return *this;
+	}
+
+	void Rectangle::Render(std::ostream& out) const {
+		out << "<rect ";
+		out << "x=\\\"" << lu_corner.x << "\\\" ";
+		out << "y=\\\"" << lu_corner.y << "\\\" ";
+		out << "width=\\\"" << w << "\\\" " << "height=\\\"" << h << "\\\" ";
+		PathProps::RenderAttrs(out);
+		out << "/>";
+	}
+
 	Text& Text::SetPoint(Point point) {
 		point_ = point;
 		return *this;
@@ -122,6 +147,18 @@ namespace Svg {
 		out << "<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" version=\\\"1.1\\\">";
 		for (const auto& object_ptr : objects_) {
 			object_ptr->Render(out);
+		}
+		out << "</svg>";
+	}
+
+	void Document::Render(std::ostream& out, const std::vector<const Document*>& docs) {
+		out << "<?xml version=\\\"1.0\\\" encoding=\\\"UTF-8\\\" ?>";
+		out << "<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" version=\\\"1.1\\\">";
+
+		for (auto doc : docs) {
+			for (const auto& object_ptr : doc->objects_) {
+				object_ptr->Render(out);
+			}
 		}
 		out << "</svg>";
 	}

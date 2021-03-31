@@ -59,6 +59,18 @@ namespace Requests {
 		}
 	};
 
+	struct RouteForPainterBuilder {
+		void operator()(const TransportRouter::RouteInfo::BusItem& bus_item) {
+			links.push_back(Paint::Link{ bus_item.bus_name, bus_item.stops });
+		}
+		void operator()(const TransportRouter::RouteInfo::WaitItem& wait_item) {}
+		Paint::RouteChain GetRoute() {
+			return move(links);
+		}
+		
+		Paint::RouteChain links;
+	};
+
 	Json::Dict Route::Process(const TransportCatalog& db) const {
 		Json::Dict dict;
 		const auto route = db.FindRoute(stop_from, stop_to);
@@ -69,10 +81,15 @@ namespace Requests {
 			dict["total_time"] = Json::Node(route->total_time);
 			vector<Json::Node> items;
 			items.reserve(route->items.size());
+
+			RouteForPainterBuilder for_painter;
+
 			for (const auto& item : route->items) {
 				items.push_back(visit(RouteItemResponseBuilder{}, item));
+				visit(for_painter, item);
 			}
 
+			dict["map"] = Json::Node{db.RenderRoute(for_painter.GetRoute())};
 			dict["items"] = move(items);
 		}
 

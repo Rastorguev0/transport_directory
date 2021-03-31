@@ -1,4 +1,5 @@
 #include "transport_catalog.h"
+#include <memory>
 
 using namespace std;
 
@@ -9,23 +10,25 @@ TransportCatalog::TransportCatalog(vector<Descriptions::InputQuery> data,
     return holds_alternative<Descriptions::Stop>(item);
     });
 
-  Descriptions::StopsDict stops_dict;
+  auto stops_dict = make_shared<Descriptions::StopsDict>();
   for (const auto& item : Range{ begin(data), stops_end }) {
     const auto& stop = get<Descriptions::Stop>(item);
-    stops_dict[stop.name] = &stop;
+    (*stops_dict)[stop.name] = &stop;
     stops_.insert({ stop.name, {} });
   }
 
-  Descriptions::BusesDict buses_dict;
+  auto buses_dict = make_shared<Descriptions::BusesDict>();
+  auto buses_own_dict = make_shared<Descriptions::BusesOwner>();
   for (const auto& item : Range{ stops_end, end(data) }) {
     const auto& bus = get<Descriptions::Bus>(item);
 
-    buses_dict[bus.name] = &bus;
+    (*buses_dict)[bus.name] = &bus;
+    (*buses_own_dict)[bus.name] = bus;
     buses_[bus.name] = Bus{
       bus.stops.size(),
       ComputeUniqueItemsCount(AsRange(bus.stops)),
-      ComputeRoadRouteLength(bus.stops, stops_dict),
-      ComputeGeoRouteDistance(bus.stops, stops_dict)
+      ComputeRoadRouteLength(bus.stops, *stops_dict),
+      ComputeGeoRouteDistance(bus.stops, *stops_dict)
     };
 
     for (const string& stop_name : bus.stops) {
@@ -33,9 +36,10 @@ TransportCatalog::TransportCatalog(vector<Descriptions::InputQuery> data,
     }
   }
 
-  router_ = make_unique<TransportRouter>(stops_dict, buses_dict, routing_settings_json);
-  map_ = Painter(render_settings_json, buses_dict, stops_dict).Paint();
+  router_ = make_unique<TransportRouter>(*stops_dict, *buses_dict, routing_settings_json);
+  painter_ = make_unique<Paint::Painter>(render_settings_json, buses_own_dict, stops_dict);
 }
+
 
 const TransportCatalog::Stop* TransportCatalog::GetStop(const string& name) const {
   return GetValuePointer(stops_, name);
@@ -74,5 +78,9 @@ double TransportCatalog::ComputeGeoRouteDistance(
 }
 
 std::string TransportCatalog::RenderMap() const {
-  return map_;
+  return painter_->Paint();
+}
+
+std::string TransportCatalog::RenderRoute(const Paint::RouteChain& links) const {
+  return painter_->PaintRoute(links);
 }

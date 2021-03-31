@@ -117,6 +117,18 @@ namespace Svg {
 		std::vector<Point> points_;
 	};
 
+	class Rectangle : public Object, public PathProps<Rectangle> {
+	public:
+		Rectangle& SetCorner(Point point);
+		Rectangle& SetWidth(double size);
+		Rectangle& SetHeight(double size);
+		void Render(std::ostream& out) const override;
+	private:
+		Point lu_corner;
+		double w = 0;
+		double h = 0;
+	};
+
 	class Text : public Object, public PathProps<Text> {
 	public:
 		Text& SetPoint(Point point);
@@ -143,6 +155,7 @@ namespace Svg {
 			objects_.push_back(std::make_unique<ObjectType>(std::move(object)));
 		}
 
+		static void Render(std::ostream& out, const std::vector<const Document*>& docs);
 		void Render(std::ostream& out) const override;
 
 	private:

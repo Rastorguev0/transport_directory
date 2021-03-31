@@ -44,6 +44,7 @@ public:
 	std::optional<TransportRouter::RouteInfo> FindRoute(const std::string& stop_from, const std::string& stop_to) const;
 
 	std::string RenderMap() const;
+	std::string RenderRoute(const Paint::RouteChain& links) const;
 
 private:
 	static int ComputeRoadRouteLength(
@@ -59,5 +60,5 @@ private:
 	std::unordered_map<std::string, Stop> stops_;
 	std::unordered_map<std::string, Bus> buses_;
 	std::unique_ptr<TransportRouter> router_;
-	std::string map_;
+	std::unique_ptr<Paint::Painter> painter_;
 };

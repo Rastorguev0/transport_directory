@@ -65,6 +65,7 @@ void TransportRouter::FillGraphWithBuses(const Descriptions::StopsDict& stops_di
         total_distance += compute_distance_from(finish_stop_idx - 1);
         edges_info_.push_back(BusEdgeInfo{
             .bus_name = bus.name,
+            .stops = {bus.stops.begin() + start_stop_idx, bus.stops.begin() + finish_stop_idx + 1 },
             .span_count = finish_stop_idx - start_stop_idx,
         });
         const Graph::EdgeId edge_id = graph_.AddEdge({
@@ -96,6 +97,7 @@ optional<TransportRouter::RouteInfo> TransportRouter::FindRoute(const string& st
       const BusEdgeInfo& bus_edge_info = get<BusEdgeInfo>(edge_info);
       route_info.items.push_back(RouteInfo::BusItem{
           .bus_name = bus_edge_info.bus_name,
+          .stops = bus_edge_info.stops,
           .time = edge.weight,
           .span_count = bus_edge_info.span_count,
       });
