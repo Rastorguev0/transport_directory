@@ -77,7 +77,7 @@ namespace Paint {
 
   static map<string, Svg::Point> ComputeStopsCoords(
     const Descriptions::StopsDict& stops_dict,
-    const Descriptions::BusesOwner& buses_dict,
+    const Descriptions::BusesDict& buses_dict,
     const RenderSettings& render_settings) {
 
     const double max_width = render_settings.width;
@@ -93,7 +93,7 @@ namespace Paint {
   }
 
   static unordered_map<string, Svg::Color> ChooseBusColors(
-    const Descriptions::BusesOwner& buses_dict,
+    const Descriptions::BusesDict& buses_dict,
     const RenderSettings& render_settings) {
 
     const auto& palette = render_settings.color_palette;
@@ -105,15 +105,9 @@ namespace Paint {
     return bus_colors;
   }
 
-  void Painter::PaintBusLines(Svg::Document& svg,
-    const variant<monostate, RouteChain>& var) const {
-    visit([&svg, this](const auto& value) { PaintBusLines(svg, value); },
-      var);
-  }
-
-  void Painter::PaintBusLines(Svg::Document& svg, monostate) const {
+  void Painter::PaintBusLines(Svg::Document& svg) const {
     for (const auto& [bus_name, bus] : *buses_dict_) {
-      const auto& stops = bus.stops;
+      const auto& stops = bus->stops;
       if (stops.empty()) {
         continue;
       }
@@ -125,86 +119,68 @@ namespace Paint {
     }
   }
 
-  void Painter::PaintBusLines(Svg::Document& svg, const RouteChain& route) const {
-    for (const auto& [bus, stops] : route) {
+  void Painter::PaintRouteBusLines(Svg::Document& svg, const RouteChain& route) const {
+    for (const auto& [bus, start, finish] : route) {
       auto line = BaseBusLine(bus);
-      for (const auto& stop : stops) {
-        line.AddPoint(stops_coords_.at(stop));
+      const auto& stops = buses_dict_->at(bus)->stops;
+      for (size_t stop_idx = start; stop_idx <= finish; stop_idx++) {
+        line.AddPoint(stops_coords_.at(stops[stop_idx]));
       }
       svg.Add(line);
     }
   }
 
-
-  void Painter::PaintBusLabels(Svg::Document& svg,
-    const std::variant<std::monostate, RouteChain>& var) const {
-    visit([&svg, this](const auto& value) { PaintBusLabels(svg, value); },
-      var);
-  }
-
-  void Painter::PaintBusLabels(Svg::Document& svg, monostate) const {
+  void Painter::PaintBusLabels(Svg::Document& svg) const {
     for (const auto& [bus_name, bus] : *buses_dict_) {
-      const auto& stops = bus.stops;
+      const auto& stops = bus->stops;
       if (!stops.empty()) {
-        for (const string& endpoint : bus.endpoints) {
+        for (const string& endpoint : bus->endpoints) {
           PaintBusLabel(svg, stops_coords_.at(endpoint), bus_name);
         }
       }
     }
   }
 
-  void Painter::PaintBusLabels(Svg::Document& svg, const RouteChain& route) const {
-    for (const auto& [bus, stops] : route) {
-      const auto& endpoints = buses_dict_->at(bus).endpoints;
-      for (const auto& stop : stops) {
-        if (find(begin(endpoints), end(endpoints), stop) != end(endpoints)) {
-          PaintBusLabel(svg, stops_coords_.at(stop), bus);
+  void Painter::PaintRouteBusLabels(Svg::Document& svg, const RouteChain& route) const {
+    for (const auto& [bus, start, finish] : route) {
+      const auto& endpoints = buses_dict_->at(bus)->endpoints;
+      const auto& stops = buses_dict_->at(bus)->stops;
+      for (size_t stop_idx = start; stop_idx <= finish; stop_idx++) {
+        if (find(begin(endpoints), end(endpoints), stops[stop_idx]) != end(endpoints)) {
+          PaintBusLabel(svg, stops_coords_.at(stops[stop_idx]), bus);
         }
       }
     }
   }
 
-
-
-  void Painter::PaintStopPoints(Svg::Document& svg,
-    const std::variant<std::monostate, RouteChain>& var) const {
-    visit([&svg, this](const auto& value) { PaintStopPoints(svg, value); },
-      var);
-  }
-
-  void Painter::PaintStopPoints(Svg::Document& svg, monostate) const {
+  void Painter::PaintStopPoints(Svg::Document& svg) const {
     for (const auto& [stop_name, stop_point] : stops_coords_) {
       PaintStopPoint(svg, stop_point);
     }
   }
 
-  void Painter::PaintStopPoints(Svg::Document& svg, const RouteChain& route) const {
-    for (const auto& [bus, stops] : route) {
-      for (const auto& stop : stops) {
-        PaintStopPoint(svg, stops_coords_.at(stop));
+  void Painter::PaintRouteStopPoints(Svg::Document& svg, const RouteChain& route) const {
+    for (const auto& [bus, start, finish] : route) {
+      const auto& stops = buses_dict_->at(bus)->stops;
+      for (size_t stop_idx = start; stop_idx <= finish; stop_idx++) {
+        PaintStopPoint(svg, stops_coords_.at(stops[stop_idx]));
       }
     }
   }
 
-
-  void Painter::PaintStopLabels(Svg::Document& svg,
-    const std::variant<std::monostate, RouteChain>& var) const {
-    visit([&svg, this](const auto& value) { PaintStopLabels(svg, value); },
-      var);
-  }
-
-  void Painter::PaintStopLabels(Svg::Document& svg, monostate) const {
+  void Painter::PaintStopLabels(Svg::Document& svg) const {
     for (const auto& [stop_name, stop_point] : stops_coords_) {
       PaintStopLabel(svg, stop_point, stop_name);
     }
   }
 
-  void Painter::PaintStopLabels(Svg::Document& svg, const RouteChain& route) const {
+  void Painter::PaintRouteStopLabels(Svg::Document& svg, const RouteChain& route) const {
     if (route.empty()) return;
-    const auto& start = route.front().stops.front();
+    const auto& bus = route.front().bus_name;
+    const auto& start = buses_dict_->at(bus)->stops[route.front().start_stop_idx];
     PaintStopLabel(svg, stops_coords_.at(start), start);
-    for (const auto& [bus, stops] : route) {
-      const auto& transfer = stops.back();
+    for (const auto& [bus, start, finish] : route) {
+      const auto& transfer = buses_dict_->at(bus)->stops[finish];
       PaintStopLabel(svg, stops_coords_.at(transfer), transfer);
     }
   }
@@ -272,42 +248,45 @@ namespace Paint {
   Svg::Document Painter::MakeDocument() const {
     Svg::Document doc;
     for (const auto& layer : settings_.layers) {
-      (this->*LAYER_ACTIONS.at(layer))(doc, variant<monostate, RouteChain>{});
+      (this->*LAYER_ACTIONS.at(layer))(doc);
     }
     return doc;
   }
 
 
-  const unordered_map<string,
-    void (Painter::*)(Svg::Document&, const variant<monostate, RouteChain>&) const> Painter::LAYER_ACTIONS = {
+  const unordered_map<string, void (Painter::*)(Svg::Document&) const> Painter::LAYER_ACTIONS = {
       {"bus_lines",   &Painter::PaintBusLines},
       {"bus_labels",  &Painter::PaintBusLabels},
       {"stop_points", &Painter::PaintStopPoints},
       {"stop_labels", &Painter::PaintStopLabels},
   };
+  const unordered_map<string, void (Painter::*)(Svg::Document&, const RouteChain&) const> Painter::ROUTE_LAYER_ACTIONS = {
+      {"bus_lines",   &Painter::PaintRouteBusLines},
+      {"bus_labels",  &Painter::PaintRouteBusLabels},
+      {"stop_points", &Painter::PaintRouteStopPoints},
+      {"stop_labels", &Painter::PaintRouteStopLabels},
+  };
 
 
   Painter::Painter(const Json::Dict& render_settings_json,
-    shared_ptr<Descriptions::BusesOwner> buses,
+    shared_ptr<Descriptions::BusesDict> buses,
     shared_ptr<Descriptions::StopsDict> stops)
     : settings_(ParseSettings(render_settings_json)),
     buses_dict_(buses),
     stops_coords_(ComputeStopsCoords(*stops, *buses, settings_)),
     bus_colors_(ChooseBusColors(*buses, settings_)),
-    base_map_(MakeDocument()) {
-
-    ostringstream out;
-    base_map_.Render(out);
-    rendered_map_ = out.str();
+    base_map_(MakeDocument())
+  {
   };
 
-
   string Painter::Paint() const {
-    return rendered_map_;
+    ostringstream out;
+    base_map_.Render(out);
+    return out.str();
   }
 
   std::string Painter::PaintRoute(const RouteChain& chain) const {
-    Svg::Document route_map;
+    Svg::Document route_map = base_map_;
     route_map.Add(
       Svg::Rectangle{}
       .SetCorner({ -settings_.outer_margin, -settings_.outer_margin })
@@ -317,14 +296,15 @@ namespace Paint {
     );
 
     for (const auto& layer : settings_.layers) {
-      (this->*LAYER_ACTIONS.at(layer))(route_map, chain);
+      (this->*ROUTE_LAYER_ACTIONS.at(layer))(route_map, chain);
     }
 
-    //static int count = 2;
+    //static int count = 1;
     //ofstream f("out" + to_string(count++) + ".svg");
-    //Svg::Document::Render(f, { &base_map_, &route_map });
+    //route_map.Render(f);
+
     ostringstream out;
-    Svg::Document::Render(out, { &base_map_, &route_map });
+    route_map.Render(out);
     return out.str();
   }
 

@@ -5,7 +5,7 @@
 using namespace std;
 
 Aligner::Aligner(const Descriptions::StopsDict& stops,
-  const Descriptions::BusesOwner& buses,
+  const Descriptions::BusesDict& buses,
   double max_width, double max_height, double padding)
   : width(max_width), height(max_height), padding(padding),
   stops_dict(stops), buses_dict(buses),
@@ -28,19 +28,19 @@ Aligner::Aligner(const Descriptions::StopsDict& stops,
   y_step = lat_count > 0 ? (height - 2 * padding) / lat_count : 0;
 }
 
-Aligner::StopSet Aligner::ControlStops(const Descriptions::BusesOwner& buses) const {
+Aligner::StopSet Aligner::ControlStops(const Descriptions::BusesDict& buses) const {
   StopSet controls;
   unordered_map<string_view, int> stops_count;
   vector<unordered_set<string_view>> round_stops;
 
   for (const auto& [_, bus] : buses) {
-    for (const auto& end : bus.endpoints) {
+    for (const auto& end : bus->endpoints) {
       controls.insert(end);
     }
-    if (bus.is_roundtrip) round_stops.emplace_back();
-    for (const auto& stop : bus.stops) {
+    if (bus->is_roundtrip) round_stops.emplace_back();
+    for (const auto& stop : bus->stops) {
       stops_count[stop]++;
-      if (bus.is_roundtrip) round_stops.back().insert(stop);
+      if (bus->is_roundtrip) round_stops.back().insert(stop);
     }
   }
 
@@ -62,7 +62,7 @@ Aligner::StopSet Aligner::ControlStops(const Descriptions::BusesOwner& buses) co
 
 Aligner::StopCoords Aligner::ComputeControlBasedCoords(
   const Descriptions::StopsDict& stops_dict,
-  const Descriptions::BusesOwner& buses_dict) const {
+  const Descriptions::BusesDict& buses_dict) const {
 
   const StopSet controls = ControlStops(buses_dict);
   StopCoords result;
@@ -71,7 +71,7 @@ Aligner::StopCoords Aligner::ComputeControlBasedCoords(
   };
 
   for (const auto& [_, bus] : buses_dict) {
-    const auto& stops = bus.stops;
+    const auto& stops = bus->stops;
     if (stops.size() < 2) continue;
     auto ctrl_it1 = stops.begin();
     for (auto ctrl_it2 = find_if(ctrl_it1 + 1, end(stops), next_control);

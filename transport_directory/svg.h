@@ -43,7 +43,17 @@ namespace Svg {
 	class Object {
 	public:
 		virtual void Render(std::ostream& out) const = 0;
+		virtual std::unique_ptr<Object> Copy() const = 0;
 		virtual ~Object() = default;
+	};
+
+	template <typename Owner>
+	class CopyableObject : public Object {
+	public:
+		std::unique_ptr<Object> Copy() const override {
+			return std::make_unique<Owner>(static_cast<const Owner&>(*this));
+		}
+		virtual ~CopyableObject() = default;
 	};
 
 	template <typename Owner>
@@ -70,18 +80,18 @@ namespace Svg {
 			return AsOwner();
 		}
 		void RenderAttrs(std::ostream& out) const {
-			out << "fill=\\\"";
+			out << "fill=\"";
 			RenderColor(out, fill_color_);
-			out << "\\\" ";
-			out << "stroke=\\\"";
+			out << "\" ";
+			out << "stroke=\"";
 			RenderColor(out, stroke_color_);
-			out << "\\\" ";
-			out << "stroke-width=\\\"" << stroke_width_ << "\\\" ";
+			out << "\" ";
+			out << "stroke-width=\"" << stroke_width_ << "\" ";
 			if (stroke_line_cap_) {
-				out << "stroke-linecap=\\\"" << *stroke_line_cap_ << "\\\" ";
+				out << "stroke-linecap=\"" << *stroke_line_cap_ << "\" ";
 			}
 			if (stroke_line_join_) {
-				out << "stroke-linejoin=\\\"" << *stroke_line_join_ << "\\\" ";
+				out << "stroke-linejoin=\"" << *stroke_line_join_ << "\" ";
 			}
 		}
 
@@ -97,7 +107,7 @@ namespace Svg {
 		}
 	};
 
-	class Circle : public Object, public PathProps<Circle> {
+	class Circle : public CopyableObject<Circle>, public PathProps<Circle> {
 	public:
 		Circle& SetCenter(Point point);
 		Circle& SetRadius(double radius);
@@ -108,7 +118,7 @@ namespace Svg {
 		double radius_ = 1;
 	};
 
-	class Polyline : public Object, public PathProps<Polyline> {
+	class Polyline : public CopyableObject<Polyline>, public PathProps<Polyline> {
 	public:
 		Polyline& AddPoint(Point point);
 		void Render(std::ostream& out) const override;
@@ -117,7 +127,7 @@ namespace Svg {
 		std::vector<Point> points_;
 	};
 
-	class Rectangle : public Object, public PathProps<Rectangle> {
+	class Rectangle : public CopyableObject<Rectangle>, public PathProps<Rectangle> {
 	public:
 		Rectangle& SetCorner(Point point);
 		Rectangle& SetWidth(double size);
@@ -129,7 +139,7 @@ namespace Svg {
 		double h = 0;
 	};
 
-	class Text : public Object, public PathProps<Text> {
+	class Text : public CopyableObject<Text>, public PathProps<Text> {
 	public:
 		Text& SetPoint(Point point);
 		Text& SetOffset(Point point);
@@ -148,14 +158,20 @@ namespace Svg {
 		std::string data_;
 	};
 
-	class Document : public Object {
+	class Document : public CopyableObject<Document> {
 	public:
+		Document() = default;
+		Document(const Document& other);
+		Document& operator=(const Document& other);
+
+		Document(Document&&) = default;
+		Document& operator=(Document&&) = default;
+
 		template <typename ObjectType>
 		void Add(ObjectType object) {
 			objects_.push_back(std::make_unique<ObjectType>(std::move(object)));
 		}
 
-		static void Render(std::ostream& out, const std::vector<const Document*>& docs);
 		void Render(std::ostream& out) const override;
 
 	private:

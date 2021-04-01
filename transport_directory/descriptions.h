@@ -8,6 +8,7 @@
 #include <unordered_set>
 #include <variant>
 #include <vector>
+#include <memory>
 
 namespace Descriptions {
   struct Stop {
@@ -36,17 +37,12 @@ namespace Descriptions {
   std::vector<InputQuery> ReadDescriptions(const std::vector<Json::Node>& nodes);
 
   template <typename Object>
-  using Dict = std::map<std::string, const Object*>;
-
-  template<typename Object>
-  using OwnDict = std::map<std::string, Object>;
+  using Dict = std::map<std::string, std::unique_ptr<const Object>>;
 
   using StopsDict = Dict<Stop>;
   using BusesDict = Dict<Bus>;
-  using BusesOwner = OwnDict<Bus>;
-  using StopsOwner = OwnDict<Stop>;
 
   using SetMap = std::unordered_map<std::string, std::unordered_set<std::string>>;
 
-  SetMap DefineNeighbors(const StopsDict& stops, const BusesOwner& buses);
+  SetMap DefineNeighbors(const StopsDict& stops, const BusesDict& buses);
 }

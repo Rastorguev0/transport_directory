@@ -24,7 +24,8 @@ public:
 
     struct BusItem {
       std::string bus_name;
-      std::vector<std::string> stops;
+      size_t start_stop_idx;
+      size_t finish_stop_idx;
       double time;
       size_t span_count;
     };
@@ -62,7 +63,8 @@ private:
 
   struct BusEdgeInfo {
     std::string bus_name;
-    std::vector<std::string> stops;
+    size_t start_stop_idx;
+    size_t finish_stop_idx;
     size_t span_count;
   };
   struct WaitEdgeInfo {};

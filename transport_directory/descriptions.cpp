@@ -80,10 +80,10 @@ namespace Descriptions {
     return result;
   }
   
-  SetMap DefineNeighbors(const StopsDict& stops, const BusesOwner& buses) {
+  SetMap DefineNeighbors(const StopsDict& stops, const BusesDict& buses) {
     SetMap neighs;
     for (const auto& [_, bus] : buses) {
-      const auto& route = bus.stops;
+      const auto& route = bus->stops;
       if (route.size() < 2) continue;
       for (auto it = begin(route); it + 1 < end(route); it++) {
         neighs[*it].insert(*(it + 1));

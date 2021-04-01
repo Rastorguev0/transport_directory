@@ -61,13 +61,15 @@ namespace Requests {
 
 	struct RouteForPainterBuilder {
 		void operator()(const TransportRouter::RouteInfo::BusItem& bus_item) {
-			links.push_back(Paint::Link{ bus_item.bus_name, bus_item.stops });
+			links.push_back(Paint::Link{
+				bus_item.bus_name, bus_item.start_stop_idx, bus_item.finish_stop_idx
+				});
 		}
-		void operator()(const TransportRouter::RouteInfo::WaitItem& wait_item) {}
+		void operator()(const TransportRouter::RouteInfo::WaitItem& wait_item) {
+		}
 		Paint::RouteChain GetRoute() {
 			return move(links);
 		}
-		
 		Paint::RouteChain links;
 	};
 

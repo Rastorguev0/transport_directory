@@ -39,9 +39,9 @@ namespace Svg {
 
 	void Circle::Render(std::ostream& out) const {
 		out << "<circle ";
-		out << "cx=\\\"" << center_.x << "\\\" ";
-		out << "cy=\\\"" << center_.y << "\\\" ";
-		out << "r=\\\"" << radius_ << "\\\" ";
+		out << "cx=\"" << center_.x << "\" ";
+		out << "cy=\"" << center_.y << "\" ";
+		out << "r=\"" << radius_ << "\" ";
 		PathProps::RenderAttrs(out);
 		out << "/>";
 	}
@@ -53,7 +53,7 @@ namespace Svg {
 
 	void Polyline::Render(std::ostream& out) const {
 		out << "<polyline ";
-		out << "points=\\\"";
+		out << "points=\"";
 		bool first = true;
 		for (const Point point : points_) {
 			if (first) {
@@ -64,7 +64,7 @@ namespace Svg {
 			}
 			out << point.x << "," << point.y;
 		}
-		out << "\\\" ";
+		out << "\" ";
 		PathProps::RenderAttrs(out);
 		out << "/>";
 	}
@@ -86,9 +86,9 @@ namespace Svg {
 
 	void Rectangle::Render(std::ostream& out) const {
 		out << "<rect ";
-		out << "x=\\\"" << lu_corner.x << "\\\" ";
-		out << "y=\\\"" << lu_corner.y << "\\\" ";
-		out << "width=\\\"" << w << "\\\" " << "height=\\\"" << h << "\\\" ";
+		out << "x=\"" << lu_corner.x << "\" ";
+		out << "y=\"" << lu_corner.y << "\" ";
+		out << "width=\"" << w << "\" " << "height=\"" << h << "\" ";
 		PathProps::RenderAttrs(out);
 		out << "/>";
 	}
@@ -125,16 +125,16 @@ namespace Svg {
 
 	void Text::Render(std::ostream& out) const {
 		out << "<text ";
-		out << "x=\\\"" << point_.x << "\\\" ";
-		out << "y=\\\"" << point_.y << "\\\" ";
-		out << "dx=\\\"" << offset_.x << "\\\" ";
-		out << "dy=\\\"" << offset_.y << "\\\" ";
-		out << "font-size=\\\"" << font_size_ << "\\\" ";
+		out << "x=\"" << point_.x << "\" ";
+		out << "y=\"" << point_.y << "\" ";
+		out << "dx=\"" << offset_.x << "\" ";
+		out << "dy=\"" << offset_.y << "\" ";
+		out << "font-size=\"" << font_size_ << "\" ";
 		if (font_family_) {
-			out << "font-family=\\\"" << *font_family_ << "\\\" ";
+			out << "font-family=\"" << *font_family_ << "\" ";
 		}
 		if (font_weight_) {
-			out << "font-weight=\\\"" << *font_weight_ << "\\\" ";
+			out << "font-weight=\"" << *font_weight_ << "\" ";
 		}
 		PathProps::RenderAttrs(out);
 		out << ">";
@@ -142,23 +142,26 @@ namespace Svg {
 		out << "</text>";
 	}
 
-	void Document::Render(std::ostream& out) const {
-		out << "<?xml version=\\\"1.0\\\" encoding=\\\"UTF-8\\\" ?>";
-		out << "<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" version=\\\"1.1\\\">";
-		for (const auto& object_ptr : objects_) {
-			object_ptr->Render(out);
+	Document::Document(const Document& other) {
+		objects_.reserve(other.objects_.size());
+		for (const auto& object : other.objects_) {
+			objects_.push_back(object->Copy());
 		}
-		out << "</svg>";
 	}
 
-	void Document::Render(std::ostream& out, const std::vector<const Document*>& docs) {
-		out << "<?xml version=\\\"1.0\\\" encoding=\\\"UTF-8\\\" ?>";
-		out << "<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" version=\\\"1.1\\\">";
+	Document& Document::operator=(const Document& other) {
+		if (this != &other) {
+			Document other_copy(other);
+			std::swap(*this, other_copy);
+		}
+		return *this;
+	}
 
-		for (auto doc : docs) {
-			for (const auto& object_ptr : doc->objects_) {
-				object_ptr->Render(out);
-			}
+	void Document::Render(std::ostream& out) const {
+		out << "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>";
+		out << "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\">";
+		for (const auto& object_ptr : objects_) {
+			object_ptr->Render(out);
 		}
 		out << "</svg>";
 	}

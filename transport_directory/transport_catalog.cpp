@@ -13,17 +13,15 @@ TransportCatalog::TransportCatalog(vector<Descriptions::InputQuery> data,
   auto stops_dict = make_shared<Descriptions::StopsDict>();
   for (const auto& item : Range{ begin(data), stops_end }) {
     const auto& stop = get<Descriptions::Stop>(item);
-    (*stops_dict)[stop.name] = &stop;
+    (*stops_dict)[stop.name] = make_unique<Descriptions::Stop>(stop);
     stops_.insert({ stop.name, {} });
   }
 
   auto buses_dict = make_shared<Descriptions::BusesDict>();
-  auto buses_own_dict = make_shared<Descriptions::BusesOwner>();
   for (const auto& item : Range{ stops_end, end(data) }) {
     const auto& bus = get<Descriptions::Bus>(item);
 
-    (*buses_dict)[bus.name] = &bus;
-    (*buses_own_dict)[bus.name] = bus;
+    (*buses_dict)[bus.name] = make_unique<Descriptions::Bus>(bus);
     buses_[bus.name] = Bus{
       bus.stops.size(),
       ComputeUniqueItemsCount(AsRange(bus.stops)),
@@ -37,7 +35,7 @@ TransportCatalog::TransportCatalog(vector<Descriptions::InputQuery> data,
   }
 
   router_ = make_unique<TransportRouter>(*stops_dict, *buses_dict, routing_settings_json);
-  painter_ = make_unique<Paint::Painter>(render_settings_json, buses_own_dict, stops_dict);
+  painter_ = make_unique<Paint::Painter>(render_settings_json, buses_dict, stops_dict);
 }
 
 
