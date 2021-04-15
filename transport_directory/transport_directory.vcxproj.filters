@@ -22,6 +22,12 @@
     <Filter Include="Header Files\maintenence">
       <UniqueIdentifier>{14f3afea-a54a-4d70-aabf-c50c1e20ec2c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\proto">
+      <UniqueIdentifier>{99b98f1b-df36-4f1b-b246-2dbf2c822587}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\proto">
+      <UniqueIdentifier>{4fc26b24-e453-49c7-acec-1c722a153202}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="descriptions.h">
@@ -72,6 +78,9 @@
     <ClInclude Include="aligner.h">
       <Filter>Header Files\graphics</Filter>
     </ClInclude>
+    <ClInclude Include="transport_catalog.pb.h">
+      <Filter>Header Files\proto</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="descriptions.cpp">
@@ -107,5 +116,23 @@
     <ClCompile Include="aligner.cpp">
       <Filter>Source Files\graphics</Filter>
     </ClCompile>
+    <ClCompile Include="tc_serialize.cpp">
+      <Filter>Source Files\proto</Filter>
+    </ClCompile>
+    <ClCompile Include="tr_serialize.cpp">
+      <Filter>Source Files\proto</Filter>
+    </ClCompile>
+    <ClCompile Include="r_serialize.cpp">
+      <Filter>Source Files\proto</Filter>
+    </ClCompile>
+    <ClCompile Include="g_serialize.cpp">
+      <Filter>Source Files\proto</Filter>
+    </ClCompile>
+    <ClCompile Include="transport_catalog.pb.cc">
+      <Filter>Source Files\proto</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\..\..\protobuf\lib\libprotobufd.lib" />
   </ItemGroup>
 </Project>

@@ -4,6 +4,7 @@
 #include "graph.h"
 #include "json.h"
 #include "router.h"
+#include "transport_catalog.pb.h"
 
 #include <memory>
 #include <unordered_map>
@@ -18,6 +19,9 @@ public:
   TransportRouter(const Descriptions::StopsDict& stops_dict,
                   const Descriptions::BusesDict& buses_dict,
                   const Json::Dict& routing_settings_json);
+
+  Serialize::TransportRouter Serialize() const;
+  TransportRouter(const Serialize::TransportRouter& router);
 
   struct RouteInfo {
     double total_time;

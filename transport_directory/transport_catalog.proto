@@ -1,0 +1,98 @@
+syntax = "proto3";
+
+package Serialize;
+
+message StopRequest {
+	string stop = 1;
+	repeated string buses = 2;
+}
+
+message BusRequest {
+	string bus = 1;
+	uint32 stop_count = 2;
+	uint32 unique_stop_count = 3;
+	uint32 road_length = 4;
+	float geo_road_length = 5;
+}
+
+message Edge {
+	uint32 from = 1;
+	uint32 to = 2;
+	double weight = 3;
+}
+
+message IncidenceList {
+	repeated uint32 edge_ids = 1;
+}
+
+message BusGraph {
+	repeated Edge edges_ = 1;
+	repeated IncidenceList incidence_lists_ = 2;
+}
+
+message RouteData {
+	double weight = 1;
+	bool has = 2;
+	uint32 prev_edge = 3;
+}
+
+message RouteInternalData {
+	bool has = 1;
+	RouteData data = 2;
+}
+
+message RoutesInternalData {
+	repeated RouteInternalData data = 1;
+}
+
+message Router {
+	repeated RoutesInternalData routes_internal_data_ = 1;
+}
+
+message StopVertexIdx {
+	string name = 1;
+	uint32 in = 2;
+	uint32 out = 3;
+}
+
+message VertexInfo {
+	string stop_name = 1;
+}
+
+message BusEdgeInfo {
+	string bus_name = 1;
+	uint32 start_stop_idx = 2;
+	uint32 finish_stop_idx = 3;
+	uint32 span_count = 4;
+}
+
+message WaitEdgeInfo {
+	
+}
+
+message EdgeInfo {
+	oneof variant {
+		BusEdgeInfo bus = 1;
+		WaitEdgeInfo wait = 2;
+	}
+}
+
+message RoutingSettings {
+	int32 bus_wait_time = 1;
+	float bus_velocity = 2;
+}
+
+message TransportRouter {
+	RoutingSettings settings_ = 1;
+	BusGraph graph_ = 2;
+	Router router_ = 3;
+	repeated StopVertexIdx stops_vertex_ids_ = 4;
+	repeated VertexInfo vertices_info_ = 5;
+	repeated EdgeInfo edges_info_ = 6;
+}
+
+message TransportCatalog {
+	repeated StopRequest stops_ = 1;
+	repeated BusRequest buses_ = 2;
+	TransportRouter router_ = 3;
+}

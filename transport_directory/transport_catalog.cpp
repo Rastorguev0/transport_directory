@@ -1,4 +1,5 @@
 #include "transport_catalog.h"
+#include "transport_catalog.pb.h"
 #include <memory>
 
 using namespace std;

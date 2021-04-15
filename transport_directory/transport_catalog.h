@@ -6,6 +6,7 @@
 #include "painter.h"
 #include "utils.h"
 #include "sphere.h"
+#include "transport_catalog.pb.h"
 
 #include <optional>
 #include <set>
@@ -37,6 +38,9 @@ public:
 	TransportCatalog(std::vector<Descriptions::InputQuery> data,
 		const Json::Dict& routing_settings_json,
 		const Json::Dict& render_settings_json);
+
+	TransportCatalog(std::istream& is);
+	void Serialize(std::ostream& os) const;
 
 	const Stop* GetStop(const std::string& name) const;
 	const Bus* GetBus(const std::string& name) const;

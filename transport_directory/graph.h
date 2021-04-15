@@ -1,6 +1,7 @@
 #pragma once
 
 #include "utils.h"
+#include "transport_catalog.pb.h"
 
 #include <cstdlib>
 #include <deque>
@@ -26,6 +27,10 @@ namespace Graph {
 
   public:
     DirectedWeightedGraph(size_t vertex_count = 0);
+
+    Serialize::BusGraph Serialize() const;
+    DirectedWeightedGraph(const Serialize::BusGraph& grap);
+
     EdgeId AddEdge(const Edge<Weight>& edge);
 
     size_t GetVertexCount() const;
