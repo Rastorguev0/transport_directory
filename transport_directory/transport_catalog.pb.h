@@ -46,7 +46,7 @@ struct TableStruct_transport_5fcatalog_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[17]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[34]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -54,6 +54,9 @@ struct TableStruct_transport_5fcatalog_2eproto {
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_transport_5fcatalog_2eproto;
 namespace Serialize {
+class BusColor;
+class BusColorDefaultTypeInternal;
+extern BusColorDefaultTypeInternal _BusColor_default_instance_;
 class BusEdgeInfo;
 class BusEdgeInfoDefaultTypeInternal;
 extern BusEdgeInfoDefaultTypeInternal _BusEdgeInfo_default_instance_;
@@ -63,6 +66,15 @@ extern BusGraphDefaultTypeInternal _BusGraph_default_instance_;
 class BusRequest;
 class BusRequestDefaultTypeInternal;
 extern BusRequestDefaultTypeInternal _BusRequest_default_instance_;
+class BusesDict;
+class BusesDictDefaultTypeInternal;
+extern BusesDictDefaultTypeInternal _BusesDict_default_instance_;
+class Circle;
+class CircleDefaultTypeInternal;
+extern CircleDefaultTypeInternal _Circle_default_instance_;
+class Document;
+class DocumentDefaultTypeInternal;
+extern DocumentDefaultTypeInternal _Document_default_instance_;
 class Edge;
 class EdgeDefaultTypeInternal;
 extern EdgeDefaultTypeInternal _Edge_default_instance_;
@@ -72,6 +84,30 @@ extern EdgeInfoDefaultTypeInternal _EdgeInfo_default_instance_;
 class IncidenceList;
 class IncidenceListDefaultTypeInternal;
 extern IncidenceListDefaultTypeInternal _IncidenceList_default_instance_;
+class Object;
+class ObjectDefaultTypeInternal;
+extern ObjectDefaultTypeInternal _Object_default_instance_;
+class ObjectBase;
+class ObjectBaseDefaultTypeInternal;
+extern ObjectBaseDefaultTypeInternal _ObjectBase_default_instance_;
+class Painter;
+class PainterDefaultTypeInternal;
+extern PainterDefaultTypeInternal _Painter_default_instance_;
+class Polyline;
+class PolylineDefaultTypeInternal;
+extern PolylineDefaultTypeInternal _Polyline_default_instance_;
+class Rectangle;
+class RectangleDefaultTypeInternal;
+extern RectangleDefaultTypeInternal _Rectangle_default_instance_;
+class RenderSettings;
+class RenderSettingsDefaultTypeInternal;
+extern RenderSettingsDefaultTypeInternal _RenderSettings_default_instance_;
+class Rgb;
+class RgbDefaultTypeInternal;
+extern RgbDefaultTypeInternal _Rgb_default_instance_;
+class Rgba;
+class RgbaDefaultTypeInternal;
+extern RgbaDefaultTypeInternal _Rgba_default_instance_;
 class RouteData;
 class RouteDataDefaultTypeInternal;
 extern RouteDataDefaultTypeInternal _RouteData_default_instance_;
@@ -87,12 +123,27 @@ extern RoutesInternalDataDefaultTypeInternal _RoutesInternalData_default_instanc
 class RoutingSettings;
 class RoutingSettingsDefaultTypeInternal;
 extern RoutingSettingsDefaultTypeInternal _RoutingSettings_default_instance_;
+class StopCoord;
+class StopCoordDefaultTypeInternal;
+extern StopCoordDefaultTypeInternal _StopCoord_default_instance_;
 class StopRequest;
 class StopRequestDefaultTypeInternal;
 extern StopRequestDefaultTypeInternal _StopRequest_default_instance_;
 class StopVertexIdx;
 class StopVertexIdxDefaultTypeInternal;
 extern StopVertexIdxDefaultTypeInternal _StopVertexIdx_default_instance_;
+class StrColor;
+class StrColorDefaultTypeInternal;
+extern StrColorDefaultTypeInternal _StrColor_default_instance_;
+class SvgColor;
+class SvgColorDefaultTypeInternal;
+extern SvgColorDefaultTypeInternal _SvgColor_default_instance_;
+class SvgPoint;
+class SvgPointDefaultTypeInternal;
+extern SvgPointDefaultTypeInternal _SvgPoint_default_instance_;
+class Text;
+class TextDefaultTypeInternal;
+extern TextDefaultTypeInternal _Text_default_instance_;
 class TransportCatalog;
 class TransportCatalogDefaultTypeInternal;
 extern TransportCatalogDefaultTypeInternal _TransportCatalog_default_instance_;
@@ -107,19 +158,36 @@ class WaitEdgeInfoDefaultTypeInternal;
 extern WaitEdgeInfoDefaultTypeInternal _WaitEdgeInfo_default_instance_;
 }  // namespace Serialize
 PROTOBUF_NAMESPACE_OPEN
+template<> ::Serialize::BusColor* Arena::CreateMaybeMessage<::Serialize::BusColor>(Arena*);
 template<> ::Serialize::BusEdgeInfo* Arena::CreateMaybeMessage<::Serialize::BusEdgeInfo>(Arena*);
 template<> ::Serialize::BusGraph* Arena::CreateMaybeMessage<::Serialize::BusGraph>(Arena*);
 template<> ::Serialize::BusRequest* Arena::CreateMaybeMessage<::Serialize::BusRequest>(Arena*);
+template<> ::Serialize::BusesDict* Arena::CreateMaybeMessage<::Serialize::BusesDict>(Arena*);
+template<> ::Serialize::Circle* Arena::CreateMaybeMessage<::Serialize::Circle>(Arena*);
+template<> ::Serialize::Document* Arena::CreateMaybeMessage<::Serialize::Document>(Arena*);
 template<> ::Serialize::Edge* Arena::CreateMaybeMessage<::Serialize::Edge>(Arena*);
 template<> ::Serialize::EdgeInfo* Arena::CreateMaybeMessage<::Serialize::EdgeInfo>(Arena*);
 template<> ::Serialize::IncidenceList* Arena::CreateMaybeMessage<::Serialize::IncidenceList>(Arena*);
+template<> ::Serialize::Object* Arena::CreateMaybeMessage<::Serialize::Object>(Arena*);
+template<> ::Serialize::ObjectBase* Arena::CreateMaybeMessage<::Serialize::ObjectBase>(Arena*);
+template<> ::Serialize::Painter* Arena::CreateMaybeMessage<::Serialize::Painter>(Arena*);
+template<> ::Serialize::Polyline* Arena::CreateMaybeMessage<::Serialize::Polyline>(Arena*);
+template<> ::Serialize::Rectangle* Arena::CreateMaybeMessage<::Serialize::Rectangle>(Arena*);
+template<> ::Serialize::RenderSettings* Arena::CreateMaybeMessage<::Serialize::RenderSettings>(Arena*);
+template<> ::Serialize::Rgb* Arena::CreateMaybeMessage<::Serialize::Rgb>(Arena*);
+template<> ::Serialize::Rgba* Arena::CreateMaybeMessage<::Serialize::Rgba>(Arena*);
 template<> ::Serialize::RouteData* Arena::CreateMaybeMessage<::Serialize::RouteData>(Arena*);
 template<> ::Serialize::RouteInternalData* Arena::CreateMaybeMessage<::Serialize::RouteInternalData>(Arena*);
 template<> ::Serialize::Router* Arena::CreateMaybeMessage<::Serialize::Router>(Arena*);
 template<> ::Serialize::RoutesInternalData* Arena::CreateMaybeMessage<::Serialize::RoutesInternalData>(Arena*);
 template<> ::Serialize::RoutingSettings* Arena::CreateMaybeMessage<::Serialize::RoutingSettings>(Arena*);
+template<> ::Serialize::StopCoord* Arena::CreateMaybeMessage<::Serialize::StopCoord>(Arena*);
 template<> ::Serialize::StopRequest* Arena::CreateMaybeMessage<::Serialize::StopRequest>(Arena*);
 template<> ::Serialize::StopVertexIdx* Arena::CreateMaybeMessage<::Serialize::StopVertexIdx>(Arena*);
+template<> ::Serialize::StrColor* Arena::CreateMaybeMessage<::Serialize::StrColor>(Arena*);
+template<> ::Serialize::SvgColor* Arena::CreateMaybeMessage<::Serialize::SvgColor>(Arena*);
+template<> ::Serialize::SvgPoint* Arena::CreateMaybeMessage<::Serialize::SvgPoint>(Arena*);
+template<> ::Serialize::Text* Arena::CreateMaybeMessage<::Serialize::Text>(Arena*);
 template<> ::Serialize::TransportCatalog* Arena::CreateMaybeMessage<::Serialize::TransportCatalog>(Arena*);
 template<> ::Serialize::TransportRouter* Arena::CreateMaybeMessage<::Serialize::TransportRouter>(Arena*);
 template<> ::Serialize::VertexInfo* Arena::CreateMaybeMessage<::Serialize::VertexInfo>(Arena*);
@@ -619,13 +687,13 @@ class Edge PROTOBUF_FINAL :
   void _internal_set_to(::PROTOBUF_NAMESPACE_ID::uint32 value);
   public:
 
-  // double weight = 3;
+  // float weight = 3;
   void clear_weight();
-  double weight() const;
-  void set_weight(double value);
+  float weight() const;
+  void set_weight(float value);
   private:
-  double _internal_weight() const;
-  void _internal_set_weight(double value);
+  float _internal_weight() const;
+  void _internal_set_weight(float value);
   public:
 
   // @@protoc_insertion_point(class_scope:Serialize.Edge)
@@ -637,7 +705,7 @@ class Edge PROTOBUF_FINAL :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::uint32 from_;
   ::PROTOBUF_NAMESPACE_ID::uint32 to_;
-  double weight_;
+  float weight_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_transport_5fcatalog_2eproto;
 };
@@ -1074,13 +1142,13 @@ class RouteData PROTOBUF_FINAL :
     kHasFieldNumber = 2,
     kPrevEdgeFieldNumber = 3,
   };
-  // double weight = 1;
+  // float weight = 1;
   void clear_weight();
-  double weight() const;
-  void set_weight(double value);
+  float weight() const;
+  void set_weight(float value);
   private:
-  double _internal_weight() const;
-  void _internal_set_weight(double value);
+  float _internal_weight() const;
+  void _internal_set_weight(float value);
   public:
 
   // bool has = 2;
@@ -1108,7 +1176,7 @@ class RouteData PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  double weight_;
+  float weight_;
   bool has_;
   ::PROTOBUF_NAMESPACE_ID::uint32 prev_edge_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -2744,6 +2812,3308 @@ class TransportRouter PROTOBUF_FINAL :
 };
 // -------------------------------------------------------------------
 
+class SvgPoint PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Serialize.SvgPoint) */ {
+ public:
+  inline SvgPoint() : SvgPoint(nullptr) {}
+  virtual ~SvgPoint();
+
+  SvgPoint(const SvgPoint& from);
+  SvgPoint(SvgPoint&& from) noexcept
+    : SvgPoint() {
+    *this = ::std::move(from);
+  }
+
+  inline SvgPoint& operator=(const SvgPoint& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline SvgPoint& operator=(SvgPoint&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const SvgPoint& default_instance();
+
+  static inline const SvgPoint* internal_default_instance() {
+    return reinterpret_cast<const SvgPoint*>(
+               &_SvgPoint_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    16;
+
+  friend void swap(SvgPoint& a, SvgPoint& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(SvgPoint* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(SvgPoint* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline SvgPoint* New() const final {
+    return CreateMaybeMessage<SvgPoint>(nullptr);
+  }
+
+  SvgPoint* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<SvgPoint>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const SvgPoint& from);
+  void MergeFrom(const SvgPoint& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(SvgPoint* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "Serialize.SvgPoint";
+  }
+  protected:
+  explicit SvgPoint(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_transport_5fcatalog_2eproto);
+    return ::descriptor_table_transport_5fcatalog_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kXFieldNumber = 1,
+    kYFieldNumber = 2,
+  };
+  // float x = 1;
+  void clear_x();
+  float x() const;
+  void set_x(float value);
+  private:
+  float _internal_x() const;
+  void _internal_set_x(float value);
+  public:
+
+  // float y = 2;
+  void clear_y();
+  float y() const;
+  void set_y(float value);
+  private:
+  float _internal_y() const;
+  void _internal_set_y(float value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:Serialize.SvgPoint)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  float x_;
+  float y_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_transport_5fcatalog_2eproto;
+};
+// -------------------------------------------------------------------
+
+class Rgb PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Serialize.Rgb) */ {
+ public:
+  inline Rgb() : Rgb(nullptr) {}
+  virtual ~Rgb();
+
+  Rgb(const Rgb& from);
+  Rgb(Rgb&& from) noexcept
+    : Rgb() {
+    *this = ::std::move(from);
+  }
+
+  inline Rgb& operator=(const Rgb& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline Rgb& operator=(Rgb&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const Rgb& default_instance();
+
+  static inline const Rgb* internal_default_instance() {
+    return reinterpret_cast<const Rgb*>(
+               &_Rgb_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    17;
+
+  friend void swap(Rgb& a, Rgb& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(Rgb* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(Rgb* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Rgb* New() const final {
+    return CreateMaybeMessage<Rgb>(nullptr);
+  }
+
+  Rgb* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<Rgb>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const Rgb& from);
+  void MergeFrom(const Rgb& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Rgb* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "Serialize.Rgb";
+  }
+  protected:
+  explicit Rgb(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_transport_5fcatalog_2eproto);
+    return ::descriptor_table_transport_5fcatalog_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kRedFieldNumber = 1,
+    kGreenFieldNumber = 2,
+    kBlueFieldNumber = 3,
+  };
+  // int32 red = 1;
+  void clear_red();
+  ::PROTOBUF_NAMESPACE_ID::int32 red() const;
+  void set_red(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_red() const;
+  void _internal_set_red(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // int32 green = 2;
+  void clear_green();
+  ::PROTOBUF_NAMESPACE_ID::int32 green() const;
+  void set_green(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_green() const;
+  void _internal_set_green(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // int32 blue = 3;
+  void clear_blue();
+  ::PROTOBUF_NAMESPACE_ID::int32 blue() const;
+  void set_blue(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_blue() const;
+  void _internal_set_blue(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:Serialize.Rgb)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::int32 red_;
+  ::PROTOBUF_NAMESPACE_ID::int32 green_;
+  ::PROTOBUF_NAMESPACE_ID::int32 blue_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_transport_5fcatalog_2eproto;
+};
+// -------------------------------------------------------------------
+
+class Rgba PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Serialize.Rgba) */ {
+ public:
+  inline Rgba() : Rgba(nullptr) {}
+  virtual ~Rgba();
+
+  Rgba(const Rgba& from);
+  Rgba(Rgba&& from) noexcept
+    : Rgba() {
+    *this = ::std::move(from);
+  }
+
+  inline Rgba& operator=(const Rgba& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline Rgba& operator=(Rgba&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const Rgba& default_instance();
+
+  static inline const Rgba* internal_default_instance() {
+    return reinterpret_cast<const Rgba*>(
+               &_Rgba_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    18;
+
+  friend void swap(Rgba& a, Rgba& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(Rgba* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(Rgba* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Rgba* New() const final {
+    return CreateMaybeMessage<Rgba>(nullptr);
+  }
+
+  Rgba* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<Rgba>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const Rgba& from);
+  void MergeFrom(const Rgba& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Rgba* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "Serialize.Rgba";
+  }
+  protected:
+  explicit Rgba(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_transport_5fcatalog_2eproto);
+    return ::descriptor_table_transport_5fcatalog_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kColorFieldNumber = 1,
+    kAlphaFieldNumber = 2,
+  };
+  // .Serialize.Rgb color = 1;
+  bool has_color() const;
+  private:
+  bool _internal_has_color() const;
+  public:
+  void clear_color();
+  const ::Serialize::Rgb& color() const;
+  ::Serialize::Rgb* release_color();
+  ::Serialize::Rgb* mutable_color();
+  void set_allocated_color(::Serialize::Rgb* color);
+  private:
+  const ::Serialize::Rgb& _internal_color() const;
+  ::Serialize::Rgb* _internal_mutable_color();
+  public:
+  void unsafe_arena_set_allocated_color(
+      ::Serialize::Rgb* color);
+  ::Serialize::Rgb* unsafe_arena_release_color();
+
+  // float alpha = 2;
+  void clear_alpha();
+  float alpha() const;
+  void set_alpha(float value);
+  private:
+  float _internal_alpha() const;
+  void _internal_set_alpha(float value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:Serialize.Rgba)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::Serialize::Rgb* color_;
+  float alpha_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_transport_5fcatalog_2eproto;
+};
+// -------------------------------------------------------------------
+
+class StrColor PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Serialize.StrColor) */ {
+ public:
+  inline StrColor() : StrColor(nullptr) {}
+  virtual ~StrColor();
+
+  StrColor(const StrColor& from);
+  StrColor(StrColor&& from) noexcept
+    : StrColor() {
+    *this = ::std::move(from);
+  }
+
+  inline StrColor& operator=(const StrColor& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline StrColor& operator=(StrColor&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const StrColor& default_instance();
+
+  static inline const StrColor* internal_default_instance() {
+    return reinterpret_cast<const StrColor*>(
+               &_StrColor_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    19;
+
+  friend void swap(StrColor& a, StrColor& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(StrColor* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(StrColor* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline StrColor* New() const final {
+    return CreateMaybeMessage<StrColor>(nullptr);
+  }
+
+  StrColor* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<StrColor>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const StrColor& from);
+  void MergeFrom(const StrColor& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(StrColor* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "Serialize.StrColor";
+  }
+  protected:
+  explicit StrColor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_transport_5fcatalog_2eproto);
+    return ::descriptor_table_transport_5fcatalog_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kColorFieldNumber = 1,
+  };
+  // string color = 1;
+  void clear_color();
+  const std::string& color() const;
+  void set_color(const std::string& value);
+  void set_color(std::string&& value);
+  void set_color(const char* value);
+  void set_color(const char* value, size_t size);
+  std::string* mutable_color();
+  std::string* release_color();
+  void set_allocated_color(std::string* color);
+  private:
+  const std::string& _internal_color() const;
+  void _internal_set_color(const std::string& value);
+  std::string* _internal_mutable_color();
+  public:
+
+  // @@protoc_insertion_point(class_scope:Serialize.StrColor)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr color_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_transport_5fcatalog_2eproto;
+};
+// -------------------------------------------------------------------
+
+class SvgColor PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Serialize.SvgColor) */ {
+ public:
+  inline SvgColor() : SvgColor(nullptr) {}
+  virtual ~SvgColor();
+
+  SvgColor(const SvgColor& from);
+  SvgColor(SvgColor&& from) noexcept
+    : SvgColor() {
+    *this = ::std::move(from);
+  }
+
+  inline SvgColor& operator=(const SvgColor& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline SvgColor& operator=(SvgColor&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const SvgColor& default_instance();
+
+  enum VariantCase {
+    kStr = 1,
+    kRgb = 2,
+    kRgba = 3,
+    VARIANT_NOT_SET = 0,
+  };
+
+  static inline const SvgColor* internal_default_instance() {
+    return reinterpret_cast<const SvgColor*>(
+               &_SvgColor_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    20;
+
+  friend void swap(SvgColor& a, SvgColor& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(SvgColor* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(SvgColor* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline SvgColor* New() const final {
+    return CreateMaybeMessage<SvgColor>(nullptr);
+  }
+
+  SvgColor* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<SvgColor>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const SvgColor& from);
+  void MergeFrom(const SvgColor& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(SvgColor* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "Serialize.SvgColor";
+  }
+  protected:
+  explicit SvgColor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_transport_5fcatalog_2eproto);
+    return ::descriptor_table_transport_5fcatalog_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kStrFieldNumber = 1,
+    kRgbFieldNumber = 2,
+    kRgbaFieldNumber = 3,
+  };
+  // .Serialize.StrColor str = 1;
+  bool has_str() const;
+  private:
+  bool _internal_has_str() const;
+  public:
+  void clear_str();
+  const ::Serialize::StrColor& str() const;
+  ::Serialize::StrColor* release_str();
+  ::Serialize::StrColor* mutable_str();
+  void set_allocated_str(::Serialize::StrColor* str);
+  private:
+  const ::Serialize::StrColor& _internal_str() const;
+  ::Serialize::StrColor* _internal_mutable_str();
+  public:
+  void unsafe_arena_set_allocated_str(
+      ::Serialize::StrColor* str);
+  ::Serialize::StrColor* unsafe_arena_release_str();
+
+  // .Serialize.Rgb rgb = 2;
+  bool has_rgb() const;
+  private:
+  bool _internal_has_rgb() const;
+  public:
+  void clear_rgb();
+  const ::Serialize::Rgb& rgb() const;
+  ::Serialize::Rgb* release_rgb();
+  ::Serialize::Rgb* mutable_rgb();
+  void set_allocated_rgb(::Serialize::Rgb* rgb);
+  private:
+  const ::Serialize::Rgb& _internal_rgb() const;
+  ::Serialize::Rgb* _internal_mutable_rgb();
+  public:
+  void unsafe_arena_set_allocated_rgb(
+      ::Serialize::Rgb* rgb);
+  ::Serialize::Rgb* unsafe_arena_release_rgb();
+
+  // .Serialize.Rgba rgba = 3;
+  bool has_rgba() const;
+  private:
+  bool _internal_has_rgba() const;
+  public:
+  void clear_rgba();
+  const ::Serialize::Rgba& rgba() const;
+  ::Serialize::Rgba* release_rgba();
+  ::Serialize::Rgba* mutable_rgba();
+  void set_allocated_rgba(::Serialize::Rgba* rgba);
+  private:
+  const ::Serialize::Rgba& _internal_rgba() const;
+  ::Serialize::Rgba* _internal_mutable_rgba();
+  public:
+  void unsafe_arena_set_allocated_rgba(
+      ::Serialize::Rgba* rgba);
+  ::Serialize::Rgba* unsafe_arena_release_rgba();
+
+  void clear_variant();
+  VariantCase variant_case() const;
+  // @@protoc_insertion_point(class_scope:Serialize.SvgColor)
+ private:
+  class _Internal;
+  void set_has_str();
+  void set_has_rgb();
+  void set_has_rgba();
+
+  inline bool has_variant() const;
+  inline void clear_has_variant();
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  union VariantUnion {
+    VariantUnion() {}
+    ::Serialize::StrColor* str_;
+    ::Serialize::Rgb* rgb_;
+    ::Serialize::Rgba* rgba_;
+  } variant_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 _oneof_case_[1];
+
+  friend struct ::TableStruct_transport_5fcatalog_2eproto;
+};
+// -------------------------------------------------------------------
+
+class BusesDict PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Serialize.BusesDict) */ {
+ public:
+  inline BusesDict() : BusesDict(nullptr) {}
+  virtual ~BusesDict();
+
+  BusesDict(const BusesDict& from);
+  BusesDict(BusesDict&& from) noexcept
+    : BusesDict() {
+    *this = ::std::move(from);
+  }
+
+  inline BusesDict& operator=(const BusesDict& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline BusesDict& operator=(BusesDict&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const BusesDict& default_instance();
+
+  static inline const BusesDict* internal_default_instance() {
+    return reinterpret_cast<const BusesDict*>(
+               &_BusesDict_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    21;
+
+  friend void swap(BusesDict& a, BusesDict& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(BusesDict* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(BusesDict* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline BusesDict* New() const final {
+    return CreateMaybeMessage<BusesDict>(nullptr);
+  }
+
+  BusesDict* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<BusesDict>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const BusesDict& from);
+  void MergeFrom(const BusesDict& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(BusesDict* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "Serialize.BusesDict";
+  }
+  protected:
+  explicit BusesDict(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_transport_5fcatalog_2eproto);
+    return ::descriptor_table_transport_5fcatalog_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kStopsFieldNumber = 2,
+    kEndpointsFieldNumber = 3,
+    kNameFieldNumber = 1,
+    kIsRoundtripFieldNumber = 4,
+  };
+  // repeated string stops = 2;
+  int stops_size() const;
+  private:
+  int _internal_stops_size() const;
+  public:
+  void clear_stops();
+  const std::string& stops(int index) const;
+  std::string* mutable_stops(int index);
+  void set_stops(int index, const std::string& value);
+  void set_stops(int index, std::string&& value);
+  void set_stops(int index, const char* value);
+  void set_stops(int index, const char* value, size_t size);
+  std::string* add_stops();
+  void add_stops(const std::string& value);
+  void add_stops(std::string&& value);
+  void add_stops(const char* value);
+  void add_stops(const char* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& stops() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_stops();
+  private:
+  const std::string& _internal_stops(int index) const;
+  std::string* _internal_add_stops();
+  public:
+
+  // repeated string endpoints = 3;
+  int endpoints_size() const;
+  private:
+  int _internal_endpoints_size() const;
+  public:
+  void clear_endpoints();
+  const std::string& endpoints(int index) const;
+  std::string* mutable_endpoints(int index);
+  void set_endpoints(int index, const std::string& value);
+  void set_endpoints(int index, std::string&& value);
+  void set_endpoints(int index, const char* value);
+  void set_endpoints(int index, const char* value, size_t size);
+  std::string* add_endpoints();
+  void add_endpoints(const std::string& value);
+  void add_endpoints(std::string&& value);
+  void add_endpoints(const char* value);
+  void add_endpoints(const char* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& endpoints() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_endpoints();
+  private:
+  const std::string& _internal_endpoints(int index) const;
+  std::string* _internal_add_endpoints();
+  public:
+
+  // string name = 1;
+  void clear_name();
+  const std::string& name() const;
+  void set_name(const std::string& value);
+  void set_name(std::string&& value);
+  void set_name(const char* value);
+  void set_name(const char* value, size_t size);
+  std::string* mutable_name();
+  std::string* release_name();
+  void set_allocated_name(std::string* name);
+  private:
+  const std::string& _internal_name() const;
+  void _internal_set_name(const std::string& value);
+  std::string* _internal_mutable_name();
+  public:
+
+  // bool is_roundtrip = 4;
+  void clear_is_roundtrip();
+  bool is_roundtrip() const;
+  void set_is_roundtrip(bool value);
+  private:
+  bool _internal_is_roundtrip() const;
+  void _internal_set_is_roundtrip(bool value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:Serialize.BusesDict)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> stops_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> endpoints_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
+  bool is_roundtrip_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_transport_5fcatalog_2eproto;
+};
+// -------------------------------------------------------------------
+
+class StopCoord PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Serialize.StopCoord) */ {
+ public:
+  inline StopCoord() : StopCoord(nullptr) {}
+  virtual ~StopCoord();
+
+  StopCoord(const StopCoord& from);
+  StopCoord(StopCoord&& from) noexcept
+    : StopCoord() {
+    *this = ::std::move(from);
+  }
+
+  inline StopCoord& operator=(const StopCoord& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline StopCoord& operator=(StopCoord&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const StopCoord& default_instance();
+
+  static inline const StopCoord* internal_default_instance() {
+    return reinterpret_cast<const StopCoord*>(
+               &_StopCoord_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    22;
+
+  friend void swap(StopCoord& a, StopCoord& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(StopCoord* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(StopCoord* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline StopCoord* New() const final {
+    return CreateMaybeMessage<StopCoord>(nullptr);
+  }
+
+  StopCoord* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<StopCoord>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const StopCoord& from);
+  void MergeFrom(const StopCoord& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(StopCoord* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "Serialize.StopCoord";
+  }
+  protected:
+  explicit StopCoord(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_transport_5fcatalog_2eproto);
+    return ::descriptor_table_transport_5fcatalog_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kNameFieldNumber = 1,
+    kPointFieldNumber = 2,
+  };
+  // string name = 1;
+  void clear_name();
+  const std::string& name() const;
+  void set_name(const std::string& value);
+  void set_name(std::string&& value);
+  void set_name(const char* value);
+  void set_name(const char* value, size_t size);
+  std::string* mutable_name();
+  std::string* release_name();
+  void set_allocated_name(std::string* name);
+  private:
+  const std::string& _internal_name() const;
+  void _internal_set_name(const std::string& value);
+  std::string* _internal_mutable_name();
+  public:
+
+  // .Serialize.SvgPoint point = 2;
+  bool has_point() const;
+  private:
+  bool _internal_has_point() const;
+  public:
+  void clear_point();
+  const ::Serialize::SvgPoint& point() const;
+  ::Serialize::SvgPoint* release_point();
+  ::Serialize::SvgPoint* mutable_point();
+  void set_allocated_point(::Serialize::SvgPoint* point);
+  private:
+  const ::Serialize::SvgPoint& _internal_point() const;
+  ::Serialize::SvgPoint* _internal_mutable_point();
+  public:
+  void unsafe_arena_set_allocated_point(
+      ::Serialize::SvgPoint* point);
+  ::Serialize::SvgPoint* unsafe_arena_release_point();
+
+  // @@protoc_insertion_point(class_scope:Serialize.StopCoord)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
+  ::Serialize::SvgPoint* point_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_transport_5fcatalog_2eproto;
+};
+// -------------------------------------------------------------------
+
+class BusColor PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Serialize.BusColor) */ {
+ public:
+  inline BusColor() : BusColor(nullptr) {}
+  virtual ~BusColor();
+
+  BusColor(const BusColor& from);
+  BusColor(BusColor&& from) noexcept
+    : BusColor() {
+    *this = ::std::move(from);
+  }
+
+  inline BusColor& operator=(const BusColor& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline BusColor& operator=(BusColor&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const BusColor& default_instance();
+
+  static inline const BusColor* internal_default_instance() {
+    return reinterpret_cast<const BusColor*>(
+               &_BusColor_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    23;
+
+  friend void swap(BusColor& a, BusColor& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(BusColor* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(BusColor* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline BusColor* New() const final {
+    return CreateMaybeMessage<BusColor>(nullptr);
+  }
+
+  BusColor* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<BusColor>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const BusColor& from);
+  void MergeFrom(const BusColor& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(BusColor* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "Serialize.BusColor";
+  }
+  protected:
+  explicit BusColor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_transport_5fcatalog_2eproto);
+    return ::descriptor_table_transport_5fcatalog_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kNameFieldNumber = 1,
+    kColorFieldNumber = 2,
+  };
+  // string name = 1;
+  void clear_name();
+  const std::string& name() const;
+  void set_name(const std::string& value);
+  void set_name(std::string&& value);
+  void set_name(const char* value);
+  void set_name(const char* value, size_t size);
+  std::string* mutable_name();
+  std::string* release_name();
+  void set_allocated_name(std::string* name);
+  private:
+  const std::string& _internal_name() const;
+  void _internal_set_name(const std::string& value);
+  std::string* _internal_mutable_name();
+  public:
+
+  // .Serialize.SvgColor color = 2;
+  bool has_color() const;
+  private:
+  bool _internal_has_color() const;
+  public:
+  void clear_color();
+  const ::Serialize::SvgColor& color() const;
+  ::Serialize::SvgColor* release_color();
+  ::Serialize::SvgColor* mutable_color();
+  void set_allocated_color(::Serialize::SvgColor* color);
+  private:
+  const ::Serialize::SvgColor& _internal_color() const;
+  ::Serialize::SvgColor* _internal_mutable_color();
+  public:
+  void unsafe_arena_set_allocated_color(
+      ::Serialize::SvgColor* color);
+  ::Serialize::SvgColor* unsafe_arena_release_color();
+
+  // @@protoc_insertion_point(class_scope:Serialize.BusColor)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
+  ::Serialize::SvgColor* color_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_transport_5fcatalog_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ObjectBase PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Serialize.ObjectBase) */ {
+ public:
+  inline ObjectBase() : ObjectBase(nullptr) {}
+  virtual ~ObjectBase();
+
+  ObjectBase(const ObjectBase& from);
+  ObjectBase(ObjectBase&& from) noexcept
+    : ObjectBase() {
+    *this = ::std::move(from);
+  }
+
+  inline ObjectBase& operator=(const ObjectBase& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ObjectBase& operator=(ObjectBase&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const ObjectBase& default_instance();
+
+  static inline const ObjectBase* internal_default_instance() {
+    return reinterpret_cast<const ObjectBase*>(
+               &_ObjectBase_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    24;
+
+  friend void swap(ObjectBase& a, ObjectBase& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ObjectBase* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ObjectBase* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ObjectBase* New() const final {
+    return CreateMaybeMessage<ObjectBase>(nullptr);
+  }
+
+  ObjectBase* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<ObjectBase>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const ObjectBase& from);
+  void MergeFrom(const ObjectBase& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ObjectBase* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "Serialize.ObjectBase";
+  }
+  protected:
+  explicit ObjectBase(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_transport_5fcatalog_2eproto);
+    return ::descriptor_table_transport_5fcatalog_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kStrokeLineCapFieldNumber = 5,
+    kStrokeLineJoinFieldNumber = 7,
+    kFillColorFieldNumber = 1,
+    kStrokeColorFieldNumber = 2,
+    kStrokeWidthFieldNumber = 3,
+    kHasStrokeLineCapFieldNumber = 4,
+    kHasStrokeLineJoinFieldNumber = 6,
+  };
+  // string stroke_line_cap = 5;
+  void clear_stroke_line_cap();
+  const std::string& stroke_line_cap() const;
+  void set_stroke_line_cap(const std::string& value);
+  void set_stroke_line_cap(std::string&& value);
+  void set_stroke_line_cap(const char* value);
+  void set_stroke_line_cap(const char* value, size_t size);
+  std::string* mutable_stroke_line_cap();
+  std::string* release_stroke_line_cap();
+  void set_allocated_stroke_line_cap(std::string* stroke_line_cap);
+  private:
+  const std::string& _internal_stroke_line_cap() const;
+  void _internal_set_stroke_line_cap(const std::string& value);
+  std::string* _internal_mutable_stroke_line_cap();
+  public:
+
+  // string stroke_line_join = 7;
+  void clear_stroke_line_join();
+  const std::string& stroke_line_join() const;
+  void set_stroke_line_join(const std::string& value);
+  void set_stroke_line_join(std::string&& value);
+  void set_stroke_line_join(const char* value);
+  void set_stroke_line_join(const char* value, size_t size);
+  std::string* mutable_stroke_line_join();
+  std::string* release_stroke_line_join();
+  void set_allocated_stroke_line_join(std::string* stroke_line_join);
+  private:
+  const std::string& _internal_stroke_line_join() const;
+  void _internal_set_stroke_line_join(const std::string& value);
+  std::string* _internal_mutable_stroke_line_join();
+  public:
+
+  // .Serialize.SvgColor fill_color = 1;
+  bool has_fill_color() const;
+  private:
+  bool _internal_has_fill_color() const;
+  public:
+  void clear_fill_color();
+  const ::Serialize::SvgColor& fill_color() const;
+  ::Serialize::SvgColor* release_fill_color();
+  ::Serialize::SvgColor* mutable_fill_color();
+  void set_allocated_fill_color(::Serialize::SvgColor* fill_color);
+  private:
+  const ::Serialize::SvgColor& _internal_fill_color() const;
+  ::Serialize::SvgColor* _internal_mutable_fill_color();
+  public:
+  void unsafe_arena_set_allocated_fill_color(
+      ::Serialize::SvgColor* fill_color);
+  ::Serialize::SvgColor* unsafe_arena_release_fill_color();
+
+  // .Serialize.SvgColor stroke_color = 2;
+  bool has_stroke_color() const;
+  private:
+  bool _internal_has_stroke_color() const;
+  public:
+  void clear_stroke_color();
+  const ::Serialize::SvgColor& stroke_color() const;
+  ::Serialize::SvgColor* release_stroke_color();
+  ::Serialize::SvgColor* mutable_stroke_color();
+  void set_allocated_stroke_color(::Serialize::SvgColor* stroke_color);
+  private:
+  const ::Serialize::SvgColor& _internal_stroke_color() const;
+  ::Serialize::SvgColor* _internal_mutable_stroke_color();
+  public:
+  void unsafe_arena_set_allocated_stroke_color(
+      ::Serialize::SvgColor* stroke_color);
+  ::Serialize::SvgColor* unsafe_arena_release_stroke_color();
+
+  // float stroke_width = 3;
+  void clear_stroke_width();
+  float stroke_width() const;
+  void set_stroke_width(float value);
+  private:
+  float _internal_stroke_width() const;
+  void _internal_set_stroke_width(float value);
+  public:
+
+  // bool has_stroke_line_cap = 4;
+  void clear_has_stroke_line_cap();
+  bool has_stroke_line_cap() const;
+  void set_has_stroke_line_cap(bool value);
+  private:
+  bool _internal_has_stroke_line_cap() const;
+  void _internal_set_has_stroke_line_cap(bool value);
+  public:
+
+  // bool has_stroke_line_join = 6;
+  void clear_has_stroke_line_join();
+  bool has_stroke_line_join() const;
+  void set_has_stroke_line_join(bool value);
+  private:
+  bool _internal_has_stroke_line_join() const;
+  void _internal_set_has_stroke_line_join(bool value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:Serialize.ObjectBase)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr stroke_line_cap_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr stroke_line_join_;
+  ::Serialize::SvgColor* fill_color_;
+  ::Serialize::SvgColor* stroke_color_;
+  float stroke_width_;
+  bool has_stroke_line_cap_;
+  bool has_stroke_line_join_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_transport_5fcatalog_2eproto;
+};
+// -------------------------------------------------------------------
+
+class Circle PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Serialize.Circle) */ {
+ public:
+  inline Circle() : Circle(nullptr) {}
+  virtual ~Circle();
+
+  Circle(const Circle& from);
+  Circle(Circle&& from) noexcept
+    : Circle() {
+    *this = ::std::move(from);
+  }
+
+  inline Circle& operator=(const Circle& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline Circle& operator=(Circle&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const Circle& default_instance();
+
+  static inline const Circle* internal_default_instance() {
+    return reinterpret_cast<const Circle*>(
+               &_Circle_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    25;
+
+  friend void swap(Circle& a, Circle& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(Circle* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(Circle* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Circle* New() const final {
+    return CreateMaybeMessage<Circle>(nullptr);
+  }
+
+  Circle* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<Circle>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const Circle& from);
+  void MergeFrom(const Circle& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Circle* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "Serialize.Circle";
+  }
+  protected:
+  explicit Circle(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_transport_5fcatalog_2eproto);
+    return ::descriptor_table_transport_5fcatalog_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kBaseFieldNumber = 1,
+    kCenterFieldNumber = 2,
+    kRadiusFieldNumber = 3,
+  };
+  // .Serialize.ObjectBase base = 1;
+  bool has_base() const;
+  private:
+  bool _internal_has_base() const;
+  public:
+  void clear_base();
+  const ::Serialize::ObjectBase& base() const;
+  ::Serialize::ObjectBase* release_base();
+  ::Serialize::ObjectBase* mutable_base();
+  void set_allocated_base(::Serialize::ObjectBase* base);
+  private:
+  const ::Serialize::ObjectBase& _internal_base() const;
+  ::Serialize::ObjectBase* _internal_mutable_base();
+  public:
+  void unsafe_arena_set_allocated_base(
+      ::Serialize::ObjectBase* base);
+  ::Serialize::ObjectBase* unsafe_arena_release_base();
+
+  // .Serialize.SvgPoint center = 2;
+  bool has_center() const;
+  private:
+  bool _internal_has_center() const;
+  public:
+  void clear_center();
+  const ::Serialize::SvgPoint& center() const;
+  ::Serialize::SvgPoint* release_center();
+  ::Serialize::SvgPoint* mutable_center();
+  void set_allocated_center(::Serialize::SvgPoint* center);
+  private:
+  const ::Serialize::SvgPoint& _internal_center() const;
+  ::Serialize::SvgPoint* _internal_mutable_center();
+  public:
+  void unsafe_arena_set_allocated_center(
+      ::Serialize::SvgPoint* center);
+  ::Serialize::SvgPoint* unsafe_arena_release_center();
+
+  // float radius = 3;
+  void clear_radius();
+  float radius() const;
+  void set_radius(float value);
+  private:
+  float _internal_radius() const;
+  void _internal_set_radius(float value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:Serialize.Circle)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::Serialize::ObjectBase* base_;
+  ::Serialize::SvgPoint* center_;
+  float radius_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_transport_5fcatalog_2eproto;
+};
+// -------------------------------------------------------------------
+
+class Rectangle PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Serialize.Rectangle) */ {
+ public:
+  inline Rectangle() : Rectangle(nullptr) {}
+  virtual ~Rectangle();
+
+  Rectangle(const Rectangle& from);
+  Rectangle(Rectangle&& from) noexcept
+    : Rectangle() {
+    *this = ::std::move(from);
+  }
+
+  inline Rectangle& operator=(const Rectangle& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline Rectangle& operator=(Rectangle&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const Rectangle& default_instance();
+
+  static inline const Rectangle* internal_default_instance() {
+    return reinterpret_cast<const Rectangle*>(
+               &_Rectangle_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    26;
+
+  friend void swap(Rectangle& a, Rectangle& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(Rectangle* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(Rectangle* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Rectangle* New() const final {
+    return CreateMaybeMessage<Rectangle>(nullptr);
+  }
+
+  Rectangle* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<Rectangle>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const Rectangle& from);
+  void MergeFrom(const Rectangle& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Rectangle* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "Serialize.Rectangle";
+  }
+  protected:
+  explicit Rectangle(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_transport_5fcatalog_2eproto);
+    return ::descriptor_table_transport_5fcatalog_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kBaseFieldNumber = 1,
+    kLuCornerFieldNumber = 2,
+    kWFieldNumber = 3,
+    kHFieldNumber = 4,
+  };
+  // .Serialize.ObjectBase base = 1;
+  bool has_base() const;
+  private:
+  bool _internal_has_base() const;
+  public:
+  void clear_base();
+  const ::Serialize::ObjectBase& base() const;
+  ::Serialize::ObjectBase* release_base();
+  ::Serialize::ObjectBase* mutable_base();
+  void set_allocated_base(::Serialize::ObjectBase* base);
+  private:
+  const ::Serialize::ObjectBase& _internal_base() const;
+  ::Serialize::ObjectBase* _internal_mutable_base();
+  public:
+  void unsafe_arena_set_allocated_base(
+      ::Serialize::ObjectBase* base);
+  ::Serialize::ObjectBase* unsafe_arena_release_base();
+
+  // .Serialize.SvgPoint lu_corner = 2;
+  bool has_lu_corner() const;
+  private:
+  bool _internal_has_lu_corner() const;
+  public:
+  void clear_lu_corner();
+  const ::Serialize::SvgPoint& lu_corner() const;
+  ::Serialize::SvgPoint* release_lu_corner();
+  ::Serialize::SvgPoint* mutable_lu_corner();
+  void set_allocated_lu_corner(::Serialize::SvgPoint* lu_corner);
+  private:
+  const ::Serialize::SvgPoint& _internal_lu_corner() const;
+  ::Serialize::SvgPoint* _internal_mutable_lu_corner();
+  public:
+  void unsafe_arena_set_allocated_lu_corner(
+      ::Serialize::SvgPoint* lu_corner);
+  ::Serialize::SvgPoint* unsafe_arena_release_lu_corner();
+
+  // float w = 3;
+  void clear_w();
+  float w() const;
+  void set_w(float value);
+  private:
+  float _internal_w() const;
+  void _internal_set_w(float value);
+  public:
+
+  // float h = 4;
+  void clear_h();
+  float h() const;
+  void set_h(float value);
+  private:
+  float _internal_h() const;
+  void _internal_set_h(float value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:Serialize.Rectangle)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::Serialize::ObjectBase* base_;
+  ::Serialize::SvgPoint* lu_corner_;
+  float w_;
+  float h_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_transport_5fcatalog_2eproto;
+};
+// -------------------------------------------------------------------
+
+class Polyline PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Serialize.Polyline) */ {
+ public:
+  inline Polyline() : Polyline(nullptr) {}
+  virtual ~Polyline();
+
+  Polyline(const Polyline& from);
+  Polyline(Polyline&& from) noexcept
+    : Polyline() {
+    *this = ::std::move(from);
+  }
+
+  inline Polyline& operator=(const Polyline& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline Polyline& operator=(Polyline&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const Polyline& default_instance();
+
+  static inline const Polyline* internal_default_instance() {
+    return reinterpret_cast<const Polyline*>(
+               &_Polyline_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    27;
+
+  friend void swap(Polyline& a, Polyline& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(Polyline* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(Polyline* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Polyline* New() const final {
+    return CreateMaybeMessage<Polyline>(nullptr);
+  }
+
+  Polyline* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<Polyline>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const Polyline& from);
+  void MergeFrom(const Polyline& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Polyline* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "Serialize.Polyline";
+  }
+  protected:
+  explicit Polyline(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_transport_5fcatalog_2eproto);
+    return ::descriptor_table_transport_5fcatalog_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kPointsFieldNumber = 2,
+    kBaseFieldNumber = 1,
+  };
+  // repeated .Serialize.SvgPoint points = 2;
+  int points_size() const;
+  private:
+  int _internal_points_size() const;
+  public:
+  void clear_points();
+  ::Serialize::SvgPoint* mutable_points(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Serialize::SvgPoint >*
+      mutable_points();
+  private:
+  const ::Serialize::SvgPoint& _internal_points(int index) const;
+  ::Serialize::SvgPoint* _internal_add_points();
+  public:
+  const ::Serialize::SvgPoint& points(int index) const;
+  ::Serialize::SvgPoint* add_points();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Serialize::SvgPoint >&
+      points() const;
+
+  // .Serialize.ObjectBase base = 1;
+  bool has_base() const;
+  private:
+  bool _internal_has_base() const;
+  public:
+  void clear_base();
+  const ::Serialize::ObjectBase& base() const;
+  ::Serialize::ObjectBase* release_base();
+  ::Serialize::ObjectBase* mutable_base();
+  void set_allocated_base(::Serialize::ObjectBase* base);
+  private:
+  const ::Serialize::ObjectBase& _internal_base() const;
+  ::Serialize::ObjectBase* _internal_mutable_base();
+  public:
+  void unsafe_arena_set_allocated_base(
+      ::Serialize::ObjectBase* base);
+  ::Serialize::ObjectBase* unsafe_arena_release_base();
+
+  // @@protoc_insertion_point(class_scope:Serialize.Polyline)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Serialize::SvgPoint > points_;
+  ::Serialize::ObjectBase* base_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_transport_5fcatalog_2eproto;
+};
+// -------------------------------------------------------------------
+
+class Text PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Serialize.Text) */ {
+ public:
+  inline Text() : Text(nullptr) {}
+  virtual ~Text();
+
+  Text(const Text& from);
+  Text(Text&& from) noexcept
+    : Text() {
+    *this = ::std::move(from);
+  }
+
+  inline Text& operator=(const Text& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline Text& operator=(Text&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const Text& default_instance();
+
+  static inline const Text* internal_default_instance() {
+    return reinterpret_cast<const Text*>(
+               &_Text_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    28;
+
+  friend void swap(Text& a, Text& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(Text* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(Text* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Text* New() const final {
+    return CreateMaybeMessage<Text>(nullptr);
+  }
+
+  Text* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<Text>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const Text& from);
+  void MergeFrom(const Text& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Text* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "Serialize.Text";
+  }
+  protected:
+  explicit Text(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_transport_5fcatalog_2eproto);
+    return ::descriptor_table_transport_5fcatalog_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kFontFamilyFieldNumber = 6,
+    kFontWeightFieldNumber = 8,
+    kDataFieldNumber = 9,
+    kBaseFieldNumber = 1,
+    kPointFieldNumber = 2,
+    kOffsetFieldNumber = 3,
+    kFontSizeFieldNumber = 4,
+    kHasFontFamilyFieldNumber = 5,
+    kHasFontWeightFieldNumber = 7,
+  };
+  // string font_family = 6;
+  void clear_font_family();
+  const std::string& font_family() const;
+  void set_font_family(const std::string& value);
+  void set_font_family(std::string&& value);
+  void set_font_family(const char* value);
+  void set_font_family(const char* value, size_t size);
+  std::string* mutable_font_family();
+  std::string* release_font_family();
+  void set_allocated_font_family(std::string* font_family);
+  private:
+  const std::string& _internal_font_family() const;
+  void _internal_set_font_family(const std::string& value);
+  std::string* _internal_mutable_font_family();
+  public:
+
+  // string font_weight = 8;
+  void clear_font_weight();
+  const std::string& font_weight() const;
+  void set_font_weight(const std::string& value);
+  void set_font_weight(std::string&& value);
+  void set_font_weight(const char* value);
+  void set_font_weight(const char* value, size_t size);
+  std::string* mutable_font_weight();
+  std::string* release_font_weight();
+  void set_allocated_font_weight(std::string* font_weight);
+  private:
+  const std::string& _internal_font_weight() const;
+  void _internal_set_font_weight(const std::string& value);
+  std::string* _internal_mutable_font_weight();
+  public:
+
+  // string data = 9;
+  void clear_data();
+  const std::string& data() const;
+  void set_data(const std::string& value);
+  void set_data(std::string&& value);
+  void set_data(const char* value);
+  void set_data(const char* value, size_t size);
+  std::string* mutable_data();
+  std::string* release_data();
+  void set_allocated_data(std::string* data);
+  private:
+  const std::string& _internal_data() const;
+  void _internal_set_data(const std::string& value);
+  std::string* _internal_mutable_data();
+  public:
+
+  // .Serialize.ObjectBase base = 1;
+  bool has_base() const;
+  private:
+  bool _internal_has_base() const;
+  public:
+  void clear_base();
+  const ::Serialize::ObjectBase& base() const;
+  ::Serialize::ObjectBase* release_base();
+  ::Serialize::ObjectBase* mutable_base();
+  void set_allocated_base(::Serialize::ObjectBase* base);
+  private:
+  const ::Serialize::ObjectBase& _internal_base() const;
+  ::Serialize::ObjectBase* _internal_mutable_base();
+  public:
+  void unsafe_arena_set_allocated_base(
+      ::Serialize::ObjectBase* base);
+  ::Serialize::ObjectBase* unsafe_arena_release_base();
+
+  // .Serialize.SvgPoint point = 2;
+  bool has_point() const;
+  private:
+  bool _internal_has_point() const;
+  public:
+  void clear_point();
+  const ::Serialize::SvgPoint& point() const;
+  ::Serialize::SvgPoint* release_point();
+  ::Serialize::SvgPoint* mutable_point();
+  void set_allocated_point(::Serialize::SvgPoint* point);
+  private:
+  const ::Serialize::SvgPoint& _internal_point() const;
+  ::Serialize::SvgPoint* _internal_mutable_point();
+  public:
+  void unsafe_arena_set_allocated_point(
+      ::Serialize::SvgPoint* point);
+  ::Serialize::SvgPoint* unsafe_arena_release_point();
+
+  // .Serialize.SvgPoint offset = 3;
+  bool has_offset() const;
+  private:
+  bool _internal_has_offset() const;
+  public:
+  void clear_offset();
+  const ::Serialize::SvgPoint& offset() const;
+  ::Serialize::SvgPoint* release_offset();
+  ::Serialize::SvgPoint* mutable_offset();
+  void set_allocated_offset(::Serialize::SvgPoint* offset);
+  private:
+  const ::Serialize::SvgPoint& _internal_offset() const;
+  ::Serialize::SvgPoint* _internal_mutable_offset();
+  public:
+  void unsafe_arena_set_allocated_offset(
+      ::Serialize::SvgPoint* offset);
+  ::Serialize::SvgPoint* unsafe_arena_release_offset();
+
+  // uint32 font_size = 4;
+  void clear_font_size();
+  ::PROTOBUF_NAMESPACE_ID::uint32 font_size() const;
+  void set_font_size(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_font_size() const;
+  void _internal_set_font_size(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  public:
+
+  // bool has_font_family = 5;
+  void clear_has_font_family();
+  bool has_font_family() const;
+  void set_has_font_family(bool value);
+  private:
+  bool _internal_has_font_family() const;
+  void _internal_set_has_font_family(bool value);
+  public:
+
+  // bool has_font_weight = 7;
+  void clear_has_font_weight();
+  bool has_font_weight() const;
+  void set_has_font_weight(bool value);
+  private:
+  bool _internal_has_font_weight() const;
+  void _internal_set_has_font_weight(bool value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:Serialize.Text)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr font_family_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr font_weight_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr data_;
+  ::Serialize::ObjectBase* base_;
+  ::Serialize::SvgPoint* point_;
+  ::Serialize::SvgPoint* offset_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 font_size_;
+  bool has_font_family_;
+  bool has_font_weight_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_transport_5fcatalog_2eproto;
+};
+// -------------------------------------------------------------------
+
+class Object PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Serialize.Object) */ {
+ public:
+  inline Object() : Object(nullptr) {}
+  virtual ~Object();
+
+  Object(const Object& from);
+  Object(Object&& from) noexcept
+    : Object() {
+    *this = ::std::move(from);
+  }
+
+  inline Object& operator=(const Object& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline Object& operator=(Object&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const Object& default_instance();
+
+  enum VariantCase {
+    kCircle = 1,
+    kRect = 2,
+    kPolyline = 3,
+    kText = 4,
+    VARIANT_NOT_SET = 0,
+  };
+
+  static inline const Object* internal_default_instance() {
+    return reinterpret_cast<const Object*>(
+               &_Object_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    29;
+
+  friend void swap(Object& a, Object& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(Object* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(Object* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Object* New() const final {
+    return CreateMaybeMessage<Object>(nullptr);
+  }
+
+  Object* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<Object>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const Object& from);
+  void MergeFrom(const Object& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Object* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "Serialize.Object";
+  }
+  protected:
+  explicit Object(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_transport_5fcatalog_2eproto);
+    return ::descriptor_table_transport_5fcatalog_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kCircleFieldNumber = 1,
+    kRectFieldNumber = 2,
+    kPolylineFieldNumber = 3,
+    kTextFieldNumber = 4,
+  };
+  // .Serialize.Circle circle = 1;
+  bool has_circle() const;
+  private:
+  bool _internal_has_circle() const;
+  public:
+  void clear_circle();
+  const ::Serialize::Circle& circle() const;
+  ::Serialize::Circle* release_circle();
+  ::Serialize::Circle* mutable_circle();
+  void set_allocated_circle(::Serialize::Circle* circle);
+  private:
+  const ::Serialize::Circle& _internal_circle() const;
+  ::Serialize::Circle* _internal_mutable_circle();
+  public:
+  void unsafe_arena_set_allocated_circle(
+      ::Serialize::Circle* circle);
+  ::Serialize::Circle* unsafe_arena_release_circle();
+
+  // .Serialize.Rectangle rect = 2;
+  bool has_rect() const;
+  private:
+  bool _internal_has_rect() const;
+  public:
+  void clear_rect();
+  const ::Serialize::Rectangle& rect() const;
+  ::Serialize::Rectangle* release_rect();
+  ::Serialize::Rectangle* mutable_rect();
+  void set_allocated_rect(::Serialize::Rectangle* rect);
+  private:
+  const ::Serialize::Rectangle& _internal_rect() const;
+  ::Serialize::Rectangle* _internal_mutable_rect();
+  public:
+  void unsafe_arena_set_allocated_rect(
+      ::Serialize::Rectangle* rect);
+  ::Serialize::Rectangle* unsafe_arena_release_rect();
+
+  // .Serialize.Polyline polyline = 3;
+  bool has_polyline() const;
+  private:
+  bool _internal_has_polyline() const;
+  public:
+  void clear_polyline();
+  const ::Serialize::Polyline& polyline() const;
+  ::Serialize::Polyline* release_polyline();
+  ::Serialize::Polyline* mutable_polyline();
+  void set_allocated_polyline(::Serialize::Polyline* polyline);
+  private:
+  const ::Serialize::Polyline& _internal_polyline() const;
+  ::Serialize::Polyline* _internal_mutable_polyline();
+  public:
+  void unsafe_arena_set_allocated_polyline(
+      ::Serialize::Polyline* polyline);
+  ::Serialize::Polyline* unsafe_arena_release_polyline();
+
+  // .Serialize.Text text = 4;
+  bool has_text() const;
+  private:
+  bool _internal_has_text() const;
+  public:
+  void clear_text();
+  const ::Serialize::Text& text() const;
+  ::Serialize::Text* release_text();
+  ::Serialize::Text* mutable_text();
+  void set_allocated_text(::Serialize::Text* text);
+  private:
+  const ::Serialize::Text& _internal_text() const;
+  ::Serialize::Text* _internal_mutable_text();
+  public:
+  void unsafe_arena_set_allocated_text(
+      ::Serialize::Text* text);
+  ::Serialize::Text* unsafe_arena_release_text();
+
+  void clear_variant();
+  VariantCase variant_case() const;
+  // @@protoc_insertion_point(class_scope:Serialize.Object)
+ private:
+  class _Internal;
+  void set_has_circle();
+  void set_has_rect();
+  void set_has_polyline();
+  void set_has_text();
+
+  inline bool has_variant() const;
+  inline void clear_has_variant();
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  union VariantUnion {
+    VariantUnion() {}
+    ::Serialize::Circle* circle_;
+    ::Serialize::Rectangle* rect_;
+    ::Serialize::Polyline* polyline_;
+    ::Serialize::Text* text_;
+  } variant_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 _oneof_case_[1];
+
+  friend struct ::TableStruct_transport_5fcatalog_2eproto;
+};
+// -------------------------------------------------------------------
+
+class Document PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Serialize.Document) */ {
+ public:
+  inline Document() : Document(nullptr) {}
+  virtual ~Document();
+
+  Document(const Document& from);
+  Document(Document&& from) noexcept
+    : Document() {
+    *this = ::std::move(from);
+  }
+
+  inline Document& operator=(const Document& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline Document& operator=(Document&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const Document& default_instance();
+
+  static inline const Document* internal_default_instance() {
+    return reinterpret_cast<const Document*>(
+               &_Document_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    30;
+
+  friend void swap(Document& a, Document& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(Document* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(Document* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Document* New() const final {
+    return CreateMaybeMessage<Document>(nullptr);
+  }
+
+  Document* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<Document>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const Document& from);
+  void MergeFrom(const Document& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Document* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "Serialize.Document";
+  }
+  protected:
+  explicit Document(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_transport_5fcatalog_2eproto);
+    return ::descriptor_table_transport_5fcatalog_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kObjectsFieldNumber = 1,
+  };
+  // repeated .Serialize.Object objects = 1;
+  int objects_size() const;
+  private:
+  int _internal_objects_size() const;
+  public:
+  void clear_objects();
+  ::Serialize::Object* mutable_objects(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Serialize::Object >*
+      mutable_objects();
+  private:
+  const ::Serialize::Object& _internal_objects(int index) const;
+  ::Serialize::Object* _internal_add_objects();
+  public:
+  const ::Serialize::Object& objects(int index) const;
+  ::Serialize::Object* add_objects();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Serialize::Object >&
+      objects() const;
+
+  // @@protoc_insertion_point(class_scope:Serialize.Document)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Serialize::Object > objects_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_transport_5fcatalog_2eproto;
+};
+// -------------------------------------------------------------------
+
+class RenderSettings PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Serialize.RenderSettings) */ {
+ public:
+  inline RenderSettings() : RenderSettings(nullptr) {}
+  virtual ~RenderSettings();
+
+  RenderSettings(const RenderSettings& from);
+  RenderSettings(RenderSettings&& from) noexcept
+    : RenderSettings() {
+    *this = ::std::move(from);
+  }
+
+  inline RenderSettings& operator=(const RenderSettings& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline RenderSettings& operator=(RenderSettings&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const RenderSettings& default_instance();
+
+  static inline const RenderSettings* internal_default_instance() {
+    return reinterpret_cast<const RenderSettings*>(
+               &_RenderSettings_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    31;
+
+  friend void swap(RenderSettings& a, RenderSettings& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(RenderSettings* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(RenderSettings* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline RenderSettings* New() const final {
+    return CreateMaybeMessage<RenderSettings>(nullptr);
+  }
+
+  RenderSettings* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<RenderSettings>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const RenderSettings& from);
+  void MergeFrom(const RenderSettings& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(RenderSettings* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "Serialize.RenderSettings";
+  }
+  protected:
+  explicit RenderSettings(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_transport_5fcatalog_2eproto);
+    return ::descriptor_table_transport_5fcatalog_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kColorPaletteFieldNumber = 10,
+    kLayersFieldNumber = 13,
+    kStopLabelOffsetFieldNumber = 7,
+    kUnderlayerColorFieldNumber = 8,
+    kBusLabelOffsetFieldNumber = 12,
+    kWidthFieldNumber = 1,
+    kHeightFieldNumber = 2,
+    kPaddingFieldNumber = 3,
+    kStopRadiusFieldNumber = 4,
+    kLineWidthFieldNumber = 5,
+    kStopLabelFontSizeFieldNumber = 6,
+    kUnderlayerWidthFieldNumber = 9,
+    kBusLabelFontSizeFieldNumber = 11,
+    kOuterMarginFieldNumber = 14,
+  };
+  // repeated .Serialize.SvgColor color_palette = 10;
+  int color_palette_size() const;
+  private:
+  int _internal_color_palette_size() const;
+  public:
+  void clear_color_palette();
+  ::Serialize::SvgColor* mutable_color_palette(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Serialize::SvgColor >*
+      mutable_color_palette();
+  private:
+  const ::Serialize::SvgColor& _internal_color_palette(int index) const;
+  ::Serialize::SvgColor* _internal_add_color_palette();
+  public:
+  const ::Serialize::SvgColor& color_palette(int index) const;
+  ::Serialize::SvgColor* add_color_palette();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Serialize::SvgColor >&
+      color_palette() const;
+
+  // repeated string layers = 13;
+  int layers_size() const;
+  private:
+  int _internal_layers_size() const;
+  public:
+  void clear_layers();
+  const std::string& layers(int index) const;
+  std::string* mutable_layers(int index);
+  void set_layers(int index, const std::string& value);
+  void set_layers(int index, std::string&& value);
+  void set_layers(int index, const char* value);
+  void set_layers(int index, const char* value, size_t size);
+  std::string* add_layers();
+  void add_layers(const std::string& value);
+  void add_layers(std::string&& value);
+  void add_layers(const char* value);
+  void add_layers(const char* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& layers() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_layers();
+  private:
+  const std::string& _internal_layers(int index) const;
+  std::string* _internal_add_layers();
+  public:
+
+  // .Serialize.SvgPoint stop_label_offset = 7;
+  bool has_stop_label_offset() const;
+  private:
+  bool _internal_has_stop_label_offset() const;
+  public:
+  void clear_stop_label_offset();
+  const ::Serialize::SvgPoint& stop_label_offset() const;
+  ::Serialize::SvgPoint* release_stop_label_offset();
+  ::Serialize::SvgPoint* mutable_stop_label_offset();
+  void set_allocated_stop_label_offset(::Serialize::SvgPoint* stop_label_offset);
+  private:
+  const ::Serialize::SvgPoint& _internal_stop_label_offset() const;
+  ::Serialize::SvgPoint* _internal_mutable_stop_label_offset();
+  public:
+  void unsafe_arena_set_allocated_stop_label_offset(
+      ::Serialize::SvgPoint* stop_label_offset);
+  ::Serialize::SvgPoint* unsafe_arena_release_stop_label_offset();
+
+  // .Serialize.SvgColor underlayer_color = 8;
+  bool has_underlayer_color() const;
+  private:
+  bool _internal_has_underlayer_color() const;
+  public:
+  void clear_underlayer_color();
+  const ::Serialize::SvgColor& underlayer_color() const;
+  ::Serialize::SvgColor* release_underlayer_color();
+  ::Serialize::SvgColor* mutable_underlayer_color();
+  void set_allocated_underlayer_color(::Serialize::SvgColor* underlayer_color);
+  private:
+  const ::Serialize::SvgColor& _internal_underlayer_color() const;
+  ::Serialize::SvgColor* _internal_mutable_underlayer_color();
+  public:
+  void unsafe_arena_set_allocated_underlayer_color(
+      ::Serialize::SvgColor* underlayer_color);
+  ::Serialize::SvgColor* unsafe_arena_release_underlayer_color();
+
+  // .Serialize.SvgPoint bus_label_offset = 12;
+  bool has_bus_label_offset() const;
+  private:
+  bool _internal_has_bus_label_offset() const;
+  public:
+  void clear_bus_label_offset();
+  const ::Serialize::SvgPoint& bus_label_offset() const;
+  ::Serialize::SvgPoint* release_bus_label_offset();
+  ::Serialize::SvgPoint* mutable_bus_label_offset();
+  void set_allocated_bus_label_offset(::Serialize::SvgPoint* bus_label_offset);
+  private:
+  const ::Serialize::SvgPoint& _internal_bus_label_offset() const;
+  ::Serialize::SvgPoint* _internal_mutable_bus_label_offset();
+  public:
+  void unsafe_arena_set_allocated_bus_label_offset(
+      ::Serialize::SvgPoint* bus_label_offset);
+  ::Serialize::SvgPoint* unsafe_arena_release_bus_label_offset();
+
+  // float width = 1;
+  void clear_width();
+  float width() const;
+  void set_width(float value);
+  private:
+  float _internal_width() const;
+  void _internal_set_width(float value);
+  public:
+
+  // float height = 2;
+  void clear_height();
+  float height() const;
+  void set_height(float value);
+  private:
+  float _internal_height() const;
+  void _internal_set_height(float value);
+  public:
+
+  // float padding = 3;
+  void clear_padding();
+  float padding() const;
+  void set_padding(float value);
+  private:
+  float _internal_padding() const;
+  void _internal_set_padding(float value);
+  public:
+
+  // float stop_radius = 4;
+  void clear_stop_radius();
+  float stop_radius() const;
+  void set_stop_radius(float value);
+  private:
+  float _internal_stop_radius() const;
+  void _internal_set_stop_radius(float value);
+  public:
+
+  // float line_width = 5;
+  void clear_line_width();
+  float line_width() const;
+  void set_line_width(float value);
+  private:
+  float _internal_line_width() const;
+  void _internal_set_line_width(float value);
+  public:
+
+  // int32 stop_label_font_size = 6;
+  void clear_stop_label_font_size();
+  ::PROTOBUF_NAMESPACE_ID::int32 stop_label_font_size() const;
+  void set_stop_label_font_size(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_stop_label_font_size() const;
+  void _internal_set_stop_label_font_size(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // float underlayer_width = 9;
+  void clear_underlayer_width();
+  float underlayer_width() const;
+  void set_underlayer_width(float value);
+  private:
+  float _internal_underlayer_width() const;
+  void _internal_set_underlayer_width(float value);
+  public:
+
+  // int32 bus_label_font_size = 11;
+  void clear_bus_label_font_size();
+  ::PROTOBUF_NAMESPACE_ID::int32 bus_label_font_size() const;
+  void set_bus_label_font_size(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_bus_label_font_size() const;
+  void _internal_set_bus_label_font_size(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // float outer_margin = 14;
+  void clear_outer_margin();
+  float outer_margin() const;
+  void set_outer_margin(float value);
+  private:
+  float _internal_outer_margin() const;
+  void _internal_set_outer_margin(float value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:Serialize.RenderSettings)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Serialize::SvgColor > color_palette_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> layers_;
+  ::Serialize::SvgPoint* stop_label_offset_;
+  ::Serialize::SvgColor* underlayer_color_;
+  ::Serialize::SvgPoint* bus_label_offset_;
+  float width_;
+  float height_;
+  float padding_;
+  float stop_radius_;
+  float line_width_;
+  ::PROTOBUF_NAMESPACE_ID::int32 stop_label_font_size_;
+  float underlayer_width_;
+  ::PROTOBUF_NAMESPACE_ID::int32 bus_label_font_size_;
+  float outer_margin_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_transport_5fcatalog_2eproto;
+};
+// -------------------------------------------------------------------
+
+class Painter PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Serialize.Painter) */ {
+ public:
+  inline Painter() : Painter(nullptr) {}
+  virtual ~Painter();
+
+  Painter(const Painter& from);
+  Painter(Painter&& from) noexcept
+    : Painter() {
+    *this = ::std::move(from);
+  }
+
+  inline Painter& operator=(const Painter& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline Painter& operator=(Painter&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const Painter& default_instance();
+
+  static inline const Painter* internal_default_instance() {
+    return reinterpret_cast<const Painter*>(
+               &_Painter_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    32;
+
+  friend void swap(Painter& a, Painter& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(Painter* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(Painter* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Painter* New() const final {
+    return CreateMaybeMessage<Painter>(nullptr);
+  }
+
+  Painter* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<Painter>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const Painter& from);
+  void MergeFrom(const Painter& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Painter* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "Serialize.Painter";
+  }
+  protected:
+  explicit Painter(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_transport_5fcatalog_2eproto);
+    return ::descriptor_table_transport_5fcatalog_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kBusesDictFieldNumber = 2,
+    kStopsCoordsFieldNumber = 3,
+    kBusColorsFieldNumber = 4,
+    kSettingsFieldNumber = 1,
+    kBaseMapFieldNumber = 5,
+  };
+  // repeated .Serialize.BusesDict buses_dict_ = 2;
+  int buses_dict__size() const;
+  private:
+  int _internal_buses_dict__size() const;
+  public:
+  void clear_buses_dict_();
+  ::Serialize::BusesDict* mutable_buses_dict_(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Serialize::BusesDict >*
+      mutable_buses_dict_();
+  private:
+  const ::Serialize::BusesDict& _internal_buses_dict_(int index) const;
+  ::Serialize::BusesDict* _internal_add_buses_dict_();
+  public:
+  const ::Serialize::BusesDict& buses_dict_(int index) const;
+  ::Serialize::BusesDict* add_buses_dict_();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Serialize::BusesDict >&
+      buses_dict_() const;
+
+  // repeated .Serialize.StopCoord stops_coords_ = 3;
+  int stops_coords__size() const;
+  private:
+  int _internal_stops_coords__size() const;
+  public:
+  void clear_stops_coords_();
+  ::Serialize::StopCoord* mutable_stops_coords_(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Serialize::StopCoord >*
+      mutable_stops_coords_();
+  private:
+  const ::Serialize::StopCoord& _internal_stops_coords_(int index) const;
+  ::Serialize::StopCoord* _internal_add_stops_coords_();
+  public:
+  const ::Serialize::StopCoord& stops_coords_(int index) const;
+  ::Serialize::StopCoord* add_stops_coords_();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Serialize::StopCoord >&
+      stops_coords_() const;
+
+  // repeated .Serialize.BusColor bus_colors_ = 4;
+  int bus_colors__size() const;
+  private:
+  int _internal_bus_colors__size() const;
+  public:
+  void clear_bus_colors_();
+  ::Serialize::BusColor* mutable_bus_colors_(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Serialize::BusColor >*
+      mutable_bus_colors_();
+  private:
+  const ::Serialize::BusColor& _internal_bus_colors_(int index) const;
+  ::Serialize::BusColor* _internal_add_bus_colors_();
+  public:
+  const ::Serialize::BusColor& bus_colors_(int index) const;
+  ::Serialize::BusColor* add_bus_colors_();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Serialize::BusColor >&
+      bus_colors_() const;
+
+  // .Serialize.RenderSettings settings_ = 1;
+  bool has_settings_() const;
+  private:
+  bool _internal_has_settings_() const;
+  public:
+  void clear_settings_();
+  const ::Serialize::RenderSettings& settings_() const;
+  ::Serialize::RenderSettings* release_settings_();
+  ::Serialize::RenderSettings* mutable_settings_();
+  void set_allocated_settings_(::Serialize::RenderSettings* settings_);
+  private:
+  const ::Serialize::RenderSettings& _internal_settings_() const;
+  ::Serialize::RenderSettings* _internal_mutable_settings_();
+  public:
+  void unsafe_arena_set_allocated_settings_(
+      ::Serialize::RenderSettings* settings_);
+  ::Serialize::RenderSettings* unsafe_arena_release_settings_();
+
+  // .Serialize.Document base_map_ = 5;
+  bool has_base_map_() const;
+  private:
+  bool _internal_has_base_map_() const;
+  public:
+  void clear_base_map_();
+  const ::Serialize::Document& base_map_() const;
+  ::Serialize::Document* release_base_map_();
+  ::Serialize::Document* mutable_base_map_();
+  void set_allocated_base_map_(::Serialize::Document* base_map_);
+  private:
+  const ::Serialize::Document& _internal_base_map_() const;
+  ::Serialize::Document* _internal_mutable_base_map_();
+  public:
+  void unsafe_arena_set_allocated_base_map_(
+      ::Serialize::Document* base_map_);
+  ::Serialize::Document* unsafe_arena_release_base_map_();
+
+  // @@protoc_insertion_point(class_scope:Serialize.Painter)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Serialize::BusesDict > buses_dict__;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Serialize::StopCoord > stops_coords__;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Serialize::BusColor > bus_colors__;
+  ::Serialize::RenderSettings* settings__;
+  ::Serialize::Document* base_map__;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_transport_5fcatalog_2eproto;
+};
+// -------------------------------------------------------------------
+
 class TransportCatalog PROTOBUF_FINAL :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Serialize.TransportCatalog) */ {
  public:
@@ -2785,7 +6155,7 @@ class TransportCatalog PROTOBUF_FINAL :
                &_TransportCatalog_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    16;
+    33;
 
   friend void swap(TransportCatalog& a, TransportCatalog& b) {
     a.Swap(&b);
@@ -2859,6 +6229,7 @@ class TransportCatalog PROTOBUF_FINAL :
     kStopsFieldNumber = 1,
     kBusesFieldNumber = 2,
     kRouterFieldNumber = 3,
+    kPainterFieldNumber = 4,
   };
   // repeated .Serialize.StopRequest stops_ = 1;
   int stops__size() const;
@@ -2914,6 +6285,24 @@ class TransportCatalog PROTOBUF_FINAL :
       ::Serialize::TransportRouter* router_);
   ::Serialize::TransportRouter* unsafe_arena_release_router_();
 
+  // .Serialize.Painter painter_ = 4;
+  bool has_painter_() const;
+  private:
+  bool _internal_has_painter_() const;
+  public:
+  void clear_painter_();
+  const ::Serialize::Painter& painter_() const;
+  ::Serialize::Painter* release_painter_();
+  ::Serialize::Painter* mutable_painter_();
+  void set_allocated_painter_(::Serialize::Painter* painter_);
+  private:
+  const ::Serialize::Painter& _internal_painter_() const;
+  ::Serialize::Painter* _internal_mutable_painter_();
+  public:
+  void unsafe_arena_set_allocated_painter_(
+      ::Serialize::Painter* painter_);
+  ::Serialize::Painter* unsafe_arena_release_painter_();
+
   // @@protoc_insertion_point(class_scope:Serialize.TransportCatalog)
  private:
   class _Internal;
@@ -2924,6 +6313,7 @@ class TransportCatalog PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Serialize::StopRequest > stops__;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Serialize::BusRequest > buses__;
   ::Serialize::TransportRouter* router__;
+  ::Serialize::Painter* painter__;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_transport_5fcatalog_2eproto;
 };
@@ -3262,22 +6652,22 @@ inline void Edge::set_to(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   // @@protoc_insertion_point(field_set:Serialize.Edge.to)
 }
 
-// double weight = 3;
+// float weight = 3;
 inline void Edge::clear_weight() {
   weight_ = 0;
 }
-inline double Edge::_internal_weight() const {
+inline float Edge::_internal_weight() const {
   return weight_;
 }
-inline double Edge::weight() const {
+inline float Edge::weight() const {
   // @@protoc_insertion_point(field_get:Serialize.Edge.weight)
   return _internal_weight();
 }
-inline void Edge::_internal_set_weight(double value) {
+inline void Edge::_internal_set_weight(float value) {
   
   weight_ = value;
 }
-inline void Edge::set_weight(double value) {
+inline void Edge::set_weight(float value) {
   _internal_set_weight(value);
   // @@protoc_insertion_point(field_set:Serialize.Edge.weight)
 }
@@ -3419,22 +6809,22 @@ BusGraph::incidence_lists_() const {
 
 // RouteData
 
-// double weight = 1;
+// float weight = 1;
 inline void RouteData::clear_weight() {
   weight_ = 0;
 }
-inline double RouteData::_internal_weight() const {
+inline float RouteData::_internal_weight() const {
   return weight_;
 }
-inline double RouteData::weight() const {
+inline float RouteData::weight() const {
   // @@protoc_insertion_point(field_get:Serialize.RouteData.weight)
   return _internal_weight();
 }
-inline void RouteData::_internal_set_weight(double value) {
+inline void RouteData::_internal_set_weight(float value) {
   
   weight_ = value;
 }
-inline void RouteData::set_weight(double value) {
+inline void RouteData::set_weight(float value) {
   _internal_set_weight(value);
   // @@protoc_insertion_point(field_set:Serialize.RouteData.weight)
 }
@@ -4546,6 +7936,3602 @@ TransportRouter::edges_info_() const {
 
 // -------------------------------------------------------------------
 
+// SvgPoint
+
+// float x = 1;
+inline void SvgPoint::clear_x() {
+  x_ = 0;
+}
+inline float SvgPoint::_internal_x() const {
+  return x_;
+}
+inline float SvgPoint::x() const {
+  // @@protoc_insertion_point(field_get:Serialize.SvgPoint.x)
+  return _internal_x();
+}
+inline void SvgPoint::_internal_set_x(float value) {
+  
+  x_ = value;
+}
+inline void SvgPoint::set_x(float value) {
+  _internal_set_x(value);
+  // @@protoc_insertion_point(field_set:Serialize.SvgPoint.x)
+}
+
+// float y = 2;
+inline void SvgPoint::clear_y() {
+  y_ = 0;
+}
+inline float SvgPoint::_internal_y() const {
+  return y_;
+}
+inline float SvgPoint::y() const {
+  // @@protoc_insertion_point(field_get:Serialize.SvgPoint.y)
+  return _internal_y();
+}
+inline void SvgPoint::_internal_set_y(float value) {
+  
+  y_ = value;
+}
+inline void SvgPoint::set_y(float value) {
+  _internal_set_y(value);
+  // @@protoc_insertion_point(field_set:Serialize.SvgPoint.y)
+}
+
+// -------------------------------------------------------------------
+
+// Rgb
+
+// int32 red = 1;
+inline void Rgb::clear_red() {
+  red_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 Rgb::_internal_red() const {
+  return red_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 Rgb::red() const {
+  // @@protoc_insertion_point(field_get:Serialize.Rgb.red)
+  return _internal_red();
+}
+inline void Rgb::_internal_set_red(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  red_ = value;
+}
+inline void Rgb::set_red(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_red(value);
+  // @@protoc_insertion_point(field_set:Serialize.Rgb.red)
+}
+
+// int32 green = 2;
+inline void Rgb::clear_green() {
+  green_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 Rgb::_internal_green() const {
+  return green_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 Rgb::green() const {
+  // @@protoc_insertion_point(field_get:Serialize.Rgb.green)
+  return _internal_green();
+}
+inline void Rgb::_internal_set_green(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  green_ = value;
+}
+inline void Rgb::set_green(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_green(value);
+  // @@protoc_insertion_point(field_set:Serialize.Rgb.green)
+}
+
+// int32 blue = 3;
+inline void Rgb::clear_blue() {
+  blue_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 Rgb::_internal_blue() const {
+  return blue_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 Rgb::blue() const {
+  // @@protoc_insertion_point(field_get:Serialize.Rgb.blue)
+  return _internal_blue();
+}
+inline void Rgb::_internal_set_blue(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  blue_ = value;
+}
+inline void Rgb::set_blue(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_blue(value);
+  // @@protoc_insertion_point(field_set:Serialize.Rgb.blue)
+}
+
+// -------------------------------------------------------------------
+
+// Rgba
+
+// .Serialize.Rgb color = 1;
+inline bool Rgba::_internal_has_color() const {
+  return this != internal_default_instance() && color_ != nullptr;
+}
+inline bool Rgba::has_color() const {
+  return _internal_has_color();
+}
+inline void Rgba::clear_color() {
+  if (GetArena() == nullptr && color_ != nullptr) {
+    delete color_;
+  }
+  color_ = nullptr;
+}
+inline const ::Serialize::Rgb& Rgba::_internal_color() const {
+  const ::Serialize::Rgb* p = color_;
+  return p != nullptr ? *p : reinterpret_cast<const ::Serialize::Rgb&>(
+      ::Serialize::_Rgb_default_instance_);
+}
+inline const ::Serialize::Rgb& Rgba::color() const {
+  // @@protoc_insertion_point(field_get:Serialize.Rgba.color)
+  return _internal_color();
+}
+inline void Rgba::unsafe_arena_set_allocated_color(
+    ::Serialize::Rgb* color) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(color_);
+  }
+  color_ = color;
+  if (color) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Serialize.Rgba.color)
+}
+inline ::Serialize::Rgb* Rgba::release_color() {
+  
+  ::Serialize::Rgb* temp = color_;
+  color_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::Serialize::Rgb* Rgba::unsafe_arena_release_color() {
+  // @@protoc_insertion_point(field_release:Serialize.Rgba.color)
+  
+  ::Serialize::Rgb* temp = color_;
+  color_ = nullptr;
+  return temp;
+}
+inline ::Serialize::Rgb* Rgba::_internal_mutable_color() {
+  
+  if (color_ == nullptr) {
+    auto* p = CreateMaybeMessage<::Serialize::Rgb>(GetArena());
+    color_ = p;
+  }
+  return color_;
+}
+inline ::Serialize::Rgb* Rgba::mutable_color() {
+  // @@protoc_insertion_point(field_mutable:Serialize.Rgba.color)
+  return _internal_mutable_color();
+}
+inline void Rgba::set_allocated_color(::Serialize::Rgb* color) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete color_;
+  }
+  if (color) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(color);
+    if (message_arena != submessage_arena) {
+      color = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, color, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  color_ = color;
+  // @@protoc_insertion_point(field_set_allocated:Serialize.Rgba.color)
+}
+
+// float alpha = 2;
+inline void Rgba::clear_alpha() {
+  alpha_ = 0;
+}
+inline float Rgba::_internal_alpha() const {
+  return alpha_;
+}
+inline float Rgba::alpha() const {
+  // @@protoc_insertion_point(field_get:Serialize.Rgba.alpha)
+  return _internal_alpha();
+}
+inline void Rgba::_internal_set_alpha(float value) {
+  
+  alpha_ = value;
+}
+inline void Rgba::set_alpha(float value) {
+  _internal_set_alpha(value);
+  // @@protoc_insertion_point(field_set:Serialize.Rgba.alpha)
+}
+
+// -------------------------------------------------------------------
+
+// StrColor
+
+// string color = 1;
+inline void StrColor::clear_color() {
+  color_.ClearToEmpty();
+}
+inline const std::string& StrColor::color() const {
+  // @@protoc_insertion_point(field_get:Serialize.StrColor.color)
+  return _internal_color();
+}
+inline void StrColor::set_color(const std::string& value) {
+  _internal_set_color(value);
+  // @@protoc_insertion_point(field_set:Serialize.StrColor.color)
+}
+inline std::string* StrColor::mutable_color() {
+  // @@protoc_insertion_point(field_mutable:Serialize.StrColor.color)
+  return _internal_mutable_color();
+}
+inline const std::string& StrColor::_internal_color() const {
+  return color_.Get();
+}
+inline void StrColor::_internal_set_color(const std::string& value) {
+  
+  color_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void StrColor::set_color(std::string&& value) {
+  
+  color_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:Serialize.StrColor.color)
+}
+inline void StrColor::set_color(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  color_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:Serialize.StrColor.color)
+}
+inline void StrColor::set_color(const char* value,
+    size_t size) {
+  
+  color_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:Serialize.StrColor.color)
+}
+inline std::string* StrColor::_internal_mutable_color() {
+  
+  return color_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* StrColor::release_color() {
+  // @@protoc_insertion_point(field_release:Serialize.StrColor.color)
+  return color_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void StrColor::set_allocated_color(std::string* color) {
+  if (color != nullptr) {
+    
+  } else {
+    
+  }
+  color_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), color,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:Serialize.StrColor.color)
+}
+
+// -------------------------------------------------------------------
+
+// SvgColor
+
+// .Serialize.StrColor str = 1;
+inline bool SvgColor::_internal_has_str() const {
+  return variant_case() == kStr;
+}
+inline bool SvgColor::has_str() const {
+  return _internal_has_str();
+}
+inline void SvgColor::set_has_str() {
+  _oneof_case_[0] = kStr;
+}
+inline void SvgColor::clear_str() {
+  if (_internal_has_str()) {
+    if (GetArena() == nullptr) {
+      delete variant_.str_;
+    }
+    clear_has_variant();
+  }
+}
+inline ::Serialize::StrColor* SvgColor::release_str() {
+  // @@protoc_insertion_point(field_release:Serialize.SvgColor.str)
+  if (_internal_has_str()) {
+    clear_has_variant();
+      ::Serialize::StrColor* temp = variant_.str_;
+    if (GetArena() != nullptr) {
+      temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+    }
+    variant_.str_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::Serialize::StrColor& SvgColor::_internal_str() const {
+  return _internal_has_str()
+      ? *variant_.str_
+      : reinterpret_cast< ::Serialize::StrColor&>(::Serialize::_StrColor_default_instance_);
+}
+inline const ::Serialize::StrColor& SvgColor::str() const {
+  // @@protoc_insertion_point(field_get:Serialize.SvgColor.str)
+  return _internal_str();
+}
+inline ::Serialize::StrColor* SvgColor::unsafe_arena_release_str() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:Serialize.SvgColor.str)
+  if (_internal_has_str()) {
+    clear_has_variant();
+    ::Serialize::StrColor* temp = variant_.str_;
+    variant_.str_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void SvgColor::unsafe_arena_set_allocated_str(::Serialize::StrColor* str) {
+  clear_variant();
+  if (str) {
+    set_has_str();
+    variant_.str_ = str;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Serialize.SvgColor.str)
+}
+inline ::Serialize::StrColor* SvgColor::_internal_mutable_str() {
+  if (!_internal_has_str()) {
+    clear_variant();
+    set_has_str();
+    variant_.str_ = CreateMaybeMessage< ::Serialize::StrColor >(GetArena());
+  }
+  return variant_.str_;
+}
+inline ::Serialize::StrColor* SvgColor::mutable_str() {
+  // @@protoc_insertion_point(field_mutable:Serialize.SvgColor.str)
+  return _internal_mutable_str();
+}
+
+// .Serialize.Rgb rgb = 2;
+inline bool SvgColor::_internal_has_rgb() const {
+  return variant_case() == kRgb;
+}
+inline bool SvgColor::has_rgb() const {
+  return _internal_has_rgb();
+}
+inline void SvgColor::set_has_rgb() {
+  _oneof_case_[0] = kRgb;
+}
+inline void SvgColor::clear_rgb() {
+  if (_internal_has_rgb()) {
+    if (GetArena() == nullptr) {
+      delete variant_.rgb_;
+    }
+    clear_has_variant();
+  }
+}
+inline ::Serialize::Rgb* SvgColor::release_rgb() {
+  // @@protoc_insertion_point(field_release:Serialize.SvgColor.rgb)
+  if (_internal_has_rgb()) {
+    clear_has_variant();
+      ::Serialize::Rgb* temp = variant_.rgb_;
+    if (GetArena() != nullptr) {
+      temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+    }
+    variant_.rgb_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::Serialize::Rgb& SvgColor::_internal_rgb() const {
+  return _internal_has_rgb()
+      ? *variant_.rgb_
+      : reinterpret_cast< ::Serialize::Rgb&>(::Serialize::_Rgb_default_instance_);
+}
+inline const ::Serialize::Rgb& SvgColor::rgb() const {
+  // @@protoc_insertion_point(field_get:Serialize.SvgColor.rgb)
+  return _internal_rgb();
+}
+inline ::Serialize::Rgb* SvgColor::unsafe_arena_release_rgb() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:Serialize.SvgColor.rgb)
+  if (_internal_has_rgb()) {
+    clear_has_variant();
+    ::Serialize::Rgb* temp = variant_.rgb_;
+    variant_.rgb_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void SvgColor::unsafe_arena_set_allocated_rgb(::Serialize::Rgb* rgb) {
+  clear_variant();
+  if (rgb) {
+    set_has_rgb();
+    variant_.rgb_ = rgb;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Serialize.SvgColor.rgb)
+}
+inline ::Serialize::Rgb* SvgColor::_internal_mutable_rgb() {
+  if (!_internal_has_rgb()) {
+    clear_variant();
+    set_has_rgb();
+    variant_.rgb_ = CreateMaybeMessage< ::Serialize::Rgb >(GetArena());
+  }
+  return variant_.rgb_;
+}
+inline ::Serialize::Rgb* SvgColor::mutable_rgb() {
+  // @@protoc_insertion_point(field_mutable:Serialize.SvgColor.rgb)
+  return _internal_mutable_rgb();
+}
+
+// .Serialize.Rgba rgba = 3;
+inline bool SvgColor::_internal_has_rgba() const {
+  return variant_case() == kRgba;
+}
+inline bool SvgColor::has_rgba() const {
+  return _internal_has_rgba();
+}
+inline void SvgColor::set_has_rgba() {
+  _oneof_case_[0] = kRgba;
+}
+inline void SvgColor::clear_rgba() {
+  if (_internal_has_rgba()) {
+    if (GetArena() == nullptr) {
+      delete variant_.rgba_;
+    }
+    clear_has_variant();
+  }
+}
+inline ::Serialize::Rgba* SvgColor::release_rgba() {
+  // @@protoc_insertion_point(field_release:Serialize.SvgColor.rgba)
+  if (_internal_has_rgba()) {
+    clear_has_variant();
+      ::Serialize::Rgba* temp = variant_.rgba_;
+    if (GetArena() != nullptr) {
+      temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+    }
+    variant_.rgba_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::Serialize::Rgba& SvgColor::_internal_rgba() const {
+  return _internal_has_rgba()
+      ? *variant_.rgba_
+      : reinterpret_cast< ::Serialize::Rgba&>(::Serialize::_Rgba_default_instance_);
+}
+inline const ::Serialize::Rgba& SvgColor::rgba() const {
+  // @@protoc_insertion_point(field_get:Serialize.SvgColor.rgba)
+  return _internal_rgba();
+}
+inline ::Serialize::Rgba* SvgColor::unsafe_arena_release_rgba() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:Serialize.SvgColor.rgba)
+  if (_internal_has_rgba()) {
+    clear_has_variant();
+    ::Serialize::Rgba* temp = variant_.rgba_;
+    variant_.rgba_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void SvgColor::unsafe_arena_set_allocated_rgba(::Serialize::Rgba* rgba) {
+  clear_variant();
+  if (rgba) {
+    set_has_rgba();
+    variant_.rgba_ = rgba;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Serialize.SvgColor.rgba)
+}
+inline ::Serialize::Rgba* SvgColor::_internal_mutable_rgba() {
+  if (!_internal_has_rgba()) {
+    clear_variant();
+    set_has_rgba();
+    variant_.rgba_ = CreateMaybeMessage< ::Serialize::Rgba >(GetArena());
+  }
+  return variant_.rgba_;
+}
+inline ::Serialize::Rgba* SvgColor::mutable_rgba() {
+  // @@protoc_insertion_point(field_mutable:Serialize.SvgColor.rgba)
+  return _internal_mutable_rgba();
+}
+
+inline bool SvgColor::has_variant() const {
+  return variant_case() != VARIANT_NOT_SET;
+}
+inline void SvgColor::clear_has_variant() {
+  _oneof_case_[0] = VARIANT_NOT_SET;
+}
+inline SvgColor::VariantCase SvgColor::variant_case() const {
+  return SvgColor::VariantCase(_oneof_case_[0]);
+}
+// -------------------------------------------------------------------
+
+// BusesDict
+
+// string name = 1;
+inline void BusesDict::clear_name() {
+  name_.ClearToEmpty();
+}
+inline const std::string& BusesDict::name() const {
+  // @@protoc_insertion_point(field_get:Serialize.BusesDict.name)
+  return _internal_name();
+}
+inline void BusesDict::set_name(const std::string& value) {
+  _internal_set_name(value);
+  // @@protoc_insertion_point(field_set:Serialize.BusesDict.name)
+}
+inline std::string* BusesDict::mutable_name() {
+  // @@protoc_insertion_point(field_mutable:Serialize.BusesDict.name)
+  return _internal_mutable_name();
+}
+inline const std::string& BusesDict::_internal_name() const {
+  return name_.Get();
+}
+inline void BusesDict::_internal_set_name(const std::string& value) {
+  
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void BusesDict::set_name(std::string&& value) {
+  
+  name_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:Serialize.BusesDict.name)
+}
+inline void BusesDict::set_name(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:Serialize.BusesDict.name)
+}
+inline void BusesDict::set_name(const char* value,
+    size_t size) {
+  
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:Serialize.BusesDict.name)
+}
+inline std::string* BusesDict::_internal_mutable_name() {
+  
+  return name_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* BusesDict::release_name() {
+  // @@protoc_insertion_point(field_release:Serialize.BusesDict.name)
+  return name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void BusesDict::set_allocated_name(std::string* name) {
+  if (name != nullptr) {
+    
+  } else {
+    
+  }
+  name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:Serialize.BusesDict.name)
+}
+
+// repeated string stops = 2;
+inline int BusesDict::_internal_stops_size() const {
+  return stops_.size();
+}
+inline int BusesDict::stops_size() const {
+  return _internal_stops_size();
+}
+inline void BusesDict::clear_stops() {
+  stops_.Clear();
+}
+inline std::string* BusesDict::add_stops() {
+  // @@protoc_insertion_point(field_add_mutable:Serialize.BusesDict.stops)
+  return _internal_add_stops();
+}
+inline const std::string& BusesDict::_internal_stops(int index) const {
+  return stops_.Get(index);
+}
+inline const std::string& BusesDict::stops(int index) const {
+  // @@protoc_insertion_point(field_get:Serialize.BusesDict.stops)
+  return _internal_stops(index);
+}
+inline std::string* BusesDict::mutable_stops(int index) {
+  // @@protoc_insertion_point(field_mutable:Serialize.BusesDict.stops)
+  return stops_.Mutable(index);
+}
+inline void BusesDict::set_stops(int index, const std::string& value) {
+  // @@protoc_insertion_point(field_set:Serialize.BusesDict.stops)
+  stops_.Mutable(index)->assign(value);
+}
+inline void BusesDict::set_stops(int index, std::string&& value) {
+  // @@protoc_insertion_point(field_set:Serialize.BusesDict.stops)
+  stops_.Mutable(index)->assign(std::move(value));
+}
+inline void BusesDict::set_stops(int index, const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  stops_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:Serialize.BusesDict.stops)
+}
+inline void BusesDict::set_stops(int index, const char* value, size_t size) {
+  stops_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:Serialize.BusesDict.stops)
+}
+inline std::string* BusesDict::_internal_add_stops() {
+  return stops_.Add();
+}
+inline void BusesDict::add_stops(const std::string& value) {
+  stops_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:Serialize.BusesDict.stops)
+}
+inline void BusesDict::add_stops(std::string&& value) {
+  stops_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:Serialize.BusesDict.stops)
+}
+inline void BusesDict::add_stops(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  stops_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:Serialize.BusesDict.stops)
+}
+inline void BusesDict::add_stops(const char* value, size_t size) {
+  stops_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:Serialize.BusesDict.stops)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
+BusesDict::stops() const {
+  // @@protoc_insertion_point(field_list:Serialize.BusesDict.stops)
+  return stops_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
+BusesDict::mutable_stops() {
+  // @@protoc_insertion_point(field_mutable_list:Serialize.BusesDict.stops)
+  return &stops_;
+}
+
+// repeated string endpoints = 3;
+inline int BusesDict::_internal_endpoints_size() const {
+  return endpoints_.size();
+}
+inline int BusesDict::endpoints_size() const {
+  return _internal_endpoints_size();
+}
+inline void BusesDict::clear_endpoints() {
+  endpoints_.Clear();
+}
+inline std::string* BusesDict::add_endpoints() {
+  // @@protoc_insertion_point(field_add_mutable:Serialize.BusesDict.endpoints)
+  return _internal_add_endpoints();
+}
+inline const std::string& BusesDict::_internal_endpoints(int index) const {
+  return endpoints_.Get(index);
+}
+inline const std::string& BusesDict::endpoints(int index) const {
+  // @@protoc_insertion_point(field_get:Serialize.BusesDict.endpoints)
+  return _internal_endpoints(index);
+}
+inline std::string* BusesDict::mutable_endpoints(int index) {
+  // @@protoc_insertion_point(field_mutable:Serialize.BusesDict.endpoints)
+  return endpoints_.Mutable(index);
+}
+inline void BusesDict::set_endpoints(int index, const std::string& value) {
+  // @@protoc_insertion_point(field_set:Serialize.BusesDict.endpoints)
+  endpoints_.Mutable(index)->assign(value);
+}
+inline void BusesDict::set_endpoints(int index, std::string&& value) {
+  // @@protoc_insertion_point(field_set:Serialize.BusesDict.endpoints)
+  endpoints_.Mutable(index)->assign(std::move(value));
+}
+inline void BusesDict::set_endpoints(int index, const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  endpoints_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:Serialize.BusesDict.endpoints)
+}
+inline void BusesDict::set_endpoints(int index, const char* value, size_t size) {
+  endpoints_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:Serialize.BusesDict.endpoints)
+}
+inline std::string* BusesDict::_internal_add_endpoints() {
+  return endpoints_.Add();
+}
+inline void BusesDict::add_endpoints(const std::string& value) {
+  endpoints_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:Serialize.BusesDict.endpoints)
+}
+inline void BusesDict::add_endpoints(std::string&& value) {
+  endpoints_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:Serialize.BusesDict.endpoints)
+}
+inline void BusesDict::add_endpoints(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  endpoints_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:Serialize.BusesDict.endpoints)
+}
+inline void BusesDict::add_endpoints(const char* value, size_t size) {
+  endpoints_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:Serialize.BusesDict.endpoints)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
+BusesDict::endpoints() const {
+  // @@protoc_insertion_point(field_list:Serialize.BusesDict.endpoints)
+  return endpoints_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
+BusesDict::mutable_endpoints() {
+  // @@protoc_insertion_point(field_mutable_list:Serialize.BusesDict.endpoints)
+  return &endpoints_;
+}
+
+// bool is_roundtrip = 4;
+inline void BusesDict::clear_is_roundtrip() {
+  is_roundtrip_ = false;
+}
+inline bool BusesDict::_internal_is_roundtrip() const {
+  return is_roundtrip_;
+}
+inline bool BusesDict::is_roundtrip() const {
+  // @@protoc_insertion_point(field_get:Serialize.BusesDict.is_roundtrip)
+  return _internal_is_roundtrip();
+}
+inline void BusesDict::_internal_set_is_roundtrip(bool value) {
+  
+  is_roundtrip_ = value;
+}
+inline void BusesDict::set_is_roundtrip(bool value) {
+  _internal_set_is_roundtrip(value);
+  // @@protoc_insertion_point(field_set:Serialize.BusesDict.is_roundtrip)
+}
+
+// -------------------------------------------------------------------
+
+// StopCoord
+
+// string name = 1;
+inline void StopCoord::clear_name() {
+  name_.ClearToEmpty();
+}
+inline const std::string& StopCoord::name() const {
+  // @@protoc_insertion_point(field_get:Serialize.StopCoord.name)
+  return _internal_name();
+}
+inline void StopCoord::set_name(const std::string& value) {
+  _internal_set_name(value);
+  // @@protoc_insertion_point(field_set:Serialize.StopCoord.name)
+}
+inline std::string* StopCoord::mutable_name() {
+  // @@protoc_insertion_point(field_mutable:Serialize.StopCoord.name)
+  return _internal_mutable_name();
+}
+inline const std::string& StopCoord::_internal_name() const {
+  return name_.Get();
+}
+inline void StopCoord::_internal_set_name(const std::string& value) {
+  
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void StopCoord::set_name(std::string&& value) {
+  
+  name_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:Serialize.StopCoord.name)
+}
+inline void StopCoord::set_name(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:Serialize.StopCoord.name)
+}
+inline void StopCoord::set_name(const char* value,
+    size_t size) {
+  
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:Serialize.StopCoord.name)
+}
+inline std::string* StopCoord::_internal_mutable_name() {
+  
+  return name_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* StopCoord::release_name() {
+  // @@protoc_insertion_point(field_release:Serialize.StopCoord.name)
+  return name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void StopCoord::set_allocated_name(std::string* name) {
+  if (name != nullptr) {
+    
+  } else {
+    
+  }
+  name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:Serialize.StopCoord.name)
+}
+
+// .Serialize.SvgPoint point = 2;
+inline bool StopCoord::_internal_has_point() const {
+  return this != internal_default_instance() && point_ != nullptr;
+}
+inline bool StopCoord::has_point() const {
+  return _internal_has_point();
+}
+inline void StopCoord::clear_point() {
+  if (GetArena() == nullptr && point_ != nullptr) {
+    delete point_;
+  }
+  point_ = nullptr;
+}
+inline const ::Serialize::SvgPoint& StopCoord::_internal_point() const {
+  const ::Serialize::SvgPoint* p = point_;
+  return p != nullptr ? *p : reinterpret_cast<const ::Serialize::SvgPoint&>(
+      ::Serialize::_SvgPoint_default_instance_);
+}
+inline const ::Serialize::SvgPoint& StopCoord::point() const {
+  // @@protoc_insertion_point(field_get:Serialize.StopCoord.point)
+  return _internal_point();
+}
+inline void StopCoord::unsafe_arena_set_allocated_point(
+    ::Serialize::SvgPoint* point) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(point_);
+  }
+  point_ = point;
+  if (point) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Serialize.StopCoord.point)
+}
+inline ::Serialize::SvgPoint* StopCoord::release_point() {
+  
+  ::Serialize::SvgPoint* temp = point_;
+  point_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::Serialize::SvgPoint* StopCoord::unsafe_arena_release_point() {
+  // @@protoc_insertion_point(field_release:Serialize.StopCoord.point)
+  
+  ::Serialize::SvgPoint* temp = point_;
+  point_ = nullptr;
+  return temp;
+}
+inline ::Serialize::SvgPoint* StopCoord::_internal_mutable_point() {
+  
+  if (point_ == nullptr) {
+    auto* p = CreateMaybeMessage<::Serialize::SvgPoint>(GetArena());
+    point_ = p;
+  }
+  return point_;
+}
+inline ::Serialize::SvgPoint* StopCoord::mutable_point() {
+  // @@protoc_insertion_point(field_mutable:Serialize.StopCoord.point)
+  return _internal_mutable_point();
+}
+inline void StopCoord::set_allocated_point(::Serialize::SvgPoint* point) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete point_;
+  }
+  if (point) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(point);
+    if (message_arena != submessage_arena) {
+      point = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, point, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  point_ = point;
+  // @@protoc_insertion_point(field_set_allocated:Serialize.StopCoord.point)
+}
+
+// -------------------------------------------------------------------
+
+// BusColor
+
+// string name = 1;
+inline void BusColor::clear_name() {
+  name_.ClearToEmpty();
+}
+inline const std::string& BusColor::name() const {
+  // @@protoc_insertion_point(field_get:Serialize.BusColor.name)
+  return _internal_name();
+}
+inline void BusColor::set_name(const std::string& value) {
+  _internal_set_name(value);
+  // @@protoc_insertion_point(field_set:Serialize.BusColor.name)
+}
+inline std::string* BusColor::mutable_name() {
+  // @@protoc_insertion_point(field_mutable:Serialize.BusColor.name)
+  return _internal_mutable_name();
+}
+inline const std::string& BusColor::_internal_name() const {
+  return name_.Get();
+}
+inline void BusColor::_internal_set_name(const std::string& value) {
+  
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void BusColor::set_name(std::string&& value) {
+  
+  name_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:Serialize.BusColor.name)
+}
+inline void BusColor::set_name(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:Serialize.BusColor.name)
+}
+inline void BusColor::set_name(const char* value,
+    size_t size) {
+  
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:Serialize.BusColor.name)
+}
+inline std::string* BusColor::_internal_mutable_name() {
+  
+  return name_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* BusColor::release_name() {
+  // @@protoc_insertion_point(field_release:Serialize.BusColor.name)
+  return name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void BusColor::set_allocated_name(std::string* name) {
+  if (name != nullptr) {
+    
+  } else {
+    
+  }
+  name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:Serialize.BusColor.name)
+}
+
+// .Serialize.SvgColor color = 2;
+inline bool BusColor::_internal_has_color() const {
+  return this != internal_default_instance() && color_ != nullptr;
+}
+inline bool BusColor::has_color() const {
+  return _internal_has_color();
+}
+inline void BusColor::clear_color() {
+  if (GetArena() == nullptr && color_ != nullptr) {
+    delete color_;
+  }
+  color_ = nullptr;
+}
+inline const ::Serialize::SvgColor& BusColor::_internal_color() const {
+  const ::Serialize::SvgColor* p = color_;
+  return p != nullptr ? *p : reinterpret_cast<const ::Serialize::SvgColor&>(
+      ::Serialize::_SvgColor_default_instance_);
+}
+inline const ::Serialize::SvgColor& BusColor::color() const {
+  // @@protoc_insertion_point(field_get:Serialize.BusColor.color)
+  return _internal_color();
+}
+inline void BusColor::unsafe_arena_set_allocated_color(
+    ::Serialize::SvgColor* color) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(color_);
+  }
+  color_ = color;
+  if (color) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Serialize.BusColor.color)
+}
+inline ::Serialize::SvgColor* BusColor::release_color() {
+  
+  ::Serialize::SvgColor* temp = color_;
+  color_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::Serialize::SvgColor* BusColor::unsafe_arena_release_color() {
+  // @@protoc_insertion_point(field_release:Serialize.BusColor.color)
+  
+  ::Serialize::SvgColor* temp = color_;
+  color_ = nullptr;
+  return temp;
+}
+inline ::Serialize::SvgColor* BusColor::_internal_mutable_color() {
+  
+  if (color_ == nullptr) {
+    auto* p = CreateMaybeMessage<::Serialize::SvgColor>(GetArena());
+    color_ = p;
+  }
+  return color_;
+}
+inline ::Serialize::SvgColor* BusColor::mutable_color() {
+  // @@protoc_insertion_point(field_mutable:Serialize.BusColor.color)
+  return _internal_mutable_color();
+}
+inline void BusColor::set_allocated_color(::Serialize::SvgColor* color) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete color_;
+  }
+  if (color) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(color);
+    if (message_arena != submessage_arena) {
+      color = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, color, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  color_ = color;
+  // @@protoc_insertion_point(field_set_allocated:Serialize.BusColor.color)
+}
+
+// -------------------------------------------------------------------
+
+// ObjectBase
+
+// .Serialize.SvgColor fill_color = 1;
+inline bool ObjectBase::_internal_has_fill_color() const {
+  return this != internal_default_instance() && fill_color_ != nullptr;
+}
+inline bool ObjectBase::has_fill_color() const {
+  return _internal_has_fill_color();
+}
+inline void ObjectBase::clear_fill_color() {
+  if (GetArena() == nullptr && fill_color_ != nullptr) {
+    delete fill_color_;
+  }
+  fill_color_ = nullptr;
+}
+inline const ::Serialize::SvgColor& ObjectBase::_internal_fill_color() const {
+  const ::Serialize::SvgColor* p = fill_color_;
+  return p != nullptr ? *p : reinterpret_cast<const ::Serialize::SvgColor&>(
+      ::Serialize::_SvgColor_default_instance_);
+}
+inline const ::Serialize::SvgColor& ObjectBase::fill_color() const {
+  // @@protoc_insertion_point(field_get:Serialize.ObjectBase.fill_color)
+  return _internal_fill_color();
+}
+inline void ObjectBase::unsafe_arena_set_allocated_fill_color(
+    ::Serialize::SvgColor* fill_color) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(fill_color_);
+  }
+  fill_color_ = fill_color;
+  if (fill_color) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Serialize.ObjectBase.fill_color)
+}
+inline ::Serialize::SvgColor* ObjectBase::release_fill_color() {
+  
+  ::Serialize::SvgColor* temp = fill_color_;
+  fill_color_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::Serialize::SvgColor* ObjectBase::unsafe_arena_release_fill_color() {
+  // @@protoc_insertion_point(field_release:Serialize.ObjectBase.fill_color)
+  
+  ::Serialize::SvgColor* temp = fill_color_;
+  fill_color_ = nullptr;
+  return temp;
+}
+inline ::Serialize::SvgColor* ObjectBase::_internal_mutable_fill_color() {
+  
+  if (fill_color_ == nullptr) {
+    auto* p = CreateMaybeMessage<::Serialize::SvgColor>(GetArena());
+    fill_color_ = p;
+  }
+  return fill_color_;
+}
+inline ::Serialize::SvgColor* ObjectBase::mutable_fill_color() {
+  // @@protoc_insertion_point(field_mutable:Serialize.ObjectBase.fill_color)
+  return _internal_mutable_fill_color();
+}
+inline void ObjectBase::set_allocated_fill_color(::Serialize::SvgColor* fill_color) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete fill_color_;
+  }
+  if (fill_color) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(fill_color);
+    if (message_arena != submessage_arena) {
+      fill_color = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, fill_color, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  fill_color_ = fill_color;
+  // @@protoc_insertion_point(field_set_allocated:Serialize.ObjectBase.fill_color)
+}
+
+// .Serialize.SvgColor stroke_color = 2;
+inline bool ObjectBase::_internal_has_stroke_color() const {
+  return this != internal_default_instance() && stroke_color_ != nullptr;
+}
+inline bool ObjectBase::has_stroke_color() const {
+  return _internal_has_stroke_color();
+}
+inline void ObjectBase::clear_stroke_color() {
+  if (GetArena() == nullptr && stroke_color_ != nullptr) {
+    delete stroke_color_;
+  }
+  stroke_color_ = nullptr;
+}
+inline const ::Serialize::SvgColor& ObjectBase::_internal_stroke_color() const {
+  const ::Serialize::SvgColor* p = stroke_color_;
+  return p != nullptr ? *p : reinterpret_cast<const ::Serialize::SvgColor&>(
+      ::Serialize::_SvgColor_default_instance_);
+}
+inline const ::Serialize::SvgColor& ObjectBase::stroke_color() const {
+  // @@protoc_insertion_point(field_get:Serialize.ObjectBase.stroke_color)
+  return _internal_stroke_color();
+}
+inline void ObjectBase::unsafe_arena_set_allocated_stroke_color(
+    ::Serialize::SvgColor* stroke_color) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(stroke_color_);
+  }
+  stroke_color_ = stroke_color;
+  if (stroke_color) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Serialize.ObjectBase.stroke_color)
+}
+inline ::Serialize::SvgColor* ObjectBase::release_stroke_color() {
+  
+  ::Serialize::SvgColor* temp = stroke_color_;
+  stroke_color_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::Serialize::SvgColor* ObjectBase::unsafe_arena_release_stroke_color() {
+  // @@protoc_insertion_point(field_release:Serialize.ObjectBase.stroke_color)
+  
+  ::Serialize::SvgColor* temp = stroke_color_;
+  stroke_color_ = nullptr;
+  return temp;
+}
+inline ::Serialize::SvgColor* ObjectBase::_internal_mutable_stroke_color() {
+  
+  if (stroke_color_ == nullptr) {
+    auto* p = CreateMaybeMessage<::Serialize::SvgColor>(GetArena());
+    stroke_color_ = p;
+  }
+  return stroke_color_;
+}
+inline ::Serialize::SvgColor* ObjectBase::mutable_stroke_color() {
+  // @@protoc_insertion_point(field_mutable:Serialize.ObjectBase.stroke_color)
+  return _internal_mutable_stroke_color();
+}
+inline void ObjectBase::set_allocated_stroke_color(::Serialize::SvgColor* stroke_color) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete stroke_color_;
+  }
+  if (stroke_color) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(stroke_color);
+    if (message_arena != submessage_arena) {
+      stroke_color = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, stroke_color, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  stroke_color_ = stroke_color;
+  // @@protoc_insertion_point(field_set_allocated:Serialize.ObjectBase.stroke_color)
+}
+
+// float stroke_width = 3;
+inline void ObjectBase::clear_stroke_width() {
+  stroke_width_ = 0;
+}
+inline float ObjectBase::_internal_stroke_width() const {
+  return stroke_width_;
+}
+inline float ObjectBase::stroke_width() const {
+  // @@protoc_insertion_point(field_get:Serialize.ObjectBase.stroke_width)
+  return _internal_stroke_width();
+}
+inline void ObjectBase::_internal_set_stroke_width(float value) {
+  
+  stroke_width_ = value;
+}
+inline void ObjectBase::set_stroke_width(float value) {
+  _internal_set_stroke_width(value);
+  // @@protoc_insertion_point(field_set:Serialize.ObjectBase.stroke_width)
+}
+
+// bool has_stroke_line_cap = 4;
+inline void ObjectBase::clear_has_stroke_line_cap() {
+  has_stroke_line_cap_ = false;
+}
+inline bool ObjectBase::_internal_has_stroke_line_cap() const {
+  return has_stroke_line_cap_;
+}
+inline bool ObjectBase::has_stroke_line_cap() const {
+  // @@protoc_insertion_point(field_get:Serialize.ObjectBase.has_stroke_line_cap)
+  return _internal_has_stroke_line_cap();
+}
+inline void ObjectBase::_internal_set_has_stroke_line_cap(bool value) {
+  
+  has_stroke_line_cap_ = value;
+}
+inline void ObjectBase::set_has_stroke_line_cap(bool value) {
+  _internal_set_has_stroke_line_cap(value);
+  // @@protoc_insertion_point(field_set:Serialize.ObjectBase.has_stroke_line_cap)
+}
+
+// string stroke_line_cap = 5;
+inline void ObjectBase::clear_stroke_line_cap() {
+  stroke_line_cap_.ClearToEmpty();
+}
+inline const std::string& ObjectBase::stroke_line_cap() const {
+  // @@protoc_insertion_point(field_get:Serialize.ObjectBase.stroke_line_cap)
+  return _internal_stroke_line_cap();
+}
+inline void ObjectBase::set_stroke_line_cap(const std::string& value) {
+  _internal_set_stroke_line_cap(value);
+  // @@protoc_insertion_point(field_set:Serialize.ObjectBase.stroke_line_cap)
+}
+inline std::string* ObjectBase::mutable_stroke_line_cap() {
+  // @@protoc_insertion_point(field_mutable:Serialize.ObjectBase.stroke_line_cap)
+  return _internal_mutable_stroke_line_cap();
+}
+inline const std::string& ObjectBase::_internal_stroke_line_cap() const {
+  return stroke_line_cap_.Get();
+}
+inline void ObjectBase::_internal_set_stroke_line_cap(const std::string& value) {
+  
+  stroke_line_cap_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void ObjectBase::set_stroke_line_cap(std::string&& value) {
+  
+  stroke_line_cap_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:Serialize.ObjectBase.stroke_line_cap)
+}
+inline void ObjectBase::set_stroke_line_cap(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  stroke_line_cap_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:Serialize.ObjectBase.stroke_line_cap)
+}
+inline void ObjectBase::set_stroke_line_cap(const char* value,
+    size_t size) {
+  
+  stroke_line_cap_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:Serialize.ObjectBase.stroke_line_cap)
+}
+inline std::string* ObjectBase::_internal_mutable_stroke_line_cap() {
+  
+  return stroke_line_cap_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* ObjectBase::release_stroke_line_cap() {
+  // @@protoc_insertion_point(field_release:Serialize.ObjectBase.stroke_line_cap)
+  return stroke_line_cap_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void ObjectBase::set_allocated_stroke_line_cap(std::string* stroke_line_cap) {
+  if (stroke_line_cap != nullptr) {
+    
+  } else {
+    
+  }
+  stroke_line_cap_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), stroke_line_cap,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:Serialize.ObjectBase.stroke_line_cap)
+}
+
+// bool has_stroke_line_join = 6;
+inline void ObjectBase::clear_has_stroke_line_join() {
+  has_stroke_line_join_ = false;
+}
+inline bool ObjectBase::_internal_has_stroke_line_join() const {
+  return has_stroke_line_join_;
+}
+inline bool ObjectBase::has_stroke_line_join() const {
+  // @@protoc_insertion_point(field_get:Serialize.ObjectBase.has_stroke_line_join)
+  return _internal_has_stroke_line_join();
+}
+inline void ObjectBase::_internal_set_has_stroke_line_join(bool value) {
+  
+  has_stroke_line_join_ = value;
+}
+inline void ObjectBase::set_has_stroke_line_join(bool value) {
+  _internal_set_has_stroke_line_join(value);
+  // @@protoc_insertion_point(field_set:Serialize.ObjectBase.has_stroke_line_join)
+}
+
+// string stroke_line_join = 7;
+inline void ObjectBase::clear_stroke_line_join() {
+  stroke_line_join_.ClearToEmpty();
+}
+inline const std::string& ObjectBase::stroke_line_join() const {
+  // @@protoc_insertion_point(field_get:Serialize.ObjectBase.stroke_line_join)
+  return _internal_stroke_line_join();
+}
+inline void ObjectBase::set_stroke_line_join(const std::string& value) {
+  _internal_set_stroke_line_join(value);
+  // @@protoc_insertion_point(field_set:Serialize.ObjectBase.stroke_line_join)
+}
+inline std::string* ObjectBase::mutable_stroke_line_join() {
+  // @@protoc_insertion_point(field_mutable:Serialize.ObjectBase.stroke_line_join)
+  return _internal_mutable_stroke_line_join();
+}
+inline const std::string& ObjectBase::_internal_stroke_line_join() const {
+  return stroke_line_join_.Get();
+}
+inline void ObjectBase::_internal_set_stroke_line_join(const std::string& value) {
+  
+  stroke_line_join_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void ObjectBase::set_stroke_line_join(std::string&& value) {
+  
+  stroke_line_join_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:Serialize.ObjectBase.stroke_line_join)
+}
+inline void ObjectBase::set_stroke_line_join(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  stroke_line_join_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:Serialize.ObjectBase.stroke_line_join)
+}
+inline void ObjectBase::set_stroke_line_join(const char* value,
+    size_t size) {
+  
+  stroke_line_join_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:Serialize.ObjectBase.stroke_line_join)
+}
+inline std::string* ObjectBase::_internal_mutable_stroke_line_join() {
+  
+  return stroke_line_join_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* ObjectBase::release_stroke_line_join() {
+  // @@protoc_insertion_point(field_release:Serialize.ObjectBase.stroke_line_join)
+  return stroke_line_join_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void ObjectBase::set_allocated_stroke_line_join(std::string* stroke_line_join) {
+  if (stroke_line_join != nullptr) {
+    
+  } else {
+    
+  }
+  stroke_line_join_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), stroke_line_join,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:Serialize.ObjectBase.stroke_line_join)
+}
+
+// -------------------------------------------------------------------
+
+// Circle
+
+// .Serialize.ObjectBase base = 1;
+inline bool Circle::_internal_has_base() const {
+  return this != internal_default_instance() && base_ != nullptr;
+}
+inline bool Circle::has_base() const {
+  return _internal_has_base();
+}
+inline void Circle::clear_base() {
+  if (GetArena() == nullptr && base_ != nullptr) {
+    delete base_;
+  }
+  base_ = nullptr;
+}
+inline const ::Serialize::ObjectBase& Circle::_internal_base() const {
+  const ::Serialize::ObjectBase* p = base_;
+  return p != nullptr ? *p : reinterpret_cast<const ::Serialize::ObjectBase&>(
+      ::Serialize::_ObjectBase_default_instance_);
+}
+inline const ::Serialize::ObjectBase& Circle::base() const {
+  // @@protoc_insertion_point(field_get:Serialize.Circle.base)
+  return _internal_base();
+}
+inline void Circle::unsafe_arena_set_allocated_base(
+    ::Serialize::ObjectBase* base) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(base_);
+  }
+  base_ = base;
+  if (base) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Serialize.Circle.base)
+}
+inline ::Serialize::ObjectBase* Circle::release_base() {
+  
+  ::Serialize::ObjectBase* temp = base_;
+  base_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::Serialize::ObjectBase* Circle::unsafe_arena_release_base() {
+  // @@protoc_insertion_point(field_release:Serialize.Circle.base)
+  
+  ::Serialize::ObjectBase* temp = base_;
+  base_ = nullptr;
+  return temp;
+}
+inline ::Serialize::ObjectBase* Circle::_internal_mutable_base() {
+  
+  if (base_ == nullptr) {
+    auto* p = CreateMaybeMessage<::Serialize::ObjectBase>(GetArena());
+    base_ = p;
+  }
+  return base_;
+}
+inline ::Serialize::ObjectBase* Circle::mutable_base() {
+  // @@protoc_insertion_point(field_mutable:Serialize.Circle.base)
+  return _internal_mutable_base();
+}
+inline void Circle::set_allocated_base(::Serialize::ObjectBase* base) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete base_;
+  }
+  if (base) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(base);
+    if (message_arena != submessage_arena) {
+      base = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, base, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  base_ = base;
+  // @@protoc_insertion_point(field_set_allocated:Serialize.Circle.base)
+}
+
+// .Serialize.SvgPoint center = 2;
+inline bool Circle::_internal_has_center() const {
+  return this != internal_default_instance() && center_ != nullptr;
+}
+inline bool Circle::has_center() const {
+  return _internal_has_center();
+}
+inline void Circle::clear_center() {
+  if (GetArena() == nullptr && center_ != nullptr) {
+    delete center_;
+  }
+  center_ = nullptr;
+}
+inline const ::Serialize::SvgPoint& Circle::_internal_center() const {
+  const ::Serialize::SvgPoint* p = center_;
+  return p != nullptr ? *p : reinterpret_cast<const ::Serialize::SvgPoint&>(
+      ::Serialize::_SvgPoint_default_instance_);
+}
+inline const ::Serialize::SvgPoint& Circle::center() const {
+  // @@protoc_insertion_point(field_get:Serialize.Circle.center)
+  return _internal_center();
+}
+inline void Circle::unsafe_arena_set_allocated_center(
+    ::Serialize::SvgPoint* center) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(center_);
+  }
+  center_ = center;
+  if (center) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Serialize.Circle.center)
+}
+inline ::Serialize::SvgPoint* Circle::release_center() {
+  
+  ::Serialize::SvgPoint* temp = center_;
+  center_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::Serialize::SvgPoint* Circle::unsafe_arena_release_center() {
+  // @@protoc_insertion_point(field_release:Serialize.Circle.center)
+  
+  ::Serialize::SvgPoint* temp = center_;
+  center_ = nullptr;
+  return temp;
+}
+inline ::Serialize::SvgPoint* Circle::_internal_mutable_center() {
+  
+  if (center_ == nullptr) {
+    auto* p = CreateMaybeMessage<::Serialize::SvgPoint>(GetArena());
+    center_ = p;
+  }
+  return center_;
+}
+inline ::Serialize::SvgPoint* Circle::mutable_center() {
+  // @@protoc_insertion_point(field_mutable:Serialize.Circle.center)
+  return _internal_mutable_center();
+}
+inline void Circle::set_allocated_center(::Serialize::SvgPoint* center) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete center_;
+  }
+  if (center) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(center);
+    if (message_arena != submessage_arena) {
+      center = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, center, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  center_ = center;
+  // @@protoc_insertion_point(field_set_allocated:Serialize.Circle.center)
+}
+
+// float radius = 3;
+inline void Circle::clear_radius() {
+  radius_ = 0;
+}
+inline float Circle::_internal_radius() const {
+  return radius_;
+}
+inline float Circle::radius() const {
+  // @@protoc_insertion_point(field_get:Serialize.Circle.radius)
+  return _internal_radius();
+}
+inline void Circle::_internal_set_radius(float value) {
+  
+  radius_ = value;
+}
+inline void Circle::set_radius(float value) {
+  _internal_set_radius(value);
+  // @@protoc_insertion_point(field_set:Serialize.Circle.radius)
+}
+
+// -------------------------------------------------------------------
+
+// Rectangle
+
+// .Serialize.ObjectBase base = 1;
+inline bool Rectangle::_internal_has_base() const {
+  return this != internal_default_instance() && base_ != nullptr;
+}
+inline bool Rectangle::has_base() const {
+  return _internal_has_base();
+}
+inline void Rectangle::clear_base() {
+  if (GetArena() == nullptr && base_ != nullptr) {
+    delete base_;
+  }
+  base_ = nullptr;
+}
+inline const ::Serialize::ObjectBase& Rectangle::_internal_base() const {
+  const ::Serialize::ObjectBase* p = base_;
+  return p != nullptr ? *p : reinterpret_cast<const ::Serialize::ObjectBase&>(
+      ::Serialize::_ObjectBase_default_instance_);
+}
+inline const ::Serialize::ObjectBase& Rectangle::base() const {
+  // @@protoc_insertion_point(field_get:Serialize.Rectangle.base)
+  return _internal_base();
+}
+inline void Rectangle::unsafe_arena_set_allocated_base(
+    ::Serialize::ObjectBase* base) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(base_);
+  }
+  base_ = base;
+  if (base) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Serialize.Rectangle.base)
+}
+inline ::Serialize::ObjectBase* Rectangle::release_base() {
+  
+  ::Serialize::ObjectBase* temp = base_;
+  base_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::Serialize::ObjectBase* Rectangle::unsafe_arena_release_base() {
+  // @@protoc_insertion_point(field_release:Serialize.Rectangle.base)
+  
+  ::Serialize::ObjectBase* temp = base_;
+  base_ = nullptr;
+  return temp;
+}
+inline ::Serialize::ObjectBase* Rectangle::_internal_mutable_base() {
+  
+  if (base_ == nullptr) {
+    auto* p = CreateMaybeMessage<::Serialize::ObjectBase>(GetArena());
+    base_ = p;
+  }
+  return base_;
+}
+inline ::Serialize::ObjectBase* Rectangle::mutable_base() {
+  // @@protoc_insertion_point(field_mutable:Serialize.Rectangle.base)
+  return _internal_mutable_base();
+}
+inline void Rectangle::set_allocated_base(::Serialize::ObjectBase* base) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete base_;
+  }
+  if (base) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(base);
+    if (message_arena != submessage_arena) {
+      base = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, base, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  base_ = base;
+  // @@protoc_insertion_point(field_set_allocated:Serialize.Rectangle.base)
+}
+
+// .Serialize.SvgPoint lu_corner = 2;
+inline bool Rectangle::_internal_has_lu_corner() const {
+  return this != internal_default_instance() && lu_corner_ != nullptr;
+}
+inline bool Rectangle::has_lu_corner() const {
+  return _internal_has_lu_corner();
+}
+inline void Rectangle::clear_lu_corner() {
+  if (GetArena() == nullptr && lu_corner_ != nullptr) {
+    delete lu_corner_;
+  }
+  lu_corner_ = nullptr;
+}
+inline const ::Serialize::SvgPoint& Rectangle::_internal_lu_corner() const {
+  const ::Serialize::SvgPoint* p = lu_corner_;
+  return p != nullptr ? *p : reinterpret_cast<const ::Serialize::SvgPoint&>(
+      ::Serialize::_SvgPoint_default_instance_);
+}
+inline const ::Serialize::SvgPoint& Rectangle::lu_corner() const {
+  // @@protoc_insertion_point(field_get:Serialize.Rectangle.lu_corner)
+  return _internal_lu_corner();
+}
+inline void Rectangle::unsafe_arena_set_allocated_lu_corner(
+    ::Serialize::SvgPoint* lu_corner) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(lu_corner_);
+  }
+  lu_corner_ = lu_corner;
+  if (lu_corner) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Serialize.Rectangle.lu_corner)
+}
+inline ::Serialize::SvgPoint* Rectangle::release_lu_corner() {
+  
+  ::Serialize::SvgPoint* temp = lu_corner_;
+  lu_corner_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::Serialize::SvgPoint* Rectangle::unsafe_arena_release_lu_corner() {
+  // @@protoc_insertion_point(field_release:Serialize.Rectangle.lu_corner)
+  
+  ::Serialize::SvgPoint* temp = lu_corner_;
+  lu_corner_ = nullptr;
+  return temp;
+}
+inline ::Serialize::SvgPoint* Rectangle::_internal_mutable_lu_corner() {
+  
+  if (lu_corner_ == nullptr) {
+    auto* p = CreateMaybeMessage<::Serialize::SvgPoint>(GetArena());
+    lu_corner_ = p;
+  }
+  return lu_corner_;
+}
+inline ::Serialize::SvgPoint* Rectangle::mutable_lu_corner() {
+  // @@protoc_insertion_point(field_mutable:Serialize.Rectangle.lu_corner)
+  return _internal_mutable_lu_corner();
+}
+inline void Rectangle::set_allocated_lu_corner(::Serialize::SvgPoint* lu_corner) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete lu_corner_;
+  }
+  if (lu_corner) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(lu_corner);
+    if (message_arena != submessage_arena) {
+      lu_corner = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, lu_corner, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  lu_corner_ = lu_corner;
+  // @@protoc_insertion_point(field_set_allocated:Serialize.Rectangle.lu_corner)
+}
+
+// float w = 3;
+inline void Rectangle::clear_w() {
+  w_ = 0;
+}
+inline float Rectangle::_internal_w() const {
+  return w_;
+}
+inline float Rectangle::w() const {
+  // @@protoc_insertion_point(field_get:Serialize.Rectangle.w)
+  return _internal_w();
+}
+inline void Rectangle::_internal_set_w(float value) {
+  
+  w_ = value;
+}
+inline void Rectangle::set_w(float value) {
+  _internal_set_w(value);
+  // @@protoc_insertion_point(field_set:Serialize.Rectangle.w)
+}
+
+// float h = 4;
+inline void Rectangle::clear_h() {
+  h_ = 0;
+}
+inline float Rectangle::_internal_h() const {
+  return h_;
+}
+inline float Rectangle::h() const {
+  // @@protoc_insertion_point(field_get:Serialize.Rectangle.h)
+  return _internal_h();
+}
+inline void Rectangle::_internal_set_h(float value) {
+  
+  h_ = value;
+}
+inline void Rectangle::set_h(float value) {
+  _internal_set_h(value);
+  // @@protoc_insertion_point(field_set:Serialize.Rectangle.h)
+}
+
+// -------------------------------------------------------------------
+
+// Polyline
+
+// .Serialize.ObjectBase base = 1;
+inline bool Polyline::_internal_has_base() const {
+  return this != internal_default_instance() && base_ != nullptr;
+}
+inline bool Polyline::has_base() const {
+  return _internal_has_base();
+}
+inline void Polyline::clear_base() {
+  if (GetArena() == nullptr && base_ != nullptr) {
+    delete base_;
+  }
+  base_ = nullptr;
+}
+inline const ::Serialize::ObjectBase& Polyline::_internal_base() const {
+  const ::Serialize::ObjectBase* p = base_;
+  return p != nullptr ? *p : reinterpret_cast<const ::Serialize::ObjectBase&>(
+      ::Serialize::_ObjectBase_default_instance_);
+}
+inline const ::Serialize::ObjectBase& Polyline::base() const {
+  // @@protoc_insertion_point(field_get:Serialize.Polyline.base)
+  return _internal_base();
+}
+inline void Polyline::unsafe_arena_set_allocated_base(
+    ::Serialize::ObjectBase* base) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(base_);
+  }
+  base_ = base;
+  if (base) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Serialize.Polyline.base)
+}
+inline ::Serialize::ObjectBase* Polyline::release_base() {
+  
+  ::Serialize::ObjectBase* temp = base_;
+  base_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::Serialize::ObjectBase* Polyline::unsafe_arena_release_base() {
+  // @@protoc_insertion_point(field_release:Serialize.Polyline.base)
+  
+  ::Serialize::ObjectBase* temp = base_;
+  base_ = nullptr;
+  return temp;
+}
+inline ::Serialize::ObjectBase* Polyline::_internal_mutable_base() {
+  
+  if (base_ == nullptr) {
+    auto* p = CreateMaybeMessage<::Serialize::ObjectBase>(GetArena());
+    base_ = p;
+  }
+  return base_;
+}
+inline ::Serialize::ObjectBase* Polyline::mutable_base() {
+  // @@protoc_insertion_point(field_mutable:Serialize.Polyline.base)
+  return _internal_mutable_base();
+}
+inline void Polyline::set_allocated_base(::Serialize::ObjectBase* base) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete base_;
+  }
+  if (base) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(base);
+    if (message_arena != submessage_arena) {
+      base = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, base, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  base_ = base;
+  // @@protoc_insertion_point(field_set_allocated:Serialize.Polyline.base)
+}
+
+// repeated .Serialize.SvgPoint points = 2;
+inline int Polyline::_internal_points_size() const {
+  return points_.size();
+}
+inline int Polyline::points_size() const {
+  return _internal_points_size();
+}
+inline void Polyline::clear_points() {
+  points_.Clear();
+}
+inline ::Serialize::SvgPoint* Polyline::mutable_points(int index) {
+  // @@protoc_insertion_point(field_mutable:Serialize.Polyline.points)
+  return points_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Serialize::SvgPoint >*
+Polyline::mutable_points() {
+  // @@protoc_insertion_point(field_mutable_list:Serialize.Polyline.points)
+  return &points_;
+}
+inline const ::Serialize::SvgPoint& Polyline::_internal_points(int index) const {
+  return points_.Get(index);
+}
+inline const ::Serialize::SvgPoint& Polyline::points(int index) const {
+  // @@protoc_insertion_point(field_get:Serialize.Polyline.points)
+  return _internal_points(index);
+}
+inline ::Serialize::SvgPoint* Polyline::_internal_add_points() {
+  return points_.Add();
+}
+inline ::Serialize::SvgPoint* Polyline::add_points() {
+  // @@protoc_insertion_point(field_add:Serialize.Polyline.points)
+  return _internal_add_points();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Serialize::SvgPoint >&
+Polyline::points() const {
+  // @@protoc_insertion_point(field_list:Serialize.Polyline.points)
+  return points_;
+}
+
+// -------------------------------------------------------------------
+
+// Text
+
+// .Serialize.ObjectBase base = 1;
+inline bool Text::_internal_has_base() const {
+  return this != internal_default_instance() && base_ != nullptr;
+}
+inline bool Text::has_base() const {
+  return _internal_has_base();
+}
+inline void Text::clear_base() {
+  if (GetArena() == nullptr && base_ != nullptr) {
+    delete base_;
+  }
+  base_ = nullptr;
+}
+inline const ::Serialize::ObjectBase& Text::_internal_base() const {
+  const ::Serialize::ObjectBase* p = base_;
+  return p != nullptr ? *p : reinterpret_cast<const ::Serialize::ObjectBase&>(
+      ::Serialize::_ObjectBase_default_instance_);
+}
+inline const ::Serialize::ObjectBase& Text::base() const {
+  // @@protoc_insertion_point(field_get:Serialize.Text.base)
+  return _internal_base();
+}
+inline void Text::unsafe_arena_set_allocated_base(
+    ::Serialize::ObjectBase* base) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(base_);
+  }
+  base_ = base;
+  if (base) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Serialize.Text.base)
+}
+inline ::Serialize::ObjectBase* Text::release_base() {
+  
+  ::Serialize::ObjectBase* temp = base_;
+  base_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::Serialize::ObjectBase* Text::unsafe_arena_release_base() {
+  // @@protoc_insertion_point(field_release:Serialize.Text.base)
+  
+  ::Serialize::ObjectBase* temp = base_;
+  base_ = nullptr;
+  return temp;
+}
+inline ::Serialize::ObjectBase* Text::_internal_mutable_base() {
+  
+  if (base_ == nullptr) {
+    auto* p = CreateMaybeMessage<::Serialize::ObjectBase>(GetArena());
+    base_ = p;
+  }
+  return base_;
+}
+inline ::Serialize::ObjectBase* Text::mutable_base() {
+  // @@protoc_insertion_point(field_mutable:Serialize.Text.base)
+  return _internal_mutable_base();
+}
+inline void Text::set_allocated_base(::Serialize::ObjectBase* base) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete base_;
+  }
+  if (base) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(base);
+    if (message_arena != submessage_arena) {
+      base = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, base, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  base_ = base;
+  // @@protoc_insertion_point(field_set_allocated:Serialize.Text.base)
+}
+
+// .Serialize.SvgPoint point = 2;
+inline bool Text::_internal_has_point() const {
+  return this != internal_default_instance() && point_ != nullptr;
+}
+inline bool Text::has_point() const {
+  return _internal_has_point();
+}
+inline void Text::clear_point() {
+  if (GetArena() == nullptr && point_ != nullptr) {
+    delete point_;
+  }
+  point_ = nullptr;
+}
+inline const ::Serialize::SvgPoint& Text::_internal_point() const {
+  const ::Serialize::SvgPoint* p = point_;
+  return p != nullptr ? *p : reinterpret_cast<const ::Serialize::SvgPoint&>(
+      ::Serialize::_SvgPoint_default_instance_);
+}
+inline const ::Serialize::SvgPoint& Text::point() const {
+  // @@protoc_insertion_point(field_get:Serialize.Text.point)
+  return _internal_point();
+}
+inline void Text::unsafe_arena_set_allocated_point(
+    ::Serialize::SvgPoint* point) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(point_);
+  }
+  point_ = point;
+  if (point) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Serialize.Text.point)
+}
+inline ::Serialize::SvgPoint* Text::release_point() {
+  
+  ::Serialize::SvgPoint* temp = point_;
+  point_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::Serialize::SvgPoint* Text::unsafe_arena_release_point() {
+  // @@protoc_insertion_point(field_release:Serialize.Text.point)
+  
+  ::Serialize::SvgPoint* temp = point_;
+  point_ = nullptr;
+  return temp;
+}
+inline ::Serialize::SvgPoint* Text::_internal_mutable_point() {
+  
+  if (point_ == nullptr) {
+    auto* p = CreateMaybeMessage<::Serialize::SvgPoint>(GetArena());
+    point_ = p;
+  }
+  return point_;
+}
+inline ::Serialize::SvgPoint* Text::mutable_point() {
+  // @@protoc_insertion_point(field_mutable:Serialize.Text.point)
+  return _internal_mutable_point();
+}
+inline void Text::set_allocated_point(::Serialize::SvgPoint* point) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete point_;
+  }
+  if (point) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(point);
+    if (message_arena != submessage_arena) {
+      point = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, point, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  point_ = point;
+  // @@protoc_insertion_point(field_set_allocated:Serialize.Text.point)
+}
+
+// .Serialize.SvgPoint offset = 3;
+inline bool Text::_internal_has_offset() const {
+  return this != internal_default_instance() && offset_ != nullptr;
+}
+inline bool Text::has_offset() const {
+  return _internal_has_offset();
+}
+inline void Text::clear_offset() {
+  if (GetArena() == nullptr && offset_ != nullptr) {
+    delete offset_;
+  }
+  offset_ = nullptr;
+}
+inline const ::Serialize::SvgPoint& Text::_internal_offset() const {
+  const ::Serialize::SvgPoint* p = offset_;
+  return p != nullptr ? *p : reinterpret_cast<const ::Serialize::SvgPoint&>(
+      ::Serialize::_SvgPoint_default_instance_);
+}
+inline const ::Serialize::SvgPoint& Text::offset() const {
+  // @@protoc_insertion_point(field_get:Serialize.Text.offset)
+  return _internal_offset();
+}
+inline void Text::unsafe_arena_set_allocated_offset(
+    ::Serialize::SvgPoint* offset) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(offset_);
+  }
+  offset_ = offset;
+  if (offset) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Serialize.Text.offset)
+}
+inline ::Serialize::SvgPoint* Text::release_offset() {
+  
+  ::Serialize::SvgPoint* temp = offset_;
+  offset_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::Serialize::SvgPoint* Text::unsafe_arena_release_offset() {
+  // @@protoc_insertion_point(field_release:Serialize.Text.offset)
+  
+  ::Serialize::SvgPoint* temp = offset_;
+  offset_ = nullptr;
+  return temp;
+}
+inline ::Serialize::SvgPoint* Text::_internal_mutable_offset() {
+  
+  if (offset_ == nullptr) {
+    auto* p = CreateMaybeMessage<::Serialize::SvgPoint>(GetArena());
+    offset_ = p;
+  }
+  return offset_;
+}
+inline ::Serialize::SvgPoint* Text::mutable_offset() {
+  // @@protoc_insertion_point(field_mutable:Serialize.Text.offset)
+  return _internal_mutable_offset();
+}
+inline void Text::set_allocated_offset(::Serialize::SvgPoint* offset) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete offset_;
+  }
+  if (offset) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(offset);
+    if (message_arena != submessage_arena) {
+      offset = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, offset, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  offset_ = offset;
+  // @@protoc_insertion_point(field_set_allocated:Serialize.Text.offset)
+}
+
+// uint32 font_size = 4;
+inline void Text::clear_font_size() {
+  font_size_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 Text::_internal_font_size() const {
+  return font_size_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 Text::font_size() const {
+  // @@protoc_insertion_point(field_get:Serialize.Text.font_size)
+  return _internal_font_size();
+}
+inline void Text::_internal_set_font_size(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  font_size_ = value;
+}
+inline void Text::set_font_size(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_set_font_size(value);
+  // @@protoc_insertion_point(field_set:Serialize.Text.font_size)
+}
+
+// bool has_font_family = 5;
+inline void Text::clear_has_font_family() {
+  has_font_family_ = false;
+}
+inline bool Text::_internal_has_font_family() const {
+  return has_font_family_;
+}
+inline bool Text::has_font_family() const {
+  // @@protoc_insertion_point(field_get:Serialize.Text.has_font_family)
+  return _internal_has_font_family();
+}
+inline void Text::_internal_set_has_font_family(bool value) {
+  
+  has_font_family_ = value;
+}
+inline void Text::set_has_font_family(bool value) {
+  _internal_set_has_font_family(value);
+  // @@protoc_insertion_point(field_set:Serialize.Text.has_font_family)
+}
+
+// string font_family = 6;
+inline void Text::clear_font_family() {
+  font_family_.ClearToEmpty();
+}
+inline const std::string& Text::font_family() const {
+  // @@protoc_insertion_point(field_get:Serialize.Text.font_family)
+  return _internal_font_family();
+}
+inline void Text::set_font_family(const std::string& value) {
+  _internal_set_font_family(value);
+  // @@protoc_insertion_point(field_set:Serialize.Text.font_family)
+}
+inline std::string* Text::mutable_font_family() {
+  // @@protoc_insertion_point(field_mutable:Serialize.Text.font_family)
+  return _internal_mutable_font_family();
+}
+inline const std::string& Text::_internal_font_family() const {
+  return font_family_.Get();
+}
+inline void Text::_internal_set_font_family(const std::string& value) {
+  
+  font_family_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void Text::set_font_family(std::string&& value) {
+  
+  font_family_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:Serialize.Text.font_family)
+}
+inline void Text::set_font_family(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  font_family_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:Serialize.Text.font_family)
+}
+inline void Text::set_font_family(const char* value,
+    size_t size) {
+  
+  font_family_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:Serialize.Text.font_family)
+}
+inline std::string* Text::_internal_mutable_font_family() {
+  
+  return font_family_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* Text::release_font_family() {
+  // @@protoc_insertion_point(field_release:Serialize.Text.font_family)
+  return font_family_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void Text::set_allocated_font_family(std::string* font_family) {
+  if (font_family != nullptr) {
+    
+  } else {
+    
+  }
+  font_family_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), font_family,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:Serialize.Text.font_family)
+}
+
+// bool has_font_weight = 7;
+inline void Text::clear_has_font_weight() {
+  has_font_weight_ = false;
+}
+inline bool Text::_internal_has_font_weight() const {
+  return has_font_weight_;
+}
+inline bool Text::has_font_weight() const {
+  // @@protoc_insertion_point(field_get:Serialize.Text.has_font_weight)
+  return _internal_has_font_weight();
+}
+inline void Text::_internal_set_has_font_weight(bool value) {
+  
+  has_font_weight_ = value;
+}
+inline void Text::set_has_font_weight(bool value) {
+  _internal_set_has_font_weight(value);
+  // @@protoc_insertion_point(field_set:Serialize.Text.has_font_weight)
+}
+
+// string font_weight = 8;
+inline void Text::clear_font_weight() {
+  font_weight_.ClearToEmpty();
+}
+inline const std::string& Text::font_weight() const {
+  // @@protoc_insertion_point(field_get:Serialize.Text.font_weight)
+  return _internal_font_weight();
+}
+inline void Text::set_font_weight(const std::string& value) {
+  _internal_set_font_weight(value);
+  // @@protoc_insertion_point(field_set:Serialize.Text.font_weight)
+}
+inline std::string* Text::mutable_font_weight() {
+  // @@protoc_insertion_point(field_mutable:Serialize.Text.font_weight)
+  return _internal_mutable_font_weight();
+}
+inline const std::string& Text::_internal_font_weight() const {
+  return font_weight_.Get();
+}
+inline void Text::_internal_set_font_weight(const std::string& value) {
+  
+  font_weight_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void Text::set_font_weight(std::string&& value) {
+  
+  font_weight_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:Serialize.Text.font_weight)
+}
+inline void Text::set_font_weight(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  font_weight_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:Serialize.Text.font_weight)
+}
+inline void Text::set_font_weight(const char* value,
+    size_t size) {
+  
+  font_weight_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:Serialize.Text.font_weight)
+}
+inline std::string* Text::_internal_mutable_font_weight() {
+  
+  return font_weight_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* Text::release_font_weight() {
+  // @@protoc_insertion_point(field_release:Serialize.Text.font_weight)
+  return font_weight_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void Text::set_allocated_font_weight(std::string* font_weight) {
+  if (font_weight != nullptr) {
+    
+  } else {
+    
+  }
+  font_weight_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), font_weight,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:Serialize.Text.font_weight)
+}
+
+// string data = 9;
+inline void Text::clear_data() {
+  data_.ClearToEmpty();
+}
+inline const std::string& Text::data() const {
+  // @@protoc_insertion_point(field_get:Serialize.Text.data)
+  return _internal_data();
+}
+inline void Text::set_data(const std::string& value) {
+  _internal_set_data(value);
+  // @@protoc_insertion_point(field_set:Serialize.Text.data)
+}
+inline std::string* Text::mutable_data() {
+  // @@protoc_insertion_point(field_mutable:Serialize.Text.data)
+  return _internal_mutable_data();
+}
+inline const std::string& Text::_internal_data() const {
+  return data_.Get();
+}
+inline void Text::_internal_set_data(const std::string& value) {
+  
+  data_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void Text::set_data(std::string&& value) {
+  
+  data_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:Serialize.Text.data)
+}
+inline void Text::set_data(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  data_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:Serialize.Text.data)
+}
+inline void Text::set_data(const char* value,
+    size_t size) {
+  
+  data_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:Serialize.Text.data)
+}
+inline std::string* Text::_internal_mutable_data() {
+  
+  return data_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* Text::release_data() {
+  // @@protoc_insertion_point(field_release:Serialize.Text.data)
+  return data_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void Text::set_allocated_data(std::string* data) {
+  if (data != nullptr) {
+    
+  } else {
+    
+  }
+  data_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), data,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:Serialize.Text.data)
+}
+
+// -------------------------------------------------------------------
+
+// Object
+
+// .Serialize.Circle circle = 1;
+inline bool Object::_internal_has_circle() const {
+  return variant_case() == kCircle;
+}
+inline bool Object::has_circle() const {
+  return _internal_has_circle();
+}
+inline void Object::set_has_circle() {
+  _oneof_case_[0] = kCircle;
+}
+inline void Object::clear_circle() {
+  if (_internal_has_circle()) {
+    if (GetArena() == nullptr) {
+      delete variant_.circle_;
+    }
+    clear_has_variant();
+  }
+}
+inline ::Serialize::Circle* Object::release_circle() {
+  // @@protoc_insertion_point(field_release:Serialize.Object.circle)
+  if (_internal_has_circle()) {
+    clear_has_variant();
+      ::Serialize::Circle* temp = variant_.circle_;
+    if (GetArena() != nullptr) {
+      temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+    }
+    variant_.circle_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::Serialize::Circle& Object::_internal_circle() const {
+  return _internal_has_circle()
+      ? *variant_.circle_
+      : reinterpret_cast< ::Serialize::Circle&>(::Serialize::_Circle_default_instance_);
+}
+inline const ::Serialize::Circle& Object::circle() const {
+  // @@protoc_insertion_point(field_get:Serialize.Object.circle)
+  return _internal_circle();
+}
+inline ::Serialize::Circle* Object::unsafe_arena_release_circle() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:Serialize.Object.circle)
+  if (_internal_has_circle()) {
+    clear_has_variant();
+    ::Serialize::Circle* temp = variant_.circle_;
+    variant_.circle_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void Object::unsafe_arena_set_allocated_circle(::Serialize::Circle* circle) {
+  clear_variant();
+  if (circle) {
+    set_has_circle();
+    variant_.circle_ = circle;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Serialize.Object.circle)
+}
+inline ::Serialize::Circle* Object::_internal_mutable_circle() {
+  if (!_internal_has_circle()) {
+    clear_variant();
+    set_has_circle();
+    variant_.circle_ = CreateMaybeMessage< ::Serialize::Circle >(GetArena());
+  }
+  return variant_.circle_;
+}
+inline ::Serialize::Circle* Object::mutable_circle() {
+  // @@protoc_insertion_point(field_mutable:Serialize.Object.circle)
+  return _internal_mutable_circle();
+}
+
+// .Serialize.Rectangle rect = 2;
+inline bool Object::_internal_has_rect() const {
+  return variant_case() == kRect;
+}
+inline bool Object::has_rect() const {
+  return _internal_has_rect();
+}
+inline void Object::set_has_rect() {
+  _oneof_case_[0] = kRect;
+}
+inline void Object::clear_rect() {
+  if (_internal_has_rect()) {
+    if (GetArena() == nullptr) {
+      delete variant_.rect_;
+    }
+    clear_has_variant();
+  }
+}
+inline ::Serialize::Rectangle* Object::release_rect() {
+  // @@protoc_insertion_point(field_release:Serialize.Object.rect)
+  if (_internal_has_rect()) {
+    clear_has_variant();
+      ::Serialize::Rectangle* temp = variant_.rect_;
+    if (GetArena() != nullptr) {
+      temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+    }
+    variant_.rect_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::Serialize::Rectangle& Object::_internal_rect() const {
+  return _internal_has_rect()
+      ? *variant_.rect_
+      : reinterpret_cast< ::Serialize::Rectangle&>(::Serialize::_Rectangle_default_instance_);
+}
+inline const ::Serialize::Rectangle& Object::rect() const {
+  // @@protoc_insertion_point(field_get:Serialize.Object.rect)
+  return _internal_rect();
+}
+inline ::Serialize::Rectangle* Object::unsafe_arena_release_rect() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:Serialize.Object.rect)
+  if (_internal_has_rect()) {
+    clear_has_variant();
+    ::Serialize::Rectangle* temp = variant_.rect_;
+    variant_.rect_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void Object::unsafe_arena_set_allocated_rect(::Serialize::Rectangle* rect) {
+  clear_variant();
+  if (rect) {
+    set_has_rect();
+    variant_.rect_ = rect;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Serialize.Object.rect)
+}
+inline ::Serialize::Rectangle* Object::_internal_mutable_rect() {
+  if (!_internal_has_rect()) {
+    clear_variant();
+    set_has_rect();
+    variant_.rect_ = CreateMaybeMessage< ::Serialize::Rectangle >(GetArena());
+  }
+  return variant_.rect_;
+}
+inline ::Serialize::Rectangle* Object::mutable_rect() {
+  // @@protoc_insertion_point(field_mutable:Serialize.Object.rect)
+  return _internal_mutable_rect();
+}
+
+// .Serialize.Polyline polyline = 3;
+inline bool Object::_internal_has_polyline() const {
+  return variant_case() == kPolyline;
+}
+inline bool Object::has_polyline() const {
+  return _internal_has_polyline();
+}
+inline void Object::set_has_polyline() {
+  _oneof_case_[0] = kPolyline;
+}
+inline void Object::clear_polyline() {
+  if (_internal_has_polyline()) {
+    if (GetArena() == nullptr) {
+      delete variant_.polyline_;
+    }
+    clear_has_variant();
+  }
+}
+inline ::Serialize::Polyline* Object::release_polyline() {
+  // @@protoc_insertion_point(field_release:Serialize.Object.polyline)
+  if (_internal_has_polyline()) {
+    clear_has_variant();
+      ::Serialize::Polyline* temp = variant_.polyline_;
+    if (GetArena() != nullptr) {
+      temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+    }
+    variant_.polyline_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::Serialize::Polyline& Object::_internal_polyline() const {
+  return _internal_has_polyline()
+      ? *variant_.polyline_
+      : reinterpret_cast< ::Serialize::Polyline&>(::Serialize::_Polyline_default_instance_);
+}
+inline const ::Serialize::Polyline& Object::polyline() const {
+  // @@protoc_insertion_point(field_get:Serialize.Object.polyline)
+  return _internal_polyline();
+}
+inline ::Serialize::Polyline* Object::unsafe_arena_release_polyline() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:Serialize.Object.polyline)
+  if (_internal_has_polyline()) {
+    clear_has_variant();
+    ::Serialize::Polyline* temp = variant_.polyline_;
+    variant_.polyline_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void Object::unsafe_arena_set_allocated_polyline(::Serialize::Polyline* polyline) {
+  clear_variant();
+  if (polyline) {
+    set_has_polyline();
+    variant_.polyline_ = polyline;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Serialize.Object.polyline)
+}
+inline ::Serialize::Polyline* Object::_internal_mutable_polyline() {
+  if (!_internal_has_polyline()) {
+    clear_variant();
+    set_has_polyline();
+    variant_.polyline_ = CreateMaybeMessage< ::Serialize::Polyline >(GetArena());
+  }
+  return variant_.polyline_;
+}
+inline ::Serialize::Polyline* Object::mutable_polyline() {
+  // @@protoc_insertion_point(field_mutable:Serialize.Object.polyline)
+  return _internal_mutable_polyline();
+}
+
+// .Serialize.Text text = 4;
+inline bool Object::_internal_has_text() const {
+  return variant_case() == kText;
+}
+inline bool Object::has_text() const {
+  return _internal_has_text();
+}
+inline void Object::set_has_text() {
+  _oneof_case_[0] = kText;
+}
+inline void Object::clear_text() {
+  if (_internal_has_text()) {
+    if (GetArena() == nullptr) {
+      delete variant_.text_;
+    }
+    clear_has_variant();
+  }
+}
+inline ::Serialize::Text* Object::release_text() {
+  // @@protoc_insertion_point(field_release:Serialize.Object.text)
+  if (_internal_has_text()) {
+    clear_has_variant();
+      ::Serialize::Text* temp = variant_.text_;
+    if (GetArena() != nullptr) {
+      temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+    }
+    variant_.text_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::Serialize::Text& Object::_internal_text() const {
+  return _internal_has_text()
+      ? *variant_.text_
+      : reinterpret_cast< ::Serialize::Text&>(::Serialize::_Text_default_instance_);
+}
+inline const ::Serialize::Text& Object::text() const {
+  // @@protoc_insertion_point(field_get:Serialize.Object.text)
+  return _internal_text();
+}
+inline ::Serialize::Text* Object::unsafe_arena_release_text() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:Serialize.Object.text)
+  if (_internal_has_text()) {
+    clear_has_variant();
+    ::Serialize::Text* temp = variant_.text_;
+    variant_.text_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void Object::unsafe_arena_set_allocated_text(::Serialize::Text* text) {
+  clear_variant();
+  if (text) {
+    set_has_text();
+    variant_.text_ = text;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Serialize.Object.text)
+}
+inline ::Serialize::Text* Object::_internal_mutable_text() {
+  if (!_internal_has_text()) {
+    clear_variant();
+    set_has_text();
+    variant_.text_ = CreateMaybeMessage< ::Serialize::Text >(GetArena());
+  }
+  return variant_.text_;
+}
+inline ::Serialize::Text* Object::mutable_text() {
+  // @@protoc_insertion_point(field_mutable:Serialize.Object.text)
+  return _internal_mutable_text();
+}
+
+inline bool Object::has_variant() const {
+  return variant_case() != VARIANT_NOT_SET;
+}
+inline void Object::clear_has_variant() {
+  _oneof_case_[0] = VARIANT_NOT_SET;
+}
+inline Object::VariantCase Object::variant_case() const {
+  return Object::VariantCase(_oneof_case_[0]);
+}
+// -------------------------------------------------------------------
+
+// Document
+
+// repeated .Serialize.Object objects = 1;
+inline int Document::_internal_objects_size() const {
+  return objects_.size();
+}
+inline int Document::objects_size() const {
+  return _internal_objects_size();
+}
+inline void Document::clear_objects() {
+  objects_.Clear();
+}
+inline ::Serialize::Object* Document::mutable_objects(int index) {
+  // @@protoc_insertion_point(field_mutable:Serialize.Document.objects)
+  return objects_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Serialize::Object >*
+Document::mutable_objects() {
+  // @@protoc_insertion_point(field_mutable_list:Serialize.Document.objects)
+  return &objects_;
+}
+inline const ::Serialize::Object& Document::_internal_objects(int index) const {
+  return objects_.Get(index);
+}
+inline const ::Serialize::Object& Document::objects(int index) const {
+  // @@protoc_insertion_point(field_get:Serialize.Document.objects)
+  return _internal_objects(index);
+}
+inline ::Serialize::Object* Document::_internal_add_objects() {
+  return objects_.Add();
+}
+inline ::Serialize::Object* Document::add_objects() {
+  // @@protoc_insertion_point(field_add:Serialize.Document.objects)
+  return _internal_add_objects();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Serialize::Object >&
+Document::objects() const {
+  // @@protoc_insertion_point(field_list:Serialize.Document.objects)
+  return objects_;
+}
+
+// -------------------------------------------------------------------
+
+// RenderSettings
+
+// float width = 1;
+inline void RenderSettings::clear_width() {
+  width_ = 0;
+}
+inline float RenderSettings::_internal_width() const {
+  return width_;
+}
+inline float RenderSettings::width() const {
+  // @@protoc_insertion_point(field_get:Serialize.RenderSettings.width)
+  return _internal_width();
+}
+inline void RenderSettings::_internal_set_width(float value) {
+  
+  width_ = value;
+}
+inline void RenderSettings::set_width(float value) {
+  _internal_set_width(value);
+  // @@protoc_insertion_point(field_set:Serialize.RenderSettings.width)
+}
+
+// float height = 2;
+inline void RenderSettings::clear_height() {
+  height_ = 0;
+}
+inline float RenderSettings::_internal_height() const {
+  return height_;
+}
+inline float RenderSettings::height() const {
+  // @@protoc_insertion_point(field_get:Serialize.RenderSettings.height)
+  return _internal_height();
+}
+inline void RenderSettings::_internal_set_height(float value) {
+  
+  height_ = value;
+}
+inline void RenderSettings::set_height(float value) {
+  _internal_set_height(value);
+  // @@protoc_insertion_point(field_set:Serialize.RenderSettings.height)
+}
+
+// float padding = 3;
+inline void RenderSettings::clear_padding() {
+  padding_ = 0;
+}
+inline float RenderSettings::_internal_padding() const {
+  return padding_;
+}
+inline float RenderSettings::padding() const {
+  // @@protoc_insertion_point(field_get:Serialize.RenderSettings.padding)
+  return _internal_padding();
+}
+inline void RenderSettings::_internal_set_padding(float value) {
+  
+  padding_ = value;
+}
+inline void RenderSettings::set_padding(float value) {
+  _internal_set_padding(value);
+  // @@protoc_insertion_point(field_set:Serialize.RenderSettings.padding)
+}
+
+// float stop_radius = 4;
+inline void RenderSettings::clear_stop_radius() {
+  stop_radius_ = 0;
+}
+inline float RenderSettings::_internal_stop_radius() const {
+  return stop_radius_;
+}
+inline float RenderSettings::stop_radius() const {
+  // @@protoc_insertion_point(field_get:Serialize.RenderSettings.stop_radius)
+  return _internal_stop_radius();
+}
+inline void RenderSettings::_internal_set_stop_radius(float value) {
+  
+  stop_radius_ = value;
+}
+inline void RenderSettings::set_stop_radius(float value) {
+  _internal_set_stop_radius(value);
+  // @@protoc_insertion_point(field_set:Serialize.RenderSettings.stop_radius)
+}
+
+// float line_width = 5;
+inline void RenderSettings::clear_line_width() {
+  line_width_ = 0;
+}
+inline float RenderSettings::_internal_line_width() const {
+  return line_width_;
+}
+inline float RenderSettings::line_width() const {
+  // @@protoc_insertion_point(field_get:Serialize.RenderSettings.line_width)
+  return _internal_line_width();
+}
+inline void RenderSettings::_internal_set_line_width(float value) {
+  
+  line_width_ = value;
+}
+inline void RenderSettings::set_line_width(float value) {
+  _internal_set_line_width(value);
+  // @@protoc_insertion_point(field_set:Serialize.RenderSettings.line_width)
+}
+
+// int32 stop_label_font_size = 6;
+inline void RenderSettings::clear_stop_label_font_size() {
+  stop_label_font_size_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 RenderSettings::_internal_stop_label_font_size() const {
+  return stop_label_font_size_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 RenderSettings::stop_label_font_size() const {
+  // @@protoc_insertion_point(field_get:Serialize.RenderSettings.stop_label_font_size)
+  return _internal_stop_label_font_size();
+}
+inline void RenderSettings::_internal_set_stop_label_font_size(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  stop_label_font_size_ = value;
+}
+inline void RenderSettings::set_stop_label_font_size(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_stop_label_font_size(value);
+  // @@protoc_insertion_point(field_set:Serialize.RenderSettings.stop_label_font_size)
+}
+
+// .Serialize.SvgPoint stop_label_offset = 7;
+inline bool RenderSettings::_internal_has_stop_label_offset() const {
+  return this != internal_default_instance() && stop_label_offset_ != nullptr;
+}
+inline bool RenderSettings::has_stop_label_offset() const {
+  return _internal_has_stop_label_offset();
+}
+inline void RenderSettings::clear_stop_label_offset() {
+  if (GetArena() == nullptr && stop_label_offset_ != nullptr) {
+    delete stop_label_offset_;
+  }
+  stop_label_offset_ = nullptr;
+}
+inline const ::Serialize::SvgPoint& RenderSettings::_internal_stop_label_offset() const {
+  const ::Serialize::SvgPoint* p = stop_label_offset_;
+  return p != nullptr ? *p : reinterpret_cast<const ::Serialize::SvgPoint&>(
+      ::Serialize::_SvgPoint_default_instance_);
+}
+inline const ::Serialize::SvgPoint& RenderSettings::stop_label_offset() const {
+  // @@protoc_insertion_point(field_get:Serialize.RenderSettings.stop_label_offset)
+  return _internal_stop_label_offset();
+}
+inline void RenderSettings::unsafe_arena_set_allocated_stop_label_offset(
+    ::Serialize::SvgPoint* stop_label_offset) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(stop_label_offset_);
+  }
+  stop_label_offset_ = stop_label_offset;
+  if (stop_label_offset) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Serialize.RenderSettings.stop_label_offset)
+}
+inline ::Serialize::SvgPoint* RenderSettings::release_stop_label_offset() {
+  
+  ::Serialize::SvgPoint* temp = stop_label_offset_;
+  stop_label_offset_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::Serialize::SvgPoint* RenderSettings::unsafe_arena_release_stop_label_offset() {
+  // @@protoc_insertion_point(field_release:Serialize.RenderSettings.stop_label_offset)
+  
+  ::Serialize::SvgPoint* temp = stop_label_offset_;
+  stop_label_offset_ = nullptr;
+  return temp;
+}
+inline ::Serialize::SvgPoint* RenderSettings::_internal_mutable_stop_label_offset() {
+  
+  if (stop_label_offset_ == nullptr) {
+    auto* p = CreateMaybeMessage<::Serialize::SvgPoint>(GetArena());
+    stop_label_offset_ = p;
+  }
+  return stop_label_offset_;
+}
+inline ::Serialize::SvgPoint* RenderSettings::mutable_stop_label_offset() {
+  // @@protoc_insertion_point(field_mutable:Serialize.RenderSettings.stop_label_offset)
+  return _internal_mutable_stop_label_offset();
+}
+inline void RenderSettings::set_allocated_stop_label_offset(::Serialize::SvgPoint* stop_label_offset) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete stop_label_offset_;
+  }
+  if (stop_label_offset) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(stop_label_offset);
+    if (message_arena != submessage_arena) {
+      stop_label_offset = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, stop_label_offset, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  stop_label_offset_ = stop_label_offset;
+  // @@protoc_insertion_point(field_set_allocated:Serialize.RenderSettings.stop_label_offset)
+}
+
+// .Serialize.SvgColor underlayer_color = 8;
+inline bool RenderSettings::_internal_has_underlayer_color() const {
+  return this != internal_default_instance() && underlayer_color_ != nullptr;
+}
+inline bool RenderSettings::has_underlayer_color() const {
+  return _internal_has_underlayer_color();
+}
+inline void RenderSettings::clear_underlayer_color() {
+  if (GetArena() == nullptr && underlayer_color_ != nullptr) {
+    delete underlayer_color_;
+  }
+  underlayer_color_ = nullptr;
+}
+inline const ::Serialize::SvgColor& RenderSettings::_internal_underlayer_color() const {
+  const ::Serialize::SvgColor* p = underlayer_color_;
+  return p != nullptr ? *p : reinterpret_cast<const ::Serialize::SvgColor&>(
+      ::Serialize::_SvgColor_default_instance_);
+}
+inline const ::Serialize::SvgColor& RenderSettings::underlayer_color() const {
+  // @@protoc_insertion_point(field_get:Serialize.RenderSettings.underlayer_color)
+  return _internal_underlayer_color();
+}
+inline void RenderSettings::unsafe_arena_set_allocated_underlayer_color(
+    ::Serialize::SvgColor* underlayer_color) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(underlayer_color_);
+  }
+  underlayer_color_ = underlayer_color;
+  if (underlayer_color) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Serialize.RenderSettings.underlayer_color)
+}
+inline ::Serialize::SvgColor* RenderSettings::release_underlayer_color() {
+  
+  ::Serialize::SvgColor* temp = underlayer_color_;
+  underlayer_color_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::Serialize::SvgColor* RenderSettings::unsafe_arena_release_underlayer_color() {
+  // @@protoc_insertion_point(field_release:Serialize.RenderSettings.underlayer_color)
+  
+  ::Serialize::SvgColor* temp = underlayer_color_;
+  underlayer_color_ = nullptr;
+  return temp;
+}
+inline ::Serialize::SvgColor* RenderSettings::_internal_mutable_underlayer_color() {
+  
+  if (underlayer_color_ == nullptr) {
+    auto* p = CreateMaybeMessage<::Serialize::SvgColor>(GetArena());
+    underlayer_color_ = p;
+  }
+  return underlayer_color_;
+}
+inline ::Serialize::SvgColor* RenderSettings::mutable_underlayer_color() {
+  // @@protoc_insertion_point(field_mutable:Serialize.RenderSettings.underlayer_color)
+  return _internal_mutable_underlayer_color();
+}
+inline void RenderSettings::set_allocated_underlayer_color(::Serialize::SvgColor* underlayer_color) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete underlayer_color_;
+  }
+  if (underlayer_color) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(underlayer_color);
+    if (message_arena != submessage_arena) {
+      underlayer_color = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, underlayer_color, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  underlayer_color_ = underlayer_color;
+  // @@protoc_insertion_point(field_set_allocated:Serialize.RenderSettings.underlayer_color)
+}
+
+// float underlayer_width = 9;
+inline void RenderSettings::clear_underlayer_width() {
+  underlayer_width_ = 0;
+}
+inline float RenderSettings::_internal_underlayer_width() const {
+  return underlayer_width_;
+}
+inline float RenderSettings::underlayer_width() const {
+  // @@protoc_insertion_point(field_get:Serialize.RenderSettings.underlayer_width)
+  return _internal_underlayer_width();
+}
+inline void RenderSettings::_internal_set_underlayer_width(float value) {
+  
+  underlayer_width_ = value;
+}
+inline void RenderSettings::set_underlayer_width(float value) {
+  _internal_set_underlayer_width(value);
+  // @@protoc_insertion_point(field_set:Serialize.RenderSettings.underlayer_width)
+}
+
+// repeated .Serialize.SvgColor color_palette = 10;
+inline int RenderSettings::_internal_color_palette_size() const {
+  return color_palette_.size();
+}
+inline int RenderSettings::color_palette_size() const {
+  return _internal_color_palette_size();
+}
+inline void RenderSettings::clear_color_palette() {
+  color_palette_.Clear();
+}
+inline ::Serialize::SvgColor* RenderSettings::mutable_color_palette(int index) {
+  // @@protoc_insertion_point(field_mutable:Serialize.RenderSettings.color_palette)
+  return color_palette_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Serialize::SvgColor >*
+RenderSettings::mutable_color_palette() {
+  // @@protoc_insertion_point(field_mutable_list:Serialize.RenderSettings.color_palette)
+  return &color_palette_;
+}
+inline const ::Serialize::SvgColor& RenderSettings::_internal_color_palette(int index) const {
+  return color_palette_.Get(index);
+}
+inline const ::Serialize::SvgColor& RenderSettings::color_palette(int index) const {
+  // @@protoc_insertion_point(field_get:Serialize.RenderSettings.color_palette)
+  return _internal_color_palette(index);
+}
+inline ::Serialize::SvgColor* RenderSettings::_internal_add_color_palette() {
+  return color_palette_.Add();
+}
+inline ::Serialize::SvgColor* RenderSettings::add_color_palette() {
+  // @@protoc_insertion_point(field_add:Serialize.RenderSettings.color_palette)
+  return _internal_add_color_palette();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Serialize::SvgColor >&
+RenderSettings::color_palette() const {
+  // @@protoc_insertion_point(field_list:Serialize.RenderSettings.color_palette)
+  return color_palette_;
+}
+
+// int32 bus_label_font_size = 11;
+inline void RenderSettings::clear_bus_label_font_size() {
+  bus_label_font_size_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 RenderSettings::_internal_bus_label_font_size() const {
+  return bus_label_font_size_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 RenderSettings::bus_label_font_size() const {
+  // @@protoc_insertion_point(field_get:Serialize.RenderSettings.bus_label_font_size)
+  return _internal_bus_label_font_size();
+}
+inline void RenderSettings::_internal_set_bus_label_font_size(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  bus_label_font_size_ = value;
+}
+inline void RenderSettings::set_bus_label_font_size(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_bus_label_font_size(value);
+  // @@protoc_insertion_point(field_set:Serialize.RenderSettings.bus_label_font_size)
+}
+
+// .Serialize.SvgPoint bus_label_offset = 12;
+inline bool RenderSettings::_internal_has_bus_label_offset() const {
+  return this != internal_default_instance() && bus_label_offset_ != nullptr;
+}
+inline bool RenderSettings::has_bus_label_offset() const {
+  return _internal_has_bus_label_offset();
+}
+inline void RenderSettings::clear_bus_label_offset() {
+  if (GetArena() == nullptr && bus_label_offset_ != nullptr) {
+    delete bus_label_offset_;
+  }
+  bus_label_offset_ = nullptr;
+}
+inline const ::Serialize::SvgPoint& RenderSettings::_internal_bus_label_offset() const {
+  const ::Serialize::SvgPoint* p = bus_label_offset_;
+  return p != nullptr ? *p : reinterpret_cast<const ::Serialize::SvgPoint&>(
+      ::Serialize::_SvgPoint_default_instance_);
+}
+inline const ::Serialize::SvgPoint& RenderSettings::bus_label_offset() const {
+  // @@protoc_insertion_point(field_get:Serialize.RenderSettings.bus_label_offset)
+  return _internal_bus_label_offset();
+}
+inline void RenderSettings::unsafe_arena_set_allocated_bus_label_offset(
+    ::Serialize::SvgPoint* bus_label_offset) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(bus_label_offset_);
+  }
+  bus_label_offset_ = bus_label_offset;
+  if (bus_label_offset) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Serialize.RenderSettings.bus_label_offset)
+}
+inline ::Serialize::SvgPoint* RenderSettings::release_bus_label_offset() {
+  
+  ::Serialize::SvgPoint* temp = bus_label_offset_;
+  bus_label_offset_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::Serialize::SvgPoint* RenderSettings::unsafe_arena_release_bus_label_offset() {
+  // @@protoc_insertion_point(field_release:Serialize.RenderSettings.bus_label_offset)
+  
+  ::Serialize::SvgPoint* temp = bus_label_offset_;
+  bus_label_offset_ = nullptr;
+  return temp;
+}
+inline ::Serialize::SvgPoint* RenderSettings::_internal_mutable_bus_label_offset() {
+  
+  if (bus_label_offset_ == nullptr) {
+    auto* p = CreateMaybeMessage<::Serialize::SvgPoint>(GetArena());
+    bus_label_offset_ = p;
+  }
+  return bus_label_offset_;
+}
+inline ::Serialize::SvgPoint* RenderSettings::mutable_bus_label_offset() {
+  // @@protoc_insertion_point(field_mutable:Serialize.RenderSettings.bus_label_offset)
+  return _internal_mutable_bus_label_offset();
+}
+inline void RenderSettings::set_allocated_bus_label_offset(::Serialize::SvgPoint* bus_label_offset) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete bus_label_offset_;
+  }
+  if (bus_label_offset) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(bus_label_offset);
+    if (message_arena != submessage_arena) {
+      bus_label_offset = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, bus_label_offset, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  bus_label_offset_ = bus_label_offset;
+  // @@protoc_insertion_point(field_set_allocated:Serialize.RenderSettings.bus_label_offset)
+}
+
+// repeated string layers = 13;
+inline int RenderSettings::_internal_layers_size() const {
+  return layers_.size();
+}
+inline int RenderSettings::layers_size() const {
+  return _internal_layers_size();
+}
+inline void RenderSettings::clear_layers() {
+  layers_.Clear();
+}
+inline std::string* RenderSettings::add_layers() {
+  // @@protoc_insertion_point(field_add_mutable:Serialize.RenderSettings.layers)
+  return _internal_add_layers();
+}
+inline const std::string& RenderSettings::_internal_layers(int index) const {
+  return layers_.Get(index);
+}
+inline const std::string& RenderSettings::layers(int index) const {
+  // @@protoc_insertion_point(field_get:Serialize.RenderSettings.layers)
+  return _internal_layers(index);
+}
+inline std::string* RenderSettings::mutable_layers(int index) {
+  // @@protoc_insertion_point(field_mutable:Serialize.RenderSettings.layers)
+  return layers_.Mutable(index);
+}
+inline void RenderSettings::set_layers(int index, const std::string& value) {
+  // @@protoc_insertion_point(field_set:Serialize.RenderSettings.layers)
+  layers_.Mutable(index)->assign(value);
+}
+inline void RenderSettings::set_layers(int index, std::string&& value) {
+  // @@protoc_insertion_point(field_set:Serialize.RenderSettings.layers)
+  layers_.Mutable(index)->assign(std::move(value));
+}
+inline void RenderSettings::set_layers(int index, const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  layers_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:Serialize.RenderSettings.layers)
+}
+inline void RenderSettings::set_layers(int index, const char* value, size_t size) {
+  layers_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:Serialize.RenderSettings.layers)
+}
+inline std::string* RenderSettings::_internal_add_layers() {
+  return layers_.Add();
+}
+inline void RenderSettings::add_layers(const std::string& value) {
+  layers_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:Serialize.RenderSettings.layers)
+}
+inline void RenderSettings::add_layers(std::string&& value) {
+  layers_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:Serialize.RenderSettings.layers)
+}
+inline void RenderSettings::add_layers(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  layers_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:Serialize.RenderSettings.layers)
+}
+inline void RenderSettings::add_layers(const char* value, size_t size) {
+  layers_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:Serialize.RenderSettings.layers)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
+RenderSettings::layers() const {
+  // @@protoc_insertion_point(field_list:Serialize.RenderSettings.layers)
+  return layers_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
+RenderSettings::mutable_layers() {
+  // @@protoc_insertion_point(field_mutable_list:Serialize.RenderSettings.layers)
+  return &layers_;
+}
+
+// float outer_margin = 14;
+inline void RenderSettings::clear_outer_margin() {
+  outer_margin_ = 0;
+}
+inline float RenderSettings::_internal_outer_margin() const {
+  return outer_margin_;
+}
+inline float RenderSettings::outer_margin() const {
+  // @@protoc_insertion_point(field_get:Serialize.RenderSettings.outer_margin)
+  return _internal_outer_margin();
+}
+inline void RenderSettings::_internal_set_outer_margin(float value) {
+  
+  outer_margin_ = value;
+}
+inline void RenderSettings::set_outer_margin(float value) {
+  _internal_set_outer_margin(value);
+  // @@protoc_insertion_point(field_set:Serialize.RenderSettings.outer_margin)
+}
+
+// -------------------------------------------------------------------
+
+// Painter
+
+// .Serialize.RenderSettings settings_ = 1;
+inline bool Painter::_internal_has_settings_() const {
+  return this != internal_default_instance() && settings__ != nullptr;
+}
+inline bool Painter::has_settings_() const {
+  return _internal_has_settings_();
+}
+inline void Painter::clear_settings_() {
+  if (GetArena() == nullptr && settings__ != nullptr) {
+    delete settings__;
+  }
+  settings__ = nullptr;
+}
+inline const ::Serialize::RenderSettings& Painter::_internal_settings_() const {
+  const ::Serialize::RenderSettings* p = settings__;
+  return p != nullptr ? *p : reinterpret_cast<const ::Serialize::RenderSettings&>(
+      ::Serialize::_RenderSettings_default_instance_);
+}
+inline const ::Serialize::RenderSettings& Painter::settings_() const {
+  // @@protoc_insertion_point(field_get:Serialize.Painter.settings_)
+  return _internal_settings_();
+}
+inline void Painter::unsafe_arena_set_allocated_settings_(
+    ::Serialize::RenderSettings* settings_) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(settings__);
+  }
+  settings__ = settings_;
+  if (settings_) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Serialize.Painter.settings_)
+}
+inline ::Serialize::RenderSettings* Painter::release_settings_() {
+  
+  ::Serialize::RenderSettings* temp = settings__;
+  settings__ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::Serialize::RenderSettings* Painter::unsafe_arena_release_settings_() {
+  // @@protoc_insertion_point(field_release:Serialize.Painter.settings_)
+  
+  ::Serialize::RenderSettings* temp = settings__;
+  settings__ = nullptr;
+  return temp;
+}
+inline ::Serialize::RenderSettings* Painter::_internal_mutable_settings_() {
+  
+  if (settings__ == nullptr) {
+    auto* p = CreateMaybeMessage<::Serialize::RenderSettings>(GetArena());
+    settings__ = p;
+  }
+  return settings__;
+}
+inline ::Serialize::RenderSettings* Painter::mutable_settings_() {
+  // @@protoc_insertion_point(field_mutable:Serialize.Painter.settings_)
+  return _internal_mutable_settings_();
+}
+inline void Painter::set_allocated_settings_(::Serialize::RenderSettings* settings_) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete settings__;
+  }
+  if (settings_) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(settings_);
+    if (message_arena != submessage_arena) {
+      settings_ = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, settings_, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  settings__ = settings_;
+  // @@protoc_insertion_point(field_set_allocated:Serialize.Painter.settings_)
+}
+
+// repeated .Serialize.BusesDict buses_dict_ = 2;
+inline int Painter::_internal_buses_dict__size() const {
+  return buses_dict__.size();
+}
+inline int Painter::buses_dict__size() const {
+  return _internal_buses_dict__size();
+}
+inline void Painter::clear_buses_dict_() {
+  buses_dict__.Clear();
+}
+inline ::Serialize::BusesDict* Painter::mutable_buses_dict_(int index) {
+  // @@protoc_insertion_point(field_mutable:Serialize.Painter.buses_dict_)
+  return buses_dict__.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Serialize::BusesDict >*
+Painter::mutable_buses_dict_() {
+  // @@protoc_insertion_point(field_mutable_list:Serialize.Painter.buses_dict_)
+  return &buses_dict__;
+}
+inline const ::Serialize::BusesDict& Painter::_internal_buses_dict_(int index) const {
+  return buses_dict__.Get(index);
+}
+inline const ::Serialize::BusesDict& Painter::buses_dict_(int index) const {
+  // @@protoc_insertion_point(field_get:Serialize.Painter.buses_dict_)
+  return _internal_buses_dict_(index);
+}
+inline ::Serialize::BusesDict* Painter::_internal_add_buses_dict_() {
+  return buses_dict__.Add();
+}
+inline ::Serialize::BusesDict* Painter::add_buses_dict_() {
+  // @@protoc_insertion_point(field_add:Serialize.Painter.buses_dict_)
+  return _internal_add_buses_dict_();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Serialize::BusesDict >&
+Painter::buses_dict_() const {
+  // @@protoc_insertion_point(field_list:Serialize.Painter.buses_dict_)
+  return buses_dict__;
+}
+
+// repeated .Serialize.StopCoord stops_coords_ = 3;
+inline int Painter::_internal_stops_coords__size() const {
+  return stops_coords__.size();
+}
+inline int Painter::stops_coords__size() const {
+  return _internal_stops_coords__size();
+}
+inline void Painter::clear_stops_coords_() {
+  stops_coords__.Clear();
+}
+inline ::Serialize::StopCoord* Painter::mutable_stops_coords_(int index) {
+  // @@protoc_insertion_point(field_mutable:Serialize.Painter.stops_coords_)
+  return stops_coords__.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Serialize::StopCoord >*
+Painter::mutable_stops_coords_() {
+  // @@protoc_insertion_point(field_mutable_list:Serialize.Painter.stops_coords_)
+  return &stops_coords__;
+}
+inline const ::Serialize::StopCoord& Painter::_internal_stops_coords_(int index) const {
+  return stops_coords__.Get(index);
+}
+inline const ::Serialize::StopCoord& Painter::stops_coords_(int index) const {
+  // @@protoc_insertion_point(field_get:Serialize.Painter.stops_coords_)
+  return _internal_stops_coords_(index);
+}
+inline ::Serialize::StopCoord* Painter::_internal_add_stops_coords_() {
+  return stops_coords__.Add();
+}
+inline ::Serialize::StopCoord* Painter::add_stops_coords_() {
+  // @@protoc_insertion_point(field_add:Serialize.Painter.stops_coords_)
+  return _internal_add_stops_coords_();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Serialize::StopCoord >&
+Painter::stops_coords_() const {
+  // @@protoc_insertion_point(field_list:Serialize.Painter.stops_coords_)
+  return stops_coords__;
+}
+
+// repeated .Serialize.BusColor bus_colors_ = 4;
+inline int Painter::_internal_bus_colors__size() const {
+  return bus_colors__.size();
+}
+inline int Painter::bus_colors__size() const {
+  return _internal_bus_colors__size();
+}
+inline void Painter::clear_bus_colors_() {
+  bus_colors__.Clear();
+}
+inline ::Serialize::BusColor* Painter::mutable_bus_colors_(int index) {
+  // @@protoc_insertion_point(field_mutable:Serialize.Painter.bus_colors_)
+  return bus_colors__.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Serialize::BusColor >*
+Painter::mutable_bus_colors_() {
+  // @@protoc_insertion_point(field_mutable_list:Serialize.Painter.bus_colors_)
+  return &bus_colors__;
+}
+inline const ::Serialize::BusColor& Painter::_internal_bus_colors_(int index) const {
+  return bus_colors__.Get(index);
+}
+inline const ::Serialize::BusColor& Painter::bus_colors_(int index) const {
+  // @@protoc_insertion_point(field_get:Serialize.Painter.bus_colors_)
+  return _internal_bus_colors_(index);
+}
+inline ::Serialize::BusColor* Painter::_internal_add_bus_colors_() {
+  return bus_colors__.Add();
+}
+inline ::Serialize::BusColor* Painter::add_bus_colors_() {
+  // @@protoc_insertion_point(field_add:Serialize.Painter.bus_colors_)
+  return _internal_add_bus_colors_();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Serialize::BusColor >&
+Painter::bus_colors_() const {
+  // @@protoc_insertion_point(field_list:Serialize.Painter.bus_colors_)
+  return bus_colors__;
+}
+
+// .Serialize.Document base_map_ = 5;
+inline bool Painter::_internal_has_base_map_() const {
+  return this != internal_default_instance() && base_map__ != nullptr;
+}
+inline bool Painter::has_base_map_() const {
+  return _internal_has_base_map_();
+}
+inline void Painter::clear_base_map_() {
+  if (GetArena() == nullptr && base_map__ != nullptr) {
+    delete base_map__;
+  }
+  base_map__ = nullptr;
+}
+inline const ::Serialize::Document& Painter::_internal_base_map_() const {
+  const ::Serialize::Document* p = base_map__;
+  return p != nullptr ? *p : reinterpret_cast<const ::Serialize::Document&>(
+      ::Serialize::_Document_default_instance_);
+}
+inline const ::Serialize::Document& Painter::base_map_() const {
+  // @@protoc_insertion_point(field_get:Serialize.Painter.base_map_)
+  return _internal_base_map_();
+}
+inline void Painter::unsafe_arena_set_allocated_base_map_(
+    ::Serialize::Document* base_map_) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(base_map__);
+  }
+  base_map__ = base_map_;
+  if (base_map_) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Serialize.Painter.base_map_)
+}
+inline ::Serialize::Document* Painter::release_base_map_() {
+  
+  ::Serialize::Document* temp = base_map__;
+  base_map__ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::Serialize::Document* Painter::unsafe_arena_release_base_map_() {
+  // @@protoc_insertion_point(field_release:Serialize.Painter.base_map_)
+  
+  ::Serialize::Document* temp = base_map__;
+  base_map__ = nullptr;
+  return temp;
+}
+inline ::Serialize::Document* Painter::_internal_mutable_base_map_() {
+  
+  if (base_map__ == nullptr) {
+    auto* p = CreateMaybeMessage<::Serialize::Document>(GetArena());
+    base_map__ = p;
+  }
+  return base_map__;
+}
+inline ::Serialize::Document* Painter::mutable_base_map_() {
+  // @@protoc_insertion_point(field_mutable:Serialize.Painter.base_map_)
+  return _internal_mutable_base_map_();
+}
+inline void Painter::set_allocated_base_map_(::Serialize::Document* base_map_) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete base_map__;
+  }
+  if (base_map_) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(base_map_);
+    if (message_arena != submessage_arena) {
+      base_map_ = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, base_map_, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  base_map__ = base_map_;
+  // @@protoc_insertion_point(field_set_allocated:Serialize.Painter.base_map_)
+}
+
+// -------------------------------------------------------------------
+
 // TransportCatalog
 
 // repeated .Serialize.StopRequest stops_ = 1;
@@ -4709,9 +11695,126 @@ inline void TransportCatalog::set_allocated_router_(::Serialize::TransportRouter
   // @@protoc_insertion_point(field_set_allocated:Serialize.TransportCatalog.router_)
 }
 
+// .Serialize.Painter painter_ = 4;
+inline bool TransportCatalog::_internal_has_painter_() const {
+  return this != internal_default_instance() && painter__ != nullptr;
+}
+inline bool TransportCatalog::has_painter_() const {
+  return _internal_has_painter_();
+}
+inline void TransportCatalog::clear_painter_() {
+  if (GetArena() == nullptr && painter__ != nullptr) {
+    delete painter__;
+  }
+  painter__ = nullptr;
+}
+inline const ::Serialize::Painter& TransportCatalog::_internal_painter_() const {
+  const ::Serialize::Painter* p = painter__;
+  return p != nullptr ? *p : reinterpret_cast<const ::Serialize::Painter&>(
+      ::Serialize::_Painter_default_instance_);
+}
+inline const ::Serialize::Painter& TransportCatalog::painter_() const {
+  // @@protoc_insertion_point(field_get:Serialize.TransportCatalog.painter_)
+  return _internal_painter_();
+}
+inline void TransportCatalog::unsafe_arena_set_allocated_painter_(
+    ::Serialize::Painter* painter_) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(painter__);
+  }
+  painter__ = painter_;
+  if (painter_) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Serialize.TransportCatalog.painter_)
+}
+inline ::Serialize::Painter* TransportCatalog::release_painter_() {
+  
+  ::Serialize::Painter* temp = painter__;
+  painter__ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::Serialize::Painter* TransportCatalog::unsafe_arena_release_painter_() {
+  // @@protoc_insertion_point(field_release:Serialize.TransportCatalog.painter_)
+  
+  ::Serialize::Painter* temp = painter__;
+  painter__ = nullptr;
+  return temp;
+}
+inline ::Serialize::Painter* TransportCatalog::_internal_mutable_painter_() {
+  
+  if (painter__ == nullptr) {
+    auto* p = CreateMaybeMessage<::Serialize::Painter>(GetArena());
+    painter__ = p;
+  }
+  return painter__;
+}
+inline ::Serialize::Painter* TransportCatalog::mutable_painter_() {
+  // @@protoc_insertion_point(field_mutable:Serialize.TransportCatalog.painter_)
+  return _internal_mutable_painter_();
+}
+inline void TransportCatalog::set_allocated_painter_(::Serialize::Painter* painter_) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete painter__;
+  }
+  if (painter_) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(painter_);
+    if (message_arena != submessage_arena) {
+      painter_ = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, painter_, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  painter__ = painter_;
+  // @@protoc_insertion_point(field_set_allocated:Serialize.TransportCatalog.painter_)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

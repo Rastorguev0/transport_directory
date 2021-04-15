@@ -14,19 +14,36 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_BusColor_transport_5fcatalog_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_BusEdgeInfo_transport_5fcatalog_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_BusGraph_transport_5fcatalog_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_BusRequest_transport_5fcatalog_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_BusesDict_transport_5fcatalog_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Circle_transport_5fcatalog_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Document_transport_5fcatalog_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Edge_transport_5fcatalog_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_EdgeInfo_transport_5fcatalog_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_IncidenceList_transport_5fcatalog_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<4> scc_info_Object_transport_5fcatalog_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ObjectBase_transport_5fcatalog_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<5> scc_info_Painter_transport_5fcatalog_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Polyline_transport_5fcatalog_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Rectangle_transport_5fcatalog_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_RenderSettings_transport_5fcatalog_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Rgb_transport_5fcatalog_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Rgba_transport_5fcatalog_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_RouteData_transport_5fcatalog_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_RouteInternalData_transport_5fcatalog_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Router_transport_5fcatalog_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_RoutesInternalData_transport_5fcatalog_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_RoutingSettings_transport_5fcatalog_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_StopCoord_transport_5fcatalog_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_StopRequest_transport_5fcatalog_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_StopVertexIdx_transport_5fcatalog_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_StrColor_transport_5fcatalog_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_SvgColor_transport_5fcatalog_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_SvgPoint_transport_5fcatalog_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Text_transport_5fcatalog_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<6> scc_info_TransportRouter_transport_5fcatalog_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_VertexInfo_transport_5fcatalog_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_WaitEdgeInfo_transport_5fcatalog_2eproto;
@@ -95,11 +112,93 @@ class TransportRouterDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<TransportRouter> _instance;
 } _TransportRouter_default_instance_;
+class SvgPointDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<SvgPoint> _instance;
+} _SvgPoint_default_instance_;
+class RgbDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Rgb> _instance;
+} _Rgb_default_instance_;
+class RgbaDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Rgba> _instance;
+} _Rgba_default_instance_;
+class StrColorDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<StrColor> _instance;
+} _StrColor_default_instance_;
+class SvgColorDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<SvgColor> _instance;
+} _SvgColor_default_instance_;
+class BusesDictDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<BusesDict> _instance;
+} _BusesDict_default_instance_;
+class StopCoordDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<StopCoord> _instance;
+} _StopCoord_default_instance_;
+class BusColorDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<BusColor> _instance;
+} _BusColor_default_instance_;
+class ObjectBaseDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ObjectBase> _instance;
+} _ObjectBase_default_instance_;
+class CircleDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Circle> _instance;
+} _Circle_default_instance_;
+class RectangleDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Rectangle> _instance;
+} _Rectangle_default_instance_;
+class PolylineDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Polyline> _instance;
+} _Polyline_default_instance_;
+class TextDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Text> _instance;
+} _Text_default_instance_;
+class ObjectDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Object> _instance;
+} _Object_default_instance_;
+class DocumentDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Document> _instance;
+} _Document_default_instance_;
+class RenderSettingsDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<RenderSettings> _instance;
+} _RenderSettings_default_instance_;
+class PainterDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Painter> _instance;
+} _Painter_default_instance_;
 class TransportCatalogDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<TransportCatalog> _instance;
 } _TransportCatalog_default_instance_;
 }  // namespace Serialize
+static void InitDefaultsscc_info_BusColor_transport_5fcatalog_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::Serialize::_BusColor_default_instance_;
+    new (ptr) ::Serialize::BusColor();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_BusColor_transport_5fcatalog_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_BusColor_transport_5fcatalog_2eproto}, {
+      &scc_info_SvgColor_transport_5fcatalog_2eproto.base,}};
+
 static void InitDefaultsscc_info_BusEdgeInfo_transport_5fcatalog_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -141,6 +240,48 @@ static void InitDefaultsscc_info_BusRequest_transport_5fcatalog_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_BusRequest_transport_5fcatalog_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_BusRequest_transport_5fcatalog_2eproto}, {}};
 
+static void InitDefaultsscc_info_BusesDict_transport_5fcatalog_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::Serialize::_BusesDict_default_instance_;
+    new (ptr) ::Serialize::BusesDict();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_BusesDict_transport_5fcatalog_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_BusesDict_transport_5fcatalog_2eproto}, {}};
+
+static void InitDefaultsscc_info_Circle_transport_5fcatalog_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::Serialize::_Circle_default_instance_;
+    new (ptr) ::Serialize::Circle();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Circle_transport_5fcatalog_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_Circle_transport_5fcatalog_2eproto}, {
+      &scc_info_ObjectBase_transport_5fcatalog_2eproto.base,
+      &scc_info_SvgPoint_transport_5fcatalog_2eproto.base,}};
+
+static void InitDefaultsscc_info_Document_transport_5fcatalog_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::Serialize::_Document_default_instance_;
+    new (ptr) ::Serialize::Document();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Document_transport_5fcatalog_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_Document_transport_5fcatalog_2eproto}, {
+      &scc_info_Object_transport_5fcatalog_2eproto.base,}};
+
 static void InitDefaultsscc_info_Edge_transport_5fcatalog_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -181,6 +322,127 @@ static void InitDefaultsscc_info_IncidenceList_transport_5fcatalog_2eproto() {
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_IncidenceList_transport_5fcatalog_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_IncidenceList_transport_5fcatalog_2eproto}, {}};
+
+static void InitDefaultsscc_info_Object_transport_5fcatalog_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::Serialize::_Object_default_instance_;
+    new (ptr) ::Serialize::Object();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<4> scc_info_Object_transport_5fcatalog_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 4, 0, InitDefaultsscc_info_Object_transport_5fcatalog_2eproto}, {
+      &scc_info_Circle_transport_5fcatalog_2eproto.base,
+      &scc_info_Rectangle_transport_5fcatalog_2eproto.base,
+      &scc_info_Polyline_transport_5fcatalog_2eproto.base,
+      &scc_info_Text_transport_5fcatalog_2eproto.base,}};
+
+static void InitDefaultsscc_info_ObjectBase_transport_5fcatalog_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::Serialize::_ObjectBase_default_instance_;
+    new (ptr) ::Serialize::ObjectBase();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ObjectBase_transport_5fcatalog_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_ObjectBase_transport_5fcatalog_2eproto}, {
+      &scc_info_SvgColor_transport_5fcatalog_2eproto.base,}};
+
+static void InitDefaultsscc_info_Painter_transport_5fcatalog_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::Serialize::_Painter_default_instance_;
+    new (ptr) ::Serialize::Painter();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<5> scc_info_Painter_transport_5fcatalog_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 5, 0, InitDefaultsscc_info_Painter_transport_5fcatalog_2eproto}, {
+      &scc_info_RenderSettings_transport_5fcatalog_2eproto.base,
+      &scc_info_BusesDict_transport_5fcatalog_2eproto.base,
+      &scc_info_StopCoord_transport_5fcatalog_2eproto.base,
+      &scc_info_BusColor_transport_5fcatalog_2eproto.base,
+      &scc_info_Document_transport_5fcatalog_2eproto.base,}};
+
+static void InitDefaultsscc_info_Polyline_transport_5fcatalog_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::Serialize::_Polyline_default_instance_;
+    new (ptr) ::Serialize::Polyline();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Polyline_transport_5fcatalog_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_Polyline_transport_5fcatalog_2eproto}, {
+      &scc_info_ObjectBase_transport_5fcatalog_2eproto.base,
+      &scc_info_SvgPoint_transport_5fcatalog_2eproto.base,}};
+
+static void InitDefaultsscc_info_Rectangle_transport_5fcatalog_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::Serialize::_Rectangle_default_instance_;
+    new (ptr) ::Serialize::Rectangle();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Rectangle_transport_5fcatalog_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_Rectangle_transport_5fcatalog_2eproto}, {
+      &scc_info_ObjectBase_transport_5fcatalog_2eproto.base,
+      &scc_info_SvgPoint_transport_5fcatalog_2eproto.base,}};
+
+static void InitDefaultsscc_info_RenderSettings_transport_5fcatalog_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::Serialize::_RenderSettings_default_instance_;
+    new (ptr) ::Serialize::RenderSettings();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_RenderSettings_transport_5fcatalog_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_RenderSettings_transport_5fcatalog_2eproto}, {
+      &scc_info_SvgPoint_transport_5fcatalog_2eproto.base,
+      &scc_info_SvgColor_transport_5fcatalog_2eproto.base,}};
+
+static void InitDefaultsscc_info_Rgb_transport_5fcatalog_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::Serialize::_Rgb_default_instance_;
+    new (ptr) ::Serialize::Rgb();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Rgb_transport_5fcatalog_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_Rgb_transport_5fcatalog_2eproto}, {}};
+
+static void InitDefaultsscc_info_Rgba_transport_5fcatalog_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::Serialize::_Rgba_default_instance_;
+    new (ptr) ::Serialize::Rgba();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Rgba_transport_5fcatalog_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_Rgba_transport_5fcatalog_2eproto}, {
+      &scc_info_Rgb_transport_5fcatalog_2eproto.base,}};
 
 static void InitDefaultsscc_info_RouteData_transport_5fcatalog_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -250,6 +512,20 @@ static void InitDefaultsscc_info_RoutingSettings_transport_5fcatalog_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_RoutingSettings_transport_5fcatalog_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_RoutingSettings_transport_5fcatalog_2eproto}, {}};
 
+static void InitDefaultsscc_info_StopCoord_transport_5fcatalog_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::Serialize::_StopCoord_default_instance_;
+    new (ptr) ::Serialize::StopCoord();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_StopCoord_transport_5fcatalog_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_StopCoord_transport_5fcatalog_2eproto}, {
+      &scc_info_SvgPoint_transport_5fcatalog_2eproto.base,}};
+
 static void InitDefaultsscc_info_StopRequest_transport_5fcatalog_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -276,6 +552,63 @@ static void InitDefaultsscc_info_StopVertexIdx_transport_5fcatalog_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_StopVertexIdx_transport_5fcatalog_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_StopVertexIdx_transport_5fcatalog_2eproto}, {}};
 
+static void InitDefaultsscc_info_StrColor_transport_5fcatalog_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::Serialize::_StrColor_default_instance_;
+    new (ptr) ::Serialize::StrColor();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_StrColor_transport_5fcatalog_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_StrColor_transport_5fcatalog_2eproto}, {}};
+
+static void InitDefaultsscc_info_SvgColor_transport_5fcatalog_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::Serialize::_SvgColor_default_instance_;
+    new (ptr) ::Serialize::SvgColor();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_SvgColor_transport_5fcatalog_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, 0, InitDefaultsscc_info_SvgColor_transport_5fcatalog_2eproto}, {
+      &scc_info_StrColor_transport_5fcatalog_2eproto.base,
+      &scc_info_Rgb_transport_5fcatalog_2eproto.base,
+      &scc_info_Rgba_transport_5fcatalog_2eproto.base,}};
+
+static void InitDefaultsscc_info_SvgPoint_transport_5fcatalog_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::Serialize::_SvgPoint_default_instance_;
+    new (ptr) ::Serialize::SvgPoint();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_SvgPoint_transport_5fcatalog_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_SvgPoint_transport_5fcatalog_2eproto}, {}};
+
+static void InitDefaultsscc_info_Text_transport_5fcatalog_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::Serialize::_Text_default_instance_;
+    new (ptr) ::Serialize::Text();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Text_transport_5fcatalog_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_Text_transport_5fcatalog_2eproto}, {
+      &scc_info_ObjectBase_transport_5fcatalog_2eproto.base,
+      &scc_info_SvgPoint_transport_5fcatalog_2eproto.base,}};
+
 static void InitDefaultsscc_info_TransportCatalog_transport_5fcatalog_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -286,11 +619,12 @@ static void InitDefaultsscc_info_TransportCatalog_transport_5fcatalog_2eproto() 
   }
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_TransportCatalog_transport_5fcatalog_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, 0, InitDefaultsscc_info_TransportCatalog_transport_5fcatalog_2eproto}, {
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<4> scc_info_TransportCatalog_transport_5fcatalog_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 4, 0, InitDefaultsscc_info_TransportCatalog_transport_5fcatalog_2eproto}, {
       &scc_info_StopRequest_transport_5fcatalog_2eproto.base,
       &scc_info_BusRequest_transport_5fcatalog_2eproto.base,
-      &scc_info_TransportRouter_transport_5fcatalog_2eproto.base,}};
+      &scc_info_TransportRouter_transport_5fcatalog_2eproto.base,
+      &scc_info_Painter_transport_5fcatalog_2eproto.base,}};
 
 static void InitDefaultsscc_info_TransportRouter_transport_5fcatalog_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -337,7 +671,7 @@ static void InitDefaultsscc_info_WaitEdgeInfo_transport_5fcatalog_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_WaitEdgeInfo_transport_5fcatalog_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_WaitEdgeInfo_transport_5fcatalog_2eproto}, {}};
 
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_transport_5fcatalog_2eproto[17];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_transport_5fcatalog_2eproto[34];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_transport_5fcatalog_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_transport_5fcatalog_2eproto = nullptr;
 
@@ -462,6 +796,161 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_transport_5fcatalog_2eproto::o
   PROTOBUF_FIELD_OFFSET(::Serialize::TransportRouter, vertices_info__),
   PROTOBUF_FIELD_OFFSET(::Serialize::TransportRouter, edges_info__),
   ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::Serialize::SvgPoint, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::Serialize::SvgPoint, x_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::SvgPoint, y_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::Serialize::Rgb, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::Serialize::Rgb, red_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::Rgb, green_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::Rgb, blue_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::Serialize::Rgba, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::Serialize::Rgba, color_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::Rgba, alpha_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::Serialize::StrColor, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::Serialize::StrColor, color_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::Serialize::SvgColor, _internal_metadata_),
+  ~0u,  // no _extensions_
+  PROTOBUF_FIELD_OFFSET(::Serialize::SvgColor, _oneof_case_[0]),
+  ~0u,  // no _weak_field_map_
+  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
+  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
+  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
+  PROTOBUF_FIELD_OFFSET(::Serialize::SvgColor, variant_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::Serialize::BusesDict, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::Serialize::BusesDict, name_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::BusesDict, stops_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::BusesDict, endpoints_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::BusesDict, is_roundtrip_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::Serialize::StopCoord, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::Serialize::StopCoord, name_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::StopCoord, point_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::Serialize::BusColor, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::Serialize::BusColor, name_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::BusColor, color_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::Serialize::ObjectBase, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::Serialize::ObjectBase, fill_color_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::ObjectBase, stroke_color_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::ObjectBase, stroke_width_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::ObjectBase, has_stroke_line_cap_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::ObjectBase, stroke_line_cap_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::ObjectBase, has_stroke_line_join_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::ObjectBase, stroke_line_join_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::Serialize::Circle, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::Serialize::Circle, base_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::Circle, center_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::Circle, radius_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::Serialize::Rectangle, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::Serialize::Rectangle, base_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::Rectangle, lu_corner_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::Rectangle, w_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::Rectangle, h_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::Serialize::Polyline, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::Serialize::Polyline, base_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::Polyline, points_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::Serialize::Text, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::Serialize::Text, base_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::Text, point_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::Text, offset_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::Text, font_size_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::Text, has_font_family_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::Text, font_family_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::Text, has_font_weight_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::Text, font_weight_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::Text, data_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::Serialize::Object, _internal_metadata_),
+  ~0u,  // no _extensions_
+  PROTOBUF_FIELD_OFFSET(::Serialize::Object, _oneof_case_[0]),
+  ~0u,  // no _weak_field_map_
+  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
+  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
+  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
+  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
+  PROTOBUF_FIELD_OFFSET(::Serialize::Object, variant_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::Serialize::Document, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::Serialize::Document, objects_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::Serialize::RenderSettings, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::Serialize::RenderSettings, width_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::RenderSettings, height_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::RenderSettings, padding_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::RenderSettings, stop_radius_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::RenderSettings, line_width_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::RenderSettings, stop_label_font_size_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::RenderSettings, stop_label_offset_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::RenderSettings, underlayer_color_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::RenderSettings, underlayer_width_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::RenderSettings, color_palette_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::RenderSettings, bus_label_font_size_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::RenderSettings, bus_label_offset_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::RenderSettings, layers_),
+  PROTOBUF_FIELD_OFFSET(::Serialize::RenderSettings, outer_margin_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::Serialize::Painter, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::Serialize::Painter, settings__),
+  PROTOBUF_FIELD_OFFSET(::Serialize::Painter, buses_dict__),
+  PROTOBUF_FIELD_OFFSET(::Serialize::Painter, stops_coords__),
+  PROTOBUF_FIELD_OFFSET(::Serialize::Painter, bus_colors__),
+  PROTOBUF_FIELD_OFFSET(::Serialize::Painter, base_map__),
+  ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::Serialize::TransportCatalog, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
@@ -469,6 +958,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_transport_5fcatalog_2eproto::o
   PROTOBUF_FIELD_OFFSET(::Serialize::TransportCatalog, stops__),
   PROTOBUF_FIELD_OFFSET(::Serialize::TransportCatalog, buses__),
   PROTOBUF_FIELD_OFFSET(::Serialize::TransportCatalog, router__),
+  PROTOBUF_FIELD_OFFSET(::Serialize::TransportCatalog, painter__),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::Serialize::StopRequest)},
@@ -487,7 +977,24 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 93, -1, sizeof(::Serialize::EdgeInfo)},
   { 101, -1, sizeof(::Serialize::RoutingSettings)},
   { 108, -1, sizeof(::Serialize::TransportRouter)},
-  { 119, -1, sizeof(::Serialize::TransportCatalog)},
+  { 119, -1, sizeof(::Serialize::SvgPoint)},
+  { 126, -1, sizeof(::Serialize::Rgb)},
+  { 134, -1, sizeof(::Serialize::Rgba)},
+  { 141, -1, sizeof(::Serialize::StrColor)},
+  { 147, -1, sizeof(::Serialize::SvgColor)},
+  { 156, -1, sizeof(::Serialize::BusesDict)},
+  { 165, -1, sizeof(::Serialize::StopCoord)},
+  { 172, -1, sizeof(::Serialize::BusColor)},
+  { 179, -1, sizeof(::Serialize::ObjectBase)},
+  { 191, -1, sizeof(::Serialize::Circle)},
+  { 199, -1, sizeof(::Serialize::Rectangle)},
+  { 208, -1, sizeof(::Serialize::Polyline)},
+  { 215, -1, sizeof(::Serialize::Text)},
+  { 229, -1, sizeof(::Serialize::Object)},
+  { 239, -1, sizeof(::Serialize::Document)},
+  { 245, -1, sizeof(::Serialize::RenderSettings)},
+  { 264, -1, sizeof(::Serialize::Painter)},
+  { 274, -1, sizeof(::Serialize::TransportCatalog)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -507,6 +1014,23 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::Serialize::_EdgeInfo_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::Serialize::_RoutingSettings_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::Serialize::_TransportRouter_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::Serialize::_SvgPoint_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::Serialize::_Rgb_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::Serialize::_Rgba_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::Serialize::_StrColor_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::Serialize::_SvgColor_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::Serialize::_BusesDict_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::Serialize::_StopCoord_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::Serialize::_BusColor_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::Serialize::_ObjectBase_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::Serialize::_Circle_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::Serialize::_Rectangle_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::Serialize::_Polyline_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::Serialize::_Text_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::Serialize::_Object_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::Serialize::_Document_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::Serialize::_RenderSettings_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::Serialize::_Painter_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::Serialize::_TransportCatalog_default_instance_),
 };
 
@@ -517,11 +1041,11 @@ const char descriptor_table_protodef_transport_5fcatalog_2eproto[] PROTOBUF_SECT
   "t\030\002 \001(\r\022\031\n\021unique_stop_count\030\003 \001(\r\022\023\n\013ro"
   "ad_length\030\004 \001(\r\022\027\n\017geo_road_length\030\005 \001(\002"
   "\"0\n\004Edge\022\014\n\004from\030\001 \001(\r\022\n\n\002to\030\002 \001(\r\022\016\n\006we"
-  "ight\030\003 \001(\001\"!\n\rIncidenceList\022\020\n\010edge_ids\030"
+  "ight\030\003 \001(\002\"!\n\rIncidenceList\022\020\n\010edge_ids\030"
   "\001 \003(\r\"_\n\010BusGraph\022\037\n\006edges_\030\001 \003(\0132\017.Seri"
   "alize.Edge\0222\n\020incidence_lists_\030\002 \003(\0132\030.S"
   "erialize.IncidenceList\";\n\tRouteData\022\016\n\006w"
-  "eight\030\001 \001(\001\022\013\n\003has\030\002 \001(\010\022\021\n\tprev_edge\030\003 "
+  "eight\030\001 \001(\002\022\013\n\003has\030\002 \001(\010\022\021\n\tprev_edge\030\003 "
   "\001(\r\"D\n\021RouteInternalData\022\013\n\003has\030\001 \001(\010\022\"\n"
   "\004data\030\002 \001(\0132\024.Serialize.RouteData\"@\n\022Rou"
   "tesInternalData\022*\n\004data\030\001 \003(\0132\034.Serializ"
@@ -543,28 +1067,99 @@ const char descriptor_table_protodef_transport_5fcatalog_2eproto[] PROTOBUF_SECT
   "outer\0223\n\021stops_vertex_ids_\030\004 \003(\0132\030.Seria"
   "lize.StopVertexIdx\022-\n\016vertices_info_\030\005 \003"
   "(\0132\025.Serialize.VertexInfo\022(\n\013edges_info_"
-  "\030\006 \003(\0132\023.Serialize.EdgeInfo\"\216\001\n\020Transpor"
-  "tCatalog\022&\n\006stops_\030\001 \003(\0132\026.Serialize.Sto"
-  "pRequest\022%\n\006buses_\030\002 \003(\0132\025.Serialize.Bus"
-  "Request\022+\n\007router_\030\003 \001(\0132\032.Serialize.Tra"
-  "nsportRouterb\006proto3"
+  "\030\006 \003(\0132\023.Serialize.EdgeInfo\" \n\010SvgPoint\022"
+  "\t\n\001x\030\001 \001(\002\022\t\n\001y\030\002 \001(\002\"/\n\003Rgb\022\013\n\003red\030\001 \001("
+  "\005\022\r\n\005green\030\002 \001(\005\022\014\n\004blue\030\003 \001(\005\"4\n\004Rgba\022\035"
+  "\n\005color\030\001 \001(\0132\016.Serialize.Rgb\022\r\n\005alpha\030\002"
+  " \001(\002\"\031\n\010StrColor\022\r\n\005color\030\001 \001(\t\"y\n\010SvgCo"
+  "lor\022\"\n\003str\030\001 \001(\0132\023.Serialize.StrColorH\000\022"
+  "\035\n\003rgb\030\002 \001(\0132\016.Serialize.RgbH\000\022\037\n\004rgba\030\003"
+  " \001(\0132\017.Serialize.RgbaH\000B\t\n\007variant\"Q\n\tBu"
+  "sesDict\022\014\n\004name\030\001 \001(\t\022\r\n\005stops\030\002 \003(\t\022\021\n\t"
+  "endpoints\030\003 \003(\t\022\024\n\014is_roundtrip\030\004 \001(\010\"=\n"
+  "\tStopCoord\022\014\n\004name\030\001 \001(\t\022\"\n\005point\030\002 \001(\0132"
+  "\023.Serialize.SvgPoint\"<\n\010BusColor\022\014\n\004name"
+  "\030\001 \001(\t\022\"\n\005color\030\002 \001(\0132\023.Serialize.SvgCol"
+  "or\"\344\001\n\nObjectBase\022\'\n\nfill_color\030\001 \001(\0132\023."
+  "Serialize.SvgColor\022)\n\014stroke_color\030\002 \001(\013"
+  "2\023.Serialize.SvgColor\022\024\n\014stroke_width\030\003 "
+  "\001(\002\022\033\n\023has_stroke_line_cap\030\004 \001(\010\022\027\n\017stro"
+  "ke_line_cap\030\005 \001(\t\022\034\n\024has_stroke_line_joi"
+  "n\030\006 \001(\010\022\030\n\020stroke_line_join\030\007 \001(\t\"b\n\006Cir"
+  "cle\022#\n\004base\030\001 \001(\0132\025.Serialize.ObjectBase"
+  "\022#\n\006center\030\002 \001(\0132\023.Serialize.SvgPoint\022\016\n"
+  "\006radius\030\003 \001(\002\"n\n\tRectangle\022#\n\004base\030\001 \001(\013"
+  "2\025.Serialize.ObjectBase\022&\n\tlu_corner\030\002 \001"
+  "(\0132\023.Serialize.SvgPoint\022\t\n\001w\030\003 \001(\002\022\t\n\001h\030"
+  "\004 \001(\002\"T\n\010Polyline\022#\n\004base\030\001 \001(\0132\025.Serial"
+  "ize.ObjectBase\022#\n\006points\030\002 \003(\0132\023.Seriali"
+  "ze.SvgPoint\"\361\001\n\004Text\022#\n\004base\030\001 \001(\0132\025.Ser"
+  "ialize.ObjectBase\022\"\n\005point\030\002 \001(\0132\023.Seria"
+  "lize.SvgPoint\022#\n\006offset\030\003 \001(\0132\023.Serializ"
+  "e.SvgPoint\022\021\n\tfont_size\030\004 \001(\r\022\027\n\017has_fon"
+  "t_family\030\005 \001(\010\022\023\n\013font_family\030\006 \001(\t\022\027\n\017h"
+  "as_font_weight\030\007 \001(\010\022\023\n\013font_weight\030\010 \001("
+  "\t\022\014\n\004data\030\t \001(\t\"\250\001\n\006Object\022#\n\006circle\030\001 \001"
+  "(\0132\021.Serialize.CircleH\000\022$\n\004rect\030\002 \001(\0132\024."
+  "Serialize.RectangleH\000\022\'\n\010polyline\030\003 \001(\0132"
+  "\023.Serialize.PolylineH\000\022\037\n\004text\030\004 \001(\0132\017.S"
+  "erialize.TextH\000B\t\n\007variant\".\n\010Document\022\""
+  "\n\007objects\030\001 \003(\0132\021.Serialize.Object\"\236\003\n\016R"
+  "enderSettings\022\r\n\005width\030\001 \001(\002\022\016\n\006height\030\002"
+  " \001(\002\022\017\n\007padding\030\003 \001(\002\022\023\n\013stop_radius\030\004 \001"
+  "(\002\022\022\n\nline_width\030\005 \001(\002\022\034\n\024stop_label_fon"
+  "t_size\030\006 \001(\005\022.\n\021stop_label_offset\030\007 \001(\0132"
+  "\023.Serialize.SvgPoint\022-\n\020underlayer_color"
+  "\030\010 \001(\0132\023.Serialize.SvgColor\022\030\n\020underlaye"
+  "r_width\030\t \001(\002\022*\n\rcolor_palette\030\n \003(\0132\023.S"
+  "erialize.SvgColor\022\033\n\023bus_label_font_size"
+  "\030\013 \001(\005\022-\n\020bus_label_offset\030\014 \001(\0132\023.Seria"
+  "lize.SvgPoint\022\016\n\006layers\030\r \003(\t\022\024\n\014outer_m"
+  "argin\030\016 \001(\002\"\341\001\n\007Painter\022,\n\tsettings_\030\001 \001"
+  "(\0132\031.Serialize.RenderSettings\022)\n\013buses_d"
+  "ict_\030\002 \003(\0132\024.Serialize.BusesDict\022+\n\rstop"
+  "s_coords_\030\003 \003(\0132\024.Serialize.StopCoord\022(\n"
+  "\013bus_colors_\030\004 \003(\0132\023.Serialize.BusColor\022"
+  "&\n\tbase_map_\030\005 \001(\0132\023.Serialize.Document\""
+  "\264\001\n\020TransportCatalog\022&\n\006stops_\030\001 \003(\0132\026.S"
+  "erialize.StopRequest\022%\n\006buses_\030\002 \003(\0132\025.S"
+  "erialize.BusRequest\022+\n\007router_\030\003 \001(\0132\032.S"
+  "erialize.TransportRouter\022$\n\010painter_\030\004 \001"
+  "(\0132\022.Serialize.Painterb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_transport_5fcatalog_2eproto_deps[1] = {
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_transport_5fcatalog_2eproto_sccs[17] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_transport_5fcatalog_2eproto_sccs[34] = {
+  &scc_info_BusColor_transport_5fcatalog_2eproto.base,
   &scc_info_BusEdgeInfo_transport_5fcatalog_2eproto.base,
   &scc_info_BusGraph_transport_5fcatalog_2eproto.base,
   &scc_info_BusRequest_transport_5fcatalog_2eproto.base,
+  &scc_info_BusesDict_transport_5fcatalog_2eproto.base,
+  &scc_info_Circle_transport_5fcatalog_2eproto.base,
+  &scc_info_Document_transport_5fcatalog_2eproto.base,
   &scc_info_Edge_transport_5fcatalog_2eproto.base,
   &scc_info_EdgeInfo_transport_5fcatalog_2eproto.base,
   &scc_info_IncidenceList_transport_5fcatalog_2eproto.base,
+  &scc_info_Object_transport_5fcatalog_2eproto.base,
+  &scc_info_ObjectBase_transport_5fcatalog_2eproto.base,
+  &scc_info_Painter_transport_5fcatalog_2eproto.base,
+  &scc_info_Polyline_transport_5fcatalog_2eproto.base,
+  &scc_info_Rectangle_transport_5fcatalog_2eproto.base,
+  &scc_info_RenderSettings_transport_5fcatalog_2eproto.base,
+  &scc_info_Rgb_transport_5fcatalog_2eproto.base,
+  &scc_info_Rgba_transport_5fcatalog_2eproto.base,
   &scc_info_RouteData_transport_5fcatalog_2eproto.base,
   &scc_info_RouteInternalData_transport_5fcatalog_2eproto.base,
   &scc_info_Router_transport_5fcatalog_2eproto.base,
   &scc_info_RoutesInternalData_transport_5fcatalog_2eproto.base,
   &scc_info_RoutingSettings_transport_5fcatalog_2eproto.base,
+  &scc_info_StopCoord_transport_5fcatalog_2eproto.base,
   &scc_info_StopRequest_transport_5fcatalog_2eproto.base,
   &scc_info_StopVertexIdx_transport_5fcatalog_2eproto.base,
+  &scc_info_StrColor_transport_5fcatalog_2eproto.base,
+  &scc_info_SvgColor_transport_5fcatalog_2eproto.base,
+  &scc_info_SvgPoint_transport_5fcatalog_2eproto.base,
+  &scc_info_Text_transport_5fcatalog_2eproto.base,
   &scc_info_TransportCatalog_transport_5fcatalog_2eproto.base,
   &scc_info_TransportRouter_transport_5fcatalog_2eproto.base,
   &scc_info_VertexInfo_transport_5fcatalog_2eproto.base,
@@ -572,10 +1167,10 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_tra
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_transport_5fcatalog_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_transport_5fcatalog_2eproto = {
-  false, false, descriptor_table_protodef_transport_5fcatalog_2eproto, "transport_catalog.proto", 1460,
-  &descriptor_table_transport_5fcatalog_2eproto_once, descriptor_table_transport_5fcatalog_2eproto_sccs, descriptor_table_transport_5fcatalog_2eproto_deps, 17, 0,
+  false, false, descriptor_table_protodef_transport_5fcatalog_2eproto, "transport_catalog.proto", 3630,
+  &descriptor_table_transport_5fcatalog_2eproto_once, descriptor_table_transport_5fcatalog_2eproto_sccs, descriptor_table_transport_5fcatalog_2eproto_deps, 34, 0,
   schemas, file_default_instances, TableStruct_transport_5fcatalog_2eproto::offsets,
-  file_level_metadata_transport_5fcatalog_2eproto, 17, file_level_enum_descriptors_transport_5fcatalog_2eproto, file_level_service_descriptors_transport_5fcatalog_2eproto,
+  file_level_metadata_transport_5fcatalog_2eproto, 34, file_level_enum_descriptors_transport_5fcatalog_2eproto, file_level_service_descriptors_transport_5fcatalog_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -1223,11 +1818,11 @@ const char* Edge::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inter
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // double weight = 3;
+      // float weight = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 25)) {
-          weight_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
-          ptr += sizeof(double);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 29)) {
+          weight_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
         } else goto handle_unusual;
         continue;
       default: {
@@ -1270,10 +1865,10 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(2, this->_internal_to(), target);
   }
 
-  // double weight = 3;
+  // float weight = 3;
   if (!(this->weight() <= 0 && this->weight() >= 0)) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(3, this->_internal_weight(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(3, this->_internal_weight(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1306,9 +1901,9 @@ size_t Edge::ByteSizeLong() const {
         this->_internal_to());
   }
 
-  // double weight = 3;
+  // float weight = 3;
   if (!(this->weight() <= 0 && this->weight() >= 0)) {
-    total_size += 1 + 8;
+    total_size += 1 + 4;
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1897,11 +2492,11 @@ const char* RouteData::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // double weight = 1;
+      // float weight = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 9)) {
-          weight_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
-          ptr += sizeof(double);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 13)) {
+          weight_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
         } else goto handle_unusual;
         continue;
       // bool has = 2;
@@ -1946,10 +2541,10 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // double weight = 1;
+  // float weight = 1;
   if (!(this->weight() <= 0 && this->weight() >= 0)) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(1, this->_internal_weight(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(1, this->_internal_weight(), target);
   }
 
   // bool has = 2;
@@ -1980,9 +2575,9 @@ size_t RouteData::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // double weight = 1;
+  // float weight = 1;
   if (!(this->weight() <= 0 && this->weight() >= 0)) {
-    total_size += 1 + 8;
+    total_size += 1 + 4;
   }
 
   // bool has = 2;
@@ -4578,14 +5173,5375 @@ void TransportRouter::InternalSwap(TransportRouter* other) {
 
 // ===================================================================
 
+class SvgPoint::_Internal {
+ public:
+};
+
+SvgPoint::SvgPoint(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:Serialize.SvgPoint)
+}
+SvgPoint::SvgPoint(const SvgPoint& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&x_, &from.x_,
+    static_cast<size_t>(reinterpret_cast<char*>(&y_) -
+    reinterpret_cast<char*>(&x_)) + sizeof(y_));
+  // @@protoc_insertion_point(copy_constructor:Serialize.SvgPoint)
+}
+
+void SvgPoint::SharedCtor() {
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&x_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&y_) -
+      reinterpret_cast<char*>(&x_)) + sizeof(y_));
+}
+
+SvgPoint::~SvgPoint() {
+  // @@protoc_insertion_point(destructor:Serialize.SvgPoint)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void SvgPoint::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+}
+
+void SvgPoint::ArenaDtor(void* object) {
+  SvgPoint* _this = reinterpret_cast< SvgPoint* >(object);
+  (void)_this;
+}
+void SvgPoint::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void SvgPoint::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const SvgPoint& SvgPoint::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_SvgPoint_transport_5fcatalog_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void SvgPoint::Clear() {
+// @@protoc_insertion_point(message_clear_start:Serialize.SvgPoint)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  ::memset(&x_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&y_) -
+      reinterpret_cast<char*>(&x_)) + sizeof(y_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* SvgPoint::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // float x = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 13)) {
+          x_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else goto handle_unusual;
+        continue;
+      // float y = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 21)) {
+          y_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* SvgPoint::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:Serialize.SvgPoint)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // float x = 1;
+  if (!(this->x() <= 0 && this->x() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(1, this->_internal_x(), target);
+  }
+
+  // float y = 2;
+  if (!(this->y() <= 0 && this->y() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(2, this->_internal_y(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:Serialize.SvgPoint)
+  return target;
+}
+
+size_t SvgPoint::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Serialize.SvgPoint)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // float x = 1;
+  if (!(this->x() <= 0 && this->x() >= 0)) {
+    total_size += 1 + 4;
+  }
+
+  // float y = 2;
+  if (!(this->y() <= 0 && this->y() >= 0)) {
+    total_size += 1 + 4;
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void SvgPoint::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:Serialize.SvgPoint)
+  GOOGLE_DCHECK_NE(&from, this);
+  const SvgPoint* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SvgPoint>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Serialize.SvgPoint)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Serialize.SvgPoint)
+    MergeFrom(*source);
+  }
+}
+
+void SvgPoint::MergeFrom(const SvgPoint& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:Serialize.SvgPoint)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!(from.x() <= 0 && from.x() >= 0)) {
+    _internal_set_x(from._internal_x());
+  }
+  if (!(from.y() <= 0 && from.y() >= 0)) {
+    _internal_set_y(from._internal_y());
+  }
+}
+
+void SvgPoint::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Serialize.SvgPoint)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void SvgPoint::CopyFrom(const SvgPoint& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Serialize.SvgPoint)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SvgPoint::IsInitialized() const {
+  return true;
+}
+
+void SvgPoint::InternalSwap(SvgPoint* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SvgPoint, y_)
+      + sizeof(SvgPoint::y_)
+      - PROTOBUF_FIELD_OFFSET(SvgPoint, x_)>(
+          reinterpret_cast<char*>(&x_),
+          reinterpret_cast<char*>(&other->x_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SvgPoint::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+class Rgb::_Internal {
+ public:
+};
+
+Rgb::Rgb(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:Serialize.Rgb)
+}
+Rgb::Rgb(const Rgb& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&red_, &from.red_,
+    static_cast<size_t>(reinterpret_cast<char*>(&blue_) -
+    reinterpret_cast<char*>(&red_)) + sizeof(blue_));
+  // @@protoc_insertion_point(copy_constructor:Serialize.Rgb)
+}
+
+void Rgb::SharedCtor() {
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&red_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&blue_) -
+      reinterpret_cast<char*>(&red_)) + sizeof(blue_));
+}
+
+Rgb::~Rgb() {
+  // @@protoc_insertion_point(destructor:Serialize.Rgb)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void Rgb::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+}
+
+void Rgb::ArenaDtor(void* object) {
+  Rgb* _this = reinterpret_cast< Rgb* >(object);
+  (void)_this;
+}
+void Rgb::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void Rgb::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const Rgb& Rgb::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Rgb_transport_5fcatalog_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void Rgb::Clear() {
+// @@protoc_insertion_point(message_clear_start:Serialize.Rgb)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  ::memset(&red_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&blue_) -
+      reinterpret_cast<char*>(&red_)) + sizeof(blue_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* Rgb::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // int32 red = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          red_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int32 green = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          green_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int32 blue = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
+          blue_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* Rgb::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:Serialize.Rgb)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 red = 1;
+  if (this->red() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_red(), target);
+  }
+
+  // int32 green = 2;
+  if (this->green() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_green(), target);
+  }
+
+  // int32 blue = 3;
+  if (this->blue() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_blue(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:Serialize.Rgb)
+  return target;
+}
+
+size_t Rgb::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Serialize.Rgb)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // int32 red = 1;
+  if (this->red() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_red());
+  }
+
+  // int32 green = 2;
+  if (this->green() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_green());
+  }
+
+  // int32 blue = 3;
+  if (this->blue() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_blue());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Rgb::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:Serialize.Rgb)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Rgb* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Rgb>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Serialize.Rgb)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Serialize.Rgb)
+    MergeFrom(*source);
+  }
+}
+
+void Rgb::MergeFrom(const Rgb& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:Serialize.Rgb)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.red() != 0) {
+    _internal_set_red(from._internal_red());
+  }
+  if (from.green() != 0) {
+    _internal_set_green(from._internal_green());
+  }
+  if (from.blue() != 0) {
+    _internal_set_blue(from._internal_blue());
+  }
+}
+
+void Rgb::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Serialize.Rgb)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Rgb::CopyFrom(const Rgb& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Serialize.Rgb)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Rgb::IsInitialized() const {
+  return true;
+}
+
+void Rgb::InternalSwap(Rgb* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(Rgb, blue_)
+      + sizeof(Rgb::blue_)
+      - PROTOBUF_FIELD_OFFSET(Rgb, red_)>(
+          reinterpret_cast<char*>(&red_),
+          reinterpret_cast<char*>(&other->red_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata Rgb::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+class Rgba::_Internal {
+ public:
+  static const ::Serialize::Rgb& color(const Rgba* msg);
+};
+
+const ::Serialize::Rgb&
+Rgba::_Internal::color(const Rgba* msg) {
+  return *msg->color_;
+}
+Rgba::Rgba(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:Serialize.Rgba)
+}
+Rgba::Rgba(const Rgba& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_color()) {
+    color_ = new ::Serialize::Rgb(*from.color_);
+  } else {
+    color_ = nullptr;
+  }
+  alpha_ = from.alpha_;
+  // @@protoc_insertion_point(copy_constructor:Serialize.Rgba)
+}
+
+void Rgba::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Rgba_transport_5fcatalog_2eproto.base);
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&color_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&alpha_) -
+      reinterpret_cast<char*>(&color_)) + sizeof(alpha_));
+}
+
+Rgba::~Rgba() {
+  // @@protoc_insertion_point(destructor:Serialize.Rgba)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void Rgba::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  if (this != internal_default_instance()) delete color_;
+}
+
+void Rgba::ArenaDtor(void* object) {
+  Rgba* _this = reinterpret_cast< Rgba* >(object);
+  (void)_this;
+}
+void Rgba::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void Rgba::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const Rgba& Rgba::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Rgba_transport_5fcatalog_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void Rgba::Clear() {
+// @@protoc_insertion_point(message_clear_start:Serialize.Rgba)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArena() == nullptr && color_ != nullptr) {
+    delete color_;
+  }
+  color_ = nullptr;
+  alpha_ = 0;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* Rgba::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .Serialize.Rgb color = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_color(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // float alpha = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 21)) {
+          alpha_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* Rgba::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:Serialize.Rgba)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .Serialize.Rgb color = 1;
+  if (this->has_color()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::color(this), target, stream);
+  }
+
+  // float alpha = 2;
+  if (!(this->alpha() <= 0 && this->alpha() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(2, this->_internal_alpha(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:Serialize.Rgba)
+  return target;
+}
+
+size_t Rgba::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Serialize.Rgba)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .Serialize.Rgb color = 1;
+  if (this->has_color()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *color_);
+  }
+
+  // float alpha = 2;
+  if (!(this->alpha() <= 0 && this->alpha() >= 0)) {
+    total_size += 1 + 4;
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Rgba::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:Serialize.Rgba)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Rgba* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Rgba>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Serialize.Rgba)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Serialize.Rgba)
+    MergeFrom(*source);
+  }
+}
+
+void Rgba::MergeFrom(const Rgba& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:Serialize.Rgba)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_color()) {
+    _internal_mutable_color()->::Serialize::Rgb::MergeFrom(from._internal_color());
+  }
+  if (!(from.alpha() <= 0 && from.alpha() >= 0)) {
+    _internal_set_alpha(from._internal_alpha());
+  }
+}
+
+void Rgba::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Serialize.Rgba)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Rgba::CopyFrom(const Rgba& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Serialize.Rgba)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Rgba::IsInitialized() const {
+  return true;
+}
+
+void Rgba::InternalSwap(Rgba* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(Rgba, alpha_)
+      + sizeof(Rgba::alpha_)
+      - PROTOBUF_FIELD_OFFSET(Rgba, color_)>(
+          reinterpret_cast<char*>(&color_),
+          reinterpret_cast<char*>(&other->color_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata Rgba::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+class StrColor::_Internal {
+ public:
+};
+
+StrColor::StrColor(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:Serialize.StrColor)
+}
+StrColor::StrColor(const StrColor& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  color_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_color().empty()) {
+    color_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_color(), 
+      GetArena());
+  }
+  // @@protoc_insertion_point(copy_constructor:Serialize.StrColor)
+}
+
+void StrColor::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_StrColor_transport_5fcatalog_2eproto.base);
+  color_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+StrColor::~StrColor() {
+  // @@protoc_insertion_point(destructor:Serialize.StrColor)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void StrColor::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  color_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+void StrColor::ArenaDtor(void* object) {
+  StrColor* _this = reinterpret_cast< StrColor* >(object);
+  (void)_this;
+}
+void StrColor::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void StrColor::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const StrColor& StrColor::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_StrColor_transport_5fcatalog_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void StrColor::Clear() {
+// @@protoc_insertion_point(message_clear_start:Serialize.StrColor)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  color_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* StrColor::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // string color = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_color();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Serialize.StrColor.color"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* StrColor::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:Serialize.StrColor)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string color = 1;
+  if (this->color().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_color().data(), static_cast<int>(this->_internal_color().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "Serialize.StrColor.color");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_color(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:Serialize.StrColor)
+  return target;
+}
+
+size_t StrColor::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Serialize.StrColor)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string color = 1;
+  if (this->color().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_color());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void StrColor::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:Serialize.StrColor)
+  GOOGLE_DCHECK_NE(&from, this);
+  const StrColor* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<StrColor>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Serialize.StrColor)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Serialize.StrColor)
+    MergeFrom(*source);
+  }
+}
+
+void StrColor::MergeFrom(const StrColor& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:Serialize.StrColor)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.color().size() > 0) {
+    _internal_set_color(from._internal_color());
+  }
+}
+
+void StrColor::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Serialize.StrColor)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void StrColor::CopyFrom(const StrColor& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Serialize.StrColor)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool StrColor::IsInitialized() const {
+  return true;
+}
+
+void StrColor::InternalSwap(StrColor* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  color_.Swap(&other->color_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata StrColor::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+class SvgColor::_Internal {
+ public:
+  static const ::Serialize::StrColor& str(const SvgColor* msg);
+  static const ::Serialize::Rgb& rgb(const SvgColor* msg);
+  static const ::Serialize::Rgba& rgba(const SvgColor* msg);
+};
+
+const ::Serialize::StrColor&
+SvgColor::_Internal::str(const SvgColor* msg) {
+  return *msg->variant_.str_;
+}
+const ::Serialize::Rgb&
+SvgColor::_Internal::rgb(const SvgColor* msg) {
+  return *msg->variant_.rgb_;
+}
+const ::Serialize::Rgba&
+SvgColor::_Internal::rgba(const SvgColor* msg) {
+  return *msg->variant_.rgba_;
+}
+void SvgColor::set_allocated_str(::Serialize::StrColor* str) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  clear_variant();
+  if (str) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(str);
+    if (message_arena != submessage_arena) {
+      str = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, str, submessage_arena);
+    }
+    set_has_str();
+    variant_.str_ = str;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Serialize.SvgColor.str)
+}
+void SvgColor::set_allocated_rgb(::Serialize::Rgb* rgb) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  clear_variant();
+  if (rgb) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(rgb);
+    if (message_arena != submessage_arena) {
+      rgb = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, rgb, submessage_arena);
+    }
+    set_has_rgb();
+    variant_.rgb_ = rgb;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Serialize.SvgColor.rgb)
+}
+void SvgColor::set_allocated_rgba(::Serialize::Rgba* rgba) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  clear_variant();
+  if (rgba) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(rgba);
+    if (message_arena != submessage_arena) {
+      rgba = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, rgba, submessage_arena);
+    }
+    set_has_rgba();
+    variant_.rgba_ = rgba;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Serialize.SvgColor.rgba)
+}
+SvgColor::SvgColor(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:Serialize.SvgColor)
+}
+SvgColor::SvgColor(const SvgColor& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  clear_has_variant();
+  switch (from.variant_case()) {
+    case kStr: {
+      _internal_mutable_str()->::Serialize::StrColor::MergeFrom(from._internal_str());
+      break;
+    }
+    case kRgb: {
+      _internal_mutable_rgb()->::Serialize::Rgb::MergeFrom(from._internal_rgb());
+      break;
+    }
+    case kRgba: {
+      _internal_mutable_rgba()->::Serialize::Rgba::MergeFrom(from._internal_rgba());
+      break;
+    }
+    case VARIANT_NOT_SET: {
+      break;
+    }
+  }
+  // @@protoc_insertion_point(copy_constructor:Serialize.SvgColor)
+}
+
+void SvgColor::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_SvgColor_transport_5fcatalog_2eproto.base);
+  clear_has_variant();
+}
+
+SvgColor::~SvgColor() {
+  // @@protoc_insertion_point(destructor:Serialize.SvgColor)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void SvgColor::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  if (has_variant()) {
+    clear_variant();
+  }
+}
+
+void SvgColor::ArenaDtor(void* object) {
+  SvgColor* _this = reinterpret_cast< SvgColor* >(object);
+  (void)_this;
+}
+void SvgColor::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void SvgColor::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const SvgColor& SvgColor::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_SvgColor_transport_5fcatalog_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void SvgColor::clear_variant() {
+// @@protoc_insertion_point(one_of_clear_start:Serialize.SvgColor)
+  switch (variant_case()) {
+    case kStr: {
+      if (GetArena() == nullptr) {
+        delete variant_.str_;
+      }
+      break;
+    }
+    case kRgb: {
+      if (GetArena() == nullptr) {
+        delete variant_.rgb_;
+      }
+      break;
+    }
+    case kRgba: {
+      if (GetArena() == nullptr) {
+        delete variant_.rgba_;
+      }
+      break;
+    }
+    case VARIANT_NOT_SET: {
+      break;
+    }
+  }
+  _oneof_case_[0] = VARIANT_NOT_SET;
+}
+
+
+void SvgColor::Clear() {
+// @@protoc_insertion_point(message_clear_start:Serialize.SvgColor)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  clear_variant();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* SvgColor::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .Serialize.StrColor str = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_str(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .Serialize.Rgb rgb = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_rgb(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .Serialize.Rgba rgba = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_rgba(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* SvgColor::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:Serialize.SvgColor)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .Serialize.StrColor str = 1;
+  if (_internal_has_str()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::str(this), target, stream);
+  }
+
+  // .Serialize.Rgb rgb = 2;
+  if (_internal_has_rgb()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::rgb(this), target, stream);
+  }
+
+  // .Serialize.Rgba rgba = 3;
+  if (_internal_has_rgba()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::rgba(this), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:Serialize.SvgColor)
+  return target;
+}
+
+size_t SvgColor::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Serialize.SvgColor)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  switch (variant_case()) {
+    // .Serialize.StrColor str = 1;
+    case kStr: {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *variant_.str_);
+      break;
+    }
+    // .Serialize.Rgb rgb = 2;
+    case kRgb: {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *variant_.rgb_);
+      break;
+    }
+    // .Serialize.Rgba rgba = 3;
+    case kRgba: {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *variant_.rgba_);
+      break;
+    }
+    case VARIANT_NOT_SET: {
+      break;
+    }
+  }
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void SvgColor::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:Serialize.SvgColor)
+  GOOGLE_DCHECK_NE(&from, this);
+  const SvgColor* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SvgColor>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Serialize.SvgColor)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Serialize.SvgColor)
+    MergeFrom(*source);
+  }
+}
+
+void SvgColor::MergeFrom(const SvgColor& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:Serialize.SvgColor)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  switch (from.variant_case()) {
+    case kStr: {
+      _internal_mutable_str()->::Serialize::StrColor::MergeFrom(from._internal_str());
+      break;
+    }
+    case kRgb: {
+      _internal_mutable_rgb()->::Serialize::Rgb::MergeFrom(from._internal_rgb());
+      break;
+    }
+    case kRgba: {
+      _internal_mutable_rgba()->::Serialize::Rgba::MergeFrom(from._internal_rgba());
+      break;
+    }
+    case VARIANT_NOT_SET: {
+      break;
+    }
+  }
+}
+
+void SvgColor::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Serialize.SvgColor)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void SvgColor::CopyFrom(const SvgColor& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Serialize.SvgColor)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SvgColor::IsInitialized() const {
+  return true;
+}
+
+void SvgColor::InternalSwap(SvgColor* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  swap(variant_, other->variant_);
+  swap(_oneof_case_[0], other->_oneof_case_[0]);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SvgColor::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+class BusesDict::_Internal {
+ public:
+};
+
+BusesDict::BusesDict(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
+  stops_(arena),
+  endpoints_(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:Serialize.BusesDict)
+}
+BusesDict::BusesDict(const BusesDict& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      stops_(from.stops_),
+      endpoints_(from.endpoints_) {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_name().empty()) {
+    name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_name(), 
+      GetArena());
+  }
+  is_roundtrip_ = from.is_roundtrip_;
+  // @@protoc_insertion_point(copy_constructor:Serialize.BusesDict)
+}
+
+void BusesDict::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_BusesDict_transport_5fcatalog_2eproto.base);
+  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  is_roundtrip_ = false;
+}
+
+BusesDict::~BusesDict() {
+  // @@protoc_insertion_point(destructor:Serialize.BusesDict)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void BusesDict::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+void BusesDict::ArenaDtor(void* object) {
+  BusesDict* _this = reinterpret_cast< BusesDict* >(object);
+  (void)_this;
+}
+void BusesDict::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void BusesDict::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const BusesDict& BusesDict::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_BusesDict_transport_5fcatalog_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void BusesDict::Clear() {
+// @@protoc_insertion_point(message_clear_start:Serialize.BusesDict)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  stops_.Clear();
+  endpoints_.Clear();
+  name_.ClearToEmpty();
+  is_roundtrip_ = false;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* BusesDict::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // string name = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Serialize.BusesDict.name"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // repeated string stops = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            auto str = _internal_add_stops();
+            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+            CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Serialize.BusesDict.stops"));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
+        } else goto handle_unusual;
+        continue;
+      // repeated string endpoints = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            auto str = _internal_add_endpoints();
+            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+            CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Serialize.BusesDict.endpoints"));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
+        } else goto handle_unusual;
+        continue;
+      // bool is_roundtrip = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
+          is_roundtrip_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* BusesDict::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:Serialize.BusesDict)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string name = 1;
+  if (this->name().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "Serialize.BusesDict.name");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_name(), target);
+  }
+
+  // repeated string stops = 2;
+  for (int i = 0, n = this->_internal_stops_size(); i < n; i++) {
+    const auto& s = this->_internal_stops(i);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      s.data(), static_cast<int>(s.length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "Serialize.BusesDict.stops");
+    target = stream->WriteString(2, s, target);
+  }
+
+  // repeated string endpoints = 3;
+  for (int i = 0, n = this->_internal_endpoints_size(); i < n; i++) {
+    const auto& s = this->_internal_endpoints(i);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      s.data(), static_cast<int>(s.length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "Serialize.BusesDict.endpoints");
+    target = stream->WriteString(3, s, target);
+  }
+
+  // bool is_roundtrip = 4;
+  if (this->is_roundtrip() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(4, this->_internal_is_roundtrip(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:Serialize.BusesDict)
+  return target;
+}
+
+size_t BusesDict::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Serialize.BusesDict)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated string stops = 2;
+  total_size += 1 *
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(stops_.size());
+  for (int i = 0, n = stops_.size(); i < n; i++) {
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      stops_.Get(i));
+  }
+
+  // repeated string endpoints = 3;
+  total_size += 1 *
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(endpoints_.size());
+  for (int i = 0, n = endpoints_.size(); i < n; i++) {
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      endpoints_.Get(i));
+  }
+
+  // string name = 1;
+  if (this->name().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_name());
+  }
+
+  // bool is_roundtrip = 4;
+  if (this->is_roundtrip() != 0) {
+    total_size += 1 + 1;
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void BusesDict::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:Serialize.BusesDict)
+  GOOGLE_DCHECK_NE(&from, this);
+  const BusesDict* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<BusesDict>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Serialize.BusesDict)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Serialize.BusesDict)
+    MergeFrom(*source);
+  }
+}
+
+void BusesDict::MergeFrom(const BusesDict& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:Serialize.BusesDict)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  stops_.MergeFrom(from.stops_);
+  endpoints_.MergeFrom(from.endpoints_);
+  if (from.name().size() > 0) {
+    _internal_set_name(from._internal_name());
+  }
+  if (from.is_roundtrip() != 0) {
+    _internal_set_is_roundtrip(from._internal_is_roundtrip());
+  }
+}
+
+void BusesDict::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Serialize.BusesDict)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void BusesDict::CopyFrom(const BusesDict& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Serialize.BusesDict)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool BusesDict::IsInitialized() const {
+  return true;
+}
+
+void BusesDict::InternalSwap(BusesDict* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  stops_.InternalSwap(&other->stops_);
+  endpoints_.InternalSwap(&other->endpoints_);
+  name_.Swap(&other->name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  swap(is_roundtrip_, other->is_roundtrip_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata BusesDict::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+class StopCoord::_Internal {
+ public:
+  static const ::Serialize::SvgPoint& point(const StopCoord* msg);
+};
+
+const ::Serialize::SvgPoint&
+StopCoord::_Internal::point(const StopCoord* msg) {
+  return *msg->point_;
+}
+StopCoord::StopCoord(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:Serialize.StopCoord)
+}
+StopCoord::StopCoord(const StopCoord& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_name().empty()) {
+    name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_name(), 
+      GetArena());
+  }
+  if (from._internal_has_point()) {
+    point_ = new ::Serialize::SvgPoint(*from.point_);
+  } else {
+    point_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:Serialize.StopCoord)
+}
+
+void StopCoord::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_StopCoord_transport_5fcatalog_2eproto.base);
+  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  point_ = nullptr;
+}
+
+StopCoord::~StopCoord() {
+  // @@protoc_insertion_point(destructor:Serialize.StopCoord)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void StopCoord::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete point_;
+}
+
+void StopCoord::ArenaDtor(void* object) {
+  StopCoord* _this = reinterpret_cast< StopCoord* >(object);
+  (void)_this;
+}
+void StopCoord::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void StopCoord::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const StopCoord& StopCoord::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_StopCoord_transport_5fcatalog_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void StopCoord::Clear() {
+// @@protoc_insertion_point(message_clear_start:Serialize.StopCoord)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  name_.ClearToEmpty();
+  if (GetArena() == nullptr && point_ != nullptr) {
+    delete point_;
+  }
+  point_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* StopCoord::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // string name = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Serialize.StopCoord.name"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .Serialize.SvgPoint point = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_point(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* StopCoord::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:Serialize.StopCoord)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string name = 1;
+  if (this->name().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "Serialize.StopCoord.name");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_name(), target);
+  }
+
+  // .Serialize.SvgPoint point = 2;
+  if (this->has_point()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::point(this), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:Serialize.StopCoord)
+  return target;
+}
+
+size_t StopCoord::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Serialize.StopCoord)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string name = 1;
+  if (this->name().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_name());
+  }
+
+  // .Serialize.SvgPoint point = 2;
+  if (this->has_point()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *point_);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void StopCoord::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:Serialize.StopCoord)
+  GOOGLE_DCHECK_NE(&from, this);
+  const StopCoord* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<StopCoord>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Serialize.StopCoord)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Serialize.StopCoord)
+    MergeFrom(*source);
+  }
+}
+
+void StopCoord::MergeFrom(const StopCoord& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:Serialize.StopCoord)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.name().size() > 0) {
+    _internal_set_name(from._internal_name());
+  }
+  if (from.has_point()) {
+    _internal_mutable_point()->::Serialize::SvgPoint::MergeFrom(from._internal_point());
+  }
+}
+
+void StopCoord::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Serialize.StopCoord)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void StopCoord::CopyFrom(const StopCoord& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Serialize.StopCoord)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool StopCoord::IsInitialized() const {
+  return true;
+}
+
+void StopCoord::InternalSwap(StopCoord* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  name_.Swap(&other->name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  swap(point_, other->point_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata StopCoord::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+class BusColor::_Internal {
+ public:
+  static const ::Serialize::SvgColor& color(const BusColor* msg);
+};
+
+const ::Serialize::SvgColor&
+BusColor::_Internal::color(const BusColor* msg) {
+  return *msg->color_;
+}
+BusColor::BusColor(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:Serialize.BusColor)
+}
+BusColor::BusColor(const BusColor& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_name().empty()) {
+    name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_name(), 
+      GetArena());
+  }
+  if (from._internal_has_color()) {
+    color_ = new ::Serialize::SvgColor(*from.color_);
+  } else {
+    color_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:Serialize.BusColor)
+}
+
+void BusColor::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_BusColor_transport_5fcatalog_2eproto.base);
+  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  color_ = nullptr;
+}
+
+BusColor::~BusColor() {
+  // @@protoc_insertion_point(destructor:Serialize.BusColor)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void BusColor::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete color_;
+}
+
+void BusColor::ArenaDtor(void* object) {
+  BusColor* _this = reinterpret_cast< BusColor* >(object);
+  (void)_this;
+}
+void BusColor::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void BusColor::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const BusColor& BusColor::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_BusColor_transport_5fcatalog_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void BusColor::Clear() {
+// @@protoc_insertion_point(message_clear_start:Serialize.BusColor)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  name_.ClearToEmpty();
+  if (GetArena() == nullptr && color_ != nullptr) {
+    delete color_;
+  }
+  color_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* BusColor::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // string name = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Serialize.BusColor.name"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .Serialize.SvgColor color = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_color(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* BusColor::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:Serialize.BusColor)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string name = 1;
+  if (this->name().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "Serialize.BusColor.name");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_name(), target);
+  }
+
+  // .Serialize.SvgColor color = 2;
+  if (this->has_color()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::color(this), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:Serialize.BusColor)
+  return target;
+}
+
+size_t BusColor::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Serialize.BusColor)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string name = 1;
+  if (this->name().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_name());
+  }
+
+  // .Serialize.SvgColor color = 2;
+  if (this->has_color()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *color_);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void BusColor::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:Serialize.BusColor)
+  GOOGLE_DCHECK_NE(&from, this);
+  const BusColor* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<BusColor>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Serialize.BusColor)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Serialize.BusColor)
+    MergeFrom(*source);
+  }
+}
+
+void BusColor::MergeFrom(const BusColor& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:Serialize.BusColor)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.name().size() > 0) {
+    _internal_set_name(from._internal_name());
+  }
+  if (from.has_color()) {
+    _internal_mutable_color()->::Serialize::SvgColor::MergeFrom(from._internal_color());
+  }
+}
+
+void BusColor::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Serialize.BusColor)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void BusColor::CopyFrom(const BusColor& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Serialize.BusColor)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool BusColor::IsInitialized() const {
+  return true;
+}
+
+void BusColor::InternalSwap(BusColor* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  name_.Swap(&other->name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  swap(color_, other->color_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata BusColor::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+class ObjectBase::_Internal {
+ public:
+  static const ::Serialize::SvgColor& fill_color(const ObjectBase* msg);
+  static const ::Serialize::SvgColor& stroke_color(const ObjectBase* msg);
+};
+
+const ::Serialize::SvgColor&
+ObjectBase::_Internal::fill_color(const ObjectBase* msg) {
+  return *msg->fill_color_;
+}
+const ::Serialize::SvgColor&
+ObjectBase::_Internal::stroke_color(const ObjectBase* msg) {
+  return *msg->stroke_color_;
+}
+ObjectBase::ObjectBase(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:Serialize.ObjectBase)
+}
+ObjectBase::ObjectBase(const ObjectBase& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  stroke_line_cap_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_stroke_line_cap().empty()) {
+    stroke_line_cap_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_stroke_line_cap(), 
+      GetArena());
+  }
+  stroke_line_join_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_stroke_line_join().empty()) {
+    stroke_line_join_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_stroke_line_join(), 
+      GetArena());
+  }
+  if (from._internal_has_fill_color()) {
+    fill_color_ = new ::Serialize::SvgColor(*from.fill_color_);
+  } else {
+    fill_color_ = nullptr;
+  }
+  if (from._internal_has_stroke_color()) {
+    stroke_color_ = new ::Serialize::SvgColor(*from.stroke_color_);
+  } else {
+    stroke_color_ = nullptr;
+  }
+  ::memcpy(&stroke_width_, &from.stroke_width_,
+    static_cast<size_t>(reinterpret_cast<char*>(&has_stroke_line_join_) -
+    reinterpret_cast<char*>(&stroke_width_)) + sizeof(has_stroke_line_join_));
+  // @@protoc_insertion_point(copy_constructor:Serialize.ObjectBase)
+}
+
+void ObjectBase::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ObjectBase_transport_5fcatalog_2eproto.base);
+  stroke_line_cap_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  stroke_line_join_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&fill_color_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&has_stroke_line_join_) -
+      reinterpret_cast<char*>(&fill_color_)) + sizeof(has_stroke_line_join_));
+}
+
+ObjectBase::~ObjectBase() {
+  // @@protoc_insertion_point(destructor:Serialize.ObjectBase)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void ObjectBase::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  stroke_line_cap_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  stroke_line_join_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete fill_color_;
+  if (this != internal_default_instance()) delete stroke_color_;
+}
+
+void ObjectBase::ArenaDtor(void* object) {
+  ObjectBase* _this = reinterpret_cast< ObjectBase* >(object);
+  (void)_this;
+}
+void ObjectBase::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void ObjectBase::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const ObjectBase& ObjectBase::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ObjectBase_transport_5fcatalog_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void ObjectBase::Clear() {
+// @@protoc_insertion_point(message_clear_start:Serialize.ObjectBase)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  stroke_line_cap_.ClearToEmpty();
+  stroke_line_join_.ClearToEmpty();
+  if (GetArena() == nullptr && fill_color_ != nullptr) {
+    delete fill_color_;
+  }
+  fill_color_ = nullptr;
+  if (GetArena() == nullptr && stroke_color_ != nullptr) {
+    delete stroke_color_;
+  }
+  stroke_color_ = nullptr;
+  ::memset(&stroke_width_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&has_stroke_line_join_) -
+      reinterpret_cast<char*>(&stroke_width_)) + sizeof(has_stroke_line_join_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ObjectBase::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .Serialize.SvgColor fill_color = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_fill_color(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .Serialize.SvgColor stroke_color = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_stroke_color(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // float stroke_width = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 29)) {
+          stroke_width_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else goto handle_unusual;
+        continue;
+      // bool has_stroke_line_cap = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
+          has_stroke_line_cap_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string stroke_line_cap = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          auto str = _internal_mutable_stroke_line_cap();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Serialize.ObjectBase.stroke_line_cap"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // bool has_stroke_line_join = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 48)) {
+          has_stroke_line_join_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string stroke_line_join = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+          auto str = _internal_mutable_stroke_line_join();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Serialize.ObjectBase.stroke_line_join"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* ObjectBase::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:Serialize.ObjectBase)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .Serialize.SvgColor fill_color = 1;
+  if (this->has_fill_color()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::fill_color(this), target, stream);
+  }
+
+  // .Serialize.SvgColor stroke_color = 2;
+  if (this->has_stroke_color()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::stroke_color(this), target, stream);
+  }
+
+  // float stroke_width = 3;
+  if (!(this->stroke_width() <= 0 && this->stroke_width() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(3, this->_internal_stroke_width(), target);
+  }
+
+  // bool has_stroke_line_cap = 4;
+  if (this->has_stroke_line_cap() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(4, this->_internal_has_stroke_line_cap(), target);
+  }
+
+  // string stroke_line_cap = 5;
+  if (this->stroke_line_cap().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_stroke_line_cap().data(), static_cast<int>(this->_internal_stroke_line_cap().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "Serialize.ObjectBase.stroke_line_cap");
+    target = stream->WriteStringMaybeAliased(
+        5, this->_internal_stroke_line_cap(), target);
+  }
+
+  // bool has_stroke_line_join = 6;
+  if (this->has_stroke_line_join() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(6, this->_internal_has_stroke_line_join(), target);
+  }
+
+  // string stroke_line_join = 7;
+  if (this->stroke_line_join().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_stroke_line_join().data(), static_cast<int>(this->_internal_stroke_line_join().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "Serialize.ObjectBase.stroke_line_join");
+    target = stream->WriteStringMaybeAliased(
+        7, this->_internal_stroke_line_join(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:Serialize.ObjectBase)
+  return target;
+}
+
+size_t ObjectBase::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Serialize.ObjectBase)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string stroke_line_cap = 5;
+  if (this->stroke_line_cap().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_stroke_line_cap());
+  }
+
+  // string stroke_line_join = 7;
+  if (this->stroke_line_join().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_stroke_line_join());
+  }
+
+  // .Serialize.SvgColor fill_color = 1;
+  if (this->has_fill_color()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *fill_color_);
+  }
+
+  // .Serialize.SvgColor stroke_color = 2;
+  if (this->has_stroke_color()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *stroke_color_);
+  }
+
+  // float stroke_width = 3;
+  if (!(this->stroke_width() <= 0 && this->stroke_width() >= 0)) {
+    total_size += 1 + 4;
+  }
+
+  // bool has_stroke_line_cap = 4;
+  if (this->has_stroke_line_cap() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // bool has_stroke_line_join = 6;
+  if (this->has_stroke_line_join() != 0) {
+    total_size += 1 + 1;
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void ObjectBase::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:Serialize.ObjectBase)
+  GOOGLE_DCHECK_NE(&from, this);
+  const ObjectBase* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ObjectBase>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Serialize.ObjectBase)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Serialize.ObjectBase)
+    MergeFrom(*source);
+  }
+}
+
+void ObjectBase::MergeFrom(const ObjectBase& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:Serialize.ObjectBase)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.stroke_line_cap().size() > 0) {
+    _internal_set_stroke_line_cap(from._internal_stroke_line_cap());
+  }
+  if (from.stroke_line_join().size() > 0) {
+    _internal_set_stroke_line_join(from._internal_stroke_line_join());
+  }
+  if (from.has_fill_color()) {
+    _internal_mutable_fill_color()->::Serialize::SvgColor::MergeFrom(from._internal_fill_color());
+  }
+  if (from.has_stroke_color()) {
+    _internal_mutable_stroke_color()->::Serialize::SvgColor::MergeFrom(from._internal_stroke_color());
+  }
+  if (!(from.stroke_width() <= 0 && from.stroke_width() >= 0)) {
+    _internal_set_stroke_width(from._internal_stroke_width());
+  }
+  if (from.has_stroke_line_cap() != 0) {
+    _internal_set_has_stroke_line_cap(from._internal_has_stroke_line_cap());
+  }
+  if (from.has_stroke_line_join() != 0) {
+    _internal_set_has_stroke_line_join(from._internal_has_stroke_line_join());
+  }
+}
+
+void ObjectBase::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Serialize.ObjectBase)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ObjectBase::CopyFrom(const ObjectBase& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Serialize.ObjectBase)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ObjectBase::IsInitialized() const {
+  return true;
+}
+
+void ObjectBase::InternalSwap(ObjectBase* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  stroke_line_cap_.Swap(&other->stroke_line_cap_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  stroke_line_join_.Swap(&other->stroke_line_join_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ObjectBase, has_stroke_line_join_)
+      + sizeof(ObjectBase::has_stroke_line_join_)
+      - PROTOBUF_FIELD_OFFSET(ObjectBase, fill_color_)>(
+          reinterpret_cast<char*>(&fill_color_),
+          reinterpret_cast<char*>(&other->fill_color_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ObjectBase::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+class Circle::_Internal {
+ public:
+  static const ::Serialize::ObjectBase& base(const Circle* msg);
+  static const ::Serialize::SvgPoint& center(const Circle* msg);
+};
+
+const ::Serialize::ObjectBase&
+Circle::_Internal::base(const Circle* msg) {
+  return *msg->base_;
+}
+const ::Serialize::SvgPoint&
+Circle::_Internal::center(const Circle* msg) {
+  return *msg->center_;
+}
+Circle::Circle(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:Serialize.Circle)
+}
+Circle::Circle(const Circle& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_base()) {
+    base_ = new ::Serialize::ObjectBase(*from.base_);
+  } else {
+    base_ = nullptr;
+  }
+  if (from._internal_has_center()) {
+    center_ = new ::Serialize::SvgPoint(*from.center_);
+  } else {
+    center_ = nullptr;
+  }
+  radius_ = from.radius_;
+  // @@protoc_insertion_point(copy_constructor:Serialize.Circle)
+}
+
+void Circle::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Circle_transport_5fcatalog_2eproto.base);
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&base_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&radius_) -
+      reinterpret_cast<char*>(&base_)) + sizeof(radius_));
+}
+
+Circle::~Circle() {
+  // @@protoc_insertion_point(destructor:Serialize.Circle)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void Circle::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  if (this != internal_default_instance()) delete base_;
+  if (this != internal_default_instance()) delete center_;
+}
+
+void Circle::ArenaDtor(void* object) {
+  Circle* _this = reinterpret_cast< Circle* >(object);
+  (void)_this;
+}
+void Circle::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void Circle::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const Circle& Circle::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Circle_transport_5fcatalog_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void Circle::Clear() {
+// @@protoc_insertion_point(message_clear_start:Serialize.Circle)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArena() == nullptr && base_ != nullptr) {
+    delete base_;
+  }
+  base_ = nullptr;
+  if (GetArena() == nullptr && center_ != nullptr) {
+    delete center_;
+  }
+  center_ = nullptr;
+  radius_ = 0;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* Circle::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .Serialize.ObjectBase base = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_base(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .Serialize.SvgPoint center = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_center(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // float radius = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 29)) {
+          radius_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* Circle::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:Serialize.Circle)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .Serialize.ObjectBase base = 1;
+  if (this->has_base()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::base(this), target, stream);
+  }
+
+  // .Serialize.SvgPoint center = 2;
+  if (this->has_center()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::center(this), target, stream);
+  }
+
+  // float radius = 3;
+  if (!(this->radius() <= 0 && this->radius() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(3, this->_internal_radius(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:Serialize.Circle)
+  return target;
+}
+
+size_t Circle::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Serialize.Circle)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .Serialize.ObjectBase base = 1;
+  if (this->has_base()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *base_);
+  }
+
+  // .Serialize.SvgPoint center = 2;
+  if (this->has_center()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *center_);
+  }
+
+  // float radius = 3;
+  if (!(this->radius() <= 0 && this->radius() >= 0)) {
+    total_size += 1 + 4;
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Circle::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:Serialize.Circle)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Circle* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Circle>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Serialize.Circle)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Serialize.Circle)
+    MergeFrom(*source);
+  }
+}
+
+void Circle::MergeFrom(const Circle& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:Serialize.Circle)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_base()) {
+    _internal_mutable_base()->::Serialize::ObjectBase::MergeFrom(from._internal_base());
+  }
+  if (from.has_center()) {
+    _internal_mutable_center()->::Serialize::SvgPoint::MergeFrom(from._internal_center());
+  }
+  if (!(from.radius() <= 0 && from.radius() >= 0)) {
+    _internal_set_radius(from._internal_radius());
+  }
+}
+
+void Circle::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Serialize.Circle)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Circle::CopyFrom(const Circle& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Serialize.Circle)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Circle::IsInitialized() const {
+  return true;
+}
+
+void Circle::InternalSwap(Circle* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(Circle, radius_)
+      + sizeof(Circle::radius_)
+      - PROTOBUF_FIELD_OFFSET(Circle, base_)>(
+          reinterpret_cast<char*>(&base_),
+          reinterpret_cast<char*>(&other->base_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata Circle::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+class Rectangle::_Internal {
+ public:
+  static const ::Serialize::ObjectBase& base(const Rectangle* msg);
+  static const ::Serialize::SvgPoint& lu_corner(const Rectangle* msg);
+};
+
+const ::Serialize::ObjectBase&
+Rectangle::_Internal::base(const Rectangle* msg) {
+  return *msg->base_;
+}
+const ::Serialize::SvgPoint&
+Rectangle::_Internal::lu_corner(const Rectangle* msg) {
+  return *msg->lu_corner_;
+}
+Rectangle::Rectangle(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:Serialize.Rectangle)
+}
+Rectangle::Rectangle(const Rectangle& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_base()) {
+    base_ = new ::Serialize::ObjectBase(*from.base_);
+  } else {
+    base_ = nullptr;
+  }
+  if (from._internal_has_lu_corner()) {
+    lu_corner_ = new ::Serialize::SvgPoint(*from.lu_corner_);
+  } else {
+    lu_corner_ = nullptr;
+  }
+  ::memcpy(&w_, &from.w_,
+    static_cast<size_t>(reinterpret_cast<char*>(&h_) -
+    reinterpret_cast<char*>(&w_)) + sizeof(h_));
+  // @@protoc_insertion_point(copy_constructor:Serialize.Rectangle)
+}
+
+void Rectangle::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Rectangle_transport_5fcatalog_2eproto.base);
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&base_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&h_) -
+      reinterpret_cast<char*>(&base_)) + sizeof(h_));
+}
+
+Rectangle::~Rectangle() {
+  // @@protoc_insertion_point(destructor:Serialize.Rectangle)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void Rectangle::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  if (this != internal_default_instance()) delete base_;
+  if (this != internal_default_instance()) delete lu_corner_;
+}
+
+void Rectangle::ArenaDtor(void* object) {
+  Rectangle* _this = reinterpret_cast< Rectangle* >(object);
+  (void)_this;
+}
+void Rectangle::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void Rectangle::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const Rectangle& Rectangle::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Rectangle_transport_5fcatalog_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void Rectangle::Clear() {
+// @@protoc_insertion_point(message_clear_start:Serialize.Rectangle)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArena() == nullptr && base_ != nullptr) {
+    delete base_;
+  }
+  base_ = nullptr;
+  if (GetArena() == nullptr && lu_corner_ != nullptr) {
+    delete lu_corner_;
+  }
+  lu_corner_ = nullptr;
+  ::memset(&w_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&h_) -
+      reinterpret_cast<char*>(&w_)) + sizeof(h_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* Rectangle::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .Serialize.ObjectBase base = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_base(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .Serialize.SvgPoint lu_corner = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_lu_corner(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // float w = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 29)) {
+          w_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else goto handle_unusual;
+        continue;
+      // float h = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 37)) {
+          h_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* Rectangle::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:Serialize.Rectangle)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .Serialize.ObjectBase base = 1;
+  if (this->has_base()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::base(this), target, stream);
+  }
+
+  // .Serialize.SvgPoint lu_corner = 2;
+  if (this->has_lu_corner()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::lu_corner(this), target, stream);
+  }
+
+  // float w = 3;
+  if (!(this->w() <= 0 && this->w() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(3, this->_internal_w(), target);
+  }
+
+  // float h = 4;
+  if (!(this->h() <= 0 && this->h() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(4, this->_internal_h(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:Serialize.Rectangle)
+  return target;
+}
+
+size_t Rectangle::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Serialize.Rectangle)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .Serialize.ObjectBase base = 1;
+  if (this->has_base()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *base_);
+  }
+
+  // .Serialize.SvgPoint lu_corner = 2;
+  if (this->has_lu_corner()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *lu_corner_);
+  }
+
+  // float w = 3;
+  if (!(this->w() <= 0 && this->w() >= 0)) {
+    total_size += 1 + 4;
+  }
+
+  // float h = 4;
+  if (!(this->h() <= 0 && this->h() >= 0)) {
+    total_size += 1 + 4;
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Rectangle::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:Serialize.Rectangle)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Rectangle* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Rectangle>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Serialize.Rectangle)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Serialize.Rectangle)
+    MergeFrom(*source);
+  }
+}
+
+void Rectangle::MergeFrom(const Rectangle& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:Serialize.Rectangle)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_base()) {
+    _internal_mutable_base()->::Serialize::ObjectBase::MergeFrom(from._internal_base());
+  }
+  if (from.has_lu_corner()) {
+    _internal_mutable_lu_corner()->::Serialize::SvgPoint::MergeFrom(from._internal_lu_corner());
+  }
+  if (!(from.w() <= 0 && from.w() >= 0)) {
+    _internal_set_w(from._internal_w());
+  }
+  if (!(from.h() <= 0 && from.h() >= 0)) {
+    _internal_set_h(from._internal_h());
+  }
+}
+
+void Rectangle::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Serialize.Rectangle)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Rectangle::CopyFrom(const Rectangle& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Serialize.Rectangle)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Rectangle::IsInitialized() const {
+  return true;
+}
+
+void Rectangle::InternalSwap(Rectangle* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(Rectangle, h_)
+      + sizeof(Rectangle::h_)
+      - PROTOBUF_FIELD_OFFSET(Rectangle, base_)>(
+          reinterpret_cast<char*>(&base_),
+          reinterpret_cast<char*>(&other->base_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata Rectangle::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+class Polyline::_Internal {
+ public:
+  static const ::Serialize::ObjectBase& base(const Polyline* msg);
+};
+
+const ::Serialize::ObjectBase&
+Polyline::_Internal::base(const Polyline* msg) {
+  return *msg->base_;
+}
+Polyline::Polyline(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
+  points_(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:Serialize.Polyline)
+}
+Polyline::Polyline(const Polyline& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      points_(from.points_) {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_base()) {
+    base_ = new ::Serialize::ObjectBase(*from.base_);
+  } else {
+    base_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:Serialize.Polyline)
+}
+
+void Polyline::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Polyline_transport_5fcatalog_2eproto.base);
+  base_ = nullptr;
+}
+
+Polyline::~Polyline() {
+  // @@protoc_insertion_point(destructor:Serialize.Polyline)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void Polyline::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  if (this != internal_default_instance()) delete base_;
+}
+
+void Polyline::ArenaDtor(void* object) {
+  Polyline* _this = reinterpret_cast< Polyline* >(object);
+  (void)_this;
+}
+void Polyline::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void Polyline::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const Polyline& Polyline::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Polyline_transport_5fcatalog_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void Polyline::Clear() {
+// @@protoc_insertion_point(message_clear_start:Serialize.Polyline)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  points_.Clear();
+  if (GetArena() == nullptr && base_ != nullptr) {
+    delete base_;
+  }
+  base_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* Polyline::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .Serialize.ObjectBase base = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_base(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // repeated .Serialize.SvgPoint points = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_points(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* Polyline::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:Serialize.Polyline)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .Serialize.ObjectBase base = 1;
+  if (this->has_base()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::base(this), target, stream);
+  }
+
+  // repeated .Serialize.SvgPoint points = 2;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->_internal_points_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, this->_internal_points(i), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:Serialize.Polyline)
+  return target;
+}
+
+size_t Polyline::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Serialize.Polyline)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .Serialize.SvgPoint points = 2;
+  total_size += 1UL * this->_internal_points_size();
+  for (const auto& msg : this->points_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  // .Serialize.ObjectBase base = 1;
+  if (this->has_base()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *base_);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Polyline::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:Serialize.Polyline)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Polyline* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Polyline>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Serialize.Polyline)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Serialize.Polyline)
+    MergeFrom(*source);
+  }
+}
+
+void Polyline::MergeFrom(const Polyline& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:Serialize.Polyline)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  points_.MergeFrom(from.points_);
+  if (from.has_base()) {
+    _internal_mutable_base()->::Serialize::ObjectBase::MergeFrom(from._internal_base());
+  }
+}
+
+void Polyline::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Serialize.Polyline)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Polyline::CopyFrom(const Polyline& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Serialize.Polyline)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Polyline::IsInitialized() const {
+  return true;
+}
+
+void Polyline::InternalSwap(Polyline* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  points_.InternalSwap(&other->points_);
+  swap(base_, other->base_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata Polyline::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+class Text::_Internal {
+ public:
+  static const ::Serialize::ObjectBase& base(const Text* msg);
+  static const ::Serialize::SvgPoint& point(const Text* msg);
+  static const ::Serialize::SvgPoint& offset(const Text* msg);
+};
+
+const ::Serialize::ObjectBase&
+Text::_Internal::base(const Text* msg) {
+  return *msg->base_;
+}
+const ::Serialize::SvgPoint&
+Text::_Internal::point(const Text* msg) {
+  return *msg->point_;
+}
+const ::Serialize::SvgPoint&
+Text::_Internal::offset(const Text* msg) {
+  return *msg->offset_;
+}
+Text::Text(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:Serialize.Text)
+}
+Text::Text(const Text& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  font_family_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_font_family().empty()) {
+    font_family_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_font_family(), 
+      GetArena());
+  }
+  font_weight_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_font_weight().empty()) {
+    font_weight_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_font_weight(), 
+      GetArena());
+  }
+  data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_data().empty()) {
+    data_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_data(), 
+      GetArena());
+  }
+  if (from._internal_has_base()) {
+    base_ = new ::Serialize::ObjectBase(*from.base_);
+  } else {
+    base_ = nullptr;
+  }
+  if (from._internal_has_point()) {
+    point_ = new ::Serialize::SvgPoint(*from.point_);
+  } else {
+    point_ = nullptr;
+  }
+  if (from._internal_has_offset()) {
+    offset_ = new ::Serialize::SvgPoint(*from.offset_);
+  } else {
+    offset_ = nullptr;
+  }
+  ::memcpy(&font_size_, &from.font_size_,
+    static_cast<size_t>(reinterpret_cast<char*>(&has_font_weight_) -
+    reinterpret_cast<char*>(&font_size_)) + sizeof(has_font_weight_));
+  // @@protoc_insertion_point(copy_constructor:Serialize.Text)
+}
+
+void Text::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Text_transport_5fcatalog_2eproto.base);
+  font_family_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  font_weight_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&base_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&has_font_weight_) -
+      reinterpret_cast<char*>(&base_)) + sizeof(has_font_weight_));
+}
+
+Text::~Text() {
+  // @@protoc_insertion_point(destructor:Serialize.Text)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void Text::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  font_family_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  font_weight_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  data_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete base_;
+  if (this != internal_default_instance()) delete point_;
+  if (this != internal_default_instance()) delete offset_;
+}
+
+void Text::ArenaDtor(void* object) {
+  Text* _this = reinterpret_cast< Text* >(object);
+  (void)_this;
+}
+void Text::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void Text::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const Text& Text::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Text_transport_5fcatalog_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void Text::Clear() {
+// @@protoc_insertion_point(message_clear_start:Serialize.Text)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  font_family_.ClearToEmpty();
+  font_weight_.ClearToEmpty();
+  data_.ClearToEmpty();
+  if (GetArena() == nullptr && base_ != nullptr) {
+    delete base_;
+  }
+  base_ = nullptr;
+  if (GetArena() == nullptr && point_ != nullptr) {
+    delete point_;
+  }
+  point_ = nullptr;
+  if (GetArena() == nullptr && offset_ != nullptr) {
+    delete offset_;
+  }
+  offset_ = nullptr;
+  ::memset(&font_size_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&has_font_weight_) -
+      reinterpret_cast<char*>(&font_size_)) + sizeof(has_font_weight_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* Text::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .Serialize.ObjectBase base = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_base(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .Serialize.SvgPoint point = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_point(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .Serialize.SvgPoint offset = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_offset(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // uint32 font_size = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
+          font_size_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // bool has_font_family = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
+          has_font_family_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string font_family = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+          auto str = _internal_mutable_font_family();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Serialize.Text.font_family"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // bool has_font_weight = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 56)) {
+          has_font_weight_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string font_weight = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
+          auto str = _internal_mutable_font_weight();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Serialize.Text.font_weight"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string data = 9;
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
+          auto str = _internal_mutable_data();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Serialize.Text.data"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* Text::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:Serialize.Text)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .Serialize.ObjectBase base = 1;
+  if (this->has_base()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::base(this), target, stream);
+  }
+
+  // .Serialize.SvgPoint point = 2;
+  if (this->has_point()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::point(this), target, stream);
+  }
+
+  // .Serialize.SvgPoint offset = 3;
+  if (this->has_offset()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::offset(this), target, stream);
+  }
+
+  // uint32 font_size = 4;
+  if (this->font_size() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(4, this->_internal_font_size(), target);
+  }
+
+  // bool has_font_family = 5;
+  if (this->has_font_family() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(5, this->_internal_has_font_family(), target);
+  }
+
+  // string font_family = 6;
+  if (this->font_family().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_font_family().data(), static_cast<int>(this->_internal_font_family().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "Serialize.Text.font_family");
+    target = stream->WriteStringMaybeAliased(
+        6, this->_internal_font_family(), target);
+  }
+
+  // bool has_font_weight = 7;
+  if (this->has_font_weight() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(7, this->_internal_has_font_weight(), target);
+  }
+
+  // string font_weight = 8;
+  if (this->font_weight().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_font_weight().data(), static_cast<int>(this->_internal_font_weight().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "Serialize.Text.font_weight");
+    target = stream->WriteStringMaybeAliased(
+        8, this->_internal_font_weight(), target);
+  }
+
+  // string data = 9;
+  if (this->data().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_data().data(), static_cast<int>(this->_internal_data().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "Serialize.Text.data");
+    target = stream->WriteStringMaybeAliased(
+        9, this->_internal_data(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:Serialize.Text)
+  return target;
+}
+
+size_t Text::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Serialize.Text)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string font_family = 6;
+  if (this->font_family().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_font_family());
+  }
+
+  // string font_weight = 8;
+  if (this->font_weight().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_font_weight());
+  }
+
+  // string data = 9;
+  if (this->data().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_data());
+  }
+
+  // .Serialize.ObjectBase base = 1;
+  if (this->has_base()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *base_);
+  }
+
+  // .Serialize.SvgPoint point = 2;
+  if (this->has_point()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *point_);
+  }
+
+  // .Serialize.SvgPoint offset = 3;
+  if (this->has_offset()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *offset_);
+  }
+
+  // uint32 font_size = 4;
+  if (this->font_size() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->_internal_font_size());
+  }
+
+  // bool has_font_family = 5;
+  if (this->has_font_family() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // bool has_font_weight = 7;
+  if (this->has_font_weight() != 0) {
+    total_size += 1 + 1;
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Text::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:Serialize.Text)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Text* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Text>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Serialize.Text)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Serialize.Text)
+    MergeFrom(*source);
+  }
+}
+
+void Text::MergeFrom(const Text& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:Serialize.Text)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.font_family().size() > 0) {
+    _internal_set_font_family(from._internal_font_family());
+  }
+  if (from.font_weight().size() > 0) {
+    _internal_set_font_weight(from._internal_font_weight());
+  }
+  if (from.data().size() > 0) {
+    _internal_set_data(from._internal_data());
+  }
+  if (from.has_base()) {
+    _internal_mutable_base()->::Serialize::ObjectBase::MergeFrom(from._internal_base());
+  }
+  if (from.has_point()) {
+    _internal_mutable_point()->::Serialize::SvgPoint::MergeFrom(from._internal_point());
+  }
+  if (from.has_offset()) {
+    _internal_mutable_offset()->::Serialize::SvgPoint::MergeFrom(from._internal_offset());
+  }
+  if (from.font_size() != 0) {
+    _internal_set_font_size(from._internal_font_size());
+  }
+  if (from.has_font_family() != 0) {
+    _internal_set_has_font_family(from._internal_has_font_family());
+  }
+  if (from.has_font_weight() != 0) {
+    _internal_set_has_font_weight(from._internal_has_font_weight());
+  }
+}
+
+void Text::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Serialize.Text)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Text::CopyFrom(const Text& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Serialize.Text)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Text::IsInitialized() const {
+  return true;
+}
+
+void Text::InternalSwap(Text* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  font_family_.Swap(&other->font_family_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  font_weight_.Swap(&other->font_weight_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  data_.Swap(&other->data_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(Text, has_font_weight_)
+      + sizeof(Text::has_font_weight_)
+      - PROTOBUF_FIELD_OFFSET(Text, base_)>(
+          reinterpret_cast<char*>(&base_),
+          reinterpret_cast<char*>(&other->base_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata Text::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+class Object::_Internal {
+ public:
+  static const ::Serialize::Circle& circle(const Object* msg);
+  static const ::Serialize::Rectangle& rect(const Object* msg);
+  static const ::Serialize::Polyline& polyline(const Object* msg);
+  static const ::Serialize::Text& text(const Object* msg);
+};
+
+const ::Serialize::Circle&
+Object::_Internal::circle(const Object* msg) {
+  return *msg->variant_.circle_;
+}
+const ::Serialize::Rectangle&
+Object::_Internal::rect(const Object* msg) {
+  return *msg->variant_.rect_;
+}
+const ::Serialize::Polyline&
+Object::_Internal::polyline(const Object* msg) {
+  return *msg->variant_.polyline_;
+}
+const ::Serialize::Text&
+Object::_Internal::text(const Object* msg) {
+  return *msg->variant_.text_;
+}
+void Object::set_allocated_circle(::Serialize::Circle* circle) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  clear_variant();
+  if (circle) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(circle);
+    if (message_arena != submessage_arena) {
+      circle = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, circle, submessage_arena);
+    }
+    set_has_circle();
+    variant_.circle_ = circle;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Serialize.Object.circle)
+}
+void Object::set_allocated_rect(::Serialize::Rectangle* rect) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  clear_variant();
+  if (rect) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(rect);
+    if (message_arena != submessage_arena) {
+      rect = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, rect, submessage_arena);
+    }
+    set_has_rect();
+    variant_.rect_ = rect;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Serialize.Object.rect)
+}
+void Object::set_allocated_polyline(::Serialize::Polyline* polyline) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  clear_variant();
+  if (polyline) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(polyline);
+    if (message_arena != submessage_arena) {
+      polyline = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, polyline, submessage_arena);
+    }
+    set_has_polyline();
+    variant_.polyline_ = polyline;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Serialize.Object.polyline)
+}
+void Object::set_allocated_text(::Serialize::Text* text) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  clear_variant();
+  if (text) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(text);
+    if (message_arena != submessage_arena) {
+      text = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, text, submessage_arena);
+    }
+    set_has_text();
+    variant_.text_ = text;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Serialize.Object.text)
+}
+Object::Object(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:Serialize.Object)
+}
+Object::Object(const Object& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  clear_has_variant();
+  switch (from.variant_case()) {
+    case kCircle: {
+      _internal_mutable_circle()->::Serialize::Circle::MergeFrom(from._internal_circle());
+      break;
+    }
+    case kRect: {
+      _internal_mutable_rect()->::Serialize::Rectangle::MergeFrom(from._internal_rect());
+      break;
+    }
+    case kPolyline: {
+      _internal_mutable_polyline()->::Serialize::Polyline::MergeFrom(from._internal_polyline());
+      break;
+    }
+    case kText: {
+      _internal_mutable_text()->::Serialize::Text::MergeFrom(from._internal_text());
+      break;
+    }
+    case VARIANT_NOT_SET: {
+      break;
+    }
+  }
+  // @@protoc_insertion_point(copy_constructor:Serialize.Object)
+}
+
+void Object::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Object_transport_5fcatalog_2eproto.base);
+  clear_has_variant();
+}
+
+Object::~Object() {
+  // @@protoc_insertion_point(destructor:Serialize.Object)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void Object::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  if (has_variant()) {
+    clear_variant();
+  }
+}
+
+void Object::ArenaDtor(void* object) {
+  Object* _this = reinterpret_cast< Object* >(object);
+  (void)_this;
+}
+void Object::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void Object::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const Object& Object::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Object_transport_5fcatalog_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void Object::clear_variant() {
+// @@protoc_insertion_point(one_of_clear_start:Serialize.Object)
+  switch (variant_case()) {
+    case kCircle: {
+      if (GetArena() == nullptr) {
+        delete variant_.circle_;
+      }
+      break;
+    }
+    case kRect: {
+      if (GetArena() == nullptr) {
+        delete variant_.rect_;
+      }
+      break;
+    }
+    case kPolyline: {
+      if (GetArena() == nullptr) {
+        delete variant_.polyline_;
+      }
+      break;
+    }
+    case kText: {
+      if (GetArena() == nullptr) {
+        delete variant_.text_;
+      }
+      break;
+    }
+    case VARIANT_NOT_SET: {
+      break;
+    }
+  }
+  _oneof_case_[0] = VARIANT_NOT_SET;
+}
+
+
+void Object::Clear() {
+// @@protoc_insertion_point(message_clear_start:Serialize.Object)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  clear_variant();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* Object::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .Serialize.Circle circle = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_circle(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .Serialize.Rectangle rect = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_rect(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .Serialize.Polyline polyline = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_polyline(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .Serialize.Text text = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_text(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* Object::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:Serialize.Object)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .Serialize.Circle circle = 1;
+  if (_internal_has_circle()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::circle(this), target, stream);
+  }
+
+  // .Serialize.Rectangle rect = 2;
+  if (_internal_has_rect()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::rect(this), target, stream);
+  }
+
+  // .Serialize.Polyline polyline = 3;
+  if (_internal_has_polyline()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::polyline(this), target, stream);
+  }
+
+  // .Serialize.Text text = 4;
+  if (_internal_has_text()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        4, _Internal::text(this), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:Serialize.Object)
+  return target;
+}
+
+size_t Object::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Serialize.Object)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  switch (variant_case()) {
+    // .Serialize.Circle circle = 1;
+    case kCircle: {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *variant_.circle_);
+      break;
+    }
+    // .Serialize.Rectangle rect = 2;
+    case kRect: {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *variant_.rect_);
+      break;
+    }
+    // .Serialize.Polyline polyline = 3;
+    case kPolyline: {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *variant_.polyline_);
+      break;
+    }
+    // .Serialize.Text text = 4;
+    case kText: {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *variant_.text_);
+      break;
+    }
+    case VARIANT_NOT_SET: {
+      break;
+    }
+  }
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Object::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:Serialize.Object)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Object* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Object>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Serialize.Object)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Serialize.Object)
+    MergeFrom(*source);
+  }
+}
+
+void Object::MergeFrom(const Object& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:Serialize.Object)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  switch (from.variant_case()) {
+    case kCircle: {
+      _internal_mutable_circle()->::Serialize::Circle::MergeFrom(from._internal_circle());
+      break;
+    }
+    case kRect: {
+      _internal_mutable_rect()->::Serialize::Rectangle::MergeFrom(from._internal_rect());
+      break;
+    }
+    case kPolyline: {
+      _internal_mutable_polyline()->::Serialize::Polyline::MergeFrom(from._internal_polyline());
+      break;
+    }
+    case kText: {
+      _internal_mutable_text()->::Serialize::Text::MergeFrom(from._internal_text());
+      break;
+    }
+    case VARIANT_NOT_SET: {
+      break;
+    }
+  }
+}
+
+void Object::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Serialize.Object)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Object::CopyFrom(const Object& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Serialize.Object)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Object::IsInitialized() const {
+  return true;
+}
+
+void Object::InternalSwap(Object* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  swap(variant_, other->variant_);
+  swap(_oneof_case_[0], other->_oneof_case_[0]);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata Object::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+class Document::_Internal {
+ public:
+};
+
+Document::Document(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
+  objects_(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:Serialize.Document)
+}
+Document::Document(const Document& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      objects_(from.objects_) {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:Serialize.Document)
+}
+
+void Document::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Document_transport_5fcatalog_2eproto.base);
+}
+
+Document::~Document() {
+  // @@protoc_insertion_point(destructor:Serialize.Document)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void Document::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+}
+
+void Document::ArenaDtor(void* object) {
+  Document* _this = reinterpret_cast< Document* >(object);
+  (void)_this;
+}
+void Document::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void Document::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const Document& Document::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Document_transport_5fcatalog_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void Document::Clear() {
+// @@protoc_insertion_point(message_clear_start:Serialize.Document)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  objects_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* Document::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // repeated .Serialize.Object objects = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_objects(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* Document::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:Serialize.Document)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .Serialize.Object objects = 1;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->_internal_objects_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, this->_internal_objects(i), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:Serialize.Document)
+  return target;
+}
+
+size_t Document::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Serialize.Document)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .Serialize.Object objects = 1;
+  total_size += 1UL * this->_internal_objects_size();
+  for (const auto& msg : this->objects_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Document::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:Serialize.Document)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Document* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Document>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Serialize.Document)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Serialize.Document)
+    MergeFrom(*source);
+  }
+}
+
+void Document::MergeFrom(const Document& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:Serialize.Document)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  objects_.MergeFrom(from.objects_);
+}
+
+void Document::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Serialize.Document)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Document::CopyFrom(const Document& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Serialize.Document)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Document::IsInitialized() const {
+  return true;
+}
+
+void Document::InternalSwap(Document* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  objects_.InternalSwap(&other->objects_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata Document::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+class RenderSettings::_Internal {
+ public:
+  static const ::Serialize::SvgPoint& stop_label_offset(const RenderSettings* msg);
+  static const ::Serialize::SvgColor& underlayer_color(const RenderSettings* msg);
+  static const ::Serialize::SvgPoint& bus_label_offset(const RenderSettings* msg);
+};
+
+const ::Serialize::SvgPoint&
+RenderSettings::_Internal::stop_label_offset(const RenderSettings* msg) {
+  return *msg->stop_label_offset_;
+}
+const ::Serialize::SvgColor&
+RenderSettings::_Internal::underlayer_color(const RenderSettings* msg) {
+  return *msg->underlayer_color_;
+}
+const ::Serialize::SvgPoint&
+RenderSettings::_Internal::bus_label_offset(const RenderSettings* msg) {
+  return *msg->bus_label_offset_;
+}
+RenderSettings::RenderSettings(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
+  color_palette_(arena),
+  layers_(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:Serialize.RenderSettings)
+}
+RenderSettings::RenderSettings(const RenderSettings& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      color_palette_(from.color_palette_),
+      layers_(from.layers_) {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_stop_label_offset()) {
+    stop_label_offset_ = new ::Serialize::SvgPoint(*from.stop_label_offset_);
+  } else {
+    stop_label_offset_ = nullptr;
+  }
+  if (from._internal_has_underlayer_color()) {
+    underlayer_color_ = new ::Serialize::SvgColor(*from.underlayer_color_);
+  } else {
+    underlayer_color_ = nullptr;
+  }
+  if (from._internal_has_bus_label_offset()) {
+    bus_label_offset_ = new ::Serialize::SvgPoint(*from.bus_label_offset_);
+  } else {
+    bus_label_offset_ = nullptr;
+  }
+  ::memcpy(&width_, &from.width_,
+    static_cast<size_t>(reinterpret_cast<char*>(&outer_margin_) -
+    reinterpret_cast<char*>(&width_)) + sizeof(outer_margin_));
+  // @@protoc_insertion_point(copy_constructor:Serialize.RenderSettings)
+}
+
+void RenderSettings::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_RenderSettings_transport_5fcatalog_2eproto.base);
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&stop_label_offset_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&outer_margin_) -
+      reinterpret_cast<char*>(&stop_label_offset_)) + sizeof(outer_margin_));
+}
+
+RenderSettings::~RenderSettings() {
+  // @@protoc_insertion_point(destructor:Serialize.RenderSettings)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void RenderSettings::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  if (this != internal_default_instance()) delete stop_label_offset_;
+  if (this != internal_default_instance()) delete underlayer_color_;
+  if (this != internal_default_instance()) delete bus_label_offset_;
+}
+
+void RenderSettings::ArenaDtor(void* object) {
+  RenderSettings* _this = reinterpret_cast< RenderSettings* >(object);
+  (void)_this;
+}
+void RenderSettings::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void RenderSettings::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const RenderSettings& RenderSettings::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_RenderSettings_transport_5fcatalog_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void RenderSettings::Clear() {
+// @@protoc_insertion_point(message_clear_start:Serialize.RenderSettings)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  color_palette_.Clear();
+  layers_.Clear();
+  if (GetArena() == nullptr && stop_label_offset_ != nullptr) {
+    delete stop_label_offset_;
+  }
+  stop_label_offset_ = nullptr;
+  if (GetArena() == nullptr && underlayer_color_ != nullptr) {
+    delete underlayer_color_;
+  }
+  underlayer_color_ = nullptr;
+  if (GetArena() == nullptr && bus_label_offset_ != nullptr) {
+    delete bus_label_offset_;
+  }
+  bus_label_offset_ = nullptr;
+  ::memset(&width_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&outer_margin_) -
+      reinterpret_cast<char*>(&width_)) + sizeof(outer_margin_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* RenderSettings::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // float width = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 13)) {
+          width_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else goto handle_unusual;
+        continue;
+      // float height = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 21)) {
+          height_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else goto handle_unusual;
+        continue;
+      // float padding = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 29)) {
+          padding_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else goto handle_unusual;
+        continue;
+      // float stop_radius = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 37)) {
+          stop_radius_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else goto handle_unusual;
+        continue;
+      // float line_width = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 45)) {
+          line_width_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else goto handle_unusual;
+        continue;
+      // int32 stop_label_font_size = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 48)) {
+          stop_label_font_size_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .Serialize.SvgPoint stop_label_offset = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+          ptr = ctx->ParseMessage(_internal_mutable_stop_label_offset(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .Serialize.SvgColor underlayer_color = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
+          ptr = ctx->ParseMessage(_internal_mutable_underlayer_color(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // float underlayer_width = 9;
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 77)) {
+          underlayer_width_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else goto handle_unusual;
+        continue;
+      // repeated .Serialize.SvgColor color_palette = 10;
+      case 10:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_color_palette(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<82>(ptr));
+        } else goto handle_unusual;
+        continue;
+      // int32 bus_label_font_size = 11;
+      case 11:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 88)) {
+          bus_label_font_size_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .Serialize.SvgPoint bus_label_offset = 12;
+      case 12:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 98)) {
+          ptr = ctx->ParseMessage(_internal_mutable_bus_label_offset(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // repeated string layers = 13;
+      case 13:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 106)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            auto str = _internal_add_layers();
+            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+            CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Serialize.RenderSettings.layers"));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<106>(ptr));
+        } else goto handle_unusual;
+        continue;
+      // float outer_margin = 14;
+      case 14:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 117)) {
+          outer_margin_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* RenderSettings::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:Serialize.RenderSettings)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // float width = 1;
+  if (!(this->width() <= 0 && this->width() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(1, this->_internal_width(), target);
+  }
+
+  // float height = 2;
+  if (!(this->height() <= 0 && this->height() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(2, this->_internal_height(), target);
+  }
+
+  // float padding = 3;
+  if (!(this->padding() <= 0 && this->padding() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(3, this->_internal_padding(), target);
+  }
+
+  // float stop_radius = 4;
+  if (!(this->stop_radius() <= 0 && this->stop_radius() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(4, this->_internal_stop_radius(), target);
+  }
+
+  // float line_width = 5;
+  if (!(this->line_width() <= 0 && this->line_width() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(5, this->_internal_line_width(), target);
+  }
+
+  // int32 stop_label_font_size = 6;
+  if (this->stop_label_font_size() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(6, this->_internal_stop_label_font_size(), target);
+  }
+
+  // .Serialize.SvgPoint stop_label_offset = 7;
+  if (this->has_stop_label_offset()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        7, _Internal::stop_label_offset(this), target, stream);
+  }
+
+  // .Serialize.SvgColor underlayer_color = 8;
+  if (this->has_underlayer_color()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        8, _Internal::underlayer_color(this), target, stream);
+  }
+
+  // float underlayer_width = 9;
+  if (!(this->underlayer_width() <= 0 && this->underlayer_width() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(9, this->_internal_underlayer_width(), target);
+  }
+
+  // repeated .Serialize.SvgColor color_palette = 10;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->_internal_color_palette_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(10, this->_internal_color_palette(i), target, stream);
+  }
+
+  // int32 bus_label_font_size = 11;
+  if (this->bus_label_font_size() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(11, this->_internal_bus_label_font_size(), target);
+  }
+
+  // .Serialize.SvgPoint bus_label_offset = 12;
+  if (this->has_bus_label_offset()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        12, _Internal::bus_label_offset(this), target, stream);
+  }
+
+  // repeated string layers = 13;
+  for (int i = 0, n = this->_internal_layers_size(); i < n; i++) {
+    const auto& s = this->_internal_layers(i);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      s.data(), static_cast<int>(s.length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "Serialize.RenderSettings.layers");
+    target = stream->WriteString(13, s, target);
+  }
+
+  // float outer_margin = 14;
+  if (!(this->outer_margin() <= 0 && this->outer_margin() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(14, this->_internal_outer_margin(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:Serialize.RenderSettings)
+  return target;
+}
+
+size_t RenderSettings::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Serialize.RenderSettings)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .Serialize.SvgColor color_palette = 10;
+  total_size += 1UL * this->_internal_color_palette_size();
+  for (const auto& msg : this->color_palette_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  // repeated string layers = 13;
+  total_size += 1 *
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(layers_.size());
+  for (int i = 0, n = layers_.size(); i < n; i++) {
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      layers_.Get(i));
+  }
+
+  // .Serialize.SvgPoint stop_label_offset = 7;
+  if (this->has_stop_label_offset()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *stop_label_offset_);
+  }
+
+  // .Serialize.SvgColor underlayer_color = 8;
+  if (this->has_underlayer_color()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *underlayer_color_);
+  }
+
+  // .Serialize.SvgPoint bus_label_offset = 12;
+  if (this->has_bus_label_offset()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *bus_label_offset_);
+  }
+
+  // float width = 1;
+  if (!(this->width() <= 0 && this->width() >= 0)) {
+    total_size += 1 + 4;
+  }
+
+  // float height = 2;
+  if (!(this->height() <= 0 && this->height() >= 0)) {
+    total_size += 1 + 4;
+  }
+
+  // float padding = 3;
+  if (!(this->padding() <= 0 && this->padding() >= 0)) {
+    total_size += 1 + 4;
+  }
+
+  // float stop_radius = 4;
+  if (!(this->stop_radius() <= 0 && this->stop_radius() >= 0)) {
+    total_size += 1 + 4;
+  }
+
+  // float line_width = 5;
+  if (!(this->line_width() <= 0 && this->line_width() >= 0)) {
+    total_size += 1 + 4;
+  }
+
+  // int32 stop_label_font_size = 6;
+  if (this->stop_label_font_size() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_stop_label_font_size());
+  }
+
+  // float underlayer_width = 9;
+  if (!(this->underlayer_width() <= 0 && this->underlayer_width() >= 0)) {
+    total_size += 1 + 4;
+  }
+
+  // int32 bus_label_font_size = 11;
+  if (this->bus_label_font_size() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_bus_label_font_size());
+  }
+
+  // float outer_margin = 14;
+  if (!(this->outer_margin() <= 0 && this->outer_margin() >= 0)) {
+    total_size += 1 + 4;
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void RenderSettings::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:Serialize.RenderSettings)
+  GOOGLE_DCHECK_NE(&from, this);
+  const RenderSettings* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RenderSettings>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Serialize.RenderSettings)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Serialize.RenderSettings)
+    MergeFrom(*source);
+  }
+}
+
+void RenderSettings::MergeFrom(const RenderSettings& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:Serialize.RenderSettings)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  color_palette_.MergeFrom(from.color_palette_);
+  layers_.MergeFrom(from.layers_);
+  if (from.has_stop_label_offset()) {
+    _internal_mutable_stop_label_offset()->::Serialize::SvgPoint::MergeFrom(from._internal_stop_label_offset());
+  }
+  if (from.has_underlayer_color()) {
+    _internal_mutable_underlayer_color()->::Serialize::SvgColor::MergeFrom(from._internal_underlayer_color());
+  }
+  if (from.has_bus_label_offset()) {
+    _internal_mutable_bus_label_offset()->::Serialize::SvgPoint::MergeFrom(from._internal_bus_label_offset());
+  }
+  if (!(from.width() <= 0 && from.width() >= 0)) {
+    _internal_set_width(from._internal_width());
+  }
+  if (!(from.height() <= 0 && from.height() >= 0)) {
+    _internal_set_height(from._internal_height());
+  }
+  if (!(from.padding() <= 0 && from.padding() >= 0)) {
+    _internal_set_padding(from._internal_padding());
+  }
+  if (!(from.stop_radius() <= 0 && from.stop_radius() >= 0)) {
+    _internal_set_stop_radius(from._internal_stop_radius());
+  }
+  if (!(from.line_width() <= 0 && from.line_width() >= 0)) {
+    _internal_set_line_width(from._internal_line_width());
+  }
+  if (from.stop_label_font_size() != 0) {
+    _internal_set_stop_label_font_size(from._internal_stop_label_font_size());
+  }
+  if (!(from.underlayer_width() <= 0 && from.underlayer_width() >= 0)) {
+    _internal_set_underlayer_width(from._internal_underlayer_width());
+  }
+  if (from.bus_label_font_size() != 0) {
+    _internal_set_bus_label_font_size(from._internal_bus_label_font_size());
+  }
+  if (!(from.outer_margin() <= 0 && from.outer_margin() >= 0)) {
+    _internal_set_outer_margin(from._internal_outer_margin());
+  }
+}
+
+void RenderSettings::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Serialize.RenderSettings)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void RenderSettings::CopyFrom(const RenderSettings& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Serialize.RenderSettings)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool RenderSettings::IsInitialized() const {
+  return true;
+}
+
+void RenderSettings::InternalSwap(RenderSettings* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  color_palette_.InternalSwap(&other->color_palette_);
+  layers_.InternalSwap(&other->layers_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(RenderSettings, outer_margin_)
+      + sizeof(RenderSettings::outer_margin_)
+      - PROTOBUF_FIELD_OFFSET(RenderSettings, stop_label_offset_)>(
+          reinterpret_cast<char*>(&stop_label_offset_),
+          reinterpret_cast<char*>(&other->stop_label_offset_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata RenderSettings::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+class Painter::_Internal {
+ public:
+  static const ::Serialize::RenderSettings& settings_(const Painter* msg);
+  static const ::Serialize::Document& base_map_(const Painter* msg);
+};
+
+const ::Serialize::RenderSettings&
+Painter::_Internal::settings_(const Painter* msg) {
+  return *msg->settings__;
+}
+const ::Serialize::Document&
+Painter::_Internal::base_map_(const Painter* msg) {
+  return *msg->base_map__;
+}
+Painter::Painter(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
+  buses_dict__(arena),
+  stops_coords__(arena),
+  bus_colors__(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:Serialize.Painter)
+}
+Painter::Painter(const Painter& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      buses_dict__(from.buses_dict__),
+      stops_coords__(from.stops_coords__),
+      bus_colors__(from.bus_colors__) {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_settings_()) {
+    settings__ = new ::Serialize::RenderSettings(*from.settings__);
+  } else {
+    settings__ = nullptr;
+  }
+  if (from._internal_has_base_map_()) {
+    base_map__ = new ::Serialize::Document(*from.base_map__);
+  } else {
+    base_map__ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:Serialize.Painter)
+}
+
+void Painter::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Painter_transport_5fcatalog_2eproto.base);
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&settings__) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&base_map__) -
+      reinterpret_cast<char*>(&settings__)) + sizeof(base_map__));
+}
+
+Painter::~Painter() {
+  // @@protoc_insertion_point(destructor:Serialize.Painter)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void Painter::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  if (this != internal_default_instance()) delete settings__;
+  if (this != internal_default_instance()) delete base_map__;
+}
+
+void Painter::ArenaDtor(void* object) {
+  Painter* _this = reinterpret_cast< Painter* >(object);
+  (void)_this;
+}
+void Painter::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void Painter::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const Painter& Painter::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Painter_transport_5fcatalog_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void Painter::Clear() {
+// @@protoc_insertion_point(message_clear_start:Serialize.Painter)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  buses_dict__.Clear();
+  stops_coords__.Clear();
+  bus_colors__.Clear();
+  if (GetArena() == nullptr && settings__ != nullptr) {
+    delete settings__;
+  }
+  settings__ = nullptr;
+  if (GetArena() == nullptr && base_map__ != nullptr) {
+    delete base_map__;
+  }
+  base_map__ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* Painter::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .Serialize.RenderSettings settings_ = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_settings_(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // repeated .Serialize.BusesDict buses_dict_ = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_buses_dict_(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
+        } else goto handle_unusual;
+        continue;
+      // repeated .Serialize.StopCoord stops_coords_ = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_stops_coords_(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
+        } else goto handle_unusual;
+        continue;
+      // repeated .Serialize.BusColor bus_colors_ = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_bus_colors_(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<34>(ptr));
+        } else goto handle_unusual;
+        continue;
+      // .Serialize.Document base_map_ = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          ptr = ctx->ParseMessage(_internal_mutable_base_map_(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* Painter::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:Serialize.Painter)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .Serialize.RenderSettings settings_ = 1;
+  if (this->has_settings_()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::settings_(this), target, stream);
+  }
+
+  // repeated .Serialize.BusesDict buses_dict_ = 2;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->_internal_buses_dict__size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, this->_internal_buses_dict_(i), target, stream);
+  }
+
+  // repeated .Serialize.StopCoord stops_coords_ = 3;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->_internal_stops_coords__size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, this->_internal_stops_coords_(i), target, stream);
+  }
+
+  // repeated .Serialize.BusColor bus_colors_ = 4;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->_internal_bus_colors__size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(4, this->_internal_bus_colors_(i), target, stream);
+  }
+
+  // .Serialize.Document base_map_ = 5;
+  if (this->has_base_map_()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        5, _Internal::base_map_(this), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:Serialize.Painter)
+  return target;
+}
+
+size_t Painter::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Serialize.Painter)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .Serialize.BusesDict buses_dict_ = 2;
+  total_size += 1UL * this->_internal_buses_dict__size();
+  for (const auto& msg : this->buses_dict__) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  // repeated .Serialize.StopCoord stops_coords_ = 3;
+  total_size += 1UL * this->_internal_stops_coords__size();
+  for (const auto& msg : this->stops_coords__) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  // repeated .Serialize.BusColor bus_colors_ = 4;
+  total_size += 1UL * this->_internal_bus_colors__size();
+  for (const auto& msg : this->bus_colors__) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  // .Serialize.RenderSettings settings_ = 1;
+  if (this->has_settings_()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *settings__);
+  }
+
+  // .Serialize.Document base_map_ = 5;
+  if (this->has_base_map_()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *base_map__);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Painter::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:Serialize.Painter)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Painter* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Painter>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Serialize.Painter)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Serialize.Painter)
+    MergeFrom(*source);
+  }
+}
+
+void Painter::MergeFrom(const Painter& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:Serialize.Painter)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  buses_dict__.MergeFrom(from.buses_dict__);
+  stops_coords__.MergeFrom(from.stops_coords__);
+  bus_colors__.MergeFrom(from.bus_colors__);
+  if (from.has_settings_()) {
+    _internal_mutable_settings_()->::Serialize::RenderSettings::MergeFrom(from._internal_settings_());
+  }
+  if (from.has_base_map_()) {
+    _internal_mutable_base_map_()->::Serialize::Document::MergeFrom(from._internal_base_map_());
+  }
+}
+
+void Painter::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Serialize.Painter)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Painter::CopyFrom(const Painter& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Serialize.Painter)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Painter::IsInitialized() const {
+  return true;
+}
+
+void Painter::InternalSwap(Painter* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  buses_dict__.InternalSwap(&other->buses_dict__);
+  stops_coords__.InternalSwap(&other->stops_coords__);
+  bus_colors__.InternalSwap(&other->bus_colors__);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(Painter, base_map__)
+      + sizeof(Painter::base_map__)
+      - PROTOBUF_FIELD_OFFSET(Painter, settings__)>(
+          reinterpret_cast<char*>(&settings__),
+          reinterpret_cast<char*>(&other->settings__));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata Painter::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
 class TransportCatalog::_Internal {
  public:
   static const ::Serialize::TransportRouter& router_(const TransportCatalog* msg);
+  static const ::Serialize::Painter& painter_(const TransportCatalog* msg);
 };
 
 const ::Serialize::TransportRouter&
 TransportCatalog::_Internal::router_(const TransportCatalog* msg) {
   return *msg->router__;
+}
+const ::Serialize::Painter&
+TransportCatalog::_Internal::painter_(const TransportCatalog* msg) {
+  return *msg->painter__;
 }
 TransportCatalog::TransportCatalog(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena),
@@ -4605,12 +10561,20 @@ TransportCatalog::TransportCatalog(const TransportCatalog& from)
   } else {
     router__ = nullptr;
   }
+  if (from._internal_has_painter_()) {
+    painter__ = new ::Serialize::Painter(*from.painter__);
+  } else {
+    painter__ = nullptr;
+  }
   // @@protoc_insertion_point(copy_constructor:Serialize.TransportCatalog)
 }
 
 void TransportCatalog::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_TransportCatalog_transport_5fcatalog_2eproto.base);
-  router__ = nullptr;
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&router__) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&painter__) -
+      reinterpret_cast<char*>(&router__)) + sizeof(painter__));
 }
 
 TransportCatalog::~TransportCatalog() {
@@ -4622,6 +10586,7 @@ TransportCatalog::~TransportCatalog() {
 void TransportCatalog::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete router__;
+  if (this != internal_default_instance()) delete painter__;
 }
 
 void TransportCatalog::ArenaDtor(void* object) {
@@ -4651,6 +10616,10 @@ void TransportCatalog::Clear() {
     delete router__;
   }
   router__ = nullptr;
+  if (GetArena() == nullptr && painter__ != nullptr) {
+    delete painter__;
+  }
+  painter__ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -4689,6 +10658,13 @@ const char* TransportCatalog::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_router_(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .Serialize.Painter painter_ = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_painter_(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -4744,6 +10720,14 @@ failure:
         3, _Internal::router_(this), target, stream);
   }
 
+  // .Serialize.Painter painter_ = 4;
+  if (this->has_painter_()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        4, _Internal::painter_(this), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -4779,6 +10763,13 @@ size_t TransportCatalog::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *router__);
+  }
+
+  // .Serialize.Painter painter_ = 4;
+  if (this->has_painter_()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *painter__);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4817,6 +10808,9 @@ void TransportCatalog::MergeFrom(const TransportCatalog& from) {
   if (from.has_router_()) {
     _internal_mutable_router_()->::Serialize::TransportRouter::MergeFrom(from._internal_router_());
   }
+  if (from.has_painter_()) {
+    _internal_mutable_painter_()->::Serialize::Painter::MergeFrom(from._internal_painter_());
+  }
 }
 
 void TransportCatalog::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
@@ -4842,7 +10836,12 @@ void TransportCatalog::InternalSwap(TransportCatalog* other) {
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   stops__.InternalSwap(&other->stops__);
   buses__.InternalSwap(&other->buses__);
-  swap(router__, other->router__);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(TransportCatalog, painter__)
+      + sizeof(TransportCatalog::painter__)
+      - PROTOBUF_FIELD_OFFSET(TransportCatalog, router__)>(
+          reinterpret_cast<char*>(&router__),
+          reinterpret_cast<char*>(&other->router__));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata TransportCatalog::GetMetadata() const {
@@ -4900,6 +10899,57 @@ template<> PROTOBUF_NOINLINE ::Serialize::RoutingSettings* Arena::CreateMaybeMes
 }
 template<> PROTOBUF_NOINLINE ::Serialize::TransportRouter* Arena::CreateMaybeMessage< ::Serialize::TransportRouter >(Arena* arena) {
   return Arena::CreateMessageInternal< ::Serialize::TransportRouter >(arena);
+}
+template<> PROTOBUF_NOINLINE ::Serialize::SvgPoint* Arena::CreateMaybeMessage< ::Serialize::SvgPoint >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::Serialize::SvgPoint >(arena);
+}
+template<> PROTOBUF_NOINLINE ::Serialize::Rgb* Arena::CreateMaybeMessage< ::Serialize::Rgb >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::Serialize::Rgb >(arena);
+}
+template<> PROTOBUF_NOINLINE ::Serialize::Rgba* Arena::CreateMaybeMessage< ::Serialize::Rgba >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::Serialize::Rgba >(arena);
+}
+template<> PROTOBUF_NOINLINE ::Serialize::StrColor* Arena::CreateMaybeMessage< ::Serialize::StrColor >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::Serialize::StrColor >(arena);
+}
+template<> PROTOBUF_NOINLINE ::Serialize::SvgColor* Arena::CreateMaybeMessage< ::Serialize::SvgColor >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::Serialize::SvgColor >(arena);
+}
+template<> PROTOBUF_NOINLINE ::Serialize::BusesDict* Arena::CreateMaybeMessage< ::Serialize::BusesDict >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::Serialize::BusesDict >(arena);
+}
+template<> PROTOBUF_NOINLINE ::Serialize::StopCoord* Arena::CreateMaybeMessage< ::Serialize::StopCoord >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::Serialize::StopCoord >(arena);
+}
+template<> PROTOBUF_NOINLINE ::Serialize::BusColor* Arena::CreateMaybeMessage< ::Serialize::BusColor >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::Serialize::BusColor >(arena);
+}
+template<> PROTOBUF_NOINLINE ::Serialize::ObjectBase* Arena::CreateMaybeMessage< ::Serialize::ObjectBase >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::Serialize::ObjectBase >(arena);
+}
+template<> PROTOBUF_NOINLINE ::Serialize::Circle* Arena::CreateMaybeMessage< ::Serialize::Circle >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::Serialize::Circle >(arena);
+}
+template<> PROTOBUF_NOINLINE ::Serialize::Rectangle* Arena::CreateMaybeMessage< ::Serialize::Rectangle >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::Serialize::Rectangle >(arena);
+}
+template<> PROTOBUF_NOINLINE ::Serialize::Polyline* Arena::CreateMaybeMessage< ::Serialize::Polyline >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::Serialize::Polyline >(arena);
+}
+template<> PROTOBUF_NOINLINE ::Serialize::Text* Arena::CreateMaybeMessage< ::Serialize::Text >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::Serialize::Text >(arena);
+}
+template<> PROTOBUF_NOINLINE ::Serialize::Object* Arena::CreateMaybeMessage< ::Serialize::Object >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::Serialize::Object >(arena);
+}
+template<> PROTOBUF_NOINLINE ::Serialize::Document* Arena::CreateMaybeMessage< ::Serialize::Document >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::Serialize::Document >(arena);
+}
+template<> PROTOBUF_NOINLINE ::Serialize::RenderSettings* Arena::CreateMaybeMessage< ::Serialize::RenderSettings >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::Serialize::RenderSettings >(arena);
+}
+template<> PROTOBUF_NOINLINE ::Serialize::Painter* Arena::CreateMaybeMessage< ::Serialize::Painter >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::Serialize::Painter >(arena);
 }
 template<> PROTOBUF_NOINLINE ::Serialize::TransportCatalog* Arena::CreateMaybeMessage< ::Serialize::TransportCatalog >(Arena* arena) {
   return Arena::CreateMessageInternal< ::Serialize::TransportCatalog >(arena);

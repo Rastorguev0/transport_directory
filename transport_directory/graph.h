@@ -29,7 +29,7 @@ namespace Graph {
     DirectedWeightedGraph(size_t vertex_count = 0);
 
     Serialize::BusGraph Serialize() const;
-    DirectedWeightedGraph(const Serialize::BusGraph& grap);
+    DirectedWeightedGraph(const Serialize::BusGraph& graph);
 
     EdgeId AddEdge(const Edge<Weight>& edge);
 

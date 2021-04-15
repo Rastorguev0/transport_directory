@@ -91,7 +91,7 @@ namespace Requests {
 				visit(for_painter, item);
 			}
 
-			//dict["map"] = Json::Node{db.RenderRoute(for_painter.GetRoute())};
+			dict["map"] = Json::Node{db.RenderRoute(for_painter.GetRoute())};
 			dict["items"] = move(items);
 		}
 

@@ -171,6 +171,7 @@
     <ClCompile Include="json.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="painter.cpp" />
+    <ClCompile Include="p_serialize.cpp" />
     <ClCompile Include="requests.cpp" />
     <ClCompile Include="r_serialize.cpp" />
     <ClCompile Include="transport_catalog.pb.cc" />

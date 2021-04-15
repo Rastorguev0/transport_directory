@@ -21,6 +21,7 @@ TransportCatalog::TransportCatalog(istream& is) {
     };;
   }
   router_ = make_unique<TransportRouter>(tc.router_());
+  painter_ = make_unique<Paint::Painter>(tc.painter_());
 }
 
 void TransportCatalog::Serialize(ostream& os) const {
@@ -43,5 +44,6 @@ void TransportCatalog::Serialize(ostream& os) const {
     *(tc.add_buses_()) = result;
   }
   *(tc.mutable_router_()) = router_->Serialize();
+  *(tc.mutable_painter_()) = painter_->Serialize();
   tc.SerializeToOstream(&os);
 }

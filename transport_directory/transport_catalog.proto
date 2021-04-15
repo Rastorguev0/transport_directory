@@ -18,7 +18,7 @@ message BusRequest {
 message Edge {
 	uint32 from = 1;
 	uint32 to = 2;
-	double weight = 3;
+	float weight = 3;
 }
 
 message IncidenceList {
@@ -31,7 +31,7 @@ message BusGraph {
 }
 
 message RouteData {
-	double weight = 1;
+	float weight = 1;
 	bool has = 2;
 	uint32 prev_edge = 3;
 }
@@ -91,8 +91,132 @@ message TransportRouter {
 	repeated EdgeInfo edges_info_ = 6;
 }
 
+message SvgPoint {
+	float x = 1;
+	float y = 2;
+}
+
+message Rgb {
+	int32 red = 1;
+	int32 green = 2;
+	int32 blue = 3;
+}
+
+message Rgba {
+	Rgb color = 1;
+	float alpha = 2;
+}
+
+message StrColor {
+	string color = 1;
+}
+
+message SvgColor {
+	oneof variant {
+		StrColor str = 1;
+		Rgb rgb = 2;
+		Rgba rgba = 3;
+	}
+}
+
+message BusesDict {
+	string name = 1;
+	repeated string stops = 2;
+	repeated string endpoints = 3;
+	bool is_roundtrip = 4;
+}
+
+message StopCoord {
+	string name = 1;
+	SvgPoint point = 2;
+}
+
+message BusColor {
+	string name = 1;
+	SvgColor color = 2;
+}
+
+message ObjectBase {
+	SvgColor fill_color = 1;
+	SvgColor stroke_color = 2;
+	float stroke_width = 3;
+	bool has_stroke_line_cap = 4;
+	string stroke_line_cap = 5;
+	bool has_stroke_line_join = 6;
+	string stroke_line_join = 7;
+}
+
+message Circle {
+	ObjectBase base = 1;
+	SvgPoint center = 2;
+	float radius = 3;
+}
+
+message Rectangle {
+	ObjectBase base = 1;
+	SvgPoint lu_corner = 2;
+	float w = 3;
+	float h = 4;
+}
+
+message Polyline {
+	ObjectBase base = 1;
+	repeated SvgPoint points = 2;
+}
+
+message Text {
+	ObjectBase base = 1;
+	SvgPoint point = 2;
+	SvgPoint offset = 3;
+	uint32 font_size = 4;
+	bool has_font_family = 5;
+	string font_family = 6;
+	bool has_font_weight = 7;
+	string font_weight = 8;
+	string data = 9;
+}
+
+message Object {
+	oneof variant {
+		Circle circle = 1;
+		Rectangle rect = 2;
+		Polyline polyline = 3;
+		Text text = 4;
+	}
+}
+
+message Document {
+	repeated Object objects = 1;
+}
+
+message RenderSettings {
+	float width = 1;
+	float height = 2;
+	float padding = 3;
+	float stop_radius = 4;
+	float line_width = 5;
+	int32 stop_label_font_size = 6;
+	SvgPoint stop_label_offset = 7;
+	SvgColor underlayer_color = 8;
+	float underlayer_width = 9;
+	repeated SvgColor color_palette = 10;
+	int32 bus_label_font_size = 11;
+	SvgPoint bus_label_offset = 12;
+	repeated string layers = 13;
+	float outer_margin = 14;
+}
+
+message Painter {
+	RenderSettings settings_ = 1;
+	repeated BusesDict buses_dict_ = 2;
+	repeated StopCoord stops_coords_ = 3;
+	repeated BusColor bus_colors_ = 4;
+	Document base_map_ = 5;
+}
+
 message TransportCatalog {
 	repeated StopRequest stops_ = 1;
 	repeated BusRequest buses_ = 2;
 	TransportRouter router_ = 3;
+	Painter painter_ = 4;
 }

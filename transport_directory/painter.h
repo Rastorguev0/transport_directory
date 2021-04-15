@@ -3,6 +3,7 @@
 #include "svg.h"
 #include "sphere.h"
 #include "descriptions.h"
+#include "transport_catalog.pb.h"
 
 #include <map>
 #include <vector>
@@ -44,6 +45,9 @@ namespace Paint {
     Painter(const Json::Dict& render_settings_json,
       std::shared_ptr<Descriptions::BusesDict> buses,
       std::shared_ptr<Descriptions::StopsDict> stops);
+
+    Serialize::Painter Serialize() const;
+    Painter(const Serialize::Painter& painter);
 
     std::string Paint() const;
     std::string PaintRoute(const RouteChain& route) const;
