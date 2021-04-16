@@ -148,39 +148,45 @@
   <ItemGroup>
     <ClInclude Include="aligner.h" />
     <ClInclude Include="descriptions.h" />
+    <ClInclude Include="descriptions.pb.h" />
     <ClInclude Include="graph.h" />
+    <ClInclude Include="graph.pb.h" />
     <ClInclude Include="json.h" />
     <ClInclude Include="painter.h" />
+    <ClInclude Include="painter.pb.h" />
     <ClInclude Include="profile.h" />
     <ClInclude Include="requests.h" />
     <ClInclude Include="rnd_big_data.h" />
     <ClInclude Include="router.h" />
     <ClInclude Include="sphere.h" />
     <ClInclude Include="svg.h" />
+    <ClInclude Include="svg.pb.h" />
     <ClInclude Include="test_all.h" />
     <ClInclude Include="test_runner.h" />
     <ClInclude Include="transport_catalog.h" />
     <ClInclude Include="transport_catalog.pb.h" />
     <ClInclude Include="transport_router.h" />
+    <ClInclude Include="transport_router.pb.h" />
     <ClInclude Include="utils.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="aligner.cpp" />
     <ClCompile Include="descriptions.cpp" />
-    <ClCompile Include="g_serialize.cpp" />
+    <ClCompile Include="descriptions.pb.cc" />
+    <ClCompile Include="graph.pb.cc" />
     <ClCompile Include="json.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="painter.cpp" />
-    <ClCompile Include="p_serialize.cpp" />
+    <ClCompile Include="painter.pb.cc" />
     <ClCompile Include="requests.cpp" />
-    <ClCompile Include="r_serialize.cpp" />
-    <ClCompile Include="transport_catalog.pb.cc" />
-    <ClCompile Include="tr_serialize.cpp" />
-    <ClCompile Include="tc_serialize.cpp" />
+    <ClCompile Include="serialize.cpp" />
     <ClCompile Include="sphere.cpp" />
     <ClCompile Include="svg.cpp" />
+    <ClCompile Include="svg.pb.cc" />
     <ClCompile Include="transport_catalog.cpp" />
+    <ClCompile Include="transport_catalog.pb.cc" />
     <ClCompile Include="transport_router.cpp" />
+    <ClCompile Include="transport_router.pb.cc" />
     <ClCompile Include="utils.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -6,7 +6,6 @@
 #include "painter.h"
 #include "utils.h"
 #include "sphere.h"
-#include "transport_catalog.pb.h"
 
 #include <optional>
 #include <set>

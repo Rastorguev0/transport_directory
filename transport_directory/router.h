@@ -1,7 +1,7 @@
 #pragma once
 
 #include "graph.h"
-#include "transport_catalog.pb.h"
+#include "graph.pb.h"
 
 #include <algorithm>
 #include <cassert>
@@ -22,8 +22,8 @@ namespace Graph {
   public:
     Router(const Graph& graph);
 
-    Serialize::Router Serialize() const;
-    Router(const Serialize::Router& router, const Graph& graph);
+    GraphProto::Router Serialize() const;
+    Router(const GraphProto::Router& router, const Graph& graph);
 
     using RouteId = uint64_t;
 

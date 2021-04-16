@@ -1,7 +1,7 @@
 #pragma once
 
 #include "utils.h"
-#include "transport_catalog.pb.h"
+#include "graph.pb.h"
 
 #include <cstdlib>
 #include <deque>
@@ -28,8 +28,8 @@ namespace Graph {
   public:
     DirectedWeightedGraph(size_t vertex_count = 0);
 
-    Serialize::BusGraph Serialize() const;
-    DirectedWeightedGraph(const Serialize::BusGraph& graph);
+    GraphProto::DirectedWeightedGraph Serialize() const;
+    DirectedWeightedGraph(const GraphProto::DirectedWeightedGraph& graph);
 
     EdgeId AddEdge(const Edge<Weight>& edge);
 
