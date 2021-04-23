@@ -122,7 +122,7 @@
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <AdditionalIncludeDirectories>C:\Users\Redaciple\source\protobuf\include</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4996; 4099</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -146,48 +146,66 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="address.pb.h" />
     <ClInclude Include="aligner.h" />
+    <ClInclude Include="companies_catalog.h" />
+    <ClInclude Include="company.pb.h" />
+    <ClInclude Include="database.pb.h" />
     <ClInclude Include="descriptions.h" />
     <ClInclude Include="descriptions.pb.h" />
     <ClInclude Include="graph.h" />
     <ClInclude Include="graph.pb.h" />
     <ClInclude Include="json.h" />
+    <ClInclude Include="name.pb.h" />
     <ClInclude Include="painter.h" />
     <ClInclude Include="painter.pb.h" />
+    <ClInclude Include="phone.pb.h" />
     <ClInclude Include="profile.h" />
     <ClInclude Include="requests.h" />
-    <ClInclude Include="rnd_big_data.h" />
     <ClInclude Include="router.h" />
+    <ClInclude Include="rubric.pb.h" />
     <ClInclude Include="sphere.h" />
+    <ClInclude Include="sphere.pb.h" />
     <ClInclude Include="svg.h" />
     <ClInclude Include="svg.pb.h" />
-    <ClInclude Include="test_all.h" />
     <ClInclude Include="test_runner.h" />
     <ClInclude Include="transport_catalog.h" />
     <ClInclude Include="transport_catalog.pb.h" />
     <ClInclude Include="transport_router.h" />
     <ClInclude Include="transport_router.pb.h" />
+    <ClInclude Include="url.pb.h" />
     <ClInclude Include="utils.h" />
+    <ClInclude Include="working_time.pb.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="address.pb.cc" />
     <ClCompile Include="aligner.cpp" />
+    <ClCompile Include="companies_catalog.cpp" />
+    <ClCompile Include="company.pb.cc" />
+    <ClCompile Include="database.pb.cc" />
     <ClCompile Include="descriptions.cpp" />
     <ClCompile Include="descriptions.pb.cc" />
     <ClCompile Include="graph.pb.cc" />
     <ClCompile Include="json.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="name.pb.cc" />
     <ClCompile Include="painter.cpp" />
     <ClCompile Include="painter.pb.cc" />
+    <ClCompile Include="phone.pb.cc" />
     <ClCompile Include="requests.cpp" />
+    <ClCompile Include="rubric.pb.cc" />
     <ClCompile Include="serialize.cpp" />
     <ClCompile Include="sphere.cpp" />
+    <ClCompile Include="sphere.pb.cc" />
     <ClCompile Include="svg.cpp" />
     <ClCompile Include="svg.pb.cc" />
     <ClCompile Include="transport_catalog.cpp" />
     <ClCompile Include="transport_catalog.pb.cc" />
     <ClCompile Include="transport_router.cpp" />
     <ClCompile Include="transport_router.pb.cc" />
+    <ClCompile Include="url.pb.cc" />
     <ClCompile Include="utils.cpp" />
+    <ClCompile Include="working_time.pb.cc" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="..\..\..\protobuf\lib\libprotobufd.lib" />

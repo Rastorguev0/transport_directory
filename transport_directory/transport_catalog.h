@@ -6,6 +6,7 @@
 #include "painter.h"
 #include "utils.h"
 #include "sphere.h"
+#include "companies_catalog.h"
 
 #include <optional>
 #include <set>
@@ -36,7 +37,8 @@ private:
 public:
 	TransportCatalog(std::vector<Descriptions::InputQuery> data,
 		const Json::Dict& routing_settings_json,
-		const Json::Dict& render_settings_json);
+		const Json::Dict& render_settings_json,
+		const Json::Dict& yellow_pages_json);
 
 	TransportCatalog(std::istream& is);
 	void Serialize(std::ostream& os) const;
@@ -45,6 +47,8 @@ public:
 	const Bus* GetBus(const std::string& name) const;
 
 	std::optional<TransportRouter::RouteInfo> FindRoute(const std::string& stop_from, const std::string& stop_to) const;
+
+	std::vector<std::string> FindCompanies(const CompanyQuery::Company& model) const;
 
 	std::string RenderMap() const;
 	std::string RenderRoute(const Paint::RouteChain& links) const;
@@ -62,6 +66,8 @@ private:
 
 	std::unordered_map<std::string, Stop> stops_;
 	std::unordered_map<std::string, Bus> buses_;
+
 	std::unique_ptr<TransportRouter> router_;
 	std::unique_ptr<Paint::Painter> painter_;
+	std::unique_ptr<CompaniesCatalog> companies_;
 };

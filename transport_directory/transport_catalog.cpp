@@ -1,12 +1,15 @@
 #include "transport_catalog.h"
 #include "transport_catalog.pb.h"
 #include <memory>
+#include <algorithm>
 
 using namespace std;
 
 TransportCatalog::TransportCatalog(vector<Descriptions::InputQuery> data,
   const Json::Dict& routing_settings_json,
-  const Json::Dict& render_settings_json) {
+  const Json::Dict& render_settings_json,
+  const Json::Dict& yellow_pages_json) {
+
   auto stops_end = partition(begin(data), end(data), [](const auto& item) {
     return holds_alternative<Descriptions::Stop>(item);
     });
@@ -37,6 +40,9 @@ TransportCatalog::TransportCatalog(vector<Descriptions::InputQuery> data,
 
   router_ = make_unique<TransportRouter>(*stops_dict, *buses_dict, routing_settings_json);
   painter_ = make_unique<Paint::Painter>(render_settings_json, buses_dict, stops_dict);
+  companies_ = make_unique<CompaniesCatalog>(
+    yellow_pages_json.at("rubrics").AsMap(), yellow_pages_json.at("companies").AsArray()
+    );
 }
 
 
@@ -50,6 +56,18 @@ const TransportCatalog::Bus* TransportCatalog::GetBus(const string& name) const 
 
 optional<TransportRouter::RouteInfo> TransportCatalog::FindRoute(const string& stop_from, const string& stop_to) const {
   return router_->FindRoute(stop_from, stop_to);
+}
+
+vector<string> TransportCatalog::FindCompanies(const CompanyQuery::Company& model) const {
+  vector<string> result;
+  auto companies = companies_->FindCompanies(model);
+  result.reserve(companies.size());
+  for (auto company : companies) {
+    result.push_back(find_if(company->names().begin(),
+                             company->names().end(),
+      [](const YellowPages::Name& n) { return n.type() == YellowPages::Name_Type_MAIN; })->value());
+  }
+  return result;
 }
 
 int TransportCatalog::ComputeRoadRouteLength(

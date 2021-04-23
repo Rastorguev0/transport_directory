@@ -69,19 +69,40 @@
     <ClInclude Include="profile.h">
       <Filter>Header Files\maintenence</Filter>
     </ClInclude>
-    <ClInclude Include="test_all.h">
-      <Filter>Header Files\maintenence</Filter>
-    </ClInclude>
-    <ClInclude Include="rnd_big_data.h">
-      <Filter>Header Files\maintenence</Filter>
-    </ClInclude>
     <ClInclude Include="aligner.h">
       <Filter>Header Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="companies_catalog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="address.pb.h">
+      <Filter>Header Files\proto</Filter>
+    </ClInclude>
+    <ClInclude Include="company.pb.h">
+      <Filter>Header Files\proto</Filter>
+    </ClInclude>
+    <ClInclude Include="database.pb.h">
+      <Filter>Header Files\proto</Filter>
+    </ClInclude>
+    <ClInclude Include="descriptions.pb.h">
+      <Filter>Header Files\proto</Filter>
     </ClInclude>
     <ClInclude Include="graph.pb.h">
       <Filter>Header Files\proto</Filter>
     </ClInclude>
+    <ClInclude Include="name.pb.h">
+      <Filter>Header Files\proto</Filter>
+    </ClInclude>
     <ClInclude Include="painter.pb.h">
+      <Filter>Header Files\proto</Filter>
+    </ClInclude>
+    <ClInclude Include="phone.pb.h">
+      <Filter>Header Files\proto</Filter>
+    </ClInclude>
+    <ClInclude Include="rubric.pb.h">
+      <Filter>Header Files\proto</Filter>
+    </ClInclude>
+    <ClInclude Include="sphere.pb.h">
       <Filter>Header Files\proto</Filter>
     </ClInclude>
     <ClInclude Include="svg.pb.h">
@@ -90,10 +111,13 @@
     <ClInclude Include="transport_catalog.pb.h">
       <Filter>Header Files\proto</Filter>
     </ClInclude>
-    <ClInclude Include="descriptions.pb.h">
+    <ClInclude Include="transport_router.pb.h">
       <Filter>Header Files\proto</Filter>
     </ClInclude>
-    <ClInclude Include="transport_router.pb.h">
+    <ClInclude Include="url.pb.h">
+      <Filter>Header Files\proto</Filter>
+    </ClInclude>
+    <ClInclude Include="working_time.pb.h">
       <Filter>Header Files\proto</Filter>
     </ClInclude>
   </ItemGroup>
@@ -128,10 +152,43 @@
     <ClCompile Include="aligner.cpp">
       <Filter>Source Files\graphics</Filter>
     </ClCompile>
+    <ClCompile Include="transport_router.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="serialize.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="companies_catalog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="address.pb.cc">
+      <Filter>Source Files\proto</Filter>
+    </ClCompile>
+    <ClCompile Include="company.pb.cc">
+      <Filter>Source Files\proto</Filter>
+    </ClCompile>
+    <ClCompile Include="database.pb.cc">
+      <Filter>Source Files\proto</Filter>
+    </ClCompile>
+    <ClCompile Include="descriptions.pb.cc">
+      <Filter>Source Files\proto</Filter>
+    </ClCompile>
     <ClCompile Include="graph.pb.cc">
       <Filter>Source Files\proto</Filter>
     </ClCompile>
+    <ClCompile Include="name.pb.cc">
+      <Filter>Source Files\proto</Filter>
+    </ClCompile>
     <ClCompile Include="painter.pb.cc">
+      <Filter>Source Files\proto</Filter>
+    </ClCompile>
+    <ClCompile Include="phone.pb.cc">
+      <Filter>Source Files\proto</Filter>
+    </ClCompile>
+    <ClCompile Include="rubric.pb.cc">
+      <Filter>Source Files\proto</Filter>
+    </ClCompile>
+    <ClCompile Include="sphere.pb.cc">
       <Filter>Source Files\proto</Filter>
     </ClCompile>
     <ClCompile Include="svg.pb.cc">
@@ -143,14 +200,11 @@
     <ClCompile Include="transport_router.pb.cc">
       <Filter>Source Files\proto</Filter>
     </ClCompile>
-    <ClCompile Include="serialize.cpp">
+    <ClCompile Include="url.pb.cc">
       <Filter>Source Files\proto</Filter>
     </ClCompile>
-    <ClCompile Include="descriptions.pb.cc">
+    <ClCompile Include="working_time.pb.cc">
       <Filter>Source Files\proto</Filter>
-    </ClCompile>
-    <ClCompile Include="transport_router.cpp">
-      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

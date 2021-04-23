@@ -1,15 +1,25 @@
 #include "descriptions.pb.h"
-#include "descriptions.h"
 #include "graph.pb.h"
-#include "graph.h"
 #include "painter.pb.h"
-#include "painter.h"
 #include "svg.pb.h"
-#include "svg.h"
 #include "transport_catalog.pb.h"
-#include "transport_catalog.h"
 #include "transport_router.pb.h"
+#include "address.pb.h"
+#include "company.pb.h"
+#include "database.pb.h"
+#include "name.pb.h"
+#include "phone.pb.h"
+#include "rubric.pb.h"
+#include "sphere.pb.h"
+#include "url.pb.h"
+#include "working_time.pb.h"
+#include "graph.h"
+#include "svg.h"
+#include "painter.h"
+#include "descriptions.h"
 #include "transport_router.h"
+#include "transport_catalog.h"
+#include "companies_catalog.h"
 
 using namespace std;
 
@@ -348,6 +358,34 @@ Paint::Painter::Painter(const TCProto::Painter& proto)
   base_map_(MakeDocument()) {}
 
 
+/* COMPANIES_CATALOG SERIALIZATION */
+
+YellowPages::Database CompaniesCatalog::Serialize() const {
+  YellowPages::Database proto;
+  for (const auto& company : companies_) {
+    (*proto.add_companies()) = company;
+    
+  }
+  for (const auto& [number, rubric] : rubrics_mapping_) {
+    auto& protorubric = proto.mutable_rubrics()->operator[](number);
+    protorubric.set_name(rubric);
+  }
+  return proto;
+}
+
+CompaniesCatalog::CompaniesCatalog(const YellowPages::Database& proto)
+{
+  for (const auto& item : proto.rubrics()) {
+    rubrics_mapping_[item.first] = item.second.name();
+  }
+  companies_.reserve(proto.companies_size());
+  for (auto& protocompany : proto.companies()) {
+    companies_.push_back(protocompany);
+    Distribute(&companies_.back());
+  }
+}
+
+
 /* TRANSPORT_CATALOG SERIALIZATION */
 
 void TransportCatalog::Serialize(ostream& os) const {
@@ -371,6 +409,7 @@ void TransportCatalog::Serialize(ostream& os) const {
 
   (*db_proto.mutable_router()) = router_->Serialize();
   (*db_proto.mutable_painter()) = painter_->Serialize();
+  (*db_proto.mutable_companies()) = companies_->Serialize();
 
   db_proto.SerializeToOstream(&os);
 }
@@ -396,4 +435,5 @@ TransportCatalog::TransportCatalog(istream& is) {
 
   router_ = make_unique<TransportRouter>(proto.router());
   painter_ = make_unique<Paint::Painter>(proto.painter());
+  companies_ = make_unique<CompaniesCatalog>(move(proto.companies()));
 }

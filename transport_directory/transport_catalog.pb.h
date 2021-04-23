@@ -33,6 +33,7 @@
 #include <google/protobuf/unknown_field_set.h>
 #include "painter.pb.h"
 #include "transport_router.pb.h"
+#include "database.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto
@@ -547,6 +548,7 @@ class TransportCatalog PROTOBUF_FINAL :
     kBusesFieldNumber = 2,
     kRouterFieldNumber = 3,
     kPainterFieldNumber = 4,
+    kCompaniesFieldNumber = 5,
   };
   // repeated .TCProto.StopResponse stops = 1;
   int stops_size() const;
@@ -620,6 +622,24 @@ class TransportCatalog PROTOBUF_FINAL :
       ::TCProto::Painter* painter);
   ::TCProto::Painter* unsafe_arena_release_painter();
 
+  // .YellowPages.Database companies = 5;
+  bool has_companies() const;
+  private:
+  bool _internal_has_companies() const;
+  public:
+  void clear_companies();
+  const ::YellowPages::Database& companies() const;
+  ::YellowPages::Database* release_companies();
+  ::YellowPages::Database* mutable_companies();
+  void set_allocated_companies(::YellowPages::Database* companies);
+  private:
+  const ::YellowPages::Database& _internal_companies() const;
+  ::YellowPages::Database* _internal_mutable_companies();
+  public:
+  void unsafe_arena_set_allocated_companies(
+      ::YellowPages::Database* companies);
+  ::YellowPages::Database* unsafe_arena_release_companies();
+
   // @@protoc_insertion_point(class_scope:TCProto.TransportCatalog)
  private:
   class _Internal;
@@ -631,6 +651,7 @@ class TransportCatalog PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::TCProto::BusResponse > buses_;
   ::TCProto::TransportRouter* router_;
   ::TCProto::Painter* painter_;
+  ::YellowPages::Database* companies_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_transport_5fcatalog_2eproto;
 };
@@ -1159,6 +1180,83 @@ inline void TransportCatalog::set_allocated_painter(::TCProto::Painter* painter)
   }
   painter_ = painter;
   // @@protoc_insertion_point(field_set_allocated:TCProto.TransportCatalog.painter)
+}
+
+// .YellowPages.Database companies = 5;
+inline bool TransportCatalog::_internal_has_companies() const {
+  return this != internal_default_instance() && companies_ != nullptr;
+}
+inline bool TransportCatalog::has_companies() const {
+  return _internal_has_companies();
+}
+inline const ::YellowPages::Database& TransportCatalog::_internal_companies() const {
+  const ::YellowPages::Database* p = companies_;
+  return p != nullptr ? *p : reinterpret_cast<const ::YellowPages::Database&>(
+      ::YellowPages::_Database_default_instance_);
+}
+inline const ::YellowPages::Database& TransportCatalog::companies() const {
+  // @@protoc_insertion_point(field_get:TCProto.TransportCatalog.companies)
+  return _internal_companies();
+}
+inline void TransportCatalog::unsafe_arena_set_allocated_companies(
+    ::YellowPages::Database* companies) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(companies_);
+  }
+  companies_ = companies;
+  if (companies) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:TCProto.TransportCatalog.companies)
+}
+inline ::YellowPages::Database* TransportCatalog::release_companies() {
+  
+  ::YellowPages::Database* temp = companies_;
+  companies_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::YellowPages::Database* TransportCatalog::unsafe_arena_release_companies() {
+  // @@protoc_insertion_point(field_release:TCProto.TransportCatalog.companies)
+  
+  ::YellowPages::Database* temp = companies_;
+  companies_ = nullptr;
+  return temp;
+}
+inline ::YellowPages::Database* TransportCatalog::_internal_mutable_companies() {
+  
+  if (companies_ == nullptr) {
+    auto* p = CreateMaybeMessage<::YellowPages::Database>(GetArena());
+    companies_ = p;
+  }
+  return companies_;
+}
+inline ::YellowPages::Database* TransportCatalog::mutable_companies() {
+  // @@protoc_insertion_point(field_mutable:TCProto.TransportCatalog.companies)
+  return _internal_mutable_companies();
+}
+inline void TransportCatalog::set_allocated_companies(::YellowPages::Database* companies) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(companies_);
+  }
+  if (companies) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(companies)->GetArena();
+    if (message_arena != submessage_arena) {
+      companies = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, companies, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  companies_ = companies;
+  // @@protoc_insertion_point(field_set_allocated:TCProto.TransportCatalog.companies)
 }
 
 #ifdef __GNUC__

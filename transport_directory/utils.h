@@ -41,4 +41,22 @@ const V* GetValuePointer(const std::unordered_map<K, V>& map, const K& key) {
   }
 }
 
+template <typename T>
+std::unordered_set<T> Intersect(const std::unordered_set<T>& set1, const std::unordered_set<T>& set2) {
+  const std::unordered_set<T> *min_ptr, *max_ptr;
+  if (set1.size() < set2.size()) {
+    min_ptr = &set1;
+    max_ptr = &set2;
+  }
+  else {
+    min_ptr = &set2;
+    max_ptr = &set1;
+  }
+  std::unordered_set<T> result;
+  for (const auto& item : *min_ptr) {
+    if (max_ptr->count(item)) result.insert(item);
+  }
+  return result;
+}
+
 std::string_view Strip(std::string_view line);

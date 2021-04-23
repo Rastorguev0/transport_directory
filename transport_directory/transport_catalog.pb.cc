@@ -18,6 +18,7 @@ extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE
 extern PROTOBUF_INTERNAL_EXPORT_painter_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<4> scc_info_Painter_painter_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_StopResponse_transport_5fcatalog_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_transport_5frouter_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<6> scc_info_TransportRouter_transport_5frouter_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_database_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Database_database_2eproto;
 namespace TCProto {
 class StopResponseDefaultTypeInternal {
  public:
@@ -68,12 +69,13 @@ static void InitDefaultsscc_info_TransportCatalog_transport_5fcatalog_2eproto() 
   }
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<4> scc_info_TransportCatalog_transport_5fcatalog_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 4, 0, InitDefaultsscc_info_TransportCatalog_transport_5fcatalog_2eproto}, {
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<5> scc_info_TransportCatalog_transport_5fcatalog_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 5, 0, InitDefaultsscc_info_TransportCatalog_transport_5fcatalog_2eproto}, {
       &scc_info_StopResponse_transport_5fcatalog_2eproto.base,
       &scc_info_BusResponse_transport_5fcatalog_2eproto.base,
       &scc_info_TransportRouter_transport_5frouter_2eproto.base,
-      &scc_info_Painter_painter_2eproto.base,}};
+      &scc_info_Painter_painter_2eproto.base,
+      &scc_info_Database_database_2eproto.base,}};
 
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_transport_5fcatalog_2eproto[3];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_transport_5fcatalog_2eproto = nullptr;
@@ -106,6 +108,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_transport_5fcatalog_2eproto::o
   PROTOBUF_FIELD_OFFSET(::TCProto::TransportCatalog, buses_),
   PROTOBUF_FIELD_OFFSET(::TCProto::TransportCatalog, router_),
   PROTOBUF_FIELD_OFFSET(::TCProto::TransportCatalog, painter_),
+  PROTOBUF_FIELD_OFFSET(::TCProto::TransportCatalog, companies_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::TCProto::StopResponse)},
@@ -121,18 +124,21 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 
 const char descriptor_table_protodef_transport_5fcatalog_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\027transport_catalog.proto\022\007TCProto\032\rpain"
-  "ter.proto\032\026transport_router.proto\"/\n\014Sto"
-  "pResponse\022\014\n\004name\030\001 \001(\t\022\021\n\tbus_names\030\002 \003"
-  "(\t\"\177\n\013BusResponse\022\014\n\004name\030\001 \001(\t\022\022\n\nstop_"
-  "count\030\002 \001(\r\022\031\n\021unique_stop_count\030\003 \001(\r\022\031"
-  "\n\021road_route_length\030\004 \001(\r\022\030\n\020geo_route_l"
-  "ength\030\005 \001(\001\"\252\001\n\020TransportCatalog\022$\n\005stop"
-  "s\030\001 \003(\0132\025.TCProto.StopResponse\022#\n\005buses\030"
-  "\002 \003(\0132\024.TCProto.BusResponse\022(\n\006router\030\003 "
-  "\001(\0132\030.TCProto.TransportRouter\022!\n\007painter"
-  "\030\004 \001(\0132\020.TCProto.Painterb\006proto3"
+  "ter.proto\032\026transport_router.proto\032\016datab"
+  "ase.proto\"/\n\014StopResponse\022\014\n\004name\030\001 \001(\t\022"
+  "\021\n\tbus_names\030\002 \003(\t\"\177\n\013BusResponse\022\014\n\004nam"
+  "e\030\001 \001(\t\022\022\n\nstop_count\030\002 \001(\r\022\031\n\021unique_st"
+  "op_count\030\003 \001(\r\022\031\n\021road_route_length\030\004 \001("
+  "\r\022\030\n\020geo_route_length\030\005 \001(\001\"\324\001\n\020Transpor"
+  "tCatalog\022$\n\005stops\030\001 \003(\0132\025.TCProto.StopRe"
+  "sponse\022#\n\005buses\030\002 \003(\0132\024.TCProto.BusRespo"
+  "nse\022(\n\006router\030\003 \001(\0132\030.TCProto.TransportR"
+  "outer\022!\n\007painter\030\004 \001(\0132\020.TCProto.Painter"
+  "\022(\n\tcompanies\030\005 \001(\0132\025.YellowPages.Databa"
+  "seb\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_transport_5fcatalog_2eproto_deps[2] = {
+static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_transport_5fcatalog_2eproto_deps[3] = {
+  &::descriptor_table_database_2eproto,
   &::descriptor_table_painter_2eproto,
   &::descriptor_table_transport_5frouter_2eproto,
 };
@@ -143,8 +149,8 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_tra
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_transport_5fcatalog_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_transport_5fcatalog_2eproto = {
-  false, false, descriptor_table_protodef_transport_5fcatalog_2eproto, "transport_catalog.proto", 432,
-  &descriptor_table_transport_5fcatalog_2eproto_once, descriptor_table_transport_5fcatalog_2eproto_sccs, descriptor_table_transport_5fcatalog_2eproto_deps, 3, 2,
+  false, false, descriptor_table_protodef_transport_5fcatalog_2eproto, "transport_catalog.proto", 490,
+  &descriptor_table_transport_5fcatalog_2eproto_once, descriptor_table_transport_5fcatalog_2eproto_sccs, descriptor_table_transport_5fcatalog_2eproto_deps, 3, 3,
   schemas, file_default_instances, TableStruct_transport_5fcatalog_2eproto::offsets,
   file_level_metadata_transport_5fcatalog_2eproto, 3, file_level_enum_descriptors_transport_5fcatalog_2eproto, file_level_service_descriptors_transport_5fcatalog_2eproto,
 };
@@ -714,6 +720,7 @@ class TransportCatalog::_Internal {
  public:
   static const ::TCProto::TransportRouter& router(const TransportCatalog* msg);
   static const ::TCProto::Painter& painter(const TransportCatalog* msg);
+  static const ::YellowPages::Database& companies(const TransportCatalog* msg);
 };
 
 const ::TCProto::TransportRouter&
@@ -723,6 +730,10 @@ TransportCatalog::_Internal::router(const TransportCatalog* msg) {
 const ::TCProto::Painter&
 TransportCatalog::_Internal::painter(const TransportCatalog* msg) {
   return *msg->painter_;
+}
+const ::YellowPages::Database&
+TransportCatalog::_Internal::companies(const TransportCatalog* msg) {
+  return *msg->companies_;
 }
 void TransportCatalog::clear_router() {
   if (GetArena() == nullptr && router_ != nullptr) {
@@ -735,6 +746,12 @@ void TransportCatalog::clear_painter() {
     delete painter_;
   }
   painter_ = nullptr;
+}
+void TransportCatalog::clear_companies() {
+  if (GetArena() == nullptr && companies_ != nullptr) {
+    delete companies_;
+  }
+  companies_ = nullptr;
 }
 TransportCatalog::TransportCatalog(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena),
@@ -759,6 +776,11 @@ TransportCatalog::TransportCatalog(const TransportCatalog& from)
   } else {
     painter_ = nullptr;
   }
+  if (from._internal_has_companies()) {
+    companies_ = new ::YellowPages::Database(*from.companies_);
+  } else {
+    companies_ = nullptr;
+  }
   // @@protoc_insertion_point(copy_constructor:TCProto.TransportCatalog)
 }
 
@@ -766,8 +788,8 @@ void TransportCatalog::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_TransportCatalog_transport_5fcatalog_2eproto.base);
   ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
       reinterpret_cast<char*>(&router_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&painter_) -
-      reinterpret_cast<char*>(&router_)) + sizeof(painter_));
+      0, static_cast<size_t>(reinterpret_cast<char*>(&companies_) -
+      reinterpret_cast<char*>(&router_)) + sizeof(companies_));
 }
 
 TransportCatalog::~TransportCatalog() {
@@ -780,6 +802,7 @@ void TransportCatalog::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete router_;
   if (this != internal_default_instance()) delete painter_;
+  if (this != internal_default_instance()) delete companies_;
 }
 
 void TransportCatalog::ArenaDtor(void* object) {
@@ -813,6 +836,10 @@ void TransportCatalog::Clear() {
     delete painter_;
   }
   painter_ = nullptr;
+  if (GetArena() == nullptr && companies_ != nullptr) {
+    delete companies_;
+  }
+  companies_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -858,6 +885,13 @@ const char* TransportCatalog::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_painter(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .YellowPages.Database companies = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          ptr = ctx->ParseMessage(_internal_mutable_companies(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -921,6 +955,14 @@ failure:
         4, _Internal::painter(this), target, stream);
   }
 
+  // .YellowPages.Database companies = 5;
+  if (this->has_companies()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        5, _Internal::companies(this), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -965,6 +1007,13 @@ size_t TransportCatalog::ByteSizeLong() const {
         *painter_);
   }
 
+  // .YellowPages.Database companies = 5;
+  if (this->has_companies()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *companies_);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
         _internal_metadata_, total_size, &_cached_size_);
@@ -1004,6 +1053,9 @@ void TransportCatalog::MergeFrom(const TransportCatalog& from) {
   if (from.has_painter()) {
     _internal_mutable_painter()->::TCProto::Painter::MergeFrom(from._internal_painter());
   }
+  if (from.has_companies()) {
+    _internal_mutable_companies()->::YellowPages::Database::MergeFrom(from._internal_companies());
+  }
 }
 
 void TransportCatalog::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
@@ -1030,8 +1082,8 @@ void TransportCatalog::InternalSwap(TransportCatalog* other) {
   stops_.InternalSwap(&other->stops_);
   buses_.InternalSwap(&other->buses_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(TransportCatalog, painter_)
-      + sizeof(TransportCatalog::painter_)
+      PROTOBUF_FIELD_OFFSET(TransportCatalog, companies_)
+      + sizeof(TransportCatalog::companies_)
       - PROTOBUF_FIELD_OFFSET(TransportCatalog, router_)>(
           reinterpret_cast<char*>(&router_),
           reinterpret_cast<char*>(&other->router_));

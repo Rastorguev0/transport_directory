@@ -1,0 +1,222 @@
+#include "companies_catalog.h"
+#include "utils.h"
+
+using namespace std;
+
+YellowPages::Phone_Type PhoneTypeFromString(const string& str) {
+  if (str == "PHONE") return YellowPages::Phone_Type_PHONE;
+  else if (str == "FAX") return YellowPages::Phone_Type_FAX;
+  else throw runtime_error("Unknown phone type");
+}
+
+YellowPages::Name_Type NameTypeFromString(const string& str) {
+  if (str == "MAIN") return YellowPages::Name_Type_MAIN;
+  else if (str == "SHORT") return YellowPages::Name_Type_SHORT;
+  else if (str == "SYNONYM") return YellowPages::Name_Type_SYNONYM;
+  else throw runtime_error("Unknown name type");
+}
+
+YellowPages::Name ReadName(const Json::Dict& properties) {
+  YellowPages::Name protoname;
+  protoname.set_value(properties.at("value").AsString());
+  if (properties.count("type"))
+    protoname.set_type(NameTypeFromString(properties.at("type").AsString()));
+  return protoname;
+}
+
+YellowPages::Phone ReadPhone(const Json::Dict& properties) {
+  YellowPages::Phone protophone;
+  if (properties.count("type")) {
+    protophone.set_type(PhoneTypeFromString(properties.at("type").AsString()));
+  }
+  if (properties.count("country_code")) {
+    protophone.set_country_code(properties.at("country_code").AsString());
+  }
+  if (properties.count("local_code")) {
+    protophone.set_local_code(properties.at("local_code").AsString());
+  }
+  if (properties.count("number")) {
+    protophone.set_number(properties.at("number").AsString());
+  }
+  if (properties.count("extension")) {
+    protophone.set_extension(properties.at("extension").AsString());
+  }
+  return protophone;
+}
+
+YellowPages::Url ReadUrl(const Json::Dict& properties) {
+  YellowPages::Url protourl;
+  protourl.set_value(properties.at("value").AsString());
+  return protourl;
+}
+
+YellowPages::Company ReadCompany(const Json::Dict& properties) {
+  YellowPages::Company protocompany;
+  if (properties.count("names")) {
+    for (const auto& name_json : properties.at("names").AsArray()) {
+      (*protocompany.add_names()) = ReadName(name_json.AsMap());
+    }
+  }
+  if (properties.count("phones")) {
+    for (const auto& phone_json : properties.at("phones").AsArray()) {
+      (*protocompany.add_phones()) = ReadPhone(phone_json.AsMap());
+    }
+  }
+  if (properties.count("urls")) {
+    for (const auto& url_json : properties.at("urls").AsArray()) {
+      (*protocompany.add_urls()) = ReadUrl(url_json.AsMap());
+    }
+  }
+  if (properties.count("rubrics")) {
+    for (const auto& rubric : properties.at("rubrics").AsArray()) {
+      protocompany.add_rubrics(rubric.AsInt());
+    }
+  }
+  return protocompany;
+}
+
+
+namespace CompanyQuery {
+
+  Phone ReadPhone(const Json::Dict& properties) {
+    Phone phone;
+    phone.phone = ::ReadPhone(properties);
+    if (properties.count("type")) {
+      phone.has_type = true;
+    }
+    return phone;
+  }
+
+  Company ReadCompany(const Json::Dict& properties) {
+    Company result;
+    if (properties.count("names")) {
+      for (const auto& name : properties.at("names").AsArray()) {
+        result.names.push_back(name.AsString());
+      }
+    }
+    if (properties.count("phones")) {
+      for (const auto& phone_json : properties.at("phones").AsArray()) {
+        result.phones.push_back(ReadPhone(phone_json.AsMap()));
+      }
+    }
+    if (properties.count("urls")) {
+      for (const auto& url : properties.at("urls").AsArray()) {
+        result.urls.push_back(url.AsString());
+      }
+    }
+    if (properties.count("rubrics")) {
+      for (const auto& rubric : properties.at("rubrics").AsArray()) {
+        result.rubrics.push_back(rubric.AsString());
+      }
+    }
+
+    return result;
+  }
+
+}
+
+
+CompaniesCatalog::CompaniesCatalog(const Json::Dict& rubrics_json,
+  const vector<Json::Node>& companies_json)
+{
+  for (const auto& [number, names_dict] : rubrics_json) {
+    rubrics_mapping_[std::stoi(number)] = names_dict.AsMap().at("name").AsString();
+  }
+  companies_.reserve(companies_json.size());
+  for (const auto& company_json : companies_json) {
+    companies_.push_back(ReadCompany(company_json.AsMap()));
+  }
+}
+
+void CompaniesCatalog::Distribute(const YellowPages::Company* company) {
+  for (const auto& name : company->names()) {
+    by_names[name.value()].insert(company);
+  }
+  for (const auto& phone : company->phones()) {
+    by_phone_numbers[phone.number()].insert(company);
+  }
+  for (const auto rubric : company->rubrics()) {
+    by_rubrics[rubrics_mapping_.at(rubric)].insert(company);
+  }
+  for (const auto& url : company->urls()) {
+    by_urls[url.value()].insert(company);
+  }
+}
+
+bool CompaniesCatalog::DoesPhoneMatch(const CompanyQuery::Phone& query, const YellowPages::Phone& phone) {
+  const auto& query_phone = query.phone;
+  if (!query_phone.extension().empty() && query_phone.extension() != phone.extension()) {
+    return false;
+  }
+  if (query.has_type && query_phone.type() != phone.type()) {
+    return false;
+  }
+  if (!query_phone.country_code().empty() && query_phone.country_code() != phone.country_code()) {
+    return false;
+  }
+  if (
+    (!query_phone.local_code().empty() || !query_phone.country_code().empty())
+    && query_phone.local_code() != phone.local_code()
+    ) {
+    return false;
+  }
+  return query_phone.number() == phone.number();
+}
+
+
+unordered_set<const YellowPages::Company*> CompaniesCatalog::FindCompanies(
+  const CompanyQuery::Company& query) const
+{
+  unordered_set<const YellowPages::Company*> set_result;
+  if (!query.names.empty()) {
+    unordered_set<const YellowPages::Company*> for_names;
+    for (const auto& name : query.names) {
+      if (!by_names.count(name)) continue;
+      for_names.insert(by_names.at(name).begin(), by_names.at(name).end());
+    }
+    set_result = for_names;
+    if (set_result.empty()) return {};
+  }
+
+  if (!query.rubrics.empty()) {
+    unordered_set<const YellowPages::Company*> for_rubrics;
+    for (const auto& rubric : query.rubrics) {
+      if (!by_rubrics.count(rubric)) continue;
+      for_rubrics.insert(by_rubrics.at(rubric).begin(), by_rubrics.at(rubric).end());
+    }
+    if (!set_result.empty()) set_result = Intersect(set_result, for_rubrics);
+    else set_result = for_rubrics;
+    if (set_result.empty()) return {};
+  }
+
+  if (!query.urls.empty()) {
+    unordered_set<const YellowPages::Company*> for_urls;
+    for (const auto& url : query.urls) {
+      if (!by_urls.count(url)) continue;
+      for_urls.insert(by_urls.at(url).begin(), by_urls.at(url).end());
+    }
+    if (!set_result.empty()) set_result = Intersect(set_result, for_urls);
+    else set_result = for_urls;
+    if (set_result.empty()) return {};
+  }
+
+  if (!query.phones.empty()) {
+    unordered_set<const YellowPages::Company*> for_phones;
+    for (const auto& query_phone : query.phones) {
+      if (!by_phone_numbers.count(query_phone.phone.number())) continue;
+      for (const auto& company : by_phone_numbers.at(query_phone.phone.number())) {
+        for (const auto& phone : company->phones()) {
+          if (DoesPhoneMatch(query_phone, phone)) {
+            for_phones.insert(company);
+            break;
+          }
+        }
+      } 
+    }
+    if (!set_result.empty()) set_result = Intersect(set_result, for_phones);
+    else set_result = for_phones;
+    if (set_result.empty()) return {};
+  }
+  
+  return set_result;
+}

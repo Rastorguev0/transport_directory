@@ -102,8 +102,19 @@ namespace Requests {
 		return Json::Dict{ {"map", db.RenderMap()} };
 	}
 
+	Json::Dict FindCompanies::Process(const TransportCatalog& db) const {
+		vector<Json::Node> companies;
+		auto found = db.FindCompanies(model);
+		companies.reserve(found.size());
+		for (const auto& company : found) {
+			companies.push_back(Json::Node{ company });
+		}
+		Json::Dict dict;
+		dict["companies"] = move(companies);
+		return dict;
+	}
 
-	variant<Stop, Bus, Route, Map> Read(const Json::Dict& attrs) {
+	variant<Stop, Bus, Route, Map, FindCompanies> Read(const Json::Dict& attrs) {
 		const string& type = attrs.at("type").AsString();
 		if (type == "Bus") {
 			return Bus{ attrs.at("name").AsString() };
@@ -114,9 +125,10 @@ namespace Requests {
 		else if (type == "Route") {
 			return Route{ attrs.at("from").AsString(), attrs.at("to").AsString() };
 		}
-		else {
+		else if (type == "Map") {
 			return Map{};
 		}
+		else return FindCompanies{ .model = CompanyQuery::ReadCompany(attrs) };
 	}
 
 	vector<Json::Node> ProcessAll(const TransportCatalog& db, const vector<Json::Node>& requests) {

@@ -1,6 +1,7 @@
 syntax = "proto3";
 import "painter.proto";
 import "transport_router.proto";
+import "database.proto";
 
 package TCProto;
 
@@ -22,4 +23,5 @@ message TransportCatalog {
     repeated BusResponse buses = 2;
     TransportRouter router = 3;
     Painter painter = 4;
+	YellowPages.Database companies = 5;
 };
