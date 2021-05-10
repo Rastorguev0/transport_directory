@@ -1,6 +1,8 @@
 #include "companies_catalog.h"
 #include "utils.h"
 
+#include <algorithm>
+
 using namespace std;
 
 YellowPages::Phone_Type PhoneTypeFromString(const string& str) {
@@ -50,8 +52,41 @@ YellowPages::Url ReadUrl(const Json::Dict& properties) {
   return protourl;
 }
 
+SphereProto::Coords ReadCoords(const Json::Dict& properties) {
+  SphereProto::Coords protocoords;
+  if (properties.count("lat")) {
+    protocoords.set_lat(stod(properties.at("lat").AsString()));
+  }
+  if (properties.count("lon")) {
+    protocoords.set_lat(stod(properties.at("lon").AsString()));
+  }
+  return protocoords;
+}
+
+YellowPages::Address ReadAddress(const Json::Dict& properties) {
+  YellowPages::Address protoaddress;
+  if (properties.count("coords")) {
+    *(protoaddress.mutable_coords()) = ReadCoords(properties.at("coords").AsMap());
+  }
+  return protoaddress;
+}
+
+YellowPages::NearbyStop ReadNearbyStops(const Json::Dict& properties) {
+  YellowPages::NearbyStop protonstops;
+  if (properties.count("name")) {
+    protonstops.set_name(properties.at("name").AsString());
+  }
+  if (properties.count("meters")) {
+    protonstops.set_meters(properties.at("meters").AsInt());
+  }
+  return protonstops;
+}
+
 YellowPages::Company ReadCompany(const Json::Dict& properties) {
   YellowPages::Company protocompany;
+  if (properties.count("address")) {
+    *(protocompany.mutable_address()) = ReadAddress(properties.at("address").AsMap());
+  }
   if (properties.count("names")) {
     for (const auto& name_json : properties.at("names").AsArray()) {
       (*protocompany.add_names()) = ReadName(name_json.AsMap());
@@ -70,6 +105,11 @@ YellowPages::Company ReadCompany(const Json::Dict& properties) {
   if (properties.count("rubrics")) {
     for (const auto& rubric : properties.at("rubrics").AsArray()) {
       protocompany.add_rubrics(rubric.AsInt());
+    }
+  }
+  if (properties.count("nearby_stops")) {
+    for (const auto& nstop : properties.at("nearby_stops").AsArray()) {
+      *(protocompany.add_nearby_stops()) = ReadNearbyStops(nstop.AsMap());
     }
   }
   return protocompany;
@@ -113,6 +153,12 @@ namespace CompanyQuery {
     return result;
   }
 
+}
+
+string CompanyMainName(const YellowPages::Company& company) {
+  return find_if(company.names().begin(),
+    company.names().end(),
+    [](const YellowPages::Name& n) { return n.type() == YellowPages::Name_Type_MAIN; })->value();
 }
 
 
@@ -161,6 +207,14 @@ bool CompaniesCatalog::DoesPhoneMatch(const CompanyQuery::Phone& query, const Ye
     return false;
   }
   return query_phone.number() == phone.number();
+}
+
+const std::string& CompaniesCatalog::GetRubric(uint64_t id) const {
+  return rubrics_mapping_.at(id);
+}
+
+const std::vector<YellowPages::Company>& CompaniesCatalog::GetCompanies() const {
+  return companies_;
 }
 
 

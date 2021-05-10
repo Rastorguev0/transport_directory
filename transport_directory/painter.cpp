@@ -71,22 +71,29 @@ namespace Paint {
       .bus_label_font_size = json.at("bus_label_font_size").AsInt(),
       .bus_label_offset = ParsePoint(json.at("bus_label_offset")),
       .layers = ParseVectorStrings(json.at("layers")),
-      .outer_margin = json.at("outer_margin").AsDouble()
+      .outer_margin = json.at("outer_margin").AsDouble(),
+      .company_radius = json.at("company_radius").AsDouble(),
+      .company_line_width = json.at("company_line_width").AsDouble(),
     };
   }
 
   static map<string, Svg::Point> ComputeStopsCoords(
-    const Descriptions::StopsDict& stops_dict,
+    const Descriptions::StopsDict& stops,
     const Descriptions::BusesDict& buses_dict,
+    const vector<YellowPages::Company>& companies,
     const RenderSettings& render_settings) {
 
     const double max_width = render_settings.width;
     const double max_height = render_settings.height;
     const double padding = render_settings.padding;
-    Aligner aligner(stops_dict, buses_dict, max_width, max_height, padding);
+    Aligner aligner(stops, buses_dict, companies, max_width, max_height, padding);
 
     map<string, Svg::Point> result;
-    for (const auto& [name, _] : stops_dict) {
+    for (const auto& [name, _] : stops) {
+      result[name] = aligner(name);
+    }
+    for (const auto& company : companies) {
+      string name = CompanyMainName(company);
       result[name] = aligner(name);
     }
     return result;
@@ -113,18 +120,18 @@ namespace Paint {
       }
       auto line = BaseBusLine(bus_name);
       for (const auto& stop_name : stops) {
-        line.AddPoint(stops_coords_.at(stop_name));
+        line.AddPoint(places_coords_.at(stop_name));
       }
       svg.Add(line);
     }
   }
 
-  void Painter::PaintRouteBusLines(Svg::Document& svg, const RouteChain& route) const {
+  void Painter::PaintRouteBusLines(Svg::Document& svg, const RouteInfo& route) const {
     for (const auto& [bus, start, finish] : route) {
       auto line = BaseBusLine(bus);
       const auto& stops = buses_dict_->at(bus)->stops;
       for (size_t stop_idx = start; stop_idx <= finish; stop_idx++) {
-        line.AddPoint(stops_coords_.at(stops[stop_idx]));
+        line.AddPoint(places_coords_.at(stops[stop_idx]));
       }
       svg.Add(line);
     }
@@ -135,53 +142,53 @@ namespace Paint {
       const auto& stops = bus->stops;
       if (!stops.empty()) {
         for (const string& endpoint : bus->endpoints) {
-          PaintBusLabel(svg, stops_coords_.at(endpoint), bus_name);
+          PaintBusLabel(svg, places_coords_.at(endpoint), bus_name);
         }
       }
     }
   }
 
-  void Painter::PaintRouteBusLabels(Svg::Document& svg, const RouteChain& route) const {
+  void Painter::PaintRouteBusLabels(Svg::Document& svg, const RouteInfo& route) const {
     for (const auto& [bus, start, finish] : route) {
       const auto& endpoints = buses_dict_->at(bus)->endpoints;
       const auto& stops = buses_dict_->at(bus)->stops;
       for (size_t stop_idx = start; stop_idx <= finish; stop_idx++) {
         if (find(begin(endpoints), end(endpoints), stops[stop_idx]) != end(endpoints)) {
-          PaintBusLabel(svg, stops_coords_.at(stops[stop_idx]), bus);
+          PaintBusLabel(svg, places_coords_.at(stops[stop_idx]), bus);
         }
       }
     }
   }
 
   void Painter::PaintStopPoints(Svg::Document& svg) const {
-    for (const auto& [stop_name, stop_point] : stops_coords_) {
+    for (const auto& [stop_name, stop_point] : places_coords_) {
       PaintStopPoint(svg, stop_point);
     }
   }
 
-  void Painter::PaintRouteStopPoints(Svg::Document& svg, const RouteChain& route) const {
+  void Painter::PaintRouteStopPoints(Svg::Document& svg, const RouteInfo& route) const {
     for (const auto& [bus, start, finish] : route) {
       const auto& stops = buses_dict_->at(bus)->stops;
       for (size_t stop_idx = start; stop_idx <= finish; stop_idx++) {
-        PaintStopPoint(svg, stops_coords_.at(stops[stop_idx]));
+        PaintStopPoint(svg, places_coords_.at(stops[stop_idx]));
       }
     }
   }
 
   void Painter::PaintStopLabels(Svg::Document& svg) const {
-    for (const auto& [stop_name, stop_point] : stops_coords_) {
+    for (const auto& [stop_name, stop_point] : places_coords_) {
       PaintStopLabel(svg, stop_point, stop_name);
     }
   }
 
-  void Painter::PaintRouteStopLabels(Svg::Document& svg, const RouteChain& route) const {
-    if (route.empty()) return;
-    const auto& bus = route.front().bus_name;
-    const auto& start = buses_dict_->at(bus)->stops[route.front().start_stop_idx];
-    PaintStopLabel(svg, stops_coords_.at(start), start);
-    for (const auto& [bus, start, finish] : route) {
+  void Painter::PaintRouteStopLabels(Svg::Document& svg, const RouteInfo& route) const {
+    if (route.items.empty()) return;
+    const auto& bus = route.items.front().bus_name;
+    const auto& start = buses_dict_->at(bus)->stops[route.items.front().start_stop_idx];
+    PaintStopLabel(svg, places_coords_.at(start), start);
+    for (const auto& [bus, start, finish] : route.items) {
       const auto& transfer = buses_dict_->at(bus)->stops[finish];
-      PaintStopLabel(svg, stops_coords_.at(transfer), transfer);
+      PaintStopLabel(svg, places_coords_.at(transfer), transfer);
     }
   }
 
@@ -260,7 +267,7 @@ namespace Paint {
       {"stop_points", &Painter::PaintStopPoints},
       {"stop_labels", &Painter::PaintStopLabels},
   };
-  const unordered_map<string, void (Painter::*)(Svg::Document&, const RouteChain&) const> Painter::ROUTE_LAYER_ACTIONS = {
+  const unordered_map<string, void (Painter::*)(Svg::Document&, const RouteInfo&) const> Painter::ROUTE_LAYER_ACTIONS = {
       {"bus_lines",   &Painter::PaintRouteBusLines},
       {"bus_labels",  &Painter::PaintRouteBusLabels},
       {"stop_points", &Painter::PaintRouteStopPoints},
@@ -270,10 +277,11 @@ namespace Paint {
 
   Painter::Painter(const Json::Dict& render_settings_json,
     shared_ptr<Descriptions::BusesDict> buses,
-    shared_ptr<Descriptions::StopsDict> stops)
+    shared_ptr<Descriptions::StopsDict> stops,
+    const vector<YellowPages::Company>& companies)
     : settings_(ParseSettings(render_settings_json)),
     buses_dict_(buses),
-    stops_coords_(ComputeStopsCoords(*stops, *buses, settings_)),
+    places_coords_(ComputeStopsCoords(*stops, *buses, companies, settings_)),
     bus_colors_(ChooseBusColors(*buses, settings_)),
     base_map_(MakeDocument())
   {
@@ -285,7 +293,7 @@ namespace Paint {
     return out.str();
   }
 
-  std::string Painter::PaintRoute(const RouteChain& chain) const {
+  std::string Painter::PaintRoute(const RouteInfo& info) const {
     Svg::Document route_map = base_map_;
     route_map.Add(
       Svg::Rectangle{}
@@ -296,12 +304,8 @@ namespace Paint {
     );
 
     for (const auto& layer : settings_.layers) {
-      (this->*ROUTE_LAYER_ACTIONS.at(layer))(route_map, chain);
+      (this->*ROUTE_LAYER_ACTIONS.at(layer))(route_map, info);
     }
-
-    //static int count = 1;
-    //ofstream f("out" + to_string(count++) + ".svg");
-    //route_map.Render(f);
 
     ostringstream out;
     route_map.Render(out);

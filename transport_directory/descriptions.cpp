@@ -80,7 +80,7 @@ namespace Descriptions {
     return result;
   }
   
-  SetMap DefineNeighbors(const StopsDict& stops, const BusesDict& buses) {
+  SetMap DefineNeighbors(const StopsDict& places, const BusesDict& buses) {
     SetMap neighs;
     for (const auto& [_, bus] : buses) {
       const auto& route = bus->stops;
@@ -91,7 +91,7 @@ namespace Descriptions {
       }
     }
 
-    for (const auto& [name, _] : stops) {
+    for (const auto& [name, _] : places) {
       neighs[name];
     }
     return neighs;

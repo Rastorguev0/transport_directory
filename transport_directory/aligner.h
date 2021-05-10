@@ -1,5 +1,7 @@
 #pragma once
 #include "descriptions.h"
+#include "company.pb.h"
+#include "companies_catalog.h"
 
 #include <string>
 #include <string_view>
@@ -18,9 +20,10 @@ private:
 public:
   Aligner(const Descriptions::StopsDict& stops,
     const Descriptions::BusesDict& buses,
+    const std::vector<YellowPages::Company>& companies,
     double max_width, double max_height, double padding);
 
-  Svg::Point operator()(const std::string& stop_name) const;
+  Svg::Point operator()(const std::string& place_name) const;
 private:
   StopSet ControlStops(const Descriptions::BusesDict& buses) const;
   StopCoords ComputeControlBasedCoords(
@@ -36,7 +39,7 @@ private:
   StopIdx stops_to_xidx;
   StopIdx stops_to_yidx;
 
-  const Descriptions::SetMap neighs;
+  Descriptions::SetMap neighs;
   const Descriptions::StopsDict& stops_dict;
   const Descriptions::BusesDict& buses_dict;
 };

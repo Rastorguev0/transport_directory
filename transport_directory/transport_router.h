@@ -5,6 +5,7 @@
 #include "json.h"
 #include "router.h"
 #include "transport_router.pb.h"
+#include "company.pb.h"
 
 #include <memory>
 #include <unordered_map>
@@ -37,17 +38,28 @@ public:
       std::string stop_name;
       double time;
     };
+    struct WalkToCompany {
+      double time;
+      std::string stop_from;
+      std::string company_name;
+      std::string rubric;
+    };
 
-    using Item = std::variant<BusItem, WaitItem>;
+    using Item = std::variant<BusItem, WaitItem, WalkToCompany>;
     std::vector<Item> items;
   };
 
   std::optional<RouteInfo> FindRoute(const std::string& stop_from, const std::string& stop_to) const;
 
+  int GetBusWaitTime() const;
+  double GetBusVelocity() const;
+  double GetWalkVelocity() const;
+
 private:
   struct RoutingSettings {
     int bus_wait_time;  // in minutes
     double bus_velocity;  // km/h
+    double pedestrian_velocity; //km/h
   };
 
   static RoutingSettings MakeRoutingSettings(const Json::Dict& json);

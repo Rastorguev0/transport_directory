@@ -6,18 +6,30 @@ using namespace std;
 
 Aligner::Aligner(const Descriptions::StopsDict& stops,
   const Descriptions::BusesDict& buses,
+  const vector<YellowPages::Company>& companies,
   double max_width, double max_height, double padding)
+
   : width(max_width), height(max_height), padding(padding),
   stops_dict(stops), buses_dict(buses),
   neighs(Descriptions::DefineNeighbors(stops, buses)) {
 
+
   const StopCoords coords = ComputeControlBasedCoords(stops, buses);
   StopAxes longs, lats;
-  longs.reserve(stops_dict.size());
-  lats.reserve(stops_dict.size());
+  longs.reserve(stops_dict.size() + companies.size());
+  lats.reserve(stops_dict.size() + companies.size());
   for (const auto& [name, point] : coords) {
     longs.emplace_back(point.longitude, name);
     lats.emplace_back(point.latitude, name);
+  }
+  for (const auto& company : companies) {
+    string name = CompanyMainName(company);
+    for (const auto& neigh : company.nearby_stops()) {
+      neighs[name].insert(neigh.name());
+      neighs[neigh.name()].insert(name);
+    }
+    longs.emplace_back(company.address().coords().lon(), name);
+    lats.emplace_back(company.address().coords().lat(), name);
   }
   std::sort(begin(longs), end(longs));
   std::sort(begin(lats), end(lats));
@@ -116,9 +128,9 @@ int Aligner::DistributeIdx(const StopAxes& axes, StopIdx& stops_to_idx) {
   return max_idx;
 }
 
-Svg::Point Aligner::operator()(const string& stop_name) const {
+Svg::Point Aligner::operator()(const string& place_name) const {
   return {
-    stops_to_xidx.at(stop_name) * x_step + padding,
-    height - padding - stops_to_yidx.at(stop_name) * y_step
+    stops_to_xidx.at(place_name) * x_step + padding,
+    height - padding - stops_to_yidx.at(place_name) * y_step
   };
 }

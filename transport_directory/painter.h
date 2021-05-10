@@ -4,6 +4,7 @@
 #include "sphere.h"
 #include "descriptions.h"
 #include "painter.pb.h"
+#include "company.pb.h"
 
 #include <map>
 #include <vector>
@@ -14,12 +15,22 @@
 
 namespace Paint {
 
-  struct Link {
-    std::string bus_name;
-    size_t start_stop_idx;
-    size_t finish_stop_idx;
+  struct RouteInfo {
+
+    struct BusItem {
+      std::string bus_name;
+      size_t start_stop_idx;
+      size_t finish_stop_idx;
+    };
+    struct WalkItem {
+      std::string stop_from;
+      std::string company_name;
+      std::string rubric_name;
+    };
+
+    using Item = std::variant<BusItem, WalkItem>;
+    std::vector<Item> items;
   };
-  using RouteChain = std::vector<Link>;
 
   struct RenderSettings {
     double width;
@@ -36,6 +47,8 @@ namespace Paint {
     Svg::Point bus_label_offset;
     std::vector<std::string> layers;
     double outer_margin;
+    double company_radius;
+    double company_line_width;
   };
 
 
@@ -44,17 +57,18 @@ namespace Paint {
     Painter() = default;
     Painter(const Json::Dict& render_settings_json,
       std::shared_ptr<Descriptions::BusesDict> buses,
-      std::shared_ptr<Descriptions::StopsDict> stops);
+      std::shared_ptr<Descriptions::StopsDict> stops,
+      const std::vector<YellowPages::Company>& companies);
 
     TCProto::Painter Serialize() const;
     Painter(const TCProto::Painter& painter);
 
     std::string Paint() const;
-    std::string PaintRoute(const RouteChain& route) const;
+    std::string PaintRoute(const RouteInfo& route) const;
   private:
     const RenderSettings settings_;
     const std::shared_ptr<Descriptions::BusesDict> buses_dict_;
-    const std::map<std::string, Svg::Point> stops_coords_;
+    const std::map<std::string, Svg::Point> places_coords_;
     const std::unordered_map<std::string, Svg::Color> bus_colors_;
 
     const Svg::Document base_map_;
@@ -64,10 +78,10 @@ namespace Paint {
     void PaintStopPoints(Svg::Document& svg) const;
     void PaintStopLabels(Svg::Document& svg) const;
 
-    void PaintRouteBusLines(Svg::Document& svg, const RouteChain&) const;
-    void PaintRouteBusLabels(Svg::Document& svg, const RouteChain&) const;
-    void PaintRouteStopPoints(Svg::Document& svg, const RouteChain&) const;
-    void PaintRouteStopLabels(Svg::Document& svg, const RouteChain&) const;
+    void PaintRouteBusLines(Svg::Document& svg, const RouteInfo&) const;
+    void PaintRouteBusLabels(Svg::Document& svg, const RouteInfo&) const;
+    void PaintRouteStopPoints(Svg::Document& svg, const RouteInfo&) const;
+    void PaintRouteStopLabels(Svg::Document& svg, const RouteInfo&) const;
 
     void PaintBusLabel(Svg::Document& svg, Svg::Point pos, const std::string& name) const;
     void PaintStopLabel(Svg::Document& svg, Svg::Point pos, const std::string& name) const;
@@ -77,7 +91,7 @@ namespace Paint {
 
     static const std::unordered_map<std::string, void (Painter::*)(Svg::Document&) const> LAYER_ACTIONS;
 
-    static const std::unordered_map<std::string, void (Painter::*)(Svg::Document&, const RouteChain&) const> ROUTE_LAYER_ACTIONS;
+    static const std::unordered_map<std::string, void (Painter::*)(Svg::Document&, const RouteInfo&) const> ROUTE_LAYER_ACTIONS;
   };
 
 }

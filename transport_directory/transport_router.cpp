@@ -22,6 +22,7 @@ TransportRouter::RoutingSettings TransportRouter::MakeRoutingSettings(const Json
   return {
       json.at("bus_wait_time").AsInt(),
       json.at("bus_velocity").AsDouble(),
+      json.at("pedestrian_velocity").AsDouble(),
   };
 }
 
@@ -116,4 +117,16 @@ optional<TransportRouter::RouteInfo> TransportRouter::FindRoute(const string& st
   // but we do not expect exceptions in normal workflow
   router_->ReleaseRoute(route->id);
   return route_info;
+}
+
+int TransportRouter::GetBusWaitTime() const {
+  return routing_settings_.bus_wait_time;
+}
+
+double TransportRouter::GetBusVelocity() const {
+  return routing_settings_.bus_velocity;
+}
+
+double TransportRouter::GetWalkVelocity() const {
+  return routing_settings_.pedestrian_velocity;
 }

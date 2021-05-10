@@ -44,5 +44,5 @@ namespace Descriptions {
 
   using SetMap = std::unordered_map<std::string, std::unordered_set<std::string>>;
 
-  SetMap DefineNeighbors(const StopsDict& stops, const BusesDict& buses);
+  SetMap DefineNeighbors(const StopsDict& places, const BusesDict& buses);
 }

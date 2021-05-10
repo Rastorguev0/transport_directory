@@ -31,8 +31,12 @@ YellowPages::Name_Type NameTypeFromString(const std::string& str);
 YellowPages::Name ReadName(const Json::Dict& properties);
 YellowPages::Phone ReadPhone(const Json::Dict& properties);
 YellowPages::Url ReadUrl(const Json::Dict& properties);
+SphereProto::Coords ReadCoords(const Json::Dict& properties);
+YellowPages::Address ReadAddress(const Json::Dict& properties);
+YellowPages::NearbyStop ReadNearbyStops(const Json::Dict& properties);
 YellowPages::Company ReadCompany(const Json::Dict& properties);
 
+std::string CompanyMainName(const YellowPages::Company& company);
 
 class CompaniesCatalog {
 public:
@@ -43,6 +47,8 @@ public:
 
   std::unordered_set<const YellowPages::Company*> FindCompanies(const CompanyQuery::Company&) const;
   static bool DoesPhoneMatch(const CompanyQuery::Phone& query_phone, const YellowPages::Phone& phone);
+  const std::string& GetRubric(uint64_t id) const;
+  const std::vector<YellowPages::Company>& GetCompanies() const;
 private:
   using Distribution = std::unordered_map<std::string, std::unordered_set<const YellowPages::Company*>>;
   void Distribute(const YellowPages::Company* company);

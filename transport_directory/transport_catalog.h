@@ -46,12 +46,15 @@ public:
 	const Stop* GetStop(const std::string& name) const;
 	const Bus* GetBus(const std::string& name) const;
 
-	std::optional<TransportRouter::RouteInfo> FindRoute(const std::string& stop_from, const std::string& stop_to) const;
+	std::optional<TransportRouter::RouteInfo> FindRoute(
+		const std::string& stop_from, const std::string& stop_to) const;
 
 	std::vector<std::string> FindCompanies(const CompanyQuery::Company& model) const;
+	std::optional<TransportRouter::RouteInfo> RouteToCompany(
+		const std::string& stop_from, const CompanyQuery::Company& model) const;
 
 	std::string RenderMap() const;
-	std::string RenderRoute(const Paint::RouteChain& links) const;
+	std::string RenderRoute(const Paint::RouteInfo& items) const;
 
 private:
 	static int ComputeRoadRouteLength(

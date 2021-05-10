@@ -38,11 +38,11 @@ TransportCatalog::TransportCatalog(vector<Descriptions::InputQuery> data,
     }
   }
 
-  router_ = make_unique<TransportRouter>(*stops_dict, *buses_dict, routing_settings_json);
-  painter_ = make_unique<Paint::Painter>(render_settings_json, buses_dict, stops_dict);
   companies_ = make_unique<CompaniesCatalog>(
     yellow_pages_json.at("rubrics").AsMap(), yellow_pages_json.at("companies").AsArray()
     );
+  router_ = make_unique<TransportRouter>(*stops_dict, *buses_dict, routing_settings_json);
+  painter_ = make_unique<Paint::Painter>(render_settings_json, buses_dict, stops_dict, companies_->GetCompanies());
 }
 
 
@@ -54,7 +54,8 @@ const TransportCatalog::Bus* TransportCatalog::GetBus(const string& name) const 
   return GetValuePointer(buses_, name);
 }
 
-optional<TransportRouter::RouteInfo> TransportCatalog::FindRoute(const string& stop_from, const string& stop_to) const {
+optional<TransportRouter::RouteInfo> TransportCatalog::FindRoute(
+  const string& stop_from, const string& stop_to) const {
   return router_->FindRoute(stop_from, stop_to);
 }
 
@@ -63,9 +64,33 @@ vector<string> TransportCatalog::FindCompanies(const CompanyQuery::Company& mode
   auto companies = companies_->FindCompanies(model);
   result.reserve(companies.size());
   for (auto company : companies) {
-    result.push_back(find_if(company->names().begin(),
-                             company->names().end(),
-      [](const YellowPages::Name& n) { return n.type() == YellowPages::Name_Type_MAIN; })->value());
+    result.push_back(CompanyMainName(*company));
+  }
+  return result;
+}
+
+optional<TransportRouter::RouteInfo> TransportCatalog::RouteToCompany(
+  const string& from, const CompanyQuery::Company& model) const
+{
+  optional<TransportRouter::RouteInfo> result;
+  for (auto company : companies_->FindCompanies(model)) {
+    for (const auto& stop : company->nearby_stops()) {
+      auto route = router_->FindRoute(from, stop.name());
+      if (route) {
+        double time = stop.meters() / (1000 * router_->GetWalkVelocity()) * 60; //in minutes
+        route->total_time += time;
+        TransportRouter::RouteInfo::WalkToCompany walk_item {
+          .time = time, .stop_from = from, .company_name = CompanyMainName(*company)
+          };
+        if (!company->rubrics().empty()) {
+          walk_item.rubric = companies_->GetRubric(company->rubrics()[0]);
+        }
+        route->items.push_back(walk_item);
+        if (!result.has_value() || route->total_time < result->total_time) {
+          result = move(route);
+        }
+      }
+    }
   }
   return result;
 }
@@ -98,6 +123,6 @@ std::string TransportCatalog::RenderMap() const {
   return painter_->Paint();
 }
 
-std::string TransportCatalog::RenderRoute(const Paint::RouteChain& links) const {
-  return painter_->PaintRoute(links);
+std::string TransportCatalog::RenderRoute(const Paint::RouteInfo& items) const {
+  return painter_->PaintRoute(items);
 }

@@ -253,6 +253,8 @@ TCProto::Painter Paint::Painter::Serialize() const {
   settings.set_max_height(settings_.height);
   settings.set_padding(settings_.padding);
   settings.set_outer_margin(settings_.outer_margin);
+  settings.set_company_radius(settings_.company_radius);
+  settings.set_company_radius(settings_.company_line_width);
   for (const Svg::Color& color : settings_.color_palette) {
     *(settings.add_palette()) = SerializeColor(color);
   }
@@ -268,7 +270,7 @@ TCProto::Painter Paint::Painter::Serialize() const {
     settings.add_layers(layer);
   }
 
-  for (const auto& [name, point] : stops_coords_) {
+  for (const auto& [name, point] : places_coords_) {
     auto& stop_coords_proto = *proto.add_stops_coords();
     stop_coords_proto.set_name(name);
     (*stop_coords_proto.mutable_point()) = SerializePoint(point);
@@ -314,6 +316,8 @@ Paint::RenderSettings DeserializeSettings(const TCProto::Painter& p) {
     result.layers.push_back(l);
   }
   result.outer_margin = p.render_settings().outer_margin();
+  result.company_radius = p.render_settings().company_radius();
+  result.company_line_width = p.render_settings().company_line_width();
   return result;
 }
 
@@ -353,7 +357,7 @@ std::unordered_map<std::string, Svg::Color> DeserializeBusColors(const TCProto::
 Paint::Painter::Painter(const TCProto::Painter& proto) 
   : settings_(DeserializeSettings(proto)),
   buses_dict_(make_unique<Descriptions::BusesDict>(DeserializeBusesDict(proto))),
-  stops_coords_(DeserialzieStopsCoords(proto)),
+  places_coords_(DeserialzieStopsCoords(proto)),
   bus_colors_(DeserializeBusColors(proto)),
   base_map_(MakeDocument()) {}
 

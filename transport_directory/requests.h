@@ -37,8 +37,15 @@ namespace Requests {
     Json::Dict Process(const TransportCatalog& db) const;
   };
 
+  struct RouteToCompany {
+    std::string from;
+    CompanyQuery::Company model;
 
-  std::variant<Stop, Bus, Route, Map, FindCompanies> Read(const Json::Dict& attrs);
+    Json::Dict Process(const TransportCatalog& db) const;
+  };
+
+
+  std::variant<Stop, Bus, Route, Map, FindCompanies, RouteToCompany> Read(const Json::Dict& attrs);
 
   std::vector<Json::Node> ProcessAll(const TransportCatalog& db, const std::vector<Json::Node>& requests);
 }
