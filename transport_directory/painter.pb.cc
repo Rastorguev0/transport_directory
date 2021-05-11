@@ -20,6 +20,7 @@ extern PROTOBUF_INTERNAL_EXPORT_painter_2eproto ::PROTOBUF_NAMESPACE_ID::interna
 extern PROTOBUF_INTERNAL_EXPORT_descriptions_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_BusDescription_descriptions_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_painter_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_RenderSettings_painter_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_painter_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_StopCoords_painter_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_descriptions_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_StopDescription_descriptions_2eproto;
 namespace TCProto {
 class RenderSettingsDefaultTypeInternal {
  public:
@@ -62,12 +63,13 @@ static void InitDefaultsscc_info_Painter_painter_2eproto() {
   }
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<4> scc_info_Painter_painter_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 4, 0, InitDefaultsscc_info_Painter_painter_2eproto}, {
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<5> scc_info_Painter_painter_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 5, 0, InitDefaultsscc_info_Painter_painter_2eproto}, {
       &scc_info_RenderSettings_painter_2eproto.base,
       &scc_info_StopCoords_painter_2eproto.base,
       &scc_info_BusColor_painter_2eproto.base,
-      &scc_info_BusDescription_descriptions_2eproto.base,}};
+      &scc_info_BusDescription_descriptions_2eproto.base,
+      &scc_info_StopDescription_descriptions_2eproto.base,}};
 
 static void InitDefaultsscc_info_RenderSettings_painter_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -147,6 +149,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_painter_2eproto::offsets[] PRO
   PROTOBUF_FIELD_OFFSET(::TCProto::Painter, stops_coords_),
   PROTOBUF_FIELD_OFFSET(::TCProto::Painter, bus_colors_),
   PROTOBUF_FIELD_OFFSET(::TCProto::Painter, bus_descriptions_),
+  PROTOBUF_FIELD_OFFSET(::TCProto::Painter, stop_descriptions_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::TCProto::RenderSettings)},
@@ -178,12 +181,14 @@ const char descriptor_table_protodef_painter_2eproto[] PROTOBUF_SECTION_VARIABLE
   "ont_size\030\r \001(\005\022\016\n\006layers\030\016 \003(\t\":\n\nStopCo"
   "ords\022\014\n\004name\030\001 \001(\t\022\036\n\005point\030\002 \001(\0132\017.SvgP"
   "roto.Point\"8\n\010BusColor\022\014\n\004name\030\001 \001(\t\022\036\n\005"
-  "color\030\002 \001(\0132\017.SvgProto.Color\"\300\001\n\007Painter"
+  "color\030\002 \001(\0132\017.SvgProto.Color\"\365\001\n\007Painter"
   "\0220\n\017render_settings\030\001 \001(\0132\027.TCProto.Rend"
   "erSettings\022)\n\014stops_coords\030\002 \003(\0132\023.TCPro"
   "to.StopCoords\022%\n\nbus_colors\030\003 \003(\0132\021.TCPr"
   "oto.BusColor\0221\n\020bus_descriptions\030\004 \003(\0132\027"
-  ".TCProto.BusDescriptionb\006proto3"
+  ".TCProto.BusDescription\0223\n\021stop_descript"
+  "ions\030\005 \003(\0132\030.TCProto.StopDescriptionb\006pr"
+  "oto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_painter_2eproto_deps[2] = {
   &::descriptor_table_descriptions_2eproto,
@@ -197,7 +202,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_pai
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_painter_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_painter_2eproto = {
-  false, false, descriptor_table_protodef_painter_2eproto, "painter.proto", 831,
+  false, false, descriptor_table_protodef_painter_2eproto, "painter.proto", 884,
   &descriptor_table_painter_2eproto_once, descriptor_table_painter_2eproto_sccs, descriptor_table_painter_2eproto_deps, 4, 2,
   schemas, file_default_instances, TableStruct_painter_2eproto::offsets,
   file_level_metadata_painter_2eproto, 4, file_level_enum_descriptors_painter_2eproto, file_level_service_descriptors_painter_2eproto,
@@ -1358,11 +1363,15 @@ Painter::_Internal::render_settings(const Painter* msg) {
 void Painter::clear_bus_descriptions() {
   bus_descriptions_.Clear();
 }
+void Painter::clear_stop_descriptions() {
+  stop_descriptions_.Clear();
+}
 Painter::Painter(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena),
   stops_coords_(arena),
   bus_colors_(arena),
-  bus_descriptions_(arena) {
+  bus_descriptions_(arena),
+  stop_descriptions_(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:TCProto.Painter)
@@ -1371,7 +1380,8 @@ Painter::Painter(const Painter& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       stops_coords_(from.stops_coords_),
       bus_colors_(from.bus_colors_),
-      bus_descriptions_(from.bus_descriptions_) {
+      bus_descriptions_(from.bus_descriptions_),
+      stop_descriptions_(from.stop_descriptions_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_render_settings()) {
     render_settings_ = new ::TCProto::RenderSettings(*from.render_settings_);
@@ -1421,6 +1431,7 @@ void Painter::Clear() {
   stops_coords_.Clear();
   bus_colors_.Clear();
   bus_descriptions_.Clear();
+  stop_descriptions_.Clear();
   if (GetArena() == nullptr && render_settings_ != nullptr) {
     delete render_settings_;
   }
@@ -1476,6 +1487,18 @@ const char* Painter::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::in
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<34>(ptr));
+        } else goto handle_unusual;
+        continue;
+      // repeated .TCProto.StopDescription stop_descriptions = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_stop_descriptions(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<42>(ptr));
         } else goto handle_unusual;
         continue;
       default: {
@@ -1538,6 +1561,14 @@ failure:
       InternalWriteMessage(4, this->_internal_bus_descriptions(i), target, stream);
   }
 
+  // repeated .TCProto.StopDescription stop_descriptions = 5;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->_internal_stop_descriptions_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(5, this->_internal_stop_descriptions(i), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -1571,6 +1602,13 @@ size_t Painter::ByteSizeLong() const {
   // repeated .TCProto.BusDescription bus_descriptions = 4;
   total_size += 1UL * this->_internal_bus_descriptions_size();
   for (const auto& msg : this->bus_descriptions_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  // repeated .TCProto.StopDescription stop_descriptions = 5;
+  total_size += 1UL * this->_internal_stop_descriptions_size();
+  for (const auto& msg : this->stop_descriptions_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
@@ -1616,6 +1654,7 @@ void Painter::MergeFrom(const Painter& from) {
   stops_coords_.MergeFrom(from.stops_coords_);
   bus_colors_.MergeFrom(from.bus_colors_);
   bus_descriptions_.MergeFrom(from.bus_descriptions_);
+  stop_descriptions_.MergeFrom(from.stop_descriptions_);
   if (from.has_render_settings()) {
     _internal_mutable_render_settings()->::TCProto::RenderSettings::MergeFrom(from._internal_render_settings());
   }
@@ -1645,6 +1684,7 @@ void Painter::InternalSwap(Painter* other) {
   stops_coords_.InternalSwap(&other->stops_coords_);
   bus_colors_.InternalSwap(&other->bus_colors_);
   bus_descriptions_.InternalSwap(&other->bus_descriptions_);
+  stop_descriptions_.InternalSwap(&other->stop_descriptions_);
   swap(render_settings_, other->render_settings_);
 }
 

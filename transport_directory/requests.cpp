@@ -69,20 +69,19 @@ namespace Requests {
   };
 
   struct RouteForPainterBuilder {
-    Paint::RouteInfo::Item operator()(const TransportRouter::RouteInfo::BusItem& bus_item) {
-      return Paint::RouteInfo::BusItem{
+    Paint::Route result;
+    void operator()(const TransportRouter::RouteInfo::BusItem& bus_item) {
+      result.buses.push_back(Paint::Route::Bus{
         bus_item.bus_name, bus_item.start_stop_idx, bus_item.finish_stop_idx
-      };
+        });
     }
-    Paint::RouteInfo::Item operator()(const TransportRouter::RouteInfo::WaitItem& wait_item) {
-      return {};
-    }
-    Paint::RouteInfo::Item operator()(const TransportRouter::RouteInfo::WalkToCompany& walk_item) const {
-      return Paint::RouteInfo::WalkItem{
+    void operator()(const TransportRouter::RouteInfo::WaitItem& wait_item) {}
+    void operator()(const TransportRouter::RouteInfo::WalkToCompany& walk_item) {
+      result.walks.push_back(Paint::Route::Walk{
         .stop_from = walk_item.stop_from,
         .company_name = walk_item.company_name,
         .rubric_name = walk_item.rubric
-      };
+      });
     }
   };
 
@@ -96,16 +95,14 @@ namespace Requests {
       dict["total_time"] = Json::Node(route->total_time);
       vector<Json::Node> items;
       items.reserve(route->items.size());
-      Paint::RouteInfo paint_info;
-
+      
+      RouteForPainterBuilder builder;
       for (const auto& item : route->items) {
         items.push_back(visit(RouteItemResponseBuilder{}, item));
-        if (!holds_alternative<TransportRouter::RouteInfo::WaitItem>(item)) {
-          paint_info.items.push_back(visit(RouteForPainterBuilder{}, item));
-        }
+        visit(builder, item);
       }
 
-      dict["map"] = Json::Node{ db.RenderRoute(move(paint_info)) };
+      dict["map"] = Json::Node{ db.RenderRoute(builder.result) };
       dict["items"] = move(items);
     }
 
@@ -138,16 +135,16 @@ namespace Requests {
       dict["total_time"] = Json::Node(route->total_time);
       vector<Json::Node> items;
       items.reserve(route->items.size());
-      Paint::RouteInfo paint_info;
-
+      
+      RouteForPainterBuilder builder;
       for (const auto& item : route->items) {
         items.push_back(visit(RouteItemResponseBuilder{}, item));
         if (!holds_alternative<TransportRouter::RouteInfo::WaitItem>(item)) {
-          paint_info.items.push_back(visit(RouteForPainterBuilder{}, item));
+          visit(builder, item);
         }
       }
 
-      dict["map"] = Json::Node{ db.RenderRoute(move(paint_info)) };
+      dict["map"] = Json::Node{ db.RenderRoute(builder.result) };
       dict["items"] = move(items);
     }
     return dict;
@@ -172,7 +169,7 @@ namespace Requests {
     }
     else return RouteToCompany{
       .from = attrs.at("from").AsString(),
-      .model = CompanyQuery::ReadCompany(attrs),
+      .model = CompanyQuery::ReadCompany(attrs.at("companies").AsMap()),
     };
   }
 

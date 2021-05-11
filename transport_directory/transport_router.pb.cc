@@ -163,6 +163,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_transport_5frouter_2eproto::of
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::TCProto::RoutingSettings, bus_wait_time_),
   PROTOBUF_FIELD_OFFSET(::TCProto::RoutingSettings, bus_velocity_),
+  PROTOBUF_FIELD_OFFSET(::TCProto::RoutingSettings, pedestrian_velocity_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::TCProto::StopVertexIds, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -213,12 +214,12 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_transport_5frouter_2eproto::of
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::TCProto::RoutingSettings)},
-  { 7, -1, sizeof(::TCProto::StopVertexIds)},
-  { 15, -1, sizeof(::TCProto::VertexInfo)},
-  { 21, -1, sizeof(::TCProto::BusEdgeInfo)},
-  { 30, -1, sizeof(::TCProto::WaitEdgeInfo)},
-  { 35, -1, sizeof(::TCProto::EdgeInfo)},
-  { 43, -1, sizeof(::TCProto::TransportRouter)},
+  { 8, -1, sizeof(::TCProto::StopVertexIds)},
+  { 16, -1, sizeof(::TCProto::VertexInfo)},
+  { 22, -1, sizeof(::TCProto::BusEdgeInfo)},
+  { 31, -1, sizeof(::TCProto::WaitEdgeInfo)},
+  { 36, -1, sizeof(::TCProto::EdgeInfo)},
+  { 44, -1, sizeof(::TCProto::TransportRouter)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -233,24 +234,24 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 
 const char descriptor_table_protodef_transport_5frouter_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\026transport_router.proto\022\007TCProto\032\013graph"
-  ".proto\">\n\017RoutingSettings\022\025\n\rbus_wait_ti"
-  "me\030\001 \001(\005\022\024\n\014bus_velocity\030\002 \001(\001\"6\n\rStopVe"
-  "rtexIds\022\014\n\004name\030\001 \001(\t\022\n\n\002in\030\002 \001(\r\022\013\n\003out"
-  "\030\003 \001(\r\"\037\n\nVertexInfo\022\021\n\tstop_name\030\001 \001(\t\""
-  "d\n\013BusEdgeInfo\022\020\n\010bus_name\030\001 \001(\t\022\026\n\016star"
-  "t_stop_idx\030\002 \001(\r\022\027\n\017finish_stop_idx\030\003 \001("
-  "\r\022\022\n\nspan_count\030\004 \001(\r\"\016\n\014WaitEdgeInfo\"h\n"
-  "\010EdgeInfo\022(\n\010bus_data\030\001 \001(\0132\024.TCProto.Bu"
-  "sEdgeInfoH\000\022*\n\twait_data\030\002 \001(\0132\025.TCProto"
-  ".WaitEdgeInfoH\000B\006\n\004data\"\240\002\n\017TransportRou"
-  "ter\0222\n\020routing_settings\030\001 \001(\0132\030.TCProto."
-  "RoutingSettings\0220\n\005graph\030\002 \001(\0132!.GraphPr"
-  "oto.DirectedWeightedGraph\022\"\n\006router\030\003 \001("
-  "\0132\022.GraphProto.Router\0220\n\020stops_vertex_id"
-  "s\030\004 \003(\0132\026.TCProto.StopVertexIds\022*\n\rverti"
-  "ces_info\030\005 \003(\0132\023.TCProto.VertexInfo\022%\n\ne"
-  "dges_info\030\006 \003(\0132\021.TCProto.EdgeInfob\006prot"
-  "o3"
+  ".proto\"[\n\017RoutingSettings\022\025\n\rbus_wait_ti"
+  "me\030\001 \001(\005\022\024\n\014bus_velocity\030\002 \001(\001\022\033\n\023pedest"
+  "rian_velocity\030\003 \001(\001\"6\n\rStopVertexIds\022\014\n\004"
+  "name\030\001 \001(\t\022\n\n\002in\030\002 \001(\r\022\013\n\003out\030\003 \001(\r\"\037\n\nV"
+  "ertexInfo\022\021\n\tstop_name\030\001 \001(\t\"d\n\013BusEdgeI"
+  "nfo\022\020\n\010bus_name\030\001 \001(\t\022\026\n\016start_stop_idx\030"
+  "\002 \001(\r\022\027\n\017finish_stop_idx\030\003 \001(\r\022\022\n\nspan_c"
+  "ount\030\004 \001(\r\"\016\n\014WaitEdgeInfo\"h\n\010EdgeInfo\022("
+  "\n\010bus_data\030\001 \001(\0132\024.TCProto.BusEdgeInfoH\000"
+  "\022*\n\twait_data\030\002 \001(\0132\025.TCProto.WaitEdgeIn"
+  "foH\000B\006\n\004data\"\240\002\n\017TransportRouter\0222\n\020rout"
+  "ing_settings\030\001 \001(\0132\030.TCProto.RoutingSett"
+  "ings\0220\n\005graph\030\002 \001(\0132!.GraphProto.Directe"
+  "dWeightedGraph\022\"\n\006router\030\003 \001(\0132\022.GraphPr"
+  "oto.Router\0220\n\020stops_vertex_ids\030\004 \003(\0132\026.T"
+  "CProto.StopVertexIds\022*\n\rvertices_info\030\005 "
+  "\003(\0132\023.TCProto.VertexInfo\022%\n\nedges_info\030\006"
+  " \003(\0132\021.TCProto.EdgeInfob\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_transport_5frouter_2eproto_deps[1] = {
   &::descriptor_table_graph_2eproto,
@@ -266,7 +267,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_tra
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_transport_5frouter_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_transport_5frouter_2eproto = {
-  false, false, descriptor_table_protodef_transport_5frouter_2eproto, "transport_router.proto", 722,
+  false, false, descriptor_table_protodef_transport_5frouter_2eproto, "transport_router.proto", 751,
   &descriptor_table_transport_5frouter_2eproto_once, descriptor_table_transport_5frouter_2eproto_sccs, descriptor_table_transport_5frouter_2eproto_deps, 7, 1,
   schemas, file_default_instances, TableStruct_transport_5frouter_2eproto::offsets,
   file_level_metadata_transport_5frouter_2eproto, 7, file_level_enum_descriptors_transport_5frouter_2eproto, file_level_service_descriptors_transport_5frouter_2eproto,
@@ -362,6 +363,13 @@ const char* RoutingSettings::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
           ptr += sizeof(double);
         } else goto handle_unusual;
         continue;
+      // double pedestrian_velocity = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 25)) {
+          pedestrian_velocity_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
@@ -402,6 +410,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(2, this->_internal_bus_velocity(), target);
   }
 
+  // double pedestrian_velocity = 3;
+  if (!(this->pedestrian_velocity() <= 0 && this->pedestrian_velocity() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(3, this->_internal_pedestrian_velocity(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -420,6 +434,11 @@ size_t RoutingSettings::ByteSizeLong() const {
 
   // double bus_velocity = 2;
   if (!(this->bus_velocity() <= 0 && this->bus_velocity() >= 0)) {
+    total_size += 1 + 8;
+  }
+
+  // double pedestrian_velocity = 3;
+  if (!(this->pedestrian_velocity() <= 0 && this->pedestrian_velocity() >= 0)) {
     total_size += 1 + 8;
   }
 
@@ -463,6 +482,9 @@ void RoutingSettings::MergeFrom(const RoutingSettings& from) {
 
   if (!(from.bus_velocity() <= 0 && from.bus_velocity() >= 0)) {
     _internal_set_bus_velocity(from._internal_bus_velocity());
+  }
+  if (!(from.pedestrian_velocity() <= 0 && from.pedestrian_velocity() >= 0)) {
+    _internal_set_pedestrian_velocity(from._internal_pedestrian_velocity());
   }
   if (from.bus_wait_time() != 0) {
     _internal_set_bus_wait_time(from._internal_bus_wait_time());

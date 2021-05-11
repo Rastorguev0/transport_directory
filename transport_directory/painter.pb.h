@@ -872,6 +872,7 @@ class Painter PROTOBUF_FINAL :
     kStopsCoordsFieldNumber = 2,
     kBusColorsFieldNumber = 3,
     kBusDescriptionsFieldNumber = 4,
+    kStopDescriptionsFieldNumber = 5,
     kRenderSettingsFieldNumber = 1,
   };
   // repeated .TCProto.StopCoords stops_coords = 2;
@@ -928,6 +929,24 @@ class Painter PROTOBUF_FINAL :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::TCProto::BusDescription >&
       bus_descriptions() const;
 
+  // repeated .TCProto.StopDescription stop_descriptions = 5;
+  int stop_descriptions_size() const;
+  private:
+  int _internal_stop_descriptions_size() const;
+  public:
+  void clear_stop_descriptions();
+  ::TCProto::StopDescription* mutable_stop_descriptions(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::TCProto::StopDescription >*
+      mutable_stop_descriptions();
+  private:
+  const ::TCProto::StopDescription& _internal_stop_descriptions(int index) const;
+  ::TCProto::StopDescription* _internal_add_stop_descriptions();
+  public:
+  const ::TCProto::StopDescription& stop_descriptions(int index) const;
+  ::TCProto::StopDescription* add_stop_descriptions();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::TCProto::StopDescription >&
+      stop_descriptions() const;
+
   // .TCProto.RenderSettings render_settings = 1;
   bool has_render_settings() const;
   private:
@@ -956,6 +975,7 @@ class Painter PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::TCProto::StopCoords > stops_coords_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::TCProto::BusColor > bus_colors_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::TCProto::BusDescription > bus_descriptions_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::TCProto::StopDescription > stop_descriptions_;
   ::TCProto::RenderSettings* render_settings_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_painter_2eproto;
@@ -2015,6 +2035,42 @@ inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::TCProto::BusDescriptio
 Painter::bus_descriptions() const {
   // @@protoc_insertion_point(field_list:TCProto.Painter.bus_descriptions)
   return bus_descriptions_;
+}
+
+// repeated .TCProto.StopDescription stop_descriptions = 5;
+inline int Painter::_internal_stop_descriptions_size() const {
+  return stop_descriptions_.size();
+}
+inline int Painter::stop_descriptions_size() const {
+  return _internal_stop_descriptions_size();
+}
+inline ::TCProto::StopDescription* Painter::mutable_stop_descriptions(int index) {
+  // @@protoc_insertion_point(field_mutable:TCProto.Painter.stop_descriptions)
+  return stop_descriptions_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::TCProto::StopDescription >*
+Painter::mutable_stop_descriptions() {
+  // @@protoc_insertion_point(field_mutable_list:TCProto.Painter.stop_descriptions)
+  return &stop_descriptions_;
+}
+inline const ::TCProto::StopDescription& Painter::_internal_stop_descriptions(int index) const {
+  return stop_descriptions_.Get(index);
+}
+inline const ::TCProto::StopDescription& Painter::stop_descriptions(int index) const {
+  // @@protoc_insertion_point(field_get:TCProto.Painter.stop_descriptions)
+  return _internal_stop_descriptions(index);
+}
+inline ::TCProto::StopDescription* Painter::_internal_add_stop_descriptions() {
+  return stop_descriptions_.Add();
+}
+inline ::TCProto::StopDescription* Painter::add_stop_descriptions() {
+  // @@protoc_insertion_point(field_add:TCProto.Painter.stop_descriptions)
+  return _internal_add_stop_descriptions();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::TCProto::StopDescription >&
+Painter::stop_descriptions() const {
+  // @@protoc_insertion_point(field_list:TCProto.Painter.stop_descriptions)
+  return stop_descriptions_;
 }
 
 #ifdef __GNUC__

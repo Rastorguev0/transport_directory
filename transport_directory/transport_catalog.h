@@ -54,7 +54,7 @@ public:
 		const std::string& stop_from, const CompanyQuery::Company& model) const;
 
 	std::string RenderMap() const;
-	std::string RenderRoute(const Paint::RouteInfo& items) const;
+	std::string RenderRoute(const Paint::Route& items) const;
 
 private:
 	static int ComputeRoadRouteLength(

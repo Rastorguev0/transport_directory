@@ -58,7 +58,7 @@ SphereProto::Coords ReadCoords(const Json::Dict& properties) {
     protocoords.set_lat(stod(properties.at("lat").AsString()));
   }
   if (properties.count("lon")) {
-    protocoords.set_lat(stod(properties.at("lon").AsString()));
+    protocoords.set_lon(stod(properties.at("lon").AsString()));
   }
   return protocoords;
 }

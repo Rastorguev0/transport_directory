@@ -13,10 +13,10 @@
 
 class Aligner {
 private:
-  using StopSet = std::unordered_set<std::string_view>;
-  using StopIdx = std::unordered_map<std::string_view, int>;
-  using StopCoords = std::unordered_map<std::string_view, Sphere::Point>;
-  using StopAxes = std::vector<std::pair<double, std::string_view>>;
+  using StopSet = std::unordered_set<std::string>;
+  using StopIdx = std::unordered_map<std::string, int>;
+  using StopCoords = std::unordered_map<std::string, Sphere::Point>;
+  using StopAxes = std::vector<std::pair<double, std::string>>;
 public:
   Aligner(const Descriptions::StopsDict& stops,
     const Descriptions::BusesDict& buses,

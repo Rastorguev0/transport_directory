@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+import "sphere.proto";
+
 package TCProto;
 
 message BusDescription {
@@ -7,4 +9,10 @@ message BusDescription {
   repeated string stops = 2;
   repeated string endpoints = 3;
   bool is_roundtrip = 4;
+}
+
+message StopDescription {
+  string name = 1;
+  SphereProto.Coords position = 2;
+  map<string, int64> distances = 3;
 }

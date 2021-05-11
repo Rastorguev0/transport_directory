@@ -5,6 +5,7 @@
 #include "descriptions.h"
 #include "painter.pb.h"
 #include "company.pb.h"
+#include "utils.h"
 
 #include <map>
 #include <vector>
@@ -15,21 +16,23 @@
 
 namespace Paint {
 
-  struct RouteInfo {
+  struct Route {
 
-    struct BusItem {
+    struct Bus {
       std::string bus_name;
       size_t start_stop_idx;
       size_t finish_stop_idx;
     };
-    struct WalkItem {
+    struct Walk {
       std::string stop_from;
       std::string company_name;
       std::string rubric_name;
     };
+    template<typename ItemType>
+    using Items = std::vector<ItemType>;
 
-    using Item = std::variant<BusItem, WalkItem>;
-    std::vector<Item> items;
+    Items<Bus> buses;
+    Items<Walk> walks;
   };
 
   struct RenderSettings {
@@ -63,35 +66,49 @@ namespace Paint {
     TCProto::Painter Serialize() const;
     Painter(const TCProto::Painter& painter);
 
-    std::string Paint() const;
-    std::string PaintRoute(const RouteInfo& route) const;
+    std::string Paint(std::optional<Route> = std::nullopt) const;
   private:
     const RenderSettings settings_;
     const std::shared_ptr<Descriptions::BusesDict> buses_dict_;
+    const std::shared_ptr<Descriptions::StopsDict> stops_dict_;
     const std::map<std::string, Svg::Point> places_coords_;
     const std::unordered_map<std::string, Svg::Color> bus_colors_;
 
     const Svg::Document base_map_;
 
-    void PaintBusLines(Svg::Document& svg) const;
-    void PaintBusLabels(Svg::Document& svg) const;
-    void PaintStopPoints(Svg::Document& svg) const;
-    void PaintStopLabels(Svg::Document& svg) const;
+    void PaintMoveLines(Svg::Document& svg) const;
+    void PaintMoveLines(Svg::Document& svg, const Route::Items<Route::Bus>& buses) const;
+    void PaintMoveLines(Svg::Document& svg, const Route::Items<Route::Walk>& walks) const;
 
-    void PaintRouteBusLines(Svg::Document& svg, const RouteInfo&) const;
-    void PaintRouteBusLabels(Svg::Document& svg, const RouteInfo&) const;
-    void PaintRouteStopPoints(Svg::Document& svg, const RouteInfo&) const;
-    void PaintRouteStopLabels(Svg::Document& svg, const RouteInfo&) const;
+    void PaintMoveLabels(Svg::Document& svg) const;
+    void PaintMoveLabels(Svg::Document& svg, const Route::Items<Route::Bus>& buses) const;
 
-    void PaintBusLabel(Svg::Document& svg, Svg::Point pos, const std::string& name) const;
-    void PaintStopLabel(Svg::Document& svg, Svg::Point pos, const std::string& name) const;
-    void PaintStopPoint(Svg::Document& svg, Svg::Point pos) const;
-    Svg::Polyline BaseBusLine(const std::string& bus_name) const;
+    void PaintPlacePoints(Svg::Document& svg) const;
+    void PaintPlacePoints(Svg::Document& svg, const Route::Items<Route::Bus>& buses) const;
+    void PaintPlacePoints(Svg::Document& svg, const Route::Items<Route::Walk>& walks) const;
+
+    void PaintPlaceLabels(Svg::Document& svg) const;
+    void PaintPlaceLabels(Svg::Document& svg, const Route::Items<Route::Bus>& buses) const;
+    void PaintPlaceLabels(Svg::Document& svg, const Route::Items<Route::Walk>& walks) const;
+
+    void PaintMoveLabel(Svg::Document& svg, Svg::Point pos, const std::string& name) const;
+    void PaintPlaceLabel(Svg::Document& svg, Svg::Point pos, const std::string& name) const;
+    void PaintPlacePoint(Svg::Document& svg, Svg::Point pos) const;
+    Svg::Polyline PaintBaseLine(const std::string& bus_name) const;
+
     Svg::Document MakeDocument() const;
 
-    static const std::unordered_map<std::string, void (Painter::*)(Svg::Document&) const> LAYER_ACTIONS;
+    static const std::unordered_map<
+      std::string, void (Painter::*)(Svg::Document&) const
+    > LAYER_ACTIONS;
 
-    static const std::unordered_map<std::string, void (Painter::*)(Svg::Document&, const RouteInfo&) const> ROUTE_LAYER_ACTIONS;
+    static const std::unordered_map<
+      std::string, void (Painter::*)(Svg::Document&, const Route::Items<Route::Bus>&) const
+    > MOVE_LAYER_ACTIONS;
+
+    static const std::unordered_map<
+      std::string, void (Painter::*)(Svg::Document&, const Route::Items<Route::Walk>&) const
+    > WALK_LAYER_ACTIONS;
   };
 
 }

@@ -125,6 +125,7 @@
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <AdditionalIncludeDirectories>C:\Users\Redaciple\source\protobuf\include</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4996; 4099</DisableSpecificWarnings>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

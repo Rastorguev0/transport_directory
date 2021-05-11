@@ -80,7 +80,7 @@ optional<TransportRouter::RouteInfo> TransportCatalog::RouteToCompany(
         double time = stop.meters() / (1000 * router_->GetWalkVelocity()) * 60; //in minutes
         route->total_time += time;
         TransportRouter::RouteInfo::WalkToCompany walk_item {
-          .time = time, .stop_from = from, .company_name = CompanyMainName(*company)
+          .time = time, .stop_from = stop.name(), .company_name = CompanyMainName(*company)
           };
         if (!company->rubrics().empty()) {
           walk_item.rubric = companies_->GetRubric(company->rubrics()[0]);
@@ -123,6 +123,6 @@ std::string TransportCatalog::RenderMap() const {
   return painter_->Paint();
 }
 
-std::string TransportCatalog::RenderRoute(const Paint::RouteInfo& items) const {
-  return painter_->PaintRoute(items);
+std::string TransportCatalog::RenderRoute(const Paint::Route& items) const {
+  return painter_->Paint(items);
 }

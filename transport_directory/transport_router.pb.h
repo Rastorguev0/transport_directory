@@ -203,6 +203,7 @@ class RoutingSettings PROTOBUF_FINAL :
 
   enum : int {
     kBusVelocityFieldNumber = 2,
+    kPedestrianVelocityFieldNumber = 3,
     kBusWaitTimeFieldNumber = 1,
   };
   // double bus_velocity = 2;
@@ -212,6 +213,15 @@ class RoutingSettings PROTOBUF_FINAL :
   private:
   double _internal_bus_velocity() const;
   void _internal_set_bus_velocity(double value);
+  public:
+
+  // double pedestrian_velocity = 3;
+  void clear_pedestrian_velocity();
+  double pedestrian_velocity() const;
+  void set_pedestrian_velocity(double value);
+  private:
+  double _internal_pedestrian_velocity() const;
+  void _internal_set_pedestrian_velocity(double value);
   public:
 
   // int32 bus_wait_time = 1;
@@ -231,6 +241,7 @@ class RoutingSettings PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   double bus_velocity_;
+  double pedestrian_velocity_;
   ::PROTOBUF_NAMESPACE_ID::int32 bus_wait_time_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_transport_5frouter_2eproto;
@@ -1319,6 +1330,26 @@ inline void RoutingSettings::_internal_set_bus_velocity(double value) {
 inline void RoutingSettings::set_bus_velocity(double value) {
   _internal_set_bus_velocity(value);
   // @@protoc_insertion_point(field_set:TCProto.RoutingSettings.bus_velocity)
+}
+
+// double pedestrian_velocity = 3;
+inline void RoutingSettings::clear_pedestrian_velocity() {
+  pedestrian_velocity_ = 0;
+}
+inline double RoutingSettings::_internal_pedestrian_velocity() const {
+  return pedestrian_velocity_;
+}
+inline double RoutingSettings::pedestrian_velocity() const {
+  // @@protoc_insertion_point(field_get:TCProto.RoutingSettings.pedestrian_velocity)
+  return _internal_pedestrian_velocity();
+}
+inline void RoutingSettings::_internal_set_pedestrian_velocity(double value) {
+  
+  pedestrian_velocity_ = value;
+}
+inline void RoutingSettings::set_pedestrian_velocity(double value) {
+  _internal_set_pedestrian_velocity(value);
+  // @@protoc_insertion_point(field_set:TCProto.RoutingSettings.pedestrian_velocity)
 }
 
 // -------------------------------------------------------------------

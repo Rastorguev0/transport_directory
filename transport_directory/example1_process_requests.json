@@ -1,51 +1,17 @@
 {
     "serialization_settings": {
-        "file": "tmpjyqkrtm8"
+        "file": "tmp8h4r0nnk"
     },
     "stat_requests": [
         {
-            "id": 379575119,
+            "id": 463508520,
             "type": "FindCompanies",
             "rubrics": [
                 "Сквер"
             ]
         },
         {
-            "id": 702762979,
-            "type": "FindCompanies",
-            "rubrics": [
-                "Вокзал"
-            ]
-        },
-        {
-            "id": 7543138,
-            "type": "FindCompanies",
-            "names": [
-                "Комсомольский"
-            ]
-        },
-        {
-            "id": 162389115,
-            "type": "FindCompanies",
-            "names": [
-                "Комсомольский"
-            ],
-            "rubrics": [
-                "Вокзал"
-            ]
-        },
-        {
-            "id": 279616443,
-            "type": "FindCompanies",
-            "names": [
-                "Комсомольский"
-            ],
-            "rubrics": [
-                "Сквер"
-            ]
-        },
-        {
-            "id": 675139528,
+            "id": 1457284289,
             "type": "FindCompanies",
             "names": [
                 "Комсомольский",
@@ -56,16 +22,28 @@
             ]
         },
         {
-            "id": 1374027080,
-            "type": "FindCompanies",
-            "names": [
-                "Комсомольский",
-                "Кооперативный"
-            ],
-            "rubrics": [
-                "Сквер",
-                "Вокзал"
-            ]
+            "id": 638533243,
+            "type": "RouteToCompany",
+            "from": "Параллельная улица",
+            "companies": {
+                "rubrics": [
+                    "Сквер"
+                ]
+            }
+        },
+        {
+            "id": 774281590,
+            "type": "RouteToCompany",
+            "from": "Морской вокзал",
+            "companies": {
+                "names": [
+                    "Комсомольский",
+                    "Кооперативный"
+                ],
+                "rubrics": [
+                    "Сквер"
+                ]
+            }
         }
     ]
 }

@@ -15,7 +15,7 @@
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_BusResponse_transport_5fcatalog_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_painter_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<4> scc_info_Painter_painter_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_painter_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<5> scc_info_Painter_painter_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_transport_5fcatalog_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_StopResponse_transport_5fcatalog_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_transport_5frouter_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<6> scc_info_TransportRouter_transport_5frouter_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_database_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Database_database_2eproto;

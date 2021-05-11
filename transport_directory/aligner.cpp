@@ -13,7 +13,6 @@ Aligner::Aligner(const Descriptions::StopsDict& stops,
   stops_dict(stops), buses_dict(buses),
   neighs(Descriptions::DefineNeighbors(stops, buses)) {
 
-
   const StopCoords coords = ComputeControlBasedCoords(stops, buses);
   StopAxes longs, lats;
   longs.reserve(stops_dict.size() + companies.size());
@@ -24,6 +23,7 @@ Aligner::Aligner(const Descriptions::StopsDict& stops,
   }
   for (const auto& company : companies) {
     string name = CompanyMainName(company);
+    neighs[name];
     for (const auto& neigh : company.nearby_stops()) {
       neighs[name].insert(neigh.name());
       neighs[neigh.name()].insert(name);
@@ -42,8 +42,8 @@ Aligner::Aligner(const Descriptions::StopsDict& stops,
 
 Aligner::StopSet Aligner::ControlStops(const Descriptions::BusesDict& buses) const {
   StopSet controls;
-  unordered_map<string_view, int> stops_count;
-  vector<unordered_set<string_view>> round_stops;
+  unordered_map<string, int> stops_count;
+  vector<unordered_set<string>> round_stops;
 
   for (const auto& [_, bus] : buses) {
     for (const auto& end : bus->endpoints) {
@@ -59,7 +59,7 @@ Aligner::StopSet Aligner::ControlStops(const Descriptions::BusesDict& buses) con
   for (const auto& [name, count] : stops_count) {
     if (count > 2) controls.insert(name);
   }
-  unordered_map<string_view, int> transfer_map;
+  unordered_map<string, int> transfer_map;
   for (const auto& route : round_stops) {
     for (auto stop : route) {
       transfer_map[stop]++;

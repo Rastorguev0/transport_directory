@@ -114,6 +114,7 @@ TCProto::TransportRouter TransportRouter::Serialize() const {
   auto& routing_settings_proto = *proto.mutable_routing_settings();
   routing_settings_proto.set_bus_wait_time(routing_settings_.bus_wait_time);
   routing_settings_proto.set_bus_velocity(routing_settings_.bus_velocity);
+  routing_settings_proto.set_pedestrian_velocity(routing_settings_.pedestrian_velocity);
 
   (*proto.mutable_graph()) = graph_.Serialize();
   (*proto.mutable_router()) = router_->Serialize();
@@ -149,6 +150,7 @@ TCProto::TransportRouter TransportRouter::Serialize() const {
 TransportRouter::TransportRouter(const TCProto::TransportRouter& proto) {
   routing_settings_.bus_wait_time = proto.routing_settings().bus_wait_time();
   routing_settings_.bus_velocity = proto.routing_settings().bus_velocity();
+  routing_settings_.pedestrian_velocity = proto.routing_settings().pedestrian_velocity();
 
   graph_ = Graph::DirectedWeightedGraph<double>(proto.graph());
   router_ = make_unique<Router>(proto.router(), graph_);
@@ -254,7 +256,7 @@ TCProto::Painter Paint::Painter::Serialize() const {
   settings.set_padding(settings_.padding);
   settings.set_outer_margin(settings_.outer_margin);
   settings.set_company_radius(settings_.company_radius);
-  settings.set_company_radius(settings_.company_line_width);
+  settings.set_company_line_width(settings_.company_line_width);
   for (const Svg::Color& color : settings_.color_palette) {
     *(settings.add_palette()) = SerializeColor(color);
   }
@@ -291,6 +293,18 @@ TCProto::Painter Paint::Painter::Serialize() const {
     }
     for (const string& stop : bus->endpoints) {
       protobus.add_endpoints(stop);
+    }
+  }
+  
+  for (const auto& [name, stop] : *stops_dict_) {
+    auto& protostop = *proto.add_stop_descriptions();
+    protostop.set_name(name);
+    auto& protocoords = *protostop.mutable_position();
+    protocoords.set_lat(stop->position.latitude);
+    protocoords.set_lon(stop->position.longitude);
+    for (const auto& [stop, dist] : stop->distances) {
+      auto& distances = *protostop.mutable_distances();
+      distances[stop] = dist;
     }
   }
   return proto;
@@ -338,6 +352,22 @@ Descriptions::BusesDict DeserializeBusesDict(const TCProto::Painter& p) {
   return result;
 }
 
+Descriptions::StopsDict DeserializeStopsDict(const TCProto::Painter& p) {
+  Descriptions::StopsDict result;
+  for (const auto& item : p.stop_descriptions()) {
+    Descriptions::Stop stop;
+    stop.name = item.name();
+    stop.position = {
+      .latitude = item.position().lat(), .longitude = item.position().lon()
+    };
+    for (const auto& p : item.distances()) {
+      stop.distances[p.first] = p.second;
+    }
+    result[item.name()] = make_unique<Descriptions::Stop>(move(stop));
+  }
+  return result;
+}
+
 std::map<std::string, Svg::Point> DeserialzieStopsCoords(const TCProto::Painter& p) {
   std::map<std::string, Svg::Point> result;
   for (const auto& item : p.stops_coords()) {
@@ -356,7 +386,8 @@ std::unordered_map<std::string, Svg::Color> DeserializeBusColors(const TCProto::
 
 Paint::Painter::Painter(const TCProto::Painter& proto) 
   : settings_(DeserializeSettings(proto)),
-  buses_dict_(make_unique<Descriptions::BusesDict>(DeserializeBusesDict(proto))),
+  buses_dict_(make_shared<Descriptions::BusesDict>(DeserializeBusesDict(proto))),
+  stops_dict_(make_shared<Descriptions::StopsDict>(DeserializeStopsDict(proto))),
   places_coords_(DeserialzieStopsCoords(proto)),
   bus_colors_(DeserializeBusColors(proto)),
   base_map_(MakeDocument()) {}
@@ -439,5 +470,5 @@ TransportCatalog::TransportCatalog(istream& is) {
 
   router_ = make_unique<TransportRouter>(proto.router());
   painter_ = make_unique<Paint::Painter>(proto.painter());
-  companies_ = make_unique<CompaniesCatalog>(move(proto.companies()));
+  companies_ = make_unique<CompaniesCatalog>(proto.companies());
 }

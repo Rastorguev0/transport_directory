@@ -30,7 +30,11 @@
 #include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/map.h>  // IWYU pragma: export
+#include <google/protobuf/map_entry.h>
+#include <google/protobuf/map_field_inl.h>
 #include <google/protobuf/unknown_field_set.h>
+#include "sphere.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_descriptions_2eproto
@@ -46,7 +50,7 @@ struct TableStruct_descriptions_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[1]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[3]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -57,9 +61,17 @@ namespace TCProto {
 class BusDescription;
 class BusDescriptionDefaultTypeInternal;
 extern BusDescriptionDefaultTypeInternal _BusDescription_default_instance_;
+class StopDescription;
+class StopDescriptionDefaultTypeInternal;
+extern StopDescriptionDefaultTypeInternal _StopDescription_default_instance_;
+class StopDescription_DistancesEntry_DoNotUse;
+class StopDescription_DistancesEntry_DoNotUseDefaultTypeInternal;
+extern StopDescription_DistancesEntry_DoNotUseDefaultTypeInternal _StopDescription_DistancesEntry_DoNotUse_default_instance_;
 }  // namespace TCProto
 PROTOBUF_NAMESPACE_OPEN
 template<> ::TCProto::BusDescription* Arena::CreateMaybeMessage<::TCProto::BusDescription>(Arena*);
+template<> ::TCProto::StopDescription* Arena::CreateMaybeMessage<::TCProto::StopDescription>(Arena*);
+template<> ::TCProto::StopDescription_DistancesEntry_DoNotUse* Arena::CreateMaybeMessage<::TCProto::StopDescription_DistancesEntry_DoNotUse>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace TCProto {
 
@@ -266,6 +278,223 @@ class BusDescription PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> endpoints_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
   bool is_roundtrip_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_descriptions_2eproto;
+};
+// -------------------------------------------------------------------
+
+class StopDescription_DistancesEntry_DoNotUse : public ::PROTOBUF_NAMESPACE_ID::internal::MapEntry<StopDescription_DistancesEntry_DoNotUse, 
+    std::string, ::PROTOBUF_NAMESPACE_ID::int64,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT64> {
+public:
+  typedef ::PROTOBUF_NAMESPACE_ID::internal::MapEntry<StopDescription_DistancesEntry_DoNotUse, 
+    std::string, ::PROTOBUF_NAMESPACE_ID::int64,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT64> SuperType;
+  StopDescription_DistancesEntry_DoNotUse();
+  explicit StopDescription_DistancesEntry_DoNotUse(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  void MergeFrom(const StopDescription_DistancesEntry_DoNotUse& other);
+  static const StopDescription_DistancesEntry_DoNotUse* internal_default_instance() { return reinterpret_cast<const StopDescription_DistancesEntry_DoNotUse*>(&_StopDescription_DistancesEntry_DoNotUse_default_instance_); }
+  static bool ValidateKey(std::string* s) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(s->data(), static_cast<int>(s->size()), ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE, "TCProto.StopDescription.DistancesEntry.key");
+ }
+  static bool ValidateValue(void*) { return true; }
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& other) final;
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_descriptions_2eproto);
+    return ::descriptor_table_descriptions_2eproto.file_level_metadata[1];
+  }
+
+  public:
+};
+
+// -------------------------------------------------------------------
+
+class StopDescription PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:TCProto.StopDescription) */ {
+ public:
+  inline StopDescription() : StopDescription(nullptr) {}
+  virtual ~StopDescription();
+
+  StopDescription(const StopDescription& from);
+  StopDescription(StopDescription&& from) noexcept
+    : StopDescription() {
+    *this = ::std::move(from);
+  }
+
+  inline StopDescription& operator=(const StopDescription& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline StopDescription& operator=(StopDescription&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const StopDescription& default_instance();
+
+  static inline const StopDescription* internal_default_instance() {
+    return reinterpret_cast<const StopDescription*>(
+               &_StopDescription_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    2;
+
+  friend void swap(StopDescription& a, StopDescription& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(StopDescription* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(StopDescription* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline StopDescription* New() const final {
+    return CreateMaybeMessage<StopDescription>(nullptr);
+  }
+
+  StopDescription* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<StopDescription>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const StopDescription& from);
+  void MergeFrom(const StopDescription& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(StopDescription* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "TCProto.StopDescription";
+  }
+  protected:
+  explicit StopDescription(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_descriptions_2eproto);
+    return ::descriptor_table_descriptions_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kDistancesFieldNumber = 3,
+    kNameFieldNumber = 1,
+    kPositionFieldNumber = 2,
+  };
+  // map<string, int64> distances = 3;
+  int distances_size() const;
+  private:
+  int _internal_distances_size() const;
+  public:
+  void clear_distances();
+  private:
+  const ::PROTOBUF_NAMESPACE_ID::Map< std::string, ::PROTOBUF_NAMESPACE_ID::int64 >&
+      _internal_distances() const;
+  ::PROTOBUF_NAMESPACE_ID::Map< std::string, ::PROTOBUF_NAMESPACE_ID::int64 >*
+      _internal_mutable_distances();
+  public:
+  const ::PROTOBUF_NAMESPACE_ID::Map< std::string, ::PROTOBUF_NAMESPACE_ID::int64 >&
+      distances() const;
+  ::PROTOBUF_NAMESPACE_ID::Map< std::string, ::PROTOBUF_NAMESPACE_ID::int64 >*
+      mutable_distances();
+
+  // string name = 1;
+  void clear_name();
+  const std::string& name() const;
+  void set_name(const std::string& value);
+  void set_name(std::string&& value);
+  void set_name(const char* value);
+  void set_name(const char* value, size_t size);
+  std::string* mutable_name();
+  std::string* release_name();
+  void set_allocated_name(std::string* name);
+  private:
+  const std::string& _internal_name() const;
+  void _internal_set_name(const std::string& value);
+  std::string* _internal_mutable_name();
+  public:
+
+  // .SphereProto.Coords position = 2;
+  bool has_position() const;
+  private:
+  bool _internal_has_position() const;
+  public:
+  void clear_position();
+  const ::SphereProto::Coords& position() const;
+  ::SphereProto::Coords* release_position();
+  ::SphereProto::Coords* mutable_position();
+  void set_allocated_position(::SphereProto::Coords* position);
+  private:
+  const ::SphereProto::Coords& _internal_position() const;
+  ::SphereProto::Coords* _internal_mutable_position();
+  public:
+  void unsafe_arena_set_allocated_position(
+      ::SphereProto::Coords* position);
+  ::SphereProto::Coords* unsafe_arena_release_position();
+
+  // @@protoc_insertion_point(class_scope:TCProto.StopDescription)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::MapField<
+      StopDescription_DistancesEntry_DoNotUse,
+      std::string, ::PROTOBUF_NAMESPACE_ID::int64,
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT64> distances_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
+  ::SphereProto::Coords* position_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_descriptions_2eproto;
 };
@@ -509,9 +738,186 @@ inline void BusDescription::set_is_roundtrip(bool value) {
   // @@protoc_insertion_point(field_set:TCProto.BusDescription.is_roundtrip)
 }
 
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// StopDescription
+
+// string name = 1;
+inline void StopDescription::clear_name() {
+  name_.ClearToEmpty();
+}
+inline const std::string& StopDescription::name() const {
+  // @@protoc_insertion_point(field_get:TCProto.StopDescription.name)
+  return _internal_name();
+}
+inline void StopDescription::set_name(const std::string& value) {
+  _internal_set_name(value);
+  // @@protoc_insertion_point(field_set:TCProto.StopDescription.name)
+}
+inline std::string* StopDescription::mutable_name() {
+  // @@protoc_insertion_point(field_mutable:TCProto.StopDescription.name)
+  return _internal_mutable_name();
+}
+inline const std::string& StopDescription::_internal_name() const {
+  return name_.Get();
+}
+inline void StopDescription::_internal_set_name(const std::string& value) {
+  
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void StopDescription::set_name(std::string&& value) {
+  
+  name_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:TCProto.StopDescription.name)
+}
+inline void StopDescription::set_name(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:TCProto.StopDescription.name)
+}
+inline void StopDescription::set_name(const char* value,
+    size_t size) {
+  
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:TCProto.StopDescription.name)
+}
+inline std::string* StopDescription::_internal_mutable_name() {
+  
+  return name_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* StopDescription::release_name() {
+  // @@protoc_insertion_point(field_release:TCProto.StopDescription.name)
+  return name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void StopDescription::set_allocated_name(std::string* name) {
+  if (name != nullptr) {
+    
+  } else {
+    
+  }
+  name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:TCProto.StopDescription.name)
+}
+
+// .SphereProto.Coords position = 2;
+inline bool StopDescription::_internal_has_position() const {
+  return this != internal_default_instance() && position_ != nullptr;
+}
+inline bool StopDescription::has_position() const {
+  return _internal_has_position();
+}
+inline const ::SphereProto::Coords& StopDescription::_internal_position() const {
+  const ::SphereProto::Coords* p = position_;
+  return p != nullptr ? *p : reinterpret_cast<const ::SphereProto::Coords&>(
+      ::SphereProto::_Coords_default_instance_);
+}
+inline const ::SphereProto::Coords& StopDescription::position() const {
+  // @@protoc_insertion_point(field_get:TCProto.StopDescription.position)
+  return _internal_position();
+}
+inline void StopDescription::unsafe_arena_set_allocated_position(
+    ::SphereProto::Coords* position) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(position_);
+  }
+  position_ = position;
+  if (position) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:TCProto.StopDescription.position)
+}
+inline ::SphereProto::Coords* StopDescription::release_position() {
+  
+  ::SphereProto::Coords* temp = position_;
+  position_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::SphereProto::Coords* StopDescription::unsafe_arena_release_position() {
+  // @@protoc_insertion_point(field_release:TCProto.StopDescription.position)
+  
+  ::SphereProto::Coords* temp = position_;
+  position_ = nullptr;
+  return temp;
+}
+inline ::SphereProto::Coords* StopDescription::_internal_mutable_position() {
+  
+  if (position_ == nullptr) {
+    auto* p = CreateMaybeMessage<::SphereProto::Coords>(GetArena());
+    position_ = p;
+  }
+  return position_;
+}
+inline ::SphereProto::Coords* StopDescription::mutable_position() {
+  // @@protoc_insertion_point(field_mutable:TCProto.StopDescription.position)
+  return _internal_mutable_position();
+}
+inline void StopDescription::set_allocated_position(::SphereProto::Coords* position) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(position_);
+  }
+  if (position) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(position)->GetArena();
+    if (message_arena != submessage_arena) {
+      position = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, position, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  position_ = position;
+  // @@protoc_insertion_point(field_set_allocated:TCProto.StopDescription.position)
+}
+
+// map<string, int64> distances = 3;
+inline int StopDescription::_internal_distances_size() const {
+  return distances_.size();
+}
+inline int StopDescription::distances_size() const {
+  return _internal_distances_size();
+}
+inline void StopDescription::clear_distances() {
+  distances_.Clear();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::Map< std::string, ::PROTOBUF_NAMESPACE_ID::int64 >&
+StopDescription::_internal_distances() const {
+  return distances_.GetMap();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::Map< std::string, ::PROTOBUF_NAMESPACE_ID::int64 >&
+StopDescription::distances() const {
+  // @@protoc_insertion_point(field_map:TCProto.StopDescription.distances)
+  return _internal_distances();
+}
+inline ::PROTOBUF_NAMESPACE_ID::Map< std::string, ::PROTOBUF_NAMESPACE_ID::int64 >*
+StopDescription::_internal_mutable_distances() {
+  return distances_.MutableMap();
+}
+inline ::PROTOBUF_NAMESPACE_ID::Map< std::string, ::PROTOBUF_NAMESPACE_ID::int64 >*
+StopDescription::mutable_distances() {
+  // @@protoc_insertion_point(field_mutable_map:TCProto.StopDescription.distances)
+  return _internal_mutable_distances();
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 
 // @@protoc_insertion_point(namespace_scope)
 
