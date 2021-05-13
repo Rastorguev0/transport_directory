@@ -149,24 +149,24 @@ namespace Paint {
     }
   }
 
-
   void Painter::PaintMoveLabels(Svg::Document& svg) const {
     for (const auto& [bus_name, bus] : *buses_dict_) {
-      const auto& stops = bus->stops;
-      if (!stops.empty()) {
+      if (!bus->stops.empty()) {
         for (const string& endpoint : bus->endpoints) {
           PaintMoveLabel(svg, places_coords_.at(endpoint), bus_name);
         }
       }
     }
   }
-
+  //!!!
   void Painter::PaintMoveLabels(Svg::Document& svg, const Route::Items<Route::Bus>& buses) const {
     for (const auto& [bus, start, finish] : buses) {
       const auto& endpoints = buses_dict_->at(bus)->endpoints;
       const auto& stops = buses_dict_->at(bus)->stops;
-      for (size_t stop_idx = start; stop_idx <= finish; stop_idx++) {
-        if (find(begin(endpoints), end(endpoints), stops[stop_idx]) != end(endpoints)) {
+      if (stops.empty()) continue;
+      for (const size_t stop_idx : {start, finish}) {
+        if (stop_idx == 0 || stop_idx == stops.size() - 1 ||
+            find(begin(endpoints), end(endpoints), stops[stop_idx]) != end(endpoints)) {
           PaintMoveLabel(svg, places_coords_.at(stops[stop_idx]), bus);
         }
       }
@@ -198,13 +198,12 @@ namespace Paint {
     }
   }
 
-
   void Painter::PaintPlaceLabels(Svg::Document& svg) const {
     for (const auto& [stop_name, stop] : *stops_dict_) {
       PaintPlaceLabel(svg, places_coords_.at(stop_name), stop_name);
     }
   }
-
+  //!!!
   void Painter::PaintPlaceLabels(Svg::Document& svg, const Route::Items<Route::Bus>& buses) const {
     if (buses.empty()) return;
     const auto& bus = buses.front().bus_name;

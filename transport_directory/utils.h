@@ -59,4 +59,6 @@ std::unordered_set<T> Intersect(const std::unordered_set<T>& set1, const std::un
   return result;
 }
 
+int ConvertToMinutes(int day, int hours, int minutes);
+
 std::string_view Strip(std::string_view line);

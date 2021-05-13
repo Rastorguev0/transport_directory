@@ -39,6 +39,7 @@ namespace Requests {
 
   struct RouteToCompany {
     std::string from;
+    int datetime;
     CompanyQuery::Company model;
 
     Json::Dict Process(const TransportCatalog& db) const;

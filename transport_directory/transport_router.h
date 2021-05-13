@@ -44,8 +44,12 @@ public:
       std::string company_name;
       std::string rubric;
     };
+    struct WaitCompany {
+      double time;
+      std::string company_name;
+    };
 
-    using Item = std::variant<BusItem, WaitItem, WalkToCompany>;
+    using Item = std::variant<BusItem, WaitItem, WalkToCompany, WaitCompany>;
     std::vector<Item> items;
   };
 

@@ -1,6 +1,7 @@
 #include "requests.h"
 #include "transport_router.h"
 #include "companies_catalog.h"
+#include "utils.h"
 
 #include <vector>
 
@@ -66,6 +67,13 @@ namespace Requests {
         {"company", Json::Node(walk_item.company_name)},
       };
     }
+    Json::Dict operator()(const TransportRouter::RouteInfo::WaitCompany& wait_item) const {
+      return Json::Dict{
+        {"type", Json::Node("WaitCompany"s)},
+        {"time", Json::Node(wait_item.time)},
+        {"company", Json::Node(wait_item.company_name)},
+      };
+    }
   };
 
   struct RouteForPainterBuilder {
@@ -76,12 +84,13 @@ namespace Requests {
         });
     }
     void operator()(const TransportRouter::RouteInfo::WaitItem& wait_item) {}
+    void operator()(const TransportRouter::RouteInfo::WaitCompany& wait_item) {}
     void operator()(const TransportRouter::RouteInfo::WalkToCompany& walk_item) {
       result.walks.push_back(Paint::Route::Walk{
         .stop_from = walk_item.stop_from,
         .company_name = walk_item.company_name,
         .rubric_name = walk_item.rubric
-      });
+        });
     }
   };
 
@@ -95,7 +104,7 @@ namespace Requests {
       dict["total_time"] = Json::Node(route->total_time);
       vector<Json::Node> items;
       items.reserve(route->items.size());
-      
+
       RouteForPainterBuilder builder;
       for (const auto& item : route->items) {
         items.push_back(visit(RouteItemResponseBuilder{}, item));
@@ -126,7 +135,7 @@ namespace Requests {
   }
 
   Json::Dict RouteToCompany::Process(const TransportCatalog& db) const {
-    const auto route = db.RouteToCompany(from, model);
+    const auto route = db.RouteToCompany(from, static_cast<double>(datetime), model);
     Json::Dict dict;
     if (!route) {
       dict["error_message"] = Json::Node("not found"s);
@@ -135,13 +144,11 @@ namespace Requests {
       dict["total_time"] = Json::Node(route->total_time);
       vector<Json::Node> items;
       items.reserve(route->items.size());
-      
+
       RouteForPainterBuilder builder;
       for (const auto& item : route->items) {
         items.push_back(visit(RouteItemResponseBuilder{}, item));
-        if (!holds_alternative<TransportRouter::RouteInfo::WaitItem>(item)) {
-          visit(builder, item);
-        }
+        visit(builder, item);
       }
 
       dict["map"] = Json::Node{ db.RenderRoute(builder.result) };
@@ -169,6 +176,9 @@ namespace Requests {
     }
     else return RouteToCompany{
       .from = attrs.at("from").AsString(),
+      .datetime = ConvertToMinutes(attrs.at("datetime").AsArray()[0].AsInt(),
+                                   attrs.at("datetime").AsArray()[1].AsInt(),
+                                   attrs.at("datetime").AsArray()[2].AsInt()),
       .model = CompanyQuery::ReadCompany(attrs.at("companies").AsMap()),
     };
   }

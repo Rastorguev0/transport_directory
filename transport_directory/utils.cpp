@@ -13,3 +13,7 @@ string_view Strip(string_view line) {
   }
   return line;
 }
+
+int ConvertToMinutes(int day, int hours, int minutes) {
+  return day * 24 * 60 + hours * 60 + minutes;
+}

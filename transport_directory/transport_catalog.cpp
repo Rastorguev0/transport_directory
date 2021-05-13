@@ -2,6 +2,7 @@
 #include "transport_catalog.pb.h"
 #include <memory>
 #include <algorithm>
+#include <cmath>
 
 using namespace std;
 
@@ -70,22 +71,34 @@ vector<string> TransportCatalog::FindCompanies(const CompanyQuery::Company& mode
 }
 
 optional<TransportRouter::RouteInfo> TransportCatalog::RouteToCompany(
-  const string& from, const CompanyQuery::Company& model) const
+  const string& from, const double datetime, const CompanyQuery::Company& model) const
 {
   optional<TransportRouter::RouteInfo> result;
   for (auto company : companies_->FindCompanies(model)) {
     for (const auto& stop : company->nearby_stops()) {
       auto route = router_->FindRoute(from, stop.name());
       if (route) {
-        double time = stop.meters() / (1000 * router_->GetWalkVelocity()) * 60; //in minutes
-        route->total_time += time;
+        string company_name = CompanyMainName(*company);
+
+        double walk_time = stop.meters() / (1000 * router_->GetWalkVelocity()) * 60; //in minutes
+        route->total_time += walk_time;
+
+        double cur_time = datetime + route->total_time;
+        /* если попали на следующую неделю */
+        cur_time = fmod(cur_time, 7.0 * 24.0 * 60.0);
+        double wait_time = companies_->WaitingForOpen(cur_time, company_name);
+        route->total_time += wait_time;
+
         TransportRouter::RouteInfo::WalkToCompany walk_item {
-          .time = time, .stop_from = stop.name(), .company_name = CompanyMainName(*company)
+          .time = walk_time, .stop_from = stop.name(), .company_name = company_name
           };
         if (!company->rubrics().empty()) {
           walk_item.rubric = companies_->GetRubric(company->rubrics()[0]);
         }
         route->items.push_back(walk_item);
+        if (wait_time != 0) {
+          route->items.push_back(TransportRouter::RouteInfo::WaitCompany{wait_time, company_name});
+        }
         if (!result.has_value() || route->total_time < result->total_time) {
           result = move(route);
         }

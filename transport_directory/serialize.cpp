@@ -418,6 +418,7 @@ CompaniesCatalog::CompaniesCatalog(const YellowPages::Database& proto)
     companies_.push_back(protocompany);
     Distribute(&companies_.back());
   }
+  ComputeWorkingTime();
 }
 
 

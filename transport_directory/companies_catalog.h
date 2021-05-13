@@ -28,12 +28,14 @@ namespace CompanyQuery {
 
 YellowPages::Phone_Type PhoneTypeFromString(const std::string& str);
 YellowPages::Name_Type NameTypeFromString(const std::string& str);
+YellowPages::WorkingTimeInterval_Day DayTypeFromString(const std::string& str);
 YellowPages::Name ReadName(const Json::Dict& properties);
 YellowPages::Phone ReadPhone(const Json::Dict& properties);
 YellowPages::Url ReadUrl(const Json::Dict& properties);
 SphereProto::Coords ReadCoords(const Json::Dict& properties);
 YellowPages::Address ReadAddress(const Json::Dict& properties);
 YellowPages::NearbyStop ReadNearbyStops(const Json::Dict& properties);
+YellowPages::WorkingTimeInterval ReadTimeInterval(const Json::Dict& properties);
 YellowPages::Company ReadCompany(const Json::Dict& properties);
 
 std::string CompanyMainName(const YellowPages::Company& company);
@@ -47,11 +49,13 @@ public:
 
   std::unordered_set<const YellowPages::Company*> FindCompanies(const CompanyQuery::Company&) const;
   static bool DoesPhoneMatch(const CompanyQuery::Phone& query_phone, const YellowPages::Phone& phone);
+  double WaitingForOpen(double cur_time, const std::string& company_name) const;
   const std::string& GetRubric(uint64_t id) const;
   const std::vector<YellowPages::Company>& GetCompanies() const;
 private:
   using Distribution = std::unordered_map<std::string, std::unordered_set<const YellowPages::Company*>>;
   void Distribute(const YellowPages::Company* company);
+  void ComputeWorkingTime();
   
 private:
   std::unordered_map<uint64_t, std::string> rubrics_mapping_;
@@ -60,4 +64,10 @@ private:
   Distribution by_phone_numbers;
   Distribution by_rubrics;
   Distribution by_urls;
+  /*
+  каждое число вектора хранит начало временного промежутка,
+  соответствующего промежутку работы (четные индексы) и неработы (четные) компании
+  число означает минуты, прошедшие с момента наступления первого дня недели.
+  */
+  std::unordered_map<std::string, std::vector<int>> working_time;
 };

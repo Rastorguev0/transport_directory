@@ -51,7 +51,7 @@ public:
 
 	std::vector<std::string> FindCompanies(const CompanyQuery::Company& model) const;
 	std::optional<TransportRouter::RouteInfo> RouteToCompany(
-		const std::string& stop_from, const CompanyQuery::Company& model) const;
+		const std::string& stop_from, const double datetime, const CompanyQuery::Company& model) const;
 
 	std::string RenderMap() const;
 	std::string RenderRoute(const Paint::Route& items) const;

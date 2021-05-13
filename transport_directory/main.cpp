@@ -26,7 +26,7 @@ int main(int argc, const char* argv[]) {
   }
 
   const string_view mode(argv[1]);
-  //ifstream in("example2_process_requests.json");
+  //ifstream in("example1_process_requests.json");
   //ofstream out("example_output.txt");
   const auto input_doc = Json::Load(cin);
   const auto& input_map = input_doc.GetRoot().AsMap();

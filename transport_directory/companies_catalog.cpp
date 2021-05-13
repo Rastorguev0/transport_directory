@@ -18,6 +18,18 @@ YellowPages::Name_Type NameTypeFromString(const string& str) {
   else throw runtime_error("Unknown name type");
 }
 
+YellowPages::WorkingTimeInterval_Day DayTypeFromString(const std::string& str) {
+  if (str == "EVERYDAY")  return YellowPages::WorkingTimeInterval_Day_EVERYDAY;
+  else if (str == "MONDAY")  return YellowPages::WorkingTimeInterval_Day_MONDAY;
+  else if (str == "TUESDAY")  return YellowPages::WorkingTimeInterval_Day_TUESDAY;
+  else if (str == "WEDNESDAY")  return YellowPages::WorkingTimeInterval_Day_WEDNESDAY;
+  else if (str == "THURSDAY")  return YellowPages::WorkingTimeInterval_Day_THURSDAY;
+  else if (str == "FRIDAY")  return YellowPages::WorkingTimeInterval_Day_FRIDAY;
+  else if (str == "SATURDAY")  return YellowPages::WorkingTimeInterval_Day_SATURDAY;
+  else if (str == "SUNDAY")  return YellowPages::WorkingTimeInterval_Day_SUNDAY;
+  else throw runtime_error("Unknown day type");
+}
+
 YellowPages::Name ReadName(const Json::Dict& properties) {
   YellowPages::Name protoname;
   protoname.set_value(properties.at("value").AsString());
@@ -82,6 +94,14 @@ YellowPages::NearbyStop ReadNearbyStops(const Json::Dict& properties) {
   return protonstops;
 }
 
+YellowPages::WorkingTimeInterval ReadTimeInterval(const Json::Dict& properties) {
+  YellowPages::WorkingTimeInterval result;
+  result.set_day(DayTypeFromString(properties.at("day").AsString()));
+  result.set_minutes_from(properties.at("minutes_from").AsInt());
+  result.set_minutes_to(properties.at("minutes_to").AsInt());
+  return result;
+}
+
 YellowPages::Company ReadCompany(const Json::Dict& properties) {
   YellowPages::Company protocompany;
   if (properties.count("address")) {
@@ -110,6 +130,13 @@ YellowPages::Company ReadCompany(const Json::Dict& properties) {
   if (properties.count("nearby_stops")) {
     for (const auto& nstop : properties.at("nearby_stops").AsArray()) {
       *(protocompany.add_nearby_stops()) = ReadNearbyStops(nstop.AsMap());
+    }
+  }
+  if (properties.count("working_time")) {
+    if (properties.at("working_time").AsMap().count("intervals")) {
+      for (const auto& interval : properties.at("working_time").AsMap().at("intervals").AsArray()) {
+        *(protocompany.mutable_working_time()->add_intervals()) = ReadTimeInterval(interval.AsMap());
+      }
     }
   }
   return protocompany;
@@ -172,6 +199,7 @@ CompaniesCatalog::CompaniesCatalog(const Json::Dict& rubrics_json,
   for (const auto& company_json : companies_json) {
     companies_.push_back(ReadCompany(company_json.AsMap()));
   }
+  ComputeWorkingTime();
 }
 
 void CompaniesCatalog::Distribute(const YellowPages::Company* company) {
@@ -186,6 +214,30 @@ void CompaniesCatalog::Distribute(const YellowPages::Company* company) {
   }
   for (const auto& url : company->urls()) {
     by_urls[url.value()].insert(company);
+  }
+}
+
+void CompaniesCatalog::ComputeWorkingTime() {
+  for (const auto& company : companies_) {
+    auto company_name = CompanyMainName(company);
+    if (company.working_time().intervals().empty()) {
+      working_time[company_name];
+    }
+    else for (const auto& interval : company.working_time().intervals()) {
+      if (interval.day() == YellowPages::WorkingTimeInterval_Day_EVERYDAY) {
+        for (int day = 0; day < 7; ++day) {
+          working_time[company_name].push_back(ConvertToMinutes(day, 0, interval.minutes_from()));
+          working_time[company_name].push_back(ConvertToMinutes(day, 0, interval.minutes_to()));
+        }
+      }
+      else {
+        working_time[company_name].push_back(
+          ConvertToMinutes(interval.day() - 1, 0, interval.minutes_from()));
+        working_time[company_name].push_back(
+          ConvertToMinutes(interval.day() - 1, 0, interval.minutes_to()));
+      }
+    }
+    sort(begin(working_time.at(company_name)), end(working_time.at(company_name)));
   }
 }
 
@@ -207,6 +259,17 @@ bool CompaniesCatalog::DoesPhoneMatch(const CompanyQuery::Phone& query, const Ye
     return false;
   }
   return query_phone.number() == phone.number();
+}
+
+double CompaniesCatalog::WaitingForOpen(double cur_time, const std::string& company_name) const {
+  const auto& timings = working_time.at(company_name);
+  if (timings.empty()) return 0.;
+  auto it = upper_bound(begin(timings), end(timings), static_cast<int>(cur_time));
+  if (it == end(timings)) return static_cast<double>(*begin(timings) + 7 * 24 * 60) - cur_time;
+  if (it == begin(timings)) return static_cast<double>(*begin(timings)) - cur_time;
+  int index = prev(it) - begin(timings);
+  if (index % 2 == 0) return 0.;
+  else return *it - cur_time;
 }
 
 const std::string& CompaniesCatalog::GetRubric(uint64_t id) const {
